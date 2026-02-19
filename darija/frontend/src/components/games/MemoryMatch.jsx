@@ -29,7 +29,7 @@ function createCards(pairs) {
 }
 
 export default function MemoryMatch({ data, onComplete }) {
-  const pairs = MOCK_PAIRS;
+  const pairs = data?.pairs || MOCK_PAIRS;
   const [cards] = useState(() => createCards(pairs));
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);

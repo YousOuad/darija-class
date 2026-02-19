@@ -26,7 +26,7 @@ const MOCK_STORY = {
 };
 
 export default function StoryGapFill({ data, onComplete }) {
-  const story = MOCK_STORY;
+  const story = data?.paragraphs ? data : MOCK_STORY;
   const allGaps = {};
   story.paragraphs.forEach((p) => {
     Object.entries(p.gaps).forEach(([key, val]) => {

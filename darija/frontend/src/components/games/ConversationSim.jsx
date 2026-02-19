@@ -50,7 +50,7 @@ const AI_RESPONSES = [
 ];
 
 export default function ConversationSim({ data, onComplete }) {
-  const convo = MOCK_CONVERSATION;
+  const convo = data?.context ? data : MOCK_CONVERSATION;
   const [messages, setMessages] = useState(convo.messages);
   const [suggestions, setSuggestions] = useState(convo.suggestions);
   const [userInput, setUserInput] = useState('');

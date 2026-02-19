@@ -81,6 +81,75 @@ const MOCK_SESSION = {
         funFact: 'In Morocco, tea is traditionally poured from a height to create a frothy top, and it\'s considered rude to refuse a glass!',
       },
     },
+    {
+      type: 'word_scramble',
+      title: 'Word Scramble',
+      data: {
+        words: [
+          { word: 'CHOUKRAN', meaning: 'Thank you', arabic: 'شكرا' },
+          { word: 'MEZYAN', meaning: 'Good', arabic: 'مزيان' },
+          { word: 'SALAM', meaning: 'Hello/Peace', arabic: 'سلام' },
+        ],
+      },
+    },
+    {
+      type: 'memory_match',
+      title: 'Memory Match',
+      data: {
+        pairs: [
+          { darija: 'Salam', english: 'Hello' },
+          { darija: 'Choukran', english: 'Thank you' },
+          { darija: 'Bslama', english: 'Goodbye' },
+          { darija: 'Wakha', english: 'Okay' },
+          { darija: 'Mezyan', english: 'Good' },
+          { darija: 'Lma', english: 'Water' },
+        ],
+      },
+    },
+    {
+      type: 'story_gap_fill',
+      title: 'Story Gap Fill',
+      data: {
+        title: 'A Day at the Souq',
+        paragraphs: [
+          {
+            text: 'Karim went to the ___1___ in the morning. He wanted to buy some ___2___ for breakfast.',
+            gaps: {
+              1: { answer: 'souq', options: ['souq', 'mdrasa', 'dar'] },
+              2: { answer: 'khobz', options: ['khobz', 'ktab', 'triq'] },
+            },
+          },
+          {
+            text: 'He said "___3___" to the seller and asked for the price. The seller replied "___4___, only 5 dirhams!"',
+            gaps: {
+              3: { answer: 'salam', options: ['bslama', 'salam', 'la'] },
+              4: { answer: 'wakha', options: ['wakha', 'choukran', 'mezyan'] },
+            },
+          },
+        ],
+        wordBank: ['souq', 'khobz', 'salam', 'wakha', 'bslama', 'mdrasa', 'dar', 'ktab', 'triq', 'la', 'choukran', 'mezyan'],
+      },
+    },
+    {
+      type: 'conversation_sim',
+      title: 'Conversation Practice',
+      data: {
+        context: 'You are at a Moroccan cafe ordering tea.',
+        messages: [
+          {
+            role: 'ai',
+            arabic: 'مرحبا! أهلا وسهلا فالقهوة ديالنا. شنو بغيتي تشرب؟',
+            latin: 'Merhba! Ahlan w sahlan f l9ahwa dyalna. Chnou bghiti tchrob?',
+            english: 'Welcome! What would you like to drink?',
+          },
+        ],
+        suggestions: [
+          { arabic: 'بغيت أتاي عافاك', latin: 'Bghit atay 3afak', english: 'I want tea please' },
+          { arabic: 'واش عندكم قهوة نص نص؟', latin: 'Wach 3ndkom qahwa noss noss?', english: 'Do you have half-half coffee?' },
+          { arabic: 'عطيني الما عافاك', latin: '3tini lma 3afak', english: 'Give me water please' },
+        ],
+      },
+    },
   ],
 };
 

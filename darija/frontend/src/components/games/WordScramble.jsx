@@ -24,7 +24,7 @@ function scrambleWord(word) {
 }
 
 export default function WordScramble({ data, onComplete }) {
-  const words = MOCK_WORDS;
+  const words = data?.words || MOCK_WORDS;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrambled, setScrambled] = useState(() => scrambleWord(words[0].word));
   const [placed, setPlaced] = useState([]);
