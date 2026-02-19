@@ -176,9 +176,12 @@ resource "aws_iam_role_policy" "lambda_bedrock" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect   = "Allow"
-      Action   = "bedrock:InvokeModel"
-      Resource = "arn:aws:bedrock:${var.aws_region}:557720455286:inference-profile/eu.anthropic.claude-haiku-4-5-20251001-v1:0"
+      Effect = "Allow"
+      Action = "bedrock:InvokeModel"
+      Resource = [
+        "arn:aws:bedrock:${var.aws_region}:557720455286:inference-profile/eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "arn:aws:bedrock:eu-*::foundation-model/anthropic.claude-haiku-4-5-20251001-v1:0"
+      ]
     }]
   })
 }

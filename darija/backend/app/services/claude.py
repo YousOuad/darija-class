@@ -124,8 +124,17 @@ async def generate_conversation_response(
         response_body = json.loads(response["body"].read())
         assistant_text = response_body["content"][0]["text"]
 
+        # Strip markdown code fences if present (e.g. ```json ... ```)
+        cleaned = assistant_text.strip()
+        if cleaned.startswith("```"):
+            # Remove opening fence (```json or ```)
+            cleaned = cleaned.split("\n", 1)[1] if "\n" in cleaned else cleaned[3:]
+            # Remove closing fence
+            if cleaned.rstrip().endswith("```"):
+                cleaned = cleaned.rstrip()[:-3].rstrip()
+
         # Parse the structured JSON response from Claude
-        parsed = json.loads(assistant_text)
+        parsed = json.loads(cleaned)
 
         return {
             "arabic": parsed.get("arabic", ""),
