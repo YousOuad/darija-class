@@ -153,6 +153,25 @@ const MOCK_SESSION = {
   ],
 };
 
+// Map backend game_type identifiers to frontend component keys
+const BACKEND_TYPE_MAP = {
+  fill_blank: 'fill_in_blank',
+  conversation: 'conversation_sim',
+  listening: 'multiple_choice',
+  translation: 'fill_in_blank',
+};
+
+function normalizeSession(raw) {
+  return {
+    ...raw,
+    games: (raw.games || []).map((g) => ({
+      type: BACKEND_TYPE_MAP[g.game_type] || g.game_type || g.type,
+      title: g.title,
+      data: g.config || g.data || {},
+    })),
+  };
+}
+
 const useGameStore = create((set, get) => ({
   currentSession: null,
   currentGameIndex: 0,
@@ -166,7 +185,7 @@ const useGameStore = create((set, get) => ({
     try {
       const response = await gamesAPI.getSession();
       set({
-        currentSession: response.data,
+        currentSession: normalizeSession(response.data),
         currentGameIndex: 0,
         results: [],
         totalXPEarned: 0,
