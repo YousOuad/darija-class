@@ -49,3 +49,10 @@ class LeaderboardResponse(BaseModel):
 class StreakResponse(BaseModel):
     current_streak: int
     last_active: Optional[datetime] = None
+
+
+class ActivityEntry(BaseModel):
+    type: str
+    title: str
+    xp: int
+    timestamp: datetime

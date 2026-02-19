@@ -1,80 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, Lock, CheckCircle2, Clock, ChevronRight } from 'lucide-react';
+import { BookOpen, Lock, CheckCircle2, ChevronRight } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
-
-const MOCK_MODULES = {
-  A2: [
-    {
-      id: 'a2-m1',
-      title: 'Greetings & Basics',
-      description: 'Essential greetings, introductions, and basic expressions.',
-      lessons: [
-        { id: 1, title: 'Hello & Goodbye', status: 'completed', xp: 50 },
-        { id: 2, title: 'Introducing Yourself', status: 'completed', xp: 50 },
-        { id: 3, title: 'How Are You?', status: 'available', xp: 50 },
-        { id: 4, title: 'Please & Thank You', status: 'locked', xp: 50 },
-      ],
-    },
-    {
-      id: 'a2-m2',
-      title: 'Numbers & Shopping',
-      description: 'Learn numbers, prices, and basic shopping vocabulary.',
-      lessons: [
-        { id: 5, title: 'Numbers 1-20', status: 'completed', xp: 50 },
-        { id: 6, title: 'At the Market', status: 'available', xp: 50 },
-        { id: 7, title: 'How Much?', status: 'locked', xp: 50 },
-        { id: 8, title: 'Colors & Sizes', status: 'locked', xp: 50 },
-      ],
-    },
-    {
-      id: 'a2-m3',
-      title: 'Food & Drink',
-      description: 'Order food, talk about meals, and learn food vocabulary.',
-      lessons: [
-        { id: 9, title: 'At the Cafe', status: 'locked', xp: 50 },
-        { id: 10, title: 'Restaurant Phrases', status: 'locked', xp: 50 },
-        { id: 11, title: 'Moroccan Dishes', status: 'locked', xp: 50 },
-      ],
-    },
-  ],
-  B1: [
-    {
-      id: 'b1-m1',
-      title: 'Daily Routines',
-      description: 'Describe your day, habits, and daily activities.',
-      lessons: [
-        { id: 12, title: 'My Morning', status: 'available', xp: 75 },
-        { id: 13, title: 'At Work/School', status: 'locked', xp: 75 },
-        { id: 14, title: 'Evening & Weekend', status: 'locked', xp: 75 },
-      ],
-    },
-    {
-      id: 'b1-m2',
-      title: 'Getting Around',
-      description: 'Directions, transportation, and navigating cities.',
-      lessons: [
-        { id: 15, title: 'Asking for Directions', status: 'locked', xp: 75 },
-        { id: 16, title: 'Taking a Taxi', status: 'locked', xp: 75 },
-        { id: 17, title: 'City Landmarks', status: 'locked', xp: 75 },
-      ],
-    },
-  ],
-  B2: [
-    {
-      id: 'b2-m1',
-      title: 'Conversations & Opinions',
-      description: 'Express opinions, debate, and have deeper conversations.',
-      lessons: [
-        { id: 18, title: 'Sharing Opinions', status: 'locked', xp: 100 },
-        { id: 19, title: 'Agreeing & Disagreeing', status: 'locked', xp: 100 },
-        { id: 20, title: 'Current Events', status: 'locked', xp: 100 },
-      ],
-    },
-  ],
-};
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import useAuth from '../hooks/useAuth';
+import { lessonsAPI, progressAPI } from '../services/api';
+import { groupLessonsByModule } from '../utils/dataTransform';
 
 const levelTabs = [
   { id: 'A2', label: 'A2 Elementary', color: 'teal' },
@@ -83,9 +16,50 @@ const levelTabs = [
 ];
 
 export default function Lessons() {
-  const [activeLevel, setActiveLevel] = useState('A2');
+  const { user } = useAuth();
+  const [activeLevel, setActiveLevel] = useState((user?.level || 'a2').toUpperCase());
+  const [modulesByLevel, setModulesByLevel] = useState({});
+  const [completedIds, setCompletedIds] = useState(new Set());
+  const [isLoading, setIsLoading] = useState(true);
 
-  const modules = MOCK_MODULES[activeLevel] || [];
+  useEffect(() => {
+    const loadData = async () => {
+      setIsLoading(true);
+      try {
+        const [lessonsRes, progressRes] = await Promise.allSettled([
+          lessonsAPI.list(),
+          progressAPI.getSummary(),
+        ]);
+
+        if (lessonsRes.status === 'fulfilled') {
+          const lessons = lessonsRes.value.data.lessons || [];
+          setModulesByLevel(groupLessonsByModule(lessons));
+        }
+
+        if (progressRes.status === 'fulfilled') {
+          const completed = progressRes.value.data.completed_lesson_ids || [];
+          setCompletedIds(new Set(completed));
+        }
+      } catch (error) {
+        console.error('Failed to load lessons:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadData();
+  }, []);
+
+  const modules = modulesByLevel[activeLevel] || [];
+
+  const getLessonStatus = (lesson, moduleIndex, lessonIndex) => {
+    if (completedIds.has(lesson.id)) return 'completed';
+    // First uncompleted lesson in the module is available
+    const moduleLessons = modules[moduleIndex]?.lessons || [];
+    const firstUncompletedIndex = moduleLessons.findIndex((l) => !completedIds.has(l.id));
+    if (lessonIndex === firstUncompletedIndex) return 'available';
+    if (lessonIndex < firstUncompletedIndex || firstUncompletedIndex === -1) return 'completed';
+    return 'available'; // unlock all for now since backend doesn't enforce order
+  };
 
   const getStatusIcon = (status) => {
     switch (status) {
@@ -101,9 +75,17 @@ export default function Lessons() {
   };
 
   const getModuleProgress = (module) => {
-    const completed = module.lessons.filter((l) => l.status === 'completed').length;
+    const completed = module.lessons.filter((l) => completedIds.has(l.id)).length;
     return Math.round((completed / module.lessons.length) * 100);
   };
+
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <LoadingSpinner size="lg" text="Loading lessons..." />
+      </AppLayout>
+    );
+  }
 
   return (
     <AppLayout>
@@ -139,70 +121,78 @@ export default function Lessons() {
 
       {/* Modules */}
       <div className="space-y-6">
-        {modules.map((module, moduleIndex) => {
-          const progress = getModuleProgress(module);
+        {modules.length === 0 ? (
+          <Card>
+            <p className="text-dark-400 text-center py-8">No lessons available for this level yet.</p>
+          </Card>
+        ) : (
+          modules.map((module, moduleIndex) => {
+            const progress = getModuleProgress(module);
 
-          return (
-            <motion.div
-              key={module.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: moduleIndex * 0.1 }}
-            >
-              <Card>
-                {/* Module header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-lg font-bold text-dark">{module.title}</h3>
-                    <p className="text-sm text-dark-400 mt-0.5">{module.description}</p>
+            return (
+              <motion.div
+                key={module.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: moduleIndex * 0.1 }}
+              >
+                <Card>
+                  {/* Module header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-lg font-bold text-dark">{module.title}</h3>
+                    </div>
+                    <div className="text-right flex-shrink-0 ml-4">
+                      <span className="text-sm font-bold text-teal-500">{progress}%</span>
+                    </div>
                   </div>
-                  <div className="text-right flex-shrink-0 ml-4">
-                    <span className="text-sm font-bold text-teal-500">{progress}%</span>
+
+                  {/* Progress bar */}
+                  <div className="h-2 bg-sand-200 rounded-full mb-4 overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-teal-500 to-teal-400 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: `${progress}%` }}
+                      transition={{ duration: 0.8, delay: moduleIndex * 0.1 }}
+                    />
                   </div>
-                </div>
 
-                {/* Progress bar */}
-                <div className="h-2 bg-sand-200 rounded-full mb-4 overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-teal-500 to-teal-400 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.8, delay: moduleIndex * 0.1 }}
-                  />
-                </div>
-
-                {/* Lessons list */}
-                <div className="space-y-1">
-                  {module.lessons.map((lesson) => (
-                    <Link
-                      key={lesson.id}
-                      to={lesson.status !== 'locked' ? `/lesson/${lesson.id}` : '#'}
-                      className={`
-                        flex items-center gap-3 px-3 py-3 rounded-xl
-                        transition-colors duration-200
-                        ${lesson.status === 'locked'
-                          ? 'opacity-50 cursor-not-allowed'
-                          : 'hover:bg-sand-50 cursor-pointer'
-                        }
-                      `}
-                    >
-                      {getStatusIcon(lesson.status)}
-                      <span className={`flex-1 text-sm font-medium ${
-                        lesson.status === 'locked' ? 'text-dark-300' : 'text-dark'
-                      }`}>
-                        {lesson.title}
-                      </span>
-                      <span className="text-xs text-dark-300">{lesson.xp} XP</span>
-                      {lesson.status !== 'locked' && (
-                        <ChevronRight size={16} className="text-dark-300" />
-                      )}
-                    </Link>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
-          );
-        })}
+                  {/* Lessons list */}
+                  <div className="space-y-1">
+                    {module.lessons.map((lesson, lessonIndex) => {
+                      const status = getLessonStatus(lesson, moduleIndex, lessonIndex);
+                      return (
+                        <Link
+                          key={lesson.id}
+                          to={status !== 'locked' ? `/lesson/${lesson.id}` : '#'}
+                          className={`
+                            flex items-center gap-3 px-3 py-3 rounded-xl
+                            transition-colors duration-200
+                            ${status === 'locked'
+                              ? 'opacity-50 cursor-not-allowed'
+                              : 'hover:bg-sand-50 cursor-pointer'
+                            }
+                          `}
+                        >
+                          {getStatusIcon(status)}
+                          <span className={`flex-1 text-sm font-medium ${
+                            status === 'locked' ? 'text-dark-300' : 'text-dark'
+                          }`}>
+                            {lesson.title}
+                          </span>
+                          <span className="text-xs text-dark-300">{lesson.xp} XP</span>
+                          {status !== 'locked' && (
+                            <ChevronRight size={16} className="text-dark-300" />
+                          )}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </Card>
+              </motion.div>
+            );
+          })
+        )}
       </div>
     </AppLayout>
   );

@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 CURRICULUM_DIR="${PROJECT_ROOT}/curriculum"
-BACKEND_URL="http://localhost:8000"
+BACKEND_URL="${BACKEND_URL:-http://localhost:8000}"
 
 echo "==> Seeding curriculum data into DarijaLingo..."
 

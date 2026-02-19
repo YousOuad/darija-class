@@ -1,19 +1,16 @@
-FROM python:3.11-slim
+FROM public.ecr.aws/lambda/python:3.11
 
-WORKDIR /app
-
-# Install system dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends gcc libpq-dev && \
-    rm -rf /var/lib/apt/lists/*
+# Install system dependencies for psycopg2
+RUN yum install -y gcc libpq-devel 2>/dev/null || \
+    microdnf install -y gcc libpq-devel 2>/dev/null || \
+    pip install --no-cache-dir psycopg2-binary
 
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY . .
+COPY . ${LAMBDA_TASK_ROOT}
 
-EXPOSE 8000
-
-CMD ["uvicorn", "app.main:application", "--host", "0.0.0.0", "--port", "8000"]
+# Lambda handler
+CMD ["app.main.handler"]

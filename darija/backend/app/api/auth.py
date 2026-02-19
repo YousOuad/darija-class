@@ -20,6 +20,7 @@ from app.schemas.auth import (
     UserLogin,
     UserRegister,
     UserResponse,
+    UserUpdateRequest,
 )
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -93,4 +94,29 @@ async def refresh(payload: RefreshTokenRequest):
 @router.get("/me", response_model=UserResponse)
 async def get_me(current_user: User = Depends(get_current_user)):
     """Return the currently authenticated user's profile."""
+    return current_user
+
+
+@router.put("/me", response_model=UserResponse)
+async def update_me(
+    payload: UserUpdateRequest,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Update the authenticated user's profile."""
+    valid_levels = {"a2", "b1", "b2"}
+
+    if payload.display_name is not None:
+        current_user.display_name = payload.display_name
+    if payload.level is not None:
+        level = payload.level.lower()
+        if level not in valid_levels:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Invalid level. Must be one of: {', '.join(sorted(valid_levels))}",
+            )
+        current_user.level = level
+
+    await db.flush()
+    await db.refresh(current_user)
     return current_user

@@ -5,23 +5,6 @@ import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 import { aiAPI } from '../../services/api';
 
-const MOCK_CONVERSATION = {
-  context: 'You are at a Moroccan cafe ordering tea.',
-  messages: [
-    {
-      role: 'ai',
-      arabic: 'مرحبا! أهلا وسهلا فالقهوة ديالنا. شنو بغيتي تشرب؟',
-      latin: 'Merhba! Ahlan w sahlan f l9ahwa dyalna. Chnou bghiti tchrob?',
-      english: 'Welcome! What would you like to drink?',
-    },
-  ],
-  suggestions: [
-    { arabic: 'بغيت أتاي عافاك', latin: 'Bghit atay 3afak', english: 'I want tea please' },
-    { arabic: 'واش عندكم قهوة نص نص؟', latin: 'Wach 3ndkom qahwa noss noss?', english: 'Do you have half-half coffee?' },
-    { arabic: 'عطيني الما عافاك', latin: '3tini lma 3afak', english: 'Give me water please' },
-  ],
-};
-
 const AI_RESPONSES = [
   {
     arabic: 'واخا! أتاي بالنعناع ولا بلا نعناع؟',
@@ -50,7 +33,15 @@ const AI_RESPONSES = [
 ];
 
 export default function ConversationSim({ data, onComplete }) {
-  const convo = data?.context ? data : MOCK_CONVERSATION;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const convo = data?.context ? data : {};
   const [messages, setMessages] = useState(convo.messages);
   const [suggestions, setSuggestions] = useState(convo.suggestions);
   const [userInput, setUserInput] = useState('');

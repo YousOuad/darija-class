@@ -12,7 +12,7 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [localError, setLocalError] = useState('');
-  const { register, isLoading, error, clearError, mockLogin } = useAuth();
+  const { register, isLoading, error, clearError } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -34,11 +34,6 @@ export default function Register() {
     } catch {
       // Error handled by store
     }
-  };
-
-  const handleDemoLogin = () => {
-    mockLogin('Youssef');
-    navigate('/dashboard');
   };
 
   const displayError = localError || error;
@@ -159,19 +154,6 @@ export default function Register() {
               Create Account
             </Button>
           </form>
-
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-sand-200" />
-            </div>
-            <div className="relative flex justify-center text-xs">
-              <span className="bg-white px-4 text-dark-300">or</span>
-            </div>
-          </div>
-
-          <Button variant="outline" fullWidth onClick={handleDemoLogin}>
-            Try Demo (No Account Needed)
-          </Button>
 
           <p className="text-center text-sm text-dark-300 mt-6">
             Already have an account?{' '}

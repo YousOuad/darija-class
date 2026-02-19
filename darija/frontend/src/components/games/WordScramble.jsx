@@ -4,12 +4,6 @@ import { RotateCcw, Check, X } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import Button from '../common/Button';
 
-const MOCK_WORDS = [
-  { word: 'CHOUKRAN', meaning: 'Thank you', arabic: 'شكرا' },
-  { word: 'MEZYAN', meaning: 'Good', arabic: 'مزيان' },
-  { word: 'SALAM', meaning: 'Hello/Peace', arabic: 'سلام' },
-];
-
 function scrambleWord(word) {
   const arr = word.split('');
   for (let i = arr.length - 1; i > 0; i--) {
@@ -24,7 +18,15 @@ function scrambleWord(word) {
 }
 
 export default function WordScramble({ data, onComplete }) {
-  const words = data?.words || MOCK_WORDS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const words = data?.words || [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrambled, setScrambled] = useState(() => scrambleWord(words[0].word));
   const [placed, setPlaced] = useState([]);

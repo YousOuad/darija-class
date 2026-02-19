@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, BookOpen, MessageSquare, PenTool, Dumbbell, Check, Volume2, AlertCircle } from 'lucide-react';
@@ -6,8 +6,10 @@ import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import ScriptText from '../components/common/ScriptText';
+import LoadingSpinner from '../components/common/LoadingSpinner';
 import useProgressStore from '../store/progressStore';
-import MOCK_LESSONS from '../data/mockLessons';
+import { lessonsAPI } from '../services/api';
+import { mapVocab, mapGrammar, mapPhrases } from '../utils/dataTransform';
 
 const tabs = [
   { id: 'vocabulary', label: 'Vocabulary', icon: BookOpen },
@@ -23,17 +25,53 @@ export default function LessonView() {
   const [exerciseAnswers, setExerciseAnswers] = useState({});
   const [exerciseChecked, setExerciseChecked] = useState({});
   const [fillAnswer, setFillAnswer] = useState('');
+  const [lesson, setLesson] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [isCompleting, setIsCompleting] = useState(false);
   const { updateXP } = useProgressStore();
 
-  const lesson = MOCK_LESSONS[Number(id)];
+  useEffect(() => {
+    const loadLesson = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const response = await lessonsAPI.getById(id);
+        const data = response.data;
+        // Extract content from content_json and map field names
+        const content = data.content_json || {};
+        setLesson({
+          ...data,
+          level: (data.level || '').toUpperCase(),
+          vocabulary: mapVocab(content.vocabulary || []),
+          grammar: mapGrammar(content.grammar || []),
+          phrases: mapPhrases(content.phrases || []),
+          exercises: content.exercises || [],
+        });
+      } catch {
+        setError('Lesson not found or failed to load.');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadLesson();
+  }, [id]);
 
-  if (!lesson) {
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <LoadingSpinner size="lg" text="Loading lesson..." />
+      </AppLayout>
+    );
+  }
+
+  if (error || !lesson) {
     return (
       <AppLayout>
         <div className="flex flex-col items-center justify-center py-20 text-center">
           <AlertCircle size={48} className="text-dark-300 mb-4" />
           <h2 className="text-xl font-bold text-dark mb-2">Lesson not found</h2>
-          <p className="text-dark-400 mb-6">This lesson doesn't exist or isn't available yet.</p>
+          <p className="text-dark-400 mb-6">{error || "This lesson doesn't exist or isn't available yet."}</p>
           <Button variant="primary" onClick={() => navigate('/lessons')}>
             Back to Lessons
           </Button>
@@ -42,9 +80,27 @@ export default function LessonView() {
     );
   }
 
-  const handleCompleteLesson = () => {
-    updateXP(50);
-    navigate('/lessons');
+  const handleCompleteLesson = async () => {
+    setIsCompleting(true);
+    try {
+      // Calculate score from exercises
+      const totalExercises = lesson.exercises.length || 1;
+      const correctAnswers = Object.entries(exerciseChecked).filter(([idx]) => {
+        const exercise = lesson.exercises[Number(idx)];
+        if (!exercise) return false;
+        return exerciseAnswers[Number(idx)] === exercise.correct;
+      }).length;
+      const score = Math.round((correctAnswers / totalExercises) * 100) || 80;
+
+      const response = await lessonsAPI.complete(id, score);
+      const xpEarned = response.data?.xp_earned || 50;
+      updateXP(xpEarned);
+      navigate('/lessons');
+    } catch {
+      // Still navigate back even if submit fails
+      updateXP(50);
+      navigate('/lessons');
+    }
   };
 
   const handleExerciseAnswer = (exerciseIndex, answerIndex) => {
@@ -52,6 +108,15 @@ export default function LessonView() {
     setExerciseAnswers((prev) => ({ ...prev, [exerciseIndex]: answerIndex }));
     setExerciseChecked((prev) => ({ ...prev, [exerciseIndex]: true }));
   };
+
+  // Filter tabs to only show ones with content
+  const availableTabs = tabs.filter((tab) => {
+    if (tab.id === 'vocabulary') return lesson.vocabulary.length > 0;
+    if (tab.id === 'grammar') return lesson.grammar.length > 0;
+    if (tab.id === 'phrases') return lesson.phrases.length > 0;
+    if (tab.id === 'exercises') return lesson.exercises.length > 0;
+    return true;
+  });
 
   return (
     <AppLayout>
@@ -76,7 +141,7 @@ export default function LessonView() {
 
       {/* Tabs */}
       <div className="flex items-center gap-1 mb-6 overflow-x-auto pb-2 bg-sand-100 rounded-xl p-1">
-        {tabs.map((tab) => (
+        {availableTabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
@@ -108,7 +173,7 @@ export default function LessonView() {
           <div className="grid sm:grid-cols-2 gap-4">
             {lesson.vocabulary.map((word, index) => (
               <motion.div
-                key={word.id}
+                key={word.id || index}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
@@ -127,15 +192,19 @@ export default function LessonView() {
                       <Volume2 size={16} />
                     </button>
                   </div>
-                  <div className="bg-sand-50 rounded-lg p-3">
-                    <p className="text-xs text-dark-300 mb-1">Example:</p>
-                    <ScriptText
-                      arabic={word.example_arabic}
-                      latin={word.example_latin}
-                      className="text-sm font-medium text-dark"
-                    />
-                    <p className="text-xs text-dark-400 mt-1">{word.example_english}</p>
-                  </div>
+                  {(word.example_arabic || word.example_latin) && (
+                    <div className="bg-sand-50 rounded-lg p-3">
+                      <p className="text-xs text-dark-300 mb-1">Example:</p>
+                      <ScriptText
+                        arabic={word.example_arabic}
+                        latin={word.example_latin}
+                        className="text-sm font-medium text-dark"
+                      />
+                      {word.example_english && (
+                        <p className="text-xs text-dark-400 mt-1">{word.example_english}</p>
+                      )}
+                    </div>
+                  )}
                 </Card>
               </motion.div>
             ))}
@@ -150,7 +219,7 @@ export default function LessonView() {
                 <h3 className="text-lg font-bold text-dark mb-3">{rule.title}</h3>
                 <p className="text-dark-400 mb-4 leading-relaxed">{rule.explanation}</p>
                 <div className="space-y-3">
-                  {rule.examples.map((example, i) => (
+                  {(rule.examples || []).map((example, i) => (
                     <div key={i} className="bg-sand-50 rounded-xl p-4">
                       <ScriptText
                         arabic={example.arabic}
@@ -185,9 +254,11 @@ export default function LessonView() {
                     />
                     <p className="text-sm text-dark-400">{phrase.english}</p>
                   </div>
-                  <span className="text-xs bg-sand-100 text-dark-300 px-2 py-1 rounded-lg flex-shrink-0">
-                    {phrase.context}
-                  </span>
+                  {phrase.context && (
+                    <span className="text-xs bg-sand-100 text-dark-300 px-2 py-1 rounded-lg flex-shrink-0">
+                      {phrase.context}
+                    </span>
+                  )}
                 </Card>
               </motion.div>
             ))}
@@ -205,7 +276,7 @@ export default function LessonView() {
                       {exerciseIndex + 1}. {exercise.question}
                     </p>
                     <div className="grid gap-2">
-                      {exercise.options.map((option, optIndex) => {
+                      {(exercise.options || []).map((option, optIndex) => {
                         const isSelected = exerciseAnswers[exerciseIndex] === optIndex;
                         const isCorrect = exerciseChecked[exerciseIndex] && optIndex === exercise.correct;
                         const isWrong = exerciseChecked[exerciseIndex] && isSelected && optIndex !== exercise.correct;
@@ -250,13 +321,7 @@ export default function LessonView() {
                         placeholder="Type your answer..."
                         className="flex-1 px-4 py-2 rounded-xl border border-sand-200 focus:outline-none focus:border-teal-400 text-sm"
                       />
-                      <Button
-                        variant="primary"
-                        size="sm"
-                        onClick={() => {
-                          // Simple check
-                        }}
-                      >
+                      <Button variant="primary" size="sm" onClick={() => {}}>
                         Check
                       </Button>
                     </div>
@@ -270,9 +335,26 @@ export default function LessonView() {
               size="lg"
               fullWidth
               onClick={handleCompleteLesson}
+              loading={isCompleting}
             >
               <Check size={18} className="mr-2" />
-              Complete Lesson (+50 XP)
+              Complete Lesson
+            </Button>
+          </div>
+        )}
+
+        {/* If active tab has no content, show complete button */}
+        {activeTab !== 'exercises' && (
+          <div className="mt-8">
+            <Button
+              variant="primary"
+              size="lg"
+              fullWidth
+              onClick={handleCompleteLesson}
+              loading={isCompleting}
+            >
+              <Check size={18} className="mr-2" />
+              Complete Lesson
             </Button>
           </div>
         )}

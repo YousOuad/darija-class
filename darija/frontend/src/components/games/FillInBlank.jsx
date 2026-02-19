@@ -3,62 +3,50 @@ import { motion } from 'framer-motion';
 import { Lightbulb, Check, X } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
-import Button from '../common/Button';
-
-const MOCK_QUESTIONS = [
-  {
-    sentence_arabic: 'أنا _____ من المغرب',
-    sentence_latin: 'Ana _____ men lMaghrib',
-    english: 'I am _____ from Morocco',
-    answer: { arabic: 'جاي', latin: 'jay' },
-    hint: 'j',
-  },
-  {
-    sentence_arabic: 'بغيت _____ أتاي عافاك',
-    sentence_latin: 'Bghit _____ atay 3afak',
-    english: 'I want _____ tea please',
-    answer: { arabic: 'واحد', latin: 'wahd' },
-    hint: 'w',
-  },
-  {
-    sentence_arabic: 'هاد _____ مزيان بزاف',
-    sentence_latin: 'Had _____ mezyan bzzaf',
-    english: 'This _____ is very good',
-    answer: { arabic: 'الماكلة', latin: 'lmakla' },
-    hint: 'l',
-  },
-];
 
 export default function FillInBlank({ data, onComplete }) {
-  const questions = data?.sentence_latin ? [data] : MOCK_QUESTIONS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  // Handle both array format {questions: [...]} and single object format
+  const questions = data?.questions || (data?.sentence_latin ? [data] : []);
   const [currentQ, setCurrentQ] = useState(0);
-  const [userInput, setUserInput] = useState('');
+  const [selected, setSelected] = useState(null);
   const [showHint, setShowHint] = useState(false);
-  const [checked, setChecked] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
+  if (questions.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
   const question = questions[currentQ];
 
-  const checkAnswer = () => {
-    const answer = question.answer;
-    const normalizedInput = userInput.trim().toLowerCase();
-    const correct =
-      normalizedInput === answer.latin?.toLowerCase() ||
-      normalizedInput === answer.arabic;
-    setIsCorrect(correct);
-    setChecked(true);
-    if (correct) setScore((prev) => prev + 1);
+  const handleSelect = (option) => {
+    if (answered) return;
+    setSelected(option.id);
+    setAnswered(true);
+    if (option.correct) {
+      setScore((prev) => prev + 1);
+    }
   };
 
   const handleNext = () => {
     if (currentQ < questions.length - 1) {
       setCurrentQ((prev) => prev + 1);
-      setUserInput('');
+      setSelected(null);
       setShowHint(false);
-      setChecked(false);
-      setIsCorrect(false);
+      setAnswered(false);
     } else {
       setGameOver(true);
       if (onComplete) {
@@ -89,12 +77,15 @@ export default function FillInBlank({ data, onComplete }) {
     );
   }
 
+  // Build options: use backend-provided options or fall back to legacy text input
+  const options = question.options || [];
+
   return (
     <GameWrapper
       title="Fill in the Blank"
       score={score}
       maxScore={questions.length}
-      showNextButton={checked}
+      showNextButton={answered}
       onNext={handleNext}
     >
       {/* Progress */}
@@ -109,98 +100,105 @@ export default function FillInBlank({ data, onComplete }) {
         ))}
       </div>
 
-      {/* Sentence with blank */}
-      <div className="bg-sand-50 rounded-xl p-6 mb-6">
-        <p className="text-sm text-dark-300 mb-2">Complete the sentence:</p>
-        <p className="text-lg font-medium text-dark mb-2">
+      {/* English meaning / clue */}
+      <div className="bg-sand-50 rounded-xl p-5 mb-6">
+        <p className="text-sm text-dark-300 mb-2">Fill in the missing word:</p>
+        <p className="text-base font-medium text-dark mb-3">
           {question.english}
         </p>
-        <ScriptText
-          arabic={question.sentence_arabic}
-          latin={question.sentence_latin}
-          className="text-dark-400 text-base"
-        />
-      </div>
-
-      {/* Input */}
-      <div className="mb-4">
-        <div className="relative">
-          <input
-            type="text"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && !checked && checkAnswer()}
-            disabled={checked}
-            placeholder="Type your answer..."
-            className={`
-              w-full px-4 py-3 rounded-xl border-2 text-lg font-medium
-              focus:outline-none focus:ring-2 focus:ring-offset-1
-              transition-all duration-200
-              ${checked && isCorrect ? 'border-green-400 bg-green-50 focus:ring-green-300' : ''}
-              ${checked && !isCorrect ? 'border-red-400 bg-red-50 focus:ring-red-300' : ''}
-              ${!checked ? 'border-sand-200 focus:border-teal-400 focus:ring-teal-300' : ''}
-            `}
+        <div className="bg-white rounded-lg p-3 border border-sand-200">
+          <ScriptText
+            arabic={question.sentence_arabic}
+            latin={question.sentence_latin}
+            className="text-lg font-semibold text-dark"
           />
-          {checked && (
-            <div className={`absolute right-3 top-1/2 -translate-y-1/2 ${isCorrect ? 'text-green-500' : 'text-red-500'}`}>
-              {isCorrect ? <Check size={20} /> : <X size={20} />}
-            </div>
-          )}
         </div>
-
-        {/* Feedback */}
-        {checked && !isCorrect && (
-          <motion.p
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-2 text-sm text-red-500"
-          >
-            Correct answer:{' '}
-            <ScriptText
-              arabic={question.answer.arabic}
-              latin={question.answer.latin}
-              className="font-bold"
-            />
-          </motion.p>
-        )}
-
-        {checked && isCorrect && (
-          <motion.p
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-2 text-sm text-green-500 font-medium"
-          >
-            Correct! Well done!
-          </motion.p>
-        )}
       </div>
 
-      {/* Actions */}
-      <div className="flex items-center gap-3">
-        {!checked && (
-          <>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowHint(true)}
-              disabled={showHint}
-            >
-              <Lightbulb size={16} className="mr-1" />
-              Hint
-            </Button>
-            <Button
-              variant="primary"
-              onClick={checkAnswer}
-              disabled={!userInput.trim()}
-            >
-              Check Answer
-            </Button>
-          </>
-        )}
-      </div>
+      {/* Choice options */}
+      {options.length > 0 ? (
+        <div className="grid gap-3">
+          {options.map((option) => {
+            const isSelected = selected === option.id;
+            const isCorrect = option.correct;
+            let borderColor = 'border-sand-200 hover:border-teal-300';
+            let bgColor = 'bg-white hover:bg-teal-50/50';
+
+            if (answered) {
+              if (isCorrect) {
+                borderColor = 'border-green-400';
+                bgColor = 'bg-green-50';
+              } else if (isSelected && !isCorrect) {
+                borderColor = 'border-red-400';
+                bgColor = 'bg-red-50';
+              } else {
+                borderColor = 'border-sand-200';
+                bgColor = 'bg-sand-50 opacity-60';
+              }
+            } else if (isSelected) {
+              borderColor = 'border-teal-400';
+              bgColor = 'bg-teal-50';
+            }
+
+            return (
+              <motion.button
+                key={option.id}
+                whileHover={!answered ? { scale: 1.01 } : {}}
+                whileTap={!answered ? { scale: 0.99 } : {}}
+                onClick={() => handleSelect(option)}
+                disabled={answered}
+                className={`
+                  flex items-center gap-3 p-4 rounded-xl border-2 text-left
+                  transition-all duration-200 ${borderColor} ${bgColor}
+                `}
+              >
+                <div
+                  className={`
+                    w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold
+                    ${answered && isCorrect ? 'bg-green-500 text-white' : ''}
+                    ${answered && isSelected && !isCorrect ? 'bg-red-500 text-white' : ''}
+                    ${!answered ? 'bg-sand-200 text-dark-400' : ''}
+                    ${answered && !isSelected && !isCorrect ? 'bg-sand-200 text-dark-300' : ''}
+                  `}
+                >
+                  {answered && isCorrect ? <Check size={16} /> : ''}
+                  {answered && isSelected && !isCorrect ? <X size={16} /> : ''}
+                  {!answered ? option.id.toUpperCase() : ''}
+                  {answered && !isSelected && !isCorrect ? option.id.toUpperCase() : ''}
+                </div>
+                <ScriptText
+                  arabic={option.arabic}
+                  latin={option.latin}
+                  className="font-medium text-dark"
+                />
+              </motion.button>
+            );
+          })}
+        </div>
+      ) : (
+        /* Fallback: legacy text input for old data without options */
+        <LegacyTextInput question={question} onAnswered={(correct) => {
+          setAnswered(true);
+          if (correct) setScore((prev) => prev + 1);
+        }} answered={answered} />
+      )}
+
+      {/* Hint button */}
+      {!answered && (
+        <div className="flex items-center gap-3 mt-4">
+          <button
+            onClick={() => setShowHint(true)}
+            disabled={showHint}
+            className="flex items-center gap-1 text-sm text-dark-400 hover:text-dark transition-colors disabled:opacity-40"
+          >
+            <Lightbulb size={16} />
+            Hint
+          </button>
+        </div>
+      )}
 
       {/* Hint */}
-      {showHint && !checked && (
+      {showHint && !answered && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
@@ -208,10 +206,71 @@ export default function FillInBlank({ data, onComplete }) {
         >
           <p className="text-sm text-dark-400">
             <Lightbulb size={14} className="inline mr-1 text-gold-500" />
-            The word starts with: <strong>{question.hint}</strong>
+            {question.hint}
           </p>
         </motion.div>
       )}
     </GameWrapper>
+  );
+}
+
+/* Fallback component for data without pre-built options */
+function LegacyTextInput({ question, onAnswered, answered }) {
+  const [userInput, setUserInput] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  const checkAnswer = () => {
+    const answer = question.answer;
+    const normalizedInput = userInput.trim().toLowerCase();
+    const correct =
+      normalizedInput === answer.latin?.toLowerCase() ||
+      normalizedInput === answer.arabic;
+    setIsCorrect(correct);
+    setChecked(true);
+    onAnswered(correct);
+  };
+
+  return (
+    <div className="mb-4">
+      <div className="relative">
+        <input
+          type="text"
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && !checked && checkAnswer()}
+          disabled={checked}
+          placeholder="Type your answer..."
+          className={`
+            w-full px-4 py-3 rounded-xl border-2 text-lg font-medium
+            focus:outline-none focus:ring-2 focus:ring-offset-1
+            transition-all duration-200
+            ${checked && isCorrect ? 'border-green-400 bg-green-50 focus:ring-green-300' : ''}
+            ${checked && !isCorrect ? 'border-red-400 bg-red-50 focus:ring-red-300' : ''}
+            ${!checked ? 'border-sand-200 focus:border-teal-400 focus:ring-teal-300' : ''}
+          `}
+        />
+        {checked && (
+          <div className={`absolute right-3 top-1/2 -translate-y-1/2 ${isCorrect ? 'text-green-500' : 'text-red-500'}`}>
+            {isCorrect ? <Check size={20} /> : <X size={20} />}
+          </div>
+        )}
+      </div>
+      {checked && !isCorrect && (
+        <motion.p initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="mt-2 text-sm text-red-500">
+          Correct answer:{' '}
+          <ScriptText arabic={question.answer.arabic} latin={question.answer.latin} className="font-bold" />
+        </motion.p>
+      )}
+      {!checked && (
+        <button
+          onClick={checkAnswer}
+          disabled={!userInput.trim()}
+          className="mt-3 px-6 py-2 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 transition-colors disabled:opacity-40"
+        >
+          Check Answer
+        </button>
+      )}
+    </div>
   );
 }

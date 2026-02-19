@@ -4,41 +4,16 @@ import { Check, X } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 
-const MOCK_QUESTIONS = [
-  {
-    question: { arabic: 'كيفاش كتقول "Good morning" بالدارجة؟', latin: 'Kifach katgoul "Good morning" b darija?' },
-    english: 'How do you say "Good morning" in Darija?',
-    options: [
-      { id: 'a', arabic: 'صباح الخير', latin: 'Sbah lkhir', correct: true },
-      { id: 'b', arabic: 'مسا الخير', latin: 'Msa lkhir', correct: false },
-      { id: 'c', arabic: 'تصبح على خير', latin: 'Tsbeh 3la khir', correct: false },
-      { id: 'd', arabic: 'الله يعطيك الصحة', latin: 'Llah y3tik sseha', correct: false },
-    ],
-  },
-  {
-    question: { arabic: 'شنو كيعني "Mezyan"؟', latin: 'Chnou kay3ni "Mezyan"?' },
-    english: 'What does "Mezyan" mean?',
-    options: [
-      { id: 'a', arabic: 'سيء', latin: 'Bad', correct: false },
-      { id: 'b', arabic: 'مزيان', latin: 'Good', correct: true },
-      { id: 'c', arabic: 'كبير', latin: 'Big', correct: false },
-      { id: 'd', arabic: 'صغير', latin: 'Small', correct: false },
-    ],
-  },
-  {
-    question: { arabic: 'شنو هو "الخبز" بالإنجليزية؟', latin: 'Chnou howa "Lkhobz" b l\'anglais?' },
-    english: 'What is "Lkhobz" in English?',
-    options: [
-      { id: 'a', arabic: 'ماء', latin: 'Water', correct: false },
-      { id: 'b', arabic: 'حليب', latin: 'Milk', correct: false },
-      { id: 'c', arabic: 'خبز', latin: 'Bread', correct: true },
-      { id: 'd', arabic: 'أتاي', latin: 'Tea', correct: false },
-    ],
-  },
-];
-
 export default function MultipleChoice({ data, onComplete }) {
-  const questions = data?.options ? [data] : MOCK_QUESTIONS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const questions = data?.options ? [data] : [];
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);

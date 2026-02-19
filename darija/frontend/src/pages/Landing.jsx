@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Gamepad2, Brain, BarChart3, Globe, ArrowRight, Star, Flame, Users } from 'lucide-react';
+import { Gamepad2, Brain, BarChart3, Globe, ArrowRight, Star, Flame } from 'lucide-react';
 import Button from '../components/common/Button';
 import useAuth from '../hooks/useAuth';
 
@@ -38,13 +38,7 @@ const stats = [
 ];
 
 export default function Landing() {
-  const { isAuthenticated, mockLogin } = useAuth();
-  const navigate = useNavigate();
-
-  const handleDemoLogin = () => {
-    mockLogin('Youssef');
-    navigate('/dashboard');
-  };
+  const { isAuthenticated } = useAuth();
 
   return (
     <div className="min-h-screen bg-sand-50">
@@ -109,9 +103,6 @@ export default function Landing() {
                     <ArrowRight size={18} className="ml-2" />
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" onClick={handleDemoLogin}>
-                  Try Demo
-                </Button>
               </div>
 
               {/* Mini stats */}
@@ -194,7 +185,7 @@ export default function Landing() {
                   className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-xl shadow-lg text-sm flex items-center gap-2"
                 >
                   <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
-                    <Check size={14} className="text-white" />
+                    <CheckIcon size={14} className="text-white" />
                   </div>
                   <span className="font-medium text-dark">Lesson Complete!</span>
                 </motion.div>
@@ -259,7 +250,7 @@ export default function Landing() {
   );
 }
 
-function Check({ size, className }) {
+function CheckIcon({ size, className }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <polyline points="20 6 9 17 4 12" />

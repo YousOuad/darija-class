@@ -4,21 +4,16 @@ import { RotateCcw, ThumbsUp, ThumbsDown, Clock } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 
-const MOCK_CARDS = [
-  { id: 1, front_arabic: 'الما', front_latin: 'Lma', back: 'Water' },
-  { id: 2, front_arabic: 'خبز', front_latin: 'Khobz', back: 'Bread' },
-  { id: 3, front_arabic: 'أتاي', front_latin: 'Atay', back: 'Tea' },
-  { id: 4, front_arabic: 'دار', front_latin: 'Dar', back: 'House' },
-  { id: 5, front_arabic: 'مدرسة', front_latin: 'Mdrasa', back: 'School' },
-  { id: 6, front_arabic: 'سوق', front_latin: 'Souq', back: 'Market' },
-  { id: 7, front_arabic: 'طريق', front_latin: 'Triq', back: 'Road' },
-  { id: 8, front_arabic: 'كتاب', front_latin: 'Ktab', back: 'Book' },
-  { id: 9, front_arabic: 'قلم', front_latin: 'Qlam', back: 'Pen' },
-  { id: 10, front_arabic: 'شمس', front_latin: 'Chems', back: 'Sun' },
-];
-
 export default function FlashcardSprint({ data, onComplete }) {
-  const cards = data?.cards || MOCK_CARDS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const cards = data?.cards || [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [known, setKnown] = useState(0);

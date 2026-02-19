@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, AlertTriangle } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -7,11 +8,22 @@ import XPBar from '../components/progress/XPBar';
 import StreakCounter from '../components/progress/StreakCounter';
 import BadgeGrid from '../components/progress/BadgeGrid';
 import SkillRadar from '../components/progress/SkillRadar';
+import LoadingSpinner from '../components/common/LoadingSpinner';
 import useProgressStore from '../store/progressStore';
 import { formatXP, getLevelFromXP } from '../utils/xpHelpers';
 
 export default function Progress() {
-  const { xp, streak, badges, skills, xpHistory, weaknesses, lessonsCompleted, gamesPlayed } = useProgressStore();
+  const {
+    xp, streak, badges, skills, xpHistory, weaknesses,
+    lessonsCompleted, gamesPlayed, isLoading,
+    fetchProgress, fetchWeaknesses,
+  } = useProgressStore();
+
+  useEffect(() => {
+    fetchProgress();
+    fetchWeaknesses();
+  }, []);
+
   const level = getLevelFromXP(xp);
 
   const overallStats = [
@@ -21,6 +33,14 @@ export default function Progress() {
     { label: 'Lessons', value: lessonsCompleted, color: 'text-dark' },
     { label: 'Games', value: gamesPlayed, color: 'text-dark' },
   ];
+
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <LoadingSpinner size="lg" text="Loading progress..." />
+      </AppLayout>
+    );
+  }
 
   return (
     <AppLayout>
@@ -66,29 +86,35 @@ export default function Progress() {
               <h3 className="font-bold text-dark">XP History (Last 14 Days)</h3>
             </div>
             <div className="h-56">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={xpHistory}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#F4E8C1" />
-                  <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#9e9eb7' }} />
-                  <YAxis tick={{ fontSize: 11, fill: '#9e9eb7' }} />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: 'white',
-                      border: '1px solid #F4E8C1',
-                      borderRadius: '12px',
-                      fontSize: '13px',
-                    }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="xp"
-                    stroke="#2A9D8F"
-                    strokeWidth={2.5}
-                    dot={{ fill: '#2A9D8F', r: 4 }}
-                    activeDot={{ fill: '#2A9D8F', r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              {xpHistory.length > 0 ? (
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={xpHistory}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#F4E8C1" />
+                    <XAxis dataKey="date" tick={{ fontSize: 11, fill: '#9e9eb7' }} />
+                    <YAxis tick={{ fontSize: 11, fill: '#9e9eb7' }} />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: 'white',
+                        border: '1px solid #F4E8C1',
+                        borderRadius: '12px',
+                        fontSize: '13px',
+                      }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="xp"
+                      stroke="#2A9D8F"
+                      strokeWidth={2.5}
+                      dot={{ fill: '#2A9D8F', r: 4 }}
+                      activeDot={{ fill: '#2A9D8F', r: 6 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="flex items-center justify-center h-full text-dark-300 text-sm">
+                  No XP data yet. Complete lessons to see your progress!
+                </div>
+              )}
             </div>
           </Card>
         </motion.div>
@@ -106,28 +132,32 @@ export default function Progress() {
             <Target size={18} className="text-terracotta-500" />
             <h3 className="font-bold text-dark">Areas to Improve</h3>
           </div>
-          <div className="space-y-3">
-            {weaknesses.map((weakness, index) => (
-              <div key={index} className="flex items-center gap-4 p-3 bg-sand-50 rounded-xl">
-                <div className="flex-shrink-0">
-                  <AlertTriangle size={18} className="text-terracotta-400" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-bold text-dark">{weakness.area}</span>
-                    <span className="text-sm font-bold text-terracotta-500">{weakness.score}%</span>
+          {weaknesses.length > 0 ? (
+            <div className="space-y-3">
+              {weaknesses.map((weakness, index) => (
+                <div key={index} className="flex items-center gap-4 p-3 bg-sand-50 rounded-xl">
+                  <div className="flex-shrink-0">
+                    <AlertTriangle size={18} className="text-terracotta-400" />
                   </div>
-                  <div className="h-1.5 bg-sand-200 rounded-full overflow-hidden mb-1">
-                    <div
-                      className="h-full bg-terracotta-400 rounded-full"
-                      style={{ width: `${weakness.score}%` }}
-                    />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-sm font-bold text-dark">{weakness.area}</span>
+                      <span className="text-sm font-bold text-terracotta-500">{weakness.score}%</span>
+                    </div>
+                    <div className="h-1.5 bg-sand-200 rounded-full overflow-hidden mb-1">
+                      <div
+                        className="h-full bg-terracotta-400 rounded-full"
+                        style={{ width: `${weakness.score}%` }}
+                      />
+                    </div>
+                    <p className="text-xs text-dark-300">{weakness.suggestion}</p>
                   </div>
-                  <p className="text-xs text-dark-300">{weakness.suggestion}</p>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-dark-400">No weakness data yet. Play more games to get personalized feedback!</p>
+          )}
         </Card>
       </motion.div>
 

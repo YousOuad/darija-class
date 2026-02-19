@@ -1,42 +1,66 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Gamepad2, BookOpen, TrendingUp, Clock, ArrowRight,
-  Target, CheckCircle2,
+  Target,
 } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import XPBar from '../components/progress/XPBar';
 import StreakCounter from '../components/progress/StreakCounter';
+import LoadingSpinner from '../components/common/LoadingSpinner';
 import useAuth from '../hooks/useAuth';
 import useProgressStore from '../store/progressStore';
-
-const recentActivity = [
-  { id: 1, type: 'lesson', title: 'Greetings & Introductions', xp: 50, time: '2 hours ago' },
-  { id: 2, type: 'game', title: 'Word Match Challenge', xp: 25, time: '3 hours ago' },
-  { id: 3, type: 'lesson', title: 'Numbers & Counting', xp: 50, time: 'Yesterday' },
-  { id: 4, type: 'game', title: 'Cultural Quiz', xp: 30, time: 'Yesterday' },
-];
-
-const recommendedLesson = {
-  id: 5,
-  title: 'At the Cafe',
-  level: 'A2',
-  module: 'Daily Life',
-  description: 'Learn essential phrases for ordering food and drinks at a Moroccan cafe.',
-  estimatedTime: '15 min',
-};
+import { lessonsAPI, progressAPI } from '../services/api';
+import { transformActivity } from '../utils/dataTransform';
 
 export default function Dashboard() {
   const { user } = useAuth();
-  const { xp, streak, lessonsCompleted, gamesPlayed } = useProgressStore();
+  const { xp, streak, lessonsCompleted, gamesPlayed, fetchProgress } = useProgressStore();
+
+  const [recentActivity, setRecentActivity] = useState([]);
+  const [recommendedLesson, setRecommendedLesson] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      setIsLoading(true);
+      try {
+        await fetchProgress();
+        const [activityRes, recommendedRes] = await Promise.allSettled([
+          progressAPI.getRecentActivity(5),
+          lessonsAPI.getRecommended(),
+        ]);
+        if (activityRes.status === 'fulfilled') {
+          setRecentActivity(transformActivity(activityRes.value.data || []));
+        }
+        if (recommendedRes.status === 'fulfilled') {
+          setRecommendedLesson(recommendedRes.value.data);
+        }
+      } catch (error) {
+        console.error('Failed to load dashboard data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadData();
+  }, []);
 
   const quickStats = [
     { label: 'Lessons Done', value: lessonsCompleted, icon: BookOpen, color: 'text-teal-500' },
     { label: 'Games Played', value: gamesPlayed, icon: Gamepad2, color: 'text-terracotta-500' },
     { label: 'Current Level', value: `Lv.${Math.floor(xp / 500) + 1}`, icon: TrendingUp, color: 'text-gold-500' },
   ];
+
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <LoadingSpinner size="lg" text="Loading dashboard..." />
+      </AppLayout>
+    );
+  }
 
   return (
     <AppLayout>
@@ -139,26 +163,27 @@ export default function Dashboard() {
               <BookOpen size={18} className="text-teal-500" />
               <h3 className="font-bold text-dark">Recommended Lesson</h3>
             </div>
-            <div className="bg-sand-50 rounded-xl p-4 mb-4">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-bold text-teal-500 bg-teal-50 px-2 py-0.5 rounded">
-                  {recommendedLesson.level}
-                </span>
-                <span className="text-xs text-dark-300">{recommendedLesson.module}</span>
-              </div>
-              <h4 className="font-bold text-dark mb-1">{recommendedLesson.title}</h4>
-              <p className="text-sm text-dark-400 mb-3">{recommendedLesson.description}</p>
-              <div className="flex items-center gap-1 text-xs text-dark-300">
-                <Clock size={12} />
-                {recommendedLesson.estimatedTime}
-              </div>
-            </div>
-            <Link to={`/lesson/${recommendedLesson.id}`}>
-              <Button variant="primary" fullWidth>
-                Start Lesson
-                <ArrowRight size={16} className="ml-2" />
-              </Button>
-            </Link>
+            {recommendedLesson ? (
+              <>
+                <div className="bg-sand-50 rounded-xl p-4 mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-bold text-teal-500 bg-teal-50 px-2 py-0.5 rounded">
+                      {(recommendedLesson.level || '').toUpperCase()}
+                    </span>
+                    <span className="text-xs text-dark-300">{recommendedLesson.module}</span>
+                  </div>
+                  <h4 className="font-bold text-dark mb-1">{recommendedLesson.title}</h4>
+                </div>
+                <Link to={`/lesson/${recommendedLesson.id}`}>
+                  <Button variant="primary" fullWidth>
+                    Start Lesson
+                    <ArrowRight size={16} className="ml-2" />
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <p className="text-sm text-dark-400">No lessons available yet.</p>
+            )}
           </Card>
         </motion.div>
 
@@ -170,29 +195,33 @@ export default function Dashboard() {
         >
           <Card>
             <h3 className="font-bold text-dark mb-4">Recent Activity</h3>
-            <div className="space-y-3">
-              {recentActivity.map((activity) => (
-                <div
-                  key={activity.id}
-                  className="flex items-center gap-3 p-2 rounded-lg hover:bg-sand-50 transition-colors"
-                >
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                    activity.type === 'lesson' ? 'bg-teal-50' : 'bg-terracotta-50'
-                  }`}>
-                    {activity.type === 'lesson' ? (
-                      <BookOpen size={16} className="text-teal-500" />
-                    ) : (
-                      <Gamepad2 size={16} className="text-terracotta-500" />
-                    )}
+            {recentActivity.length > 0 ? (
+              <div className="space-y-3">
+                {recentActivity.map((activity, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-sand-50 transition-colors"
+                  >
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                      activity.type === 'lesson' ? 'bg-teal-50' : 'bg-terracotta-50'
+                    }`}>
+                      {activity.type === 'lesson' ? (
+                        <BookOpen size={16} className="text-teal-500" />
+                      ) : (
+                        <Gamepad2 size={16} className="text-terracotta-500" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-dark truncate">{activity.title}</p>
+                      <p className="text-xs text-dark-300">{activity.time}</p>
+                    </div>
+                    <span className="text-xs font-bold text-gold-500">+{activity.xp} XP</span>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-dark truncate">{activity.title}</p>
-                    <p className="text-xs text-dark-300">{activity.time}</p>
-                  </div>
-                  <span className="text-xs font-bold text-gold-500">+{activity.xp} XP</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-dark-400">No activity yet. Start a lesson or game session!</p>
+            )}
           </Card>
         </motion.div>
       </div>

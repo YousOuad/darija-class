@@ -13,7 +13,7 @@ export default function useAuth() {
     refreshToken,
     fetchUser,
     clearError,
-    mockLogin,
+    updateProfile,
   } = useAuthStore();
 
   return {
@@ -28,6 +28,6 @@ export default function useAuth() {
     refreshToken,
     fetchUser,
     clearError,
-    mockLogin,
+    updateProfile,
   };
 }

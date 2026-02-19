@@ -5,12 +5,6 @@ import GameWrapper from './GameWrapper';
 import useScript from '../../hooks/useScript';
 import Button from '../common/Button';
 
-const MOCK_DATA = {
-  correct_order_arabic: ['أنا', 'كنتكلم', 'الدارجة', 'مزيان'],
-  correct_order_latin: ['Ana', 'kantkellm', 'darija', 'mezyan'],
-  english: 'I speak Darija well',
-};
-
 function shuffleArray(arr) {
   const shuffled = [...arr];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -21,7 +15,15 @@ function shuffleArray(arr) {
 }
 
 export default function SentenceBuilder({ data, onComplete }) {
-  const gameData = data?.correct_order_latin ? data : MOCK_DATA;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const gameData = data?.correct_order_latin ? data : {};
   const { scriptMode } = useScript();
 
   const correctOrder = scriptMode === 'arabic'

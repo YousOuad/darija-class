@@ -9,7 +9,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const { login, isLoading, error, clearError, mockLogin } = useAuth();
+  const { login, isLoading, error, clearError } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -20,11 +20,6 @@ export default function Login() {
     } catch {
       // Error is handled by the store
     }
-  };
-
-  const handleDemoLogin = () => {
-    mockLogin('Youssef');
-    navigate('/dashboard');
   };
 
   return (
@@ -109,23 +104,6 @@ export default function Login() {
               Log In
             </Button>
           </form>
-
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-sand-200" />
-            </div>
-            <div className="relative flex justify-center text-xs">
-              <span className="bg-white px-4 text-dark-300">or</span>
-            </div>
-          </div>
-
-          <Button
-            variant="outline"
-            fullWidth
-            onClick={handleDemoLogin}
-          >
-            Try Demo (No Account Needed)
-          </Button>
 
           <p className="text-center text-sm text-dark-300 mt-6">
             Don't have an account?{' '}

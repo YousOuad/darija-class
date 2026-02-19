@@ -4,29 +4,16 @@ import { Check, X, RotateCcw } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import Button from '../common/Button';
 
-const MOCK_STORY = {
-  title: 'A Day at the Souq',
-  paragraphs: [
-    {
-      text: 'Karim went to the ___1___ in the morning. He wanted to buy some ___2___ for breakfast.',
-      gaps: {
-        1: { answer: 'souq', options: ['souq', 'mdrasa', 'dar'] },
-        2: { answer: 'khobz', options: ['khobz', 'ktab', 'triq'] },
-      },
-    },
-    {
-      text: 'He said "___3___" to the seller and asked for the price. The seller replied "___4___, only 5 dirhams!"',
-      gaps: {
-        3: { answer: 'salam', options: ['bslama', 'salam', 'la'] },
-        4: { answer: 'wakha', options: ['wakha', 'choukran', 'mezyan'] },
-      },
-    },
-  ],
-  wordBank: ['souq', 'khobz', 'salam', 'wakha', 'bslama', 'mdrasa', 'dar', 'ktab', 'triq', 'la', 'choukran', 'mezyan'],
-};
-
 export default function StoryGapFill({ data, onComplete }) {
-  const story = data?.paragraphs ? data : MOCK_STORY;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const story = data?.paragraphs ? data : {};
   const allGaps = {};
   story.paragraphs.forEach((p) => {
     Object.entries(p.gaps).forEach(([key, val]) => {

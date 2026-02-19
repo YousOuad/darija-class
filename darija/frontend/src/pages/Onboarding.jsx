@@ -55,12 +55,19 @@ const levels = [
 
 export default function Onboarding() {
   const [selectedLevel, setSelectedLevel] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, updateProfile } = useAuth();
 
-  const handleContinue = () => {
-    // In a real app, save the level to the user's profile
-    navigate('/dashboard');
+  const handleContinue = async () => {
+    if (!selectedLevel) return;
+    setIsSaving(true);
+    try {
+      await updateProfile({ level: selectedLevel.toLowerCase() });
+      navigate('/dashboard');
+    } catch {
+      setIsSaving(false);
+    }
   };
 
   return (
@@ -139,7 +146,8 @@ export default function Onboarding() {
             variant="primary"
             size="lg"
             onClick={handleContinue}
-            disabled={!selectedLevel}
+            disabled={!selectedLevel || isSaving}
+            loading={isSaving}
           >
             Continue
             <ArrowRight size={18} className="ml-2" />

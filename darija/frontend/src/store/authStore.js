@@ -80,22 +80,18 @@ const useAuthStore = create((set, get) => ({
 
   clearError: () => set({ error: null }),
 
-  // Mock login for demo purposes
-  mockLogin: (name = 'Youssef') => {
-    const mockUser = {
-      id: 'demo-user-1',
-      display_name: name,
-      email: `${name.toLowerCase()}@demo.com`,
-      level: 'B1',
-      xp: 1250,
-      streak: 7,
-      created_at: new Date().toISOString(),
-    };
-    const mockToken = 'demo-token-12345';
-    localStorage.setItem('darijalingo_token', mockToken);
-    localStorage.setItem('darijalingo_user', JSON.stringify(mockUser));
-    set({ user: mockUser, token: mockToken, isAuthenticated: true });
-    return mockUser;
+  updateProfile: async (data) => {
+    try {
+      const response = await authAPI.updateProfile(data);
+      const user = response.data;
+      localStorage.setItem('darijalingo_user', JSON.stringify(user));
+      set({ user });
+      return user;
+    } catch (error) {
+      const message = error.response?.data?.detail || 'Failed to update profile.';
+      set({ error: message });
+      throw new Error(message);
+    }
   },
 }));
 

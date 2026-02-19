@@ -4,12 +4,11 @@ import { User, Lock, Globe, Check, Save } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-import ScriptText from '../components/common/ScriptText';
 import useAuth from '../hooks/useAuth';
 import useScript from '../hooks/useScript';
 
 export default function Settings() {
-  const { user } = useAuth();
+  const { user, updateProfile } = useAuth();
   const { scriptMode, setScriptMode } = useScript();
 
   const [displayName, setDisplayName] = useState(user?.display_name || '');
@@ -17,19 +16,27 @@ export default function Settings() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [saved, setSaved] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [passwordSaved, setPasswordSaved] = useState(false);
 
-  const handleSaveProfile = () => {
-    // In real app, call API
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+  const handleSaveProfile = async () => {
+    setIsSaving(true);
+    try {
+      await updateProfile({ display_name: displayName });
+      setSaved(true);
+      setTimeout(() => setSaved(false), 3000);
+    } catch {
+      // Error shown in store
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   const handleChangePassword = () => {
     if (newPassword !== confirmPassword) {
       return;
     }
-    // In real app, call API
+    // Password change not yet implemented in backend
     setCurrentPassword('');
     setNewPassword('');
     setConfirmPassword('');
@@ -146,7 +153,7 @@ export default function Settings() {
                 <label className="block text-sm font-medium text-dark-400 mb-1.5">Email</label>
                 <input
                   type="email"
-                  value={user?.email || 'user@demo.com'}
+                  value={user?.email || ''}
                   disabled
                   className="w-full px-4 py-3 rounded-xl border border-sand-200 bg-sand-50
                     text-sm text-dark-300 cursor-not-allowed"
@@ -157,15 +164,15 @@ export default function Settings() {
                 <label className="block text-sm font-medium text-dark-400 mb-1.5">Current Level</label>
                 <div className="flex items-center gap-2">
                   <span className="px-3 py-1.5 bg-teal-50 text-teal-600 rounded-lg text-sm font-bold">
-                    {user?.level || 'B1'}
+                    {(user?.level || 'a2').toUpperCase()}
                   </span>
-                  <span className="text-sm text-dark-300">Intermediate</span>
                 </div>
               </div>
 
               <Button
                 variant="primary"
                 onClick={handleSaveProfile}
+                loading={isSaving}
               >
                 <Save size={16} className="mr-2" />
                 {saved ? 'Saved!' : 'Save Changes'}

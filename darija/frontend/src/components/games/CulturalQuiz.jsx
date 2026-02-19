@@ -3,44 +3,16 @@ import { motion } from 'framer-motion';
 import { Check, X, Lightbulb, Info } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 
-const MOCK_QUESTIONS = [
-  {
-    question: 'What is the traditional Moroccan mint tea called?',
-    options: [
-      { id: 'a', text: 'Atay Nana', correct: true },
-      { id: 'b', text: 'Chai Masala', correct: false },
-      { id: 'c', text: 'Qamar al-Din', correct: false },
-      { id: 'd', text: 'Sahlab', correct: false },
-    ],
-    explanation: 'Atay Nana (literally "mint tea") is Morocco\'s beloved national drink. It\'s made with Chinese gunpowder green tea, fresh spearmint leaves, and lots of sugar.',
-    funFact: 'In Morocco, tea is traditionally poured from a height to create a frothy top, and it\'s considered rude to refuse a glass!',
-  },
-  {
-    question: 'What is a "riad" in Moroccan architecture?',
-    options: [
-      { id: 'a', text: 'A mosque', correct: false },
-      { id: 'b', text: 'A traditional house with an interior garden', correct: true },
-      { id: 'c', text: 'A market stall', correct: false },
-      { id: 'd', text: 'A royal palace', correct: false },
-    ],
-    explanation: 'A riad is a traditional Moroccan house or palace with an interior garden. The word comes from Arabic "ryad" meaning garden.',
-    funFact: 'Many riads in cities like Marrakech and Fez have been converted into charming boutique hotels!',
-  },
-  {
-    question: 'What does "Inshallah" mean when used in daily Moroccan conversation?',
-    options: [
-      { id: 'a', text: 'Thank you very much', correct: false },
-      { id: 'b', text: 'God willing / Hopefully', correct: true },
-      { id: 'c', text: 'Good morning', correct: false },
-      { id: 'd', text: 'You are welcome', correct: false },
-    ],
-    explanation: '"Inshallah" literally means "God willing" and is used frequently in daily conversation when talking about future plans or hopes.',
-    funFact: 'Moroccans use "Inshallah" so frequently that it can mean anything from a definite yes to a polite maybe!',
-  },
-];
-
 export default function CulturalQuiz({ data, onComplete }) {
-  const questions = data?.question ? [data] : MOCK_QUESTIONS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const questions = data?.question ? [data] : [];
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);

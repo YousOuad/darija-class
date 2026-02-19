@@ -1,90 +1,77 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, CheckCircle2, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
-
-const MOCK_PATH = [
-  {
-    id: 'm1',
-    title: 'Greetings & Basics',
-    level: 'A2',
-    status: 'completed',
-    lessons: [
-      { id: 1, title: 'Hello & Goodbye', completed: true },
-      { id: 2, title: 'Introducing Yourself', completed: true },
-      { id: 3, title: 'How Are You?', completed: true },
-    ],
-  },
-  {
-    id: 'm2',
-    title: 'Numbers & Shopping',
-    level: 'A2',
-    status: 'current',
-    lessons: [
-      { id: 5, title: 'Numbers 1-20', completed: true },
-      { id: 6, title: 'At the Market', completed: false },
-      { id: 7, title: 'How Much?', completed: false },
-      { id: 8, title: 'Colors & Sizes', completed: false },
-    ],
-  },
-  {
-    id: 'm3',
-    title: 'Food & Drink',
-    level: 'A2',
-    status: 'locked',
-    lessons: [
-      { id: 9, title: 'At the Cafe', completed: false },
-      { id: 10, title: 'Restaurant Phrases', completed: false },
-      { id: 11, title: 'Moroccan Dishes', completed: false },
-    ],
-  },
-  {
-    id: 'm4',
-    title: 'Family & People',
-    level: 'A2',
-    status: 'locked',
-    lessons: [
-      { id: 12, title: 'Family Members', completed: false },
-      { id: 13, title: 'Describing People', completed: false },
-    ],
-  },
-  {
-    id: 'm5',
-    title: 'Daily Routines',
-    level: 'B1',
-    status: 'locked',
-    lessons: [
-      { id: 14, title: 'My Morning', completed: false },
-      { id: 15, title: 'At Work/School', completed: false },
-      { id: 16, title: 'Evening & Weekend', completed: false },
-    ],
-  },
-  {
-    id: 'm6',
-    title: 'Getting Around',
-    level: 'B1',
-    status: 'locked',
-    lessons: [
-      { id: 17, title: 'Asking for Directions', completed: false },
-      { id: 18, title: 'Taking a Taxi', completed: false },
-      { id: 19, title: 'City Landmarks', completed: false },
-    ],
-  },
-  {
-    id: 'm7',
-    title: 'Advanced Conversation',
-    level: 'B2',
-    status: 'locked',
-    lessons: [
-      { id: 20, title: 'Sharing Opinions', completed: false },
-      { id: 21, title: 'Debating Topics', completed: false },
-    ],
-  },
-];
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import { lessonsAPI, progressAPI } from '../services/api';
+import { groupLessonsByModule } from '../utils/dataTransform';
 
 export default function Roadmap() {
-  const [expandedModule, setExpandedModule] = useState('m2');
+  const [expandedModule, setExpandedModule] = useState(null);
+  const [modules, setModules] = useState([]);
+  const [completedIds, setCompletedIds] = useState(new Set());
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      setIsLoading(true);
+      try {
+        const [lessonsRes, progressRes] = await Promise.allSettled([
+          lessonsAPI.list(),
+          progressAPI.getSummary(),
+        ]);
+
+        let allModules = [];
+        if (lessonsRes.status === 'fulfilled') {
+          const lessons = lessonsRes.value.data.lessons || [];
+          const grouped = groupLessonsByModule(lessons);
+          // Flatten all levels into a single roadmap path
+          for (const level of ['A2', 'B1', 'B2']) {
+            const levelModules = grouped[level] || [];
+            allModules = allModules.concat(
+              levelModules.map((m) => ({ ...m, level }))
+            );
+          }
+        }
+
+        let completed = new Set();
+        if (progressRes.status === 'fulfilled') {
+          const ids = progressRes.value.data.completed_lesson_ids || [];
+          completed = new Set(ids);
+        }
+
+        setModules(allModules);
+        setCompletedIds(completed);
+
+        // Auto-expand the first module that has uncompleted lessons
+        const currentIdx = allModules.findIndex((m) =>
+          m.lessons.some((l) => !completed.has(l.id))
+        );
+        if (currentIdx >= 0) {
+          setExpandedModule(allModules[currentIdx].id);
+        }
+      } catch (error) {
+        console.error('Failed to load roadmap:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadData();
+  }, []);
+
+  const getModuleStatus = (module) => {
+    const allCompleted = module.lessons.every((l) => completedIds.has(l.id));
+    const someCompleted = module.lessons.some((l) => completedIds.has(l.id));
+    if (allCompleted) return 'completed';
+    if (someCompleted) return 'current';
+    // Check if previous module in the list is completed
+    const idx = modules.indexOf(module);
+    if (idx === 0) return 'current';
+    const prevModule = modules[idx - 1];
+    const prevAllCompleted = prevModule.lessons.every((l) => completedIds.has(l.id));
+    return prevAllCompleted ? 'current' : 'locked';
+  };
 
   const getNodeStyles = (status) => {
     switch (status) {
@@ -132,6 +119,14 @@ export default function Roadmap() {
     }
   };
 
+  if (isLoading) {
+    return (
+      <AppLayout>
+        <LoadingSpinner size="lg" text="Loading roadmap..." />
+      </AppLayout>
+    );
+  }
+
   return (
     <AppLayout>
       <div className="mb-8">
@@ -140,11 +135,12 @@ export default function Roadmap() {
       </div>
 
       <div className="max-w-xl mx-auto">
-        {MOCK_PATH.map((module, index) => {
-          const styles = getNodeStyles(module.status);
+        {modules.map((module, index) => {
+          const status = getModuleStatus(module);
+          const styles = getNodeStyles(status);
           const isExpanded = expandedModule === module.id;
-          const completedLessons = module.lessons.filter((l) => l.completed).length;
-          const isLast = index === MOCK_PATH.length - 1;
+          const completedLessons = module.lessons.filter((l) => completedIds.has(l.id)).length;
+          const isLast = index === modules.length - 1;
 
           return (
             <div key={module.id} className="relative">
@@ -170,11 +166,11 @@ export default function Roadmap() {
                   <div className={`
                     w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0
                     ${styles.bg} shadow-sm
-                    ${module.status === 'current' ? 'animate-pulse-slow' : ''}
+                    ${status === 'current' ? 'animate-pulse-slow' : ''}
                   `}>
-                    {module.status === 'completed' ? (
+                    {status === 'completed' ? (
                       <CheckCircle2 size={24} className="text-white" />
-                    ) : module.status === 'locked' ? (
+                    ) : status === 'locked' ? (
                       <Lock size={24} className="text-dark-300" />
                     ) : (
                       <BookOpen size={24} className="text-white" />
@@ -186,7 +182,7 @@ export default function Roadmap() {
                       <span className={`text-xs font-bold px-2 py-0.5 rounded ${getLevelBadge(module.level)}`}>
                         {module.level}
                       </span>
-                      {module.status === 'current' && (
+                      {status === 'current' && (
                         <span className="text-xs font-medium text-teal-500 bg-teal-50 px-2 py-0.5 rounded">
                           In Progress
                         </span>
@@ -198,7 +194,7 @@ export default function Roadmap() {
                     </p>
                   </div>
 
-                  {module.status !== 'locked' && (
+                  {status !== 'locked' && (
                     <div className="text-dark-300">
                       {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                     </div>
@@ -207,7 +203,7 @@ export default function Roadmap() {
 
                 {/* Expanded lessons */}
                 <AnimatePresence>
-                  {isExpanded && module.status !== 'locked' && (
+                  {isExpanded && status !== 'locked' && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
@@ -220,12 +216,12 @@ export default function Roadmap() {
                           to={`/lesson/${lesson.id}`}
                           className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-sand-50 transition-colors"
                         >
-                          {lesson.completed ? (
+                          {completedIds.has(lesson.id) ? (
                             <CheckCircle2 size={16} className="text-green-500 flex-shrink-0" />
                           ) : (
                             <div className="w-4 h-4 rounded-full border-2 border-sand-300 flex-shrink-0" />
                           )}
-                          <span className={`text-sm ${lesson.completed ? 'text-dark-300' : 'text-dark font-medium'}`}>
+                          <span className={`text-sm ${completedIds.has(lesson.id) ? 'text-dark-300' : 'text-dark font-medium'}`}>
                             {lesson.title}
                           </span>
                         </Link>

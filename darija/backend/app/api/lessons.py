@@ -48,6 +48,55 @@ async def list_lessons(
     )
 
 
+@router.get("/recommended", response_model=LessonResponse)
+async def get_recommended_lesson(
+    db: AsyncSession = Depends(get_db), current_user: User = Depends(get_current_user)
+):
+    """Get the next recommended lesson based on user level and progress."""
+    completed_result = await db.execute(
+        select(UserProgress.lesson_id).where(UserProgress.user_id == current_user.id)
+    )
+    completed_ids = {row[0] for row in completed_result.all()}
+
+    # Find first uncompleted lesson at user's level (skip game_content lessons)
+    result = await db.execute(
+        select(Lesson)
+        .where(Lesson.level == current_user.level, Lesson.order < 999)
+        .order_by(Lesson.module, Lesson.order)
+    )
+    for lesson in result.scalars().all():
+        if lesson.id not in completed_ids:
+            return lesson
+
+    # All done at current level - try next level
+    level_up = {"a2": "b1", "b1": "b2"}
+    next_level = level_up.get(current_user.level)
+    if next_level:
+        result = await db.execute(
+            select(Lesson)
+            .where(Lesson.level == next_level, Lesson.order < 999)
+            .order_by(Lesson.module, Lesson.order)
+            .limit(1)
+        )
+        lesson = result.scalar_one_or_none()
+        if lesson:
+            return lesson
+
+    # Fallback: first lesson of user's level
+    result = await db.execute(
+        select(Lesson)
+        .where(Lesson.level == current_user.level, Lesson.order < 999)
+        .order_by(Lesson.module, Lesson.order)
+        .limit(1)
+    )
+    lesson = result.scalar_one_or_none()
+    if lesson is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="No lessons available"
+        )
+    return lesson
+
+
 @router.get("/{lesson_id}", response_model=LessonResponse)
 async def get_lesson(
     lesson_id: UUID,

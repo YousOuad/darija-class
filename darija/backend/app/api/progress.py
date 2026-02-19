@@ -1,14 +1,15 @@
-"""Progress routes: summary and weaknesses."""
+"""Progress routes: summary, weaknesses, and recent activity."""
 
-from fastapi import APIRouter, Depends
-from sqlalchemy import func, select
+from fastapi import APIRouter, Depends, Query
+from sqlalchemy import func, select, union_all, literal_column
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
 from app.core.security import get_current_user
+from app.models.lesson import Lesson
 from app.models.progress import GameResult, UserProgress
 from app.models.user import User
-from app.schemas.progress import ProgressSummary, WeaknessResponse
+from app.schemas.progress import ActivityEntry, ProgressSummary, WeaknessResponse
 from app.services.adaptive import get_weaknesses
 
 router = APIRouter(prefix="/progress", tags=["progress"])
@@ -42,8 +43,6 @@ async def get_progress(
     avg_score = avg_result.scalar() or 0.0
 
     # Lessons grouped by module (via lesson join)
-    from app.models.lesson import Lesson
-
     module_result = await db.execute(
         select(Lesson.module, func.count(UserProgress.id))
         .join(Lesson, UserProgress.lesson_id == Lesson.id)
@@ -70,3 +69,47 @@ async def get_user_weaknesses(
     """Return the user's weakness areas sorted by error count."""
     weaknesses = await get_weaknesses(db, current_user.id)
     return weaknesses
+
+
+@router.get("/recent-activity", response_model=list[ActivityEntry])
+async def get_recent_activity(
+    limit: int = Query(10, le=50),
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Return recent lessons completed and games played."""
+    activities = []
+
+    # Recent lesson completions
+    lesson_result = await db.execute(
+        select(Lesson.title, UserProgress.score, UserProgress.completed_at)
+        .join(Lesson, UserProgress.lesson_id == Lesson.id)
+        .where(UserProgress.user_id == current_user.id)
+        .order_by(UserProgress.completed_at.desc())
+        .limit(limit)
+    )
+    for title, score, ts in lesson_result.all():
+        activities.append(
+            ActivityEntry(type="lesson", title=title, xp=int(score * 50), timestamp=ts)
+        )
+
+    # Recent game results
+    game_result = await db.execute(
+        select(GameResult.game_type, GameResult.xp_earned, GameResult.played_at)
+        .where(GameResult.user_id == current_user.id)
+        .order_by(GameResult.played_at.desc())
+        .limit(limit)
+    )
+    for game_type, xp_earned, ts in game_result.all():
+        activities.append(
+            ActivityEntry(
+                type="game",
+                title=game_type.replace("_", " ").title(),
+                xp=xp_earned,
+                timestamp=ts,
+            )
+        )
+
+    # Sort combined by timestamp descending
+    activities.sort(key=lambda a: a.timestamp, reverse=True)
+    return activities[:limit]

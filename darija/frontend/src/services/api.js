@@ -48,35 +48,33 @@ export const authAPI = {
   login: (data) => api.post('/auth/login', data),
   refresh: () => api.post('/auth/refresh'),
   getMe: () => api.get('/auth/me'),
+  updateProfile: (data) => api.put('/auth/me', data),
 };
 
 // Lessons endpoints
 export const lessonsAPI = {
   list: (params) => api.get('/lessons', { params }),
   getById: (id) => api.get(`/lessons/${id}`),
-  complete: (id) => api.post(`/lessons/${id}/complete`),
+  complete: (id, score) => api.post(`/lessons/${id}/complete`, { score }),
+  getRecommended: () => api.get('/lessons/recommended'),
 };
 
 // Games endpoints
 export const gamesAPI = {
   getSession: () => api.get('/games/session'),
-  submitResult: (data) => api.post('/games/result', data),
+  submitResult: (gameType, data) => api.post(`/games/${gameType}/submit`, data),
 };
 
 // Progress endpoints
 export const progressAPI = {
-  getSummary: () => api.get('/progress/summary'),
+  getSummary: () => api.get('/progress'),
   getWeaknesses: () => api.get('/progress/weaknesses'),
+  getRecentActivity: (limit = 10) => api.get(`/progress/recent-activity?limit=${limit}`),
 };
 
 // Leaderboard endpoints
 export const leaderboardAPI = {
   get: (period = 'weekly') => api.get(`/leaderboard?period=${period}`),
-};
-
-// Badges endpoints
-export const badgesAPI = {
-  list: () => api.get('/badges'),
 };
 
 // User endpoints

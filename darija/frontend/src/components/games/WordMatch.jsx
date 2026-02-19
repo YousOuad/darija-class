@@ -4,14 +4,6 @@ import { Check, X, Shuffle } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 
-const MOCK_PAIRS = [
-  { id: 1, darija_arabic: 'سلام', darija_latin: 'Salam', english: 'Hello' },
-  { id: 2, darija_arabic: 'شكرا', darija_latin: 'Choukran', english: 'Thank you' },
-  { id: 3, darija_arabic: 'بسلامة', darija_latin: 'Bslama', english: 'Goodbye' },
-  { id: 4, darija_arabic: 'واخا', darija_latin: 'Wakha', english: 'Okay' },
-  { id: 5, darija_arabic: 'مزيان', darija_latin: 'Mezyan', english: 'Good' },
-];
-
 function shuffleArray(arr) {
   const shuffled = [...arr];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -22,7 +14,15 @@ function shuffleArray(arr) {
 }
 
 export default function WordMatch({ data, onComplete }) {
-  const pairs = data?.pairs || MOCK_PAIRS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const pairs = data?.pairs || [];
   const [shuffledEnglish] = useState(() => shuffleArray(pairs));
   const [selectedDarija, setSelectedDarija] = useState(null);
   const [selectedEnglish, setSelectedEnglish] = useState(null);

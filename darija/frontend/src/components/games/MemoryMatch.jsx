@@ -3,17 +3,6 @@ import { motion } from 'framer-motion';
 import { Clock, RotateCcw } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 
-const MOCK_PAIRS = [
-  { darija: 'Salam', english: 'Hello' },
-  { darija: 'Choukran', english: 'Thank you' },
-  { darija: 'Bslama', english: 'Goodbye' },
-  { darija: 'Wakha', english: 'Okay' },
-  { darija: 'Mezyan', english: 'Good' },
-  { darija: 'Lma', english: 'Water' },
-  { darija: 'Khobz', english: 'Bread' },
-  { darija: 'Atay', english: 'Tea' },
-];
-
 function createCards(pairs) {
   const cards = [];
   pairs.forEach((pair, pairIndex) => {
@@ -29,7 +18,15 @@ function createCards(pairs) {
 }
 
 export default function MemoryMatch({ data, onComplete }) {
-  const pairs = data?.pairs || MOCK_PAIRS;
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No game data available.</p>
+      </div>
+    );
+  }
+
+  const pairs = data?.pairs || [];
   const [cards] = useState(() => createCards(pairs));
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
