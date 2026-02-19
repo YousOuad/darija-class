@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Trophy, Star, Flame, Home } from 'lucide-react';
+import { ArrowLeft, Trophy, Star, Flame, Home, GraduationCap } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Button from '../components/common/Button';
 import LoadingSpinner from '../components/common/LoadingSpinner';
@@ -44,6 +44,7 @@ export default function Session() {
     submitAnswer,
     nextGame,
     resetSession,
+    endSession,
   } = useGameStore();
   const { updateXP } = useProgressStore();
 
@@ -58,9 +59,9 @@ export default function Session() {
     nextGame();
   };
 
-  const handleFinishSession = () => {
+  const handleFinishSession = async () => {
+    await endSession();
     updateXP(totalXPEarned);
-    resetSession();
     navigate('/dashboard');
   };
 
@@ -108,6 +109,15 @@ export default function Session() {
             </motion.div>
 
             <h2 className="text-3xl font-extrabold text-dark mb-2">Session Complete!</h2>
+            {currentSession.level && (
+              <span
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-white mb-3"
+                style={{ backgroundColor: currentSession.levelColor || '#0d9488' }}
+              >
+                <GraduationCap size={14} />
+                {currentSession.level.toUpperCase()} &middot; {currentSession.levelLabel}
+              </span>
+            )}
             <p className="text-dark-400 mb-8">Great job finishing today's practice!</p>
 
             {/* Stats */}
@@ -161,8 +171,8 @@ export default function Session() {
               <Button
                 variant="outline"
                 fullWidth
-                onClick={() => {
-                  resetSession();
+                onClick={async () => {
+                  await endSession();
                   startSession();
                 }}
               >
@@ -191,9 +201,20 @@ export default function Session() {
             <ArrowLeft size={20} />
             <span className="text-sm font-medium">Exit Session</span>
           </button>
-          <span className="text-sm font-medium text-dark-400">
-            Game {currentGameIndex + 1} of {currentSession.games.length}
-          </span>
+          <div className="flex items-center gap-3">
+            {currentSession.level && (
+              <span
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-white"
+                style={{ backgroundColor: currentSession.levelColor || '#0d9488' }}
+              >
+                <GraduationCap size={14} />
+                {currentSession.level.toUpperCase()} &middot; {currentSession.levelLabel}
+              </span>
+            )}
+            <span className="text-sm font-medium text-dark-400">
+              Game {currentGameIndex + 1} of {currentSession.games.length}
+            </span>
+          </div>
         </div>
 
         {/* Progress bar */}

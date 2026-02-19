@@ -1,19 +1,35 @@
 """Adaptive learning engine for DarijaLingo.
 
 Tracks user performance and generates personalised game sessions
-that prioritise weak skill areas.
+that prioritise weak skill areas.  Games are scoped to the user's
+CEFR level and use vocabulary from **completed lessons** so that
+content always reinforces what the learner has already studied.
 """
 
 import random
 from datetime import datetime, timezone
-from typing import List
+from typing import List, Set
 from uuid import UUID
 
-from sqlalchemy import select, update
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.lesson import Lesson
-from app.models.progress import UserWeakness
+from app.models.progress import UserProgress, UserWeakness
+
+
+# ---------------------------------------------------------------------------
+# Difficulty scaling per CEFR level
+# ---------------------------------------------------------------------------
+
+LEVEL_DIFFICULTY = {
+    "a1": {"word_match_count": 4, "fill_blank_count": 2, "cultural_quiz_count": 2},
+    "a2": {"word_match_count": 5, "fill_blank_count": 3, "cultural_quiz_count": 3},
+    "b1": {"word_match_count": 6, "fill_blank_count": 4, "cultural_quiz_count": 4},
+    "b2": {"word_match_count": 8, "fill_blank_count": 5, "cultural_quiz_count": 4},
+}
+
+DEFAULT_DIFFICULTY = LEVEL_DIFFICULTY["a2"]
 
 
 # ---------------------------------------------------------------------------
@@ -465,17 +481,79 @@ CONVERSATION_SCENARIOS = {
 }
 
 
-async def _load_game_content(db: AsyncSession, level: str) -> dict:
-    """Load all game_content entries from curriculum for the given level."""
+async def _get_completed_modules(
+    db: AsyncSession, user_id: UUID, level: str
+) -> Set[str]:
+    """Return the set of module IDs where the user has completed at least one lesson."""
     result = await db.execute(
-        select(Lesson.content_json).where(Lesson.level == level, Lesson.order == 999)
+        select(Lesson.module)
+        .join(UserProgress, UserProgress.lesson_id == Lesson.id)
+        .where(
+            UserProgress.user_id == user_id, Lesson.level == level, Lesson.order < 999
+        )
+        .distinct()
     )
+    return {row[0] for row in result.all()}
+
+
+async def _load_game_content(
+    db: AsyncSession, level: str, completed_modules: Set[str] | None = None
+) -> dict:
+    """Load game_content entries scoped to the user's completed modules.
+
+    If *completed_modules* is provided, only game_content from those modules
+    is returned so that games reinforce vocabulary the user has already learned.
+    Falls back to all content for the level when no modules have been completed
+    yet (first session).
+    """
+    stmt = select(Lesson.content_json, Lesson.module).where(
+        Lesson.level == level, Lesson.order == 999
+    )
+    if completed_modules:
+        stmt = stmt.where(Lesson.module.in_(completed_modules))
+
+    result = await db.execute(stmt)
     all_content = {"word_match": [], "fill_blanks": [], "cultural_quiz": []}
-    for (cj,) in result.all():
+    for cj, _module in result.all():
         gc = cj.get("game_content", {}) if cj else {}
         for key in all_content:
             all_content[key].extend(gc.get(key, []))
+
+    # If nothing found from completed modules, fall back to all level content
+    if not any(all_content.values()) and completed_modules:
+        return await _load_game_content(db, level, completed_modules=None)
+
     return all_content
+
+
+async def _load_lesson_vocabulary(db: AsyncSession, user_id: UUID, level: str) -> list:
+    """Extract vocabulary items from the user's completed lessons.
+
+    Returns a flat list of vocabulary dicts that can be used to generate
+    additional word_match pairs and flashcard content directly from words
+    the user has studied.
+    """
+    result = await db.execute(
+        select(Lesson.content_json)
+        .join(UserProgress, UserProgress.lesson_id == Lesson.id)
+        .where(
+            UserProgress.user_id == user_id, Lesson.level == level, Lesson.order < 999
+        )
+    )
+    vocab = []
+    for (cj,) in result.all():
+        if not cj:
+            continue
+        for item in cj.get("vocabulary", []):
+            if item.get("arabic") and item.get("english"):
+                vocab.append(
+                    {
+                        "darija_arabic": item["arabic"],
+                        "darija_latin": item.get("romanized", ""),
+                        "english": item["english"],
+                    }
+                )
+    return vocab
 
 
 def _build_word_match_config(items: list, count: int = 5) -> dict:
@@ -538,7 +616,7 @@ def _build_fill_blank_config(items: list, count: int = 3) -> dict:
             {
                 "sentence_arabic": item.get("sentence_arabic", ""),
                 "sentence_latin": item.get("sentence_latin", ""),
-                "english": item.get("hint", ""),
+                "english": item.get("english", item.get("hint", "")),
                 "answer": {
                     "arabic": item.get("answer_arabic", ""),
                     "latin": item.get("answer_latin", ""),
@@ -592,17 +670,40 @@ def _build_cultural_quiz_config(items: list, count: int = 3) -> dict:
 async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[dict]:
     """Generate a daily game session prioritising the user's weak areas.
 
-    The returned list contains game config dicts ready to be serialised
-    as ``GameConfig`` schemas, with actual game content from curriculum.
+    Games are scoped to the user's CEFR level and draw content only from
+    modules/lessons the user has already completed, so vocabulary always
+    reinforces prior learning.  Difficulty (number of items per game)
+    scales with the CEFR level.
     """
     weaknesses = await get_weaknesses(db, user_id)
-    content = await _load_game_content(db, level)
+
+    # Determine which modules the user has completed at this level
+    completed_modules = await _get_completed_modules(db, user_id, level)
+
+    # Load game_content scoped to completed modules
+    content = await _load_game_content(db, level, completed_modules or None)
+
+    # Also extract vocabulary directly from completed lessons to enrich
+    # word_match content with words the user actually studied
+    lesson_vocab = await _load_lesson_vocabulary(db, user_id, level)
+    if lesson_vocab:
+        # Merge lesson vocabulary into word_match pool (deduplicate)
+        existing = {
+            (w.get("darija_arabic", ""), w.get("english", ""))
+            for w in content["word_match"]
+        }
+        for v in lesson_vocab:
+            key = (v["darija_arabic"], v["english"])
+            if key not in existing:
+                content["word_match"].append(v)
+                existing.add(key)
+
+    difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
 
     # Build a list of games; put weakness-related ones first
     session_games: List[dict] = []
     used_types: set = set()
 
-    # Map skill areas to relevant game types
     skill_to_game = {
         "vocabulary": "word_match",
         "grammar": "fill_blank",
@@ -618,14 +719,14 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
                 (g for g in GAME_TYPES if g["game_type"] == game_type), None
             )
             if game_def:
-                config = _build_game_config(game_type, content, level)
+                config = _build_game_config(game_type, content, level, difficulty)
                 session_games.append({**game_def, "config": config})
                 used_types.add(game_type)
 
     # Fill remaining slots with games not yet included
     for g in GAME_TYPES:
         if g["game_type"] not in used_types:
-            config = _build_game_config(g["game_type"], content, level)
+            config = _build_game_config(g["game_type"], content, level, difficulty)
             session_games.append({**g, "config": config})
             used_types.add(g["game_type"])
 
@@ -659,16 +760,37 @@ def _build_conversation_config(level: str) -> dict:
     }
 
 
-def _build_game_config(game_type: str, content: dict, level: str) -> dict:
-    """Build the config dict for a specific game type with real content."""
+def _build_game_config(
+    game_type: str, content: dict, level: str, difficulty: dict | None = None
+) -> dict:
+    """Build the config dict for a specific game type with real content.
+
+    The *difficulty* dict controls how many items each game contains,
+    scaling with the user's CEFR level.
+    """
+    if difficulty is None:
+        difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
+
     base = {"level": level}
 
     if game_type == "word_match" and content["word_match"]:
-        base.update(_build_word_match_config(content["word_match"]))
+        base.update(
+            _build_word_match_config(
+                content["word_match"], count=difficulty["word_match_count"]
+            )
+        )
     elif game_type == "fill_blank" and content["fill_blanks"]:
-        base.update(_build_fill_blank_config(content["fill_blanks"]))
+        base.update(
+            _build_fill_blank_config(
+                content["fill_blanks"], count=difficulty["fill_blank_count"]
+            )
+        )
     elif game_type == "cultural_quiz" and content["cultural_quiz"]:
-        base.update(_build_cultural_quiz_config(content["cultural_quiz"]))
+        base.update(
+            _build_cultural_quiz_config(
+                content["cultural_quiz"], count=difficulty["cultural_quiz_count"]
+            )
+        )
     elif game_type == "conversation":
         base.update(_build_conversation_config(level))
 

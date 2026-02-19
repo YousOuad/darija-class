@@ -14,13 +14,24 @@ from app.services.xp import GAME_COMPLETE_XP, calculate_xp, check_badges, update
 router = APIRouter(prefix="/games", tags=["games"])
 
 
+LEVEL_LABELS = {
+    "a1": "Beginner",
+    "a2": "Elementary",
+    "b1": "Intermediate",
+    "b2": "Upper-Intermediate",
+}
+
+
 @router.get("/session", response_model=GameSessionResponse)
 async def get_game_session(
     db: AsyncSession = Depends(get_db), current_user: User = Depends(get_current_user)
 ):
-    """Generate a daily game session tailored to the user's weaknesses."""
-    games = await generate_session(db, current_user.id, current_user.level)
-    return GameSessionResponse(games=games)
+    """Generate a daily game session tailored to the user's level and weaknesses."""
+    level = current_user.level
+    games = await generate_session(db, current_user.id, level)
+    return GameSessionResponse(
+        games=games, level=level, level_label=LEVEL_LABELS.get(level, level.upper())
+    )
 
 
 @router.post("/{game_type}/submit", response_model=GameSubmitResponse)

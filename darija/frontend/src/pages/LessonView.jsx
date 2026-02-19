@@ -11,6 +11,30 @@ import useProgressStore from '../store/progressStore';
 import { lessonsAPI } from '../services/api';
 import { mapVocab, mapGrammar, mapPhrases } from '../utils/dataTransform';
 
+function shuffleArray(arr) {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+function normalizeExercises(exercises) {
+  return exercises.map((ex) => {
+    if (ex.type === 'multiple_choice' && ex.correct_answer && !ex.options) {
+      const allOptions = [ex.correct_answer, ...(ex.distractors || [])];
+      const shuffled = shuffleArray(allOptions);
+      return {
+        ...ex,
+        options: shuffled,
+        correctIndex: shuffled.indexOf(ex.correct_answer),
+      };
+    }
+    return ex;
+  });
+}
+
 const tabs = [
   { id: 'vocabulary', label: 'Vocabulary', icon: BookOpen },
   { id: 'grammar', label: 'Grammar', icon: PenTool },
@@ -24,7 +48,9 @@ export default function LessonView() {
   const [activeTab, setActiveTab] = useState('vocabulary');
   const [exerciseAnswers, setExerciseAnswers] = useState({});
   const [exerciseChecked, setExerciseChecked] = useState({});
-  const [fillAnswer, setFillAnswer] = useState('');
+  const [fillAnswers, setFillAnswers] = useState({});
+  const [fillChecked, setFillChecked] = useState({});
+  const [fillCorrect, setFillCorrect] = useState({});
   const [lesson, setLesson] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -46,7 +72,7 @@ export default function LessonView() {
           vocabulary: mapVocab(content.vocabulary || []),
           grammar: mapGrammar(content.grammar || []),
           phrases: mapPhrases(content.phrases || []),
-          exercises: content.exercises || [],
+          exercises: normalizeExercises(content.exercises || []),
         });
       } catch {
         setError('Lesson not found or failed to load.');
@@ -85,11 +111,16 @@ export default function LessonView() {
     try {
       // Calculate score from exercises
       const totalExercises = lesson.exercises.length || 1;
-      const correctAnswers = Object.entries(exerciseChecked).filter(([idx]) => {
+      // Count correct multiple-choice answers
+      let correctAnswers = Object.entries(exerciseChecked).filter(([idx]) => {
         const exercise = lesson.exercises[Number(idx)];
-        if (!exercise) return false;
-        return exerciseAnswers[Number(idx)] === exercise.correct;
+        if (!exercise || exercise.type !== 'multiple_choice') return false;
+        return exerciseAnswers[Number(idx)] === exercise.correctIndex;
       }).length;
+      // Count correct fill-in-blank / translation answers
+      Object.entries(fillCorrect).forEach(([, isCorrect]) => {
+        if (isCorrect) correctAnswers++;
+      });
       const score = Math.round((correctAnswers / totalExercises) * 100) || 80;
 
       const response = await lessonsAPI.complete(id, score);
@@ -107,6 +138,21 @@ export default function LessonView() {
     if (exerciseChecked[exerciseIndex]) return;
     setExerciseAnswers((prev) => ({ ...prev, [exerciseIndex]: answerIndex }));
     setExerciseChecked((prev) => ({ ...prev, [exerciseIndex]: true }));
+  };
+
+  const checkFillAnswer = (exerciseIndex) => {
+    if (fillChecked[exerciseIndex]) return;
+    const exercise = lesson.exercises[exerciseIndex];
+    const userAnswer = (fillAnswers[exerciseIndex] || '').trim().toLowerCase();
+    const correctAnswers = [
+      exercise.correct_answer,
+      exercise.romanized_answer,
+      exercise.correct_answer_arabic,
+      exercise.correct_answer_romanized,
+    ].filter(Boolean).map((a) => a.toLowerCase());
+    const isCorrect = correctAnswers.some((a) => userAnswer === a);
+    setFillChecked((prev) => ({ ...prev, [exerciseIndex]: true }));
+    setFillCorrect((prev) => ({ ...prev, [exerciseIndex]: isCorrect }));
   };
 
   // Filter tabs to only show ones with content
@@ -270,16 +316,20 @@ export default function LessonView() {
           <div className="space-y-6">
             {lesson.exercises.map((exercise, exerciseIndex) => (
               <Card key={exerciseIndex}>
+                {/* Multiple Choice */}
                 {exercise.type === 'multiple_choice' && (
                   <div>
                     <p className="font-bold text-dark mb-4">
                       {exerciseIndex + 1}. {exercise.question}
                     </p>
+                    {exercise.hint && !exerciseChecked[exerciseIndex] && (
+                      <p className="text-xs text-dark-300 italic mb-3">Hint: {exercise.hint}</p>
+                    )}
                     <div className="grid gap-2">
                       {(exercise.options || []).map((option, optIndex) => {
                         const isSelected = exerciseAnswers[exerciseIndex] === optIndex;
-                        const isCorrect = exerciseChecked[exerciseIndex] && optIndex === exercise.correct;
-                        const isWrong = exerciseChecked[exerciseIndex] && isSelected && optIndex !== exercise.correct;
+                        const isCorrect = exerciseChecked[exerciseIndex] && optIndex === exercise.correctIndex;
+                        const isWrong = exerciseChecked[exerciseIndex] && isSelected && optIndex !== exercise.correctIndex;
 
                         return (
                           <button
@@ -295,6 +345,7 @@ export default function LessonView() {
                           >
                             <div className="flex items-center gap-2">
                               {isCorrect && <Check size={16} className="text-green-500" />}
+                              {isWrong && <AlertCircle size={16} className="text-red-500" />}
                               <span className="text-sm font-medium">{option}</span>
                             </div>
                           </button>
@@ -304,27 +355,169 @@ export default function LessonView() {
                   </div>
                 )}
 
-                {exercise.type === 'fill_blank' && (
+                {/* Fill in the Blank */}
+                {exercise.type === 'fill_in_blank' && (
                   <div>
                     <p className="font-bold text-dark mb-2">
                       {exerciseIndex + 1}. Fill in the blank:
                     </p>
-                    <p className="text-dark-400 text-sm mb-4">{exercise.english}</p>
                     <div className="bg-sand-50 rounded-xl p-4 mb-3">
-                      <p className="text-lg font-medium text-dark">{exercise.sentence}</p>
+                      <p className="text-lg font-medium text-dark">{exercise.question}</p>
                     </div>
+                    {exercise.hint && !fillChecked[exerciseIndex] && (
+                      <p className="text-xs text-dark-300 italic mb-3">Hint: {exercise.hint}</p>
+                    )}
                     <div className="flex gap-2">
                       <input
                         type="text"
-                        value={fillAnswer}
-                        onChange={(e) => setFillAnswer(e.target.value)}
+                        value={fillAnswers[exerciseIndex] || ''}
+                        onChange={(e) => setFillAnswers((prev) => ({ ...prev, [exerciseIndex]: e.target.value }))}
+                        onKeyDown={(e) => e.key === 'Enter' && !fillChecked[exerciseIndex] && checkFillAnswer(exerciseIndex)}
+                        disabled={fillChecked[exerciseIndex]}
                         placeholder="Type your answer..."
-                        className="flex-1 px-4 py-2 rounded-xl border border-sand-200 focus:outline-none focus:border-teal-400 text-sm"
+                        className={`flex-1 px-4 py-2 rounded-xl border transition-all duration-200 focus:outline-none text-sm ${
+                          fillChecked[exerciseIndex]
+                            ? fillCorrect[exerciseIndex]
+                              ? 'border-green-400 bg-green-50'
+                              : 'border-red-400 bg-red-50'
+                            : 'border-sand-200 focus:border-teal-400'
+                        }`}
                       />
-                      <Button variant="primary" size="sm" onClick={() => {}}>
-                        Check
-                      </Button>
+                      {!fillChecked[exerciseIndex] && (
+                        <Button variant="primary" size="sm" onClick={() => checkFillAnswer(exerciseIndex)}>
+                          Check
+                        </Button>
+                      )}
                     </div>
+                    {fillChecked[exerciseIndex] && (
+                      <p className={`text-sm mt-2 font-medium ${fillCorrect[exerciseIndex] ? 'text-green-600' : 'text-red-600'}`}>
+                        {fillCorrect[exerciseIndex]
+                          ? 'Correct!'
+                          : `Answer: ${exercise.correct_answer}${exercise.romanized_answer ? ` (${exercise.romanized_answer})` : ''}`}
+                      </p>
+                    )}
+                  </div>
+                )}
+
+                {/* Translation */}
+                {exercise.type === 'translation' && (
+                  <div>
+                    <p className="font-bold text-dark mb-2">
+                      {exerciseIndex + 1}. {exercise.question}
+                    </p>
+                    {exercise.hint && !fillChecked[exerciseIndex] && (
+                      <p className="text-xs text-dark-300 italic mb-3">Hint: {exercise.hint}</p>
+                    )}
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={fillAnswers[exerciseIndex] || ''}
+                        onChange={(e) => setFillAnswers((prev) => ({ ...prev, [exerciseIndex]: e.target.value }))}
+                        onKeyDown={(e) => e.key === 'Enter' && !fillChecked[exerciseIndex] && checkFillAnswer(exerciseIndex)}
+                        disabled={fillChecked[exerciseIndex]}
+                        placeholder="Type your translation..."
+                        className={`flex-1 px-4 py-2 rounded-xl border transition-all duration-200 focus:outline-none text-sm ${
+                          fillChecked[exerciseIndex]
+                            ? fillCorrect[exerciseIndex]
+                              ? 'border-green-400 bg-green-50'
+                              : 'border-red-400 bg-red-50'
+                            : 'border-sand-200 focus:border-teal-400'
+                        }`}
+                      />
+                      {!fillChecked[exerciseIndex] && (
+                        <Button variant="primary" size="sm" onClick={() => checkFillAnswer(exerciseIndex)}>
+                          Check
+                        </Button>
+                      )}
+                    </div>
+                    {fillChecked[exerciseIndex] && (
+                      <p className={`text-sm mt-2 font-medium ${fillCorrect[exerciseIndex] ? 'text-green-600' : 'text-red-600'}`}>
+                        {fillCorrect[exerciseIndex]
+                          ? 'Correct!'
+                          : `Answer: ${exercise.correct_answer_arabic || exercise.correct_answer || ''}${exercise.correct_answer_romanized ? ` (${exercise.correct_answer_romanized})` : ''}`}
+                      </p>
+                    )}
+                  </div>
+                )}
+
+                {/* Matching */}
+                {exercise.type === 'matching' && (
+                  <div>
+                    <p className="font-bold text-dark mb-4">
+                      {exerciseIndex + 1}. {exercise.question}
+                    </p>
+                    <div className="space-y-2">
+                      {(exercise.pairs || []).map((pair, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-sand-50 rounded-xl p-3">
+                          <span className="font-bold text-teal-600 flex-1 text-right">{pair.darija}</span>
+                          <span className="text-dark-300">—</span>
+                          <span className="text-dark-400 flex-1">{pair.english}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Ordering */}
+                {exercise.type === 'ordering' && (
+                  <div>
+                    <p className="font-bold text-dark mb-4">
+                      {exerciseIndex + 1}. {exercise.question}
+                    </p>
+                    <div className="space-y-2">
+                      {(exercise.correct_order || []).map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-sand-50 rounded-xl p-3">
+                          <span className="w-7 h-7 rounded-lg bg-teal-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">
+                            {i + 1}
+                          </span>
+                          <span className="text-sm font-medium text-dark">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Dialogue Completion */}
+                {exercise.type === 'dialogue_completion' && (
+                  <div>
+                    <p className="font-bold text-dark mb-2">
+                      {exerciseIndex + 1}. Complete the dialogue:
+                    </p>
+                    <div className="bg-sand-50 rounded-xl p-4 mb-3">
+                      <p className="text-sm font-medium text-dark whitespace-pre-line">{exercise.question}</p>
+                    </div>
+                    {exercise.hint && !fillChecked[exerciseIndex] && (
+                      <p className="text-xs text-dark-300 italic mb-3">Hint: {exercise.hint}</p>
+                    )}
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={fillAnswers[exerciseIndex] || ''}
+                        onChange={(e) => setFillAnswers((prev) => ({ ...prev, [exerciseIndex]: e.target.value }))}
+                        onKeyDown={(e) => e.key === 'Enter' && !fillChecked[exerciseIndex] && checkFillAnswer(exerciseIndex)}
+                        disabled={fillChecked[exerciseIndex]}
+                        placeholder="Type the missing parts..."
+                        className={`flex-1 px-4 py-2 rounded-xl border transition-all duration-200 focus:outline-none text-sm ${
+                          fillChecked[exerciseIndex]
+                            ? fillCorrect[exerciseIndex]
+                              ? 'border-green-400 bg-green-50'
+                              : 'border-red-400 bg-red-50'
+                            : 'border-sand-200 focus:border-teal-400'
+                        }`}
+                      />
+                      {!fillChecked[exerciseIndex] && (
+                        <Button variant="primary" size="sm" onClick={() => checkFillAnswer(exerciseIndex)}>
+                          Check
+                        </Button>
+                      )}
+                    </div>
+                    {fillChecked[exerciseIndex] && (
+                      <p className={`text-sm mt-2 font-medium ${fillCorrect[exerciseIndex] ? 'text-green-600' : 'text-red-600'}`}>
+                        {fillCorrect[exerciseIndex]
+                          ? 'Correct!'
+                          : `Answer: ${exercise.correct_answer}`}
+                      </p>
+                    )}
                   </div>
                 )}
               </Card>

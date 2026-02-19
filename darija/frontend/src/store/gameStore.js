@@ -9,9 +9,20 @@ const BACKEND_TYPE_MAP = {
   translation: 'fill_in_blank',
 };
 
+const LEVEL_COLORS = {
+  a1: '#6366f1',
+  a2: '#0d9488',
+  b1: '#f59e0b',
+  b2: '#e11d48',
+};
+
 function normalizeSession(raw) {
+  const level = raw.level || '';
   return {
     ...raw,
+    level,
+    levelLabel: raw.level_label || level.toUpperCase(),
+    levelColor: LEVEL_COLORS[level] || '#0d9488',
     games: (raw.games || []).map((g) => ({
       type: BACKEND_TYPE_MAP[g.game_type] || g.game_type || g.type,
       title: g.title,

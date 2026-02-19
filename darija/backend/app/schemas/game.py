@@ -13,6 +13,8 @@ class GameConfig(BaseModel):
 
 class GameSessionResponse(BaseModel):
     games: List[GameConfig]
+    level: str = ""
+    level_label: str = ""
 
 
 class GameSubmitRequest(BaseModel):
