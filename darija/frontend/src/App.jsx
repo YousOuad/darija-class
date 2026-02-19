@@ -15,6 +15,7 @@ import Progress from './pages/Progress';
 import Leaderboard from './pages/Leaderboard';
 import Settings from './pages/Settings';
 
+
 function ProtectedRoute({ children }) {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
@@ -24,6 +25,7 @@ function ProtectedRoute({ children }) {
 
   return children;
 }
+
 
 export default function App() {
   return (

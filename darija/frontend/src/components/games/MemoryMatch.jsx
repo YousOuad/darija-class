@@ -18,11 +18,19 @@ function createCards(pairs) {
 }
 
 export default function MemoryMatch({ data, onComplete }) {
-  if (!data || Object.keys(data).length === 0) {
+  if (!data || Object.keys(data).length === 0 || !data.pairs?.length) {
     return (
-      <div className="text-center py-16">
-        <p className="text-dark-400">No game data available.</p>
-      </div>
+      <GameWrapper
+        title="Memory Match"
+        score={0}
+        maxScore={0}
+        gameComplete
+        onNext={() => onComplete?.({ correct: false, score: 0, total: 0 })}
+      >
+        <div className="text-center py-8">
+          <p className="text-dark-400">No game data available.</p>
+        </div>
+      </GameWrapper>
     );
   }
 

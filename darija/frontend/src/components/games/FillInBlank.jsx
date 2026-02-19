@@ -5,30 +5,31 @@ import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 
 export default function FillInBlank({ data, onComplete }) {
-  if (!data || Object.keys(data).length === 0) {
+  // Handle both array format {questions: [...]} and single object format
+  const questions = data?.questions || (data?.sentence_latin ? [data] : []);
+
+  if (!data || Object.keys(data).length === 0 || questions.length === 0) {
     return (
-      <div className="text-center py-16">
-        <p className="text-dark-400">No game data available.</p>
-      </div>
+      <GameWrapper
+        title="Fill in the Blank"
+        score={0}
+        maxScore={0}
+        gameComplete
+        onNext={() => onComplete?.({ correct: false, score: 0, total: 0 })}
+      >
+        <div className="text-center py-8">
+          <p className="text-dark-400">No game data available.</p>
+        </div>
+      </GameWrapper>
     );
   }
 
-  // Handle both array format {questions: [...]} and single object format
-  const questions = data?.questions || (data?.sentence_latin ? [data] : []);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-
-  if (questions.length === 0) {
-    return (
-      <div className="text-center py-16">
-        <p className="text-dark-400">No game data available.</p>
-      </div>
-    );
-  }
 
   const question = questions[currentQ];
 
@@ -100,12 +101,13 @@ export default function FillInBlank({ data, onComplete }) {
         ))}
       </div>
 
-      {/* English meaning / clue */}
+      {/* English sentence */}
       <div className="bg-sand-50 rounded-xl p-5 mb-6">
-        <p className="text-sm text-dark-300 mb-2">Fill in the missing word:</p>
-        <p className="text-base font-medium text-dark mb-3">
+        <p className="text-xs font-semibold text-teal-500 uppercase tracking-wider mb-2">English</p>
+        <p className="text-lg font-bold text-dark mb-4">
           {question.english}
         </p>
+        <p className="text-xs font-semibold text-terracotta-500 uppercase tracking-wider mb-2">Complete in Darija</p>
         <div className="bg-white rounded-lg p-3 border border-sand-200">
           <ScriptText
             arabic={question.sentence_arabic}
