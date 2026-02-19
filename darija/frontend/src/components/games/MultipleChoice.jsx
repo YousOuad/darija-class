@@ -14,6 +14,15 @@ export default function MultipleChoice({ data, onComplete }) {
   }
 
   const questions = data?.questions || (data?.options ? [data] : []);
+
+  if (questions.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No quiz questions available.</p>
+      </div>
+    );
+  }
+
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);

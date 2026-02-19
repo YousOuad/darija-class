@@ -13,6 +13,15 @@ export default function CulturalQuiz({ data, onComplete }) {
   }
 
   const questions = data?.questions || (data?.question ? [data] : []);
+
+  if (questions.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-dark-400">No quiz questions available.</p>
+      </div>
+    );
+  }
+
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
