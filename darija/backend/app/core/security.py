@@ -131,3 +131,16 @@ async def get_current_user(
         )
 
     return user
+
+
+async def require_teacher_or_admin(current_user=Depends(get_current_user)):
+    """Ensure the current user has teacher or admin role.
+
+    Raises 403 if the user is a regular student.
+    """
+    if current_user.role not in ("teacher", "admin"):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Teacher or admin role required",
+        )
+    return current_user

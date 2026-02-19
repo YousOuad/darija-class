@@ -14,6 +14,7 @@ import Roadmap from './pages/Roadmap';
 import Progress from './pages/Progress';
 import Leaderboard from './pages/Leaderboard';
 import Settings from './pages/Settings';
+import CurriculumEditor from './pages/CurriculumEditor';
 
 
 function ProtectedRoute({ children }) {
@@ -21,6 +22,21 @@ function ProtectedRoute({ children }) {
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
+  }
+
+  return children;
+}
+
+function TeacherRoute({ children }) {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const user = useAuthStore((state) => state.user);
+
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+
+  if (user?.role !== 'teacher' && user?.role !== 'admin') {
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;
@@ -82,6 +98,13 @@ export default function App() {
         <ProtectedRoute>
           <Settings />
         </ProtectedRoute>
+      } />
+
+      {/* Teacher/Admin routes */}
+      <Route path="/curriculum-editor" element={
+        <TeacherRoute>
+          <CurriculumEditor />
+        </TeacherRoute>
       } />
 
       {/* Catch-all */}

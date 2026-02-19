@@ -8,7 +8,9 @@ import {
   BarChart3,
   Trophy,
   Settings,
+  PenSquare,
 } from 'lucide-react';
+import useAuthStore from '../../store/authStore';
 
 const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -21,9 +23,16 @@ const navItems = [
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
+  const user = useAuthStore((state) => state.user);
+  const isTeacherOrAdmin = user?.role === 'teacher' || user?.role === 'admin';
+
+  const allNavItems = isTeacherOrAdmin
+    ? [...navItems, { to: '/curriculum-editor', label: 'Curriculum', icon: PenSquare }]
+    : navItems;
+
   const sidebarContent = (
     <nav className="flex flex-col gap-1 px-3 py-4">
-      {navItems.map((item) => (
+      {allNavItems.map((item) => (
         <NavLink
           key={item.to}
           to={item.to}

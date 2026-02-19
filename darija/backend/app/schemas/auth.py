@@ -31,6 +31,7 @@ class UserResponse(BaseModel):
     email: str
     display_name: str
     level: str
+    role: str
     xp: int
     streak: int
     created_at: datetime

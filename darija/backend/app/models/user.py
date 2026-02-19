@@ -20,6 +20,7 @@ class User(Base):
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
     display_name: Mapped[str] = mapped_column(String(100), nullable=False)
     level: Mapped[str] = mapped_column(String(10), nullable=False, default="a2")
+    role: Mapped[str] = mapped_column(String(20), nullable=False, default="student")
     xp: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     streak: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     last_active: Mapped[datetime | None] = mapped_column(

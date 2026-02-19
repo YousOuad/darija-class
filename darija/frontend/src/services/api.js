@@ -88,4 +88,13 @@ export const aiAPI = {
   sendConversation: (data) => api.post('/ai/conversation', data),
 };
 
+// Curriculum editor endpoints (teacher/admin only)
+export const curriculumAPI = {
+  getModules: () => api.get('/curriculum/modules'),
+  getModule: (moduleId) => api.get(`/curriculum/modules/${moduleId}`),
+  updateLesson: (lessonId, data) => api.put(`/curriculum/lessons/${lessonId}`, data),
+  createLesson: (moduleId, data) => api.post(`/curriculum/modules/${moduleId}/lessons`, data),
+  deleteLesson: (lessonId) => api.delete(`/curriculum/lessons/${lessonId}`),
+};
+
 export default api;
