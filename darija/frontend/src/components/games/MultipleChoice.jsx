@@ -13,7 +13,7 @@ export default function MultipleChoice({ data, onComplete }) {
     );
   }
 
-  const questions = data?.options ? [data] : [];
+  const questions = data?.questions || (data?.options ? [data] : []);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);

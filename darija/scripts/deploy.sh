@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-AWS_REGION="${AWS_REGION:-us-east-1}"
+AWS_REGION="${AWS_REGION:-eu-west-3}"
 PROJECT_NAME="${PROJECT_NAME:-darijalingo}"
 ENVIRONMENT="${ENVIRONMENT:-production}"
 FUNCTION_NAME="${PROJECT_NAME}-${ENVIRONMENT}-backend"

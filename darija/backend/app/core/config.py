@@ -26,8 +26,11 @@ class Settings(BaseSettings):
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
-    # Claude / Anthropic
+    # Claude / Anthropic (kept for backwards compatibility)
     ANTHROPIC_API_KEY: str = ""
+
+    # AWS (Bedrock for AI conversations)
+    AWS_REGION: str = "eu-west-3"
 
     # CORS - comma-separated string
     CORS_ORIGINS: str = "http://localhost:3000,http://localhost:5173"

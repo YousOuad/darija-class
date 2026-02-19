@@ -12,7 +12,7 @@ export default function CulturalQuiz({ data, onComplete }) {
     );
   }
 
-  const questions = data?.question ? [data] : [];
+  const questions = data?.questions || (data?.question ? [data] : []);
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
