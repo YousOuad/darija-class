@@ -32,11 +32,6 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      const token = localStorage.getItem('darijalingo_token');
-      // Don't redirect demo users — let the calling code handle the error
-      if (token && token.startsWith('demo-')) {
-        return Promise.reject(error);
-      }
       localStorage.removeItem('darijalingo_token');
       localStorage.removeItem('darijalingo_user');
       if (window.location.pathname !== '/login' && window.location.pathname !== '/') {
