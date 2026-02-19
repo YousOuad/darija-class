@@ -9,6 +9,8 @@ import {
   Trophy,
   Settings,
   PenSquare,
+  Layers,
+  MessageCircle,
 } from 'lucide-react';
 import useAuthStore from '../../store/authStore';
 
@@ -17,6 +19,8 @@ const navItems = [
   { to: '/lessons', label: 'Lessons', icon: BookOpen },
   { to: '/roadmap', label: 'Roadmap', icon: Map },
   { to: '/session', label: 'Games', icon: Gamepad2 },
+  { to: '/flashcards', label: 'Flash Cards', icon: Layers },
+  { to: '/conversation', label: 'Conversation', icon: MessageCircle },
   { to: '/progress', label: 'Progress', icon: BarChart3 },
   { to: '/leaderboard', label: 'Leaderboard', icon: Trophy },
   { to: '/settings', label: 'Settings', icon: Settings },

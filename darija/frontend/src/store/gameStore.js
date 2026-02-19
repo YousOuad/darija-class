@@ -25,6 +25,7 @@ function normalizeSession(raw) {
     levelColor: LEVEL_COLORS[level] || '#0d9488',
     games: (raw.games || []).map((g) => ({
       type: BACKEND_TYPE_MAP[g.game_type] || g.game_type || g.type,
+      backendType: g.game_type || g.type,
       title: g.title,
       data: g.config || g.data || {},
     })),
@@ -79,27 +80,30 @@ const useGameStore = create((set, get) => ({
   },
 
   endSession: async () => {
-    const { currentSession, results, totalXPEarned } = get();
+    const { currentSession, results } = get();
+    let success = true;
     try {
-      // Submit each game result individually
       const games = currentSession?.games || [];
       for (let i = 0; i < results.length; i++) {
         const result = results[i];
         const game = games[result.gameIndex] || games[i];
-        const gameType = game?.type || 'multiple_choice';
-        await gamesAPI.submitResult(gameType, {
-          score: result.correct ? 100 : 0,
-          xp_earned: result.xpEarned,
+        // Use the original backend game type for the API call
+        const backendType = game?.backendType || 'word_match';
+        await gamesAPI.submitResult(backendType, {
+          score: result.correct ? 1.0 : 0.0,
+          answers: [{ correct: result.correct }],
         });
       }
     } catch (error) {
       console.error('Failed to submit game results:', error);
+      success = false;
     }
     set({
       currentSession: null,
       currentGameIndex: 0,
       isSessionComplete: false,
     });
+    return success;
   },
 
   resetSession: () => {

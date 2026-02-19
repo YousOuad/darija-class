@@ -129,12 +129,14 @@ export default function LessonView() {
     setIsCompleting(true);
     try {
       const response = await lessonsAPI.complete(id, scorePercent / 100);
-      const xpEarned = response.data?.xp_earned || 50;
-      updateXP(xpEarned);
+      const xpEarned = response.data?.xp_earned || 0;
+      if (xpEarned > 0) {
+        updateXP(xpEarned);
+      }
       navigate('/lessons');
-    } catch {
-      updateXP(50);
-      navigate('/lessons');
+    } catch (err) {
+      console.error('Failed to complete lesson:', err);
+      setIsCompleting(false);
     }
   };
 

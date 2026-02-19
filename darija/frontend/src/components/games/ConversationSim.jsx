@@ -5,7 +5,7 @@ import GameWrapper from './GameWrapper';
 import ScriptText from '../common/ScriptText';
 import { aiAPI } from '../../services/api';
 
-const MAX_EXCHANGES = 8;
+const MAX_EXCHANGES = 3;
 
 export default function ConversationSim({ data, onComplete }) {
   if (!data || Object.keys(data).length === 0) {

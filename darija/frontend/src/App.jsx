@@ -14,6 +14,8 @@ import Roadmap from './pages/Roadmap';
 import Progress from './pages/Progress';
 import Leaderboard from './pages/Leaderboard';
 import Settings from './pages/Settings';
+import Flashcards from './pages/Flashcards';
+import Conversation from './pages/Conversation';
 import CurriculumEditor from './pages/CurriculumEditor';
 
 
@@ -97,6 +99,16 @@ export default function App() {
       <Route path="/settings" element={
         <ProtectedRoute>
           <Settings />
+        </ProtectedRoute>
+      } />
+      <Route path="/flashcards" element={
+        <ProtectedRoute>
+          <Flashcards />
+        </ProtectedRoute>
+      } />
+      <Route path="/conversation" element={
+        <ProtectedRoute>
+          <Conversation />
         </ProtectedRoute>
       } />
 

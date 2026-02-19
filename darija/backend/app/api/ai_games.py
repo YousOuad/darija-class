@@ -9,7 +9,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.database import get_db
 from app.core.security import get_current_user
 from app.models.user import User
-from app.services.claude import generate_conversation_response
+from app.services.claude import (
+    generate_conversation_response,
+    generate_open_conversation,
+)
 
 router = APIRouter(prefix="/ai", tags=["ai"])
 
@@ -56,6 +59,40 @@ async def conversation(
         conversation_history=history_dicts,
         user_message=payload.message,
         scenario=payload.scenario,
+    )
+
+    return ConversationResponse(
+        arabic=result.get("arabic", ""),
+        latin=result.get("latin", ""),
+        english=result.get("english", ""),
+        correction=result.get("correction"),
+        suggestions=[SuggestionItem(**s) for s in result.get("suggestions", [])],
+        error=result.get("error"),
+    )
+
+
+class OpenConversationRequest(BaseModel):
+    message: str
+    history: List[ConversationTurn] = []
+    topic: str = "General everyday conversation"
+
+
+@router.post("/open-conversation", response_model=ConversationResponse)
+async def open_conversation(
+    payload: OpenConversationRequest,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Open-ended Darija conversation practice (standalone page)."""
+    history_dicts: List[Dict[str, str]] = [
+        {"role": t.role, "content": t.content} for t in payload.history
+    ]
+
+    result = await generate_open_conversation(
+        user_level=current_user.level,
+        conversation_history=history_dicts,
+        user_message=payload.message,
+        topic=payload.topic,
     )
 
     return ConversationResponse(

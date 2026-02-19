@@ -60,8 +60,10 @@ export default function Session() {
   };
 
   const handleFinishSession = async () => {
-    await endSession();
-    updateXP(totalXPEarned);
+    const success = await endSession();
+    if (success) {
+      updateXP(totalXPEarned);
+    }
     navigate('/dashboard');
   };
 
@@ -172,7 +174,10 @@ export default function Session() {
                 variant="outline"
                 fullWidth
                 onClick={async () => {
-                  await endSession();
+                  const success = await endSession();
+                  if (success) {
+                    updateXP(totalXPEarned);
+                  }
                   startSession();
                 }}
               >

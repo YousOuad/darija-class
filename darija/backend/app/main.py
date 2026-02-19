@@ -6,7 +6,16 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
 
-from app.api import ai_games, auth, curriculum, games, leaderboard, lessons, progress
+from app.api import (
+    ai_games,
+    auth,
+    curriculum,
+    flashcards,
+    games,
+    leaderboard,
+    lessons,
+    progress,
+)
 from app.core.config import settings
 from app.core.database import Base, engine
 
@@ -45,6 +54,7 @@ application.include_router(progress.router, prefix="/api")
 application.include_router(leaderboard.router, prefix="/api")
 application.include_router(ai_games.router, prefix="/api")
 application.include_router(curriculum.router, prefix="/api")
+application.include_router(flashcards.router, prefix="/api")
 
 
 @application.get("/api/health", tags=["health"])

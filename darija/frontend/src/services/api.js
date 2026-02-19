@@ -86,6 +86,17 @@ export const userAPI = {
 // AI endpoints
 export const aiAPI = {
   sendConversation: (data) => api.post('/ai/conversation', data),
+  sendOpenConversation: (data) => api.post('/ai/open-conversation', data),
+};
+
+// Flashcards endpoints
+export const flashcardsAPI = {
+  getMyDeck: () => api.get('/flashcards/my-deck'),
+  create: (data) => api.post('/flashcards', data),
+  delete: (id) => api.delete(`/flashcards/${id}`),
+  getSuggestions: () => api.get('/flashcards/suggestions'),
+  explore: () => api.get('/flashcards/explore'),
+  copy: (id) => api.post(`/flashcards/${id}/copy`),
 };
 
 // Curriculum editor endpoints (teacher/admin only)

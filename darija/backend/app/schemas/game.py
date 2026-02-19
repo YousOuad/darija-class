@@ -18,7 +18,6 @@ class GameSessionResponse(BaseModel):
 
 
 class GameSubmitRequest(BaseModel):
-    game_type: str
     score: float = Field(..., ge=0.0, le=1.0)
     answers: List[Dict[str, Any]] = []
 
