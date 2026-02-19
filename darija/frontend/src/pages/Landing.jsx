@@ -52,8 +52,8 @@ export default function Landing() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-sand-100">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="text-2xl font-extrabold">
-            <span className="text-teal-500">Darija</span>
-            <span className="text-terracotta-500">Lingo</span>
+            <span className="text-teal-500">Ta</span>
+            <span className="text-terracotta-500">gine</span>
           </Link>
           <div className="flex items-center gap-3">
             {isAuthenticated ? (
@@ -243,41 +243,12 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-4 bg-gradient-to-br from-teal-500 to-teal-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
-              Ready to Start Your Darija Journey?
-            </h2>
-            <p className="text-teal-100 text-lg mb-8 max-w-xl mx-auto">
-              Join thousands of learners mastering Moroccan Darija. Free to start, fun to continue.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/register">
-                <Button variant="gold" size="lg">
-                  Create Free Account
-                  <ArrowRight size={18} className="ml-2" />
-                </Button>
-              </Link>
-              <Button variant="outline" size="lg" onClick={handleDemoLogin} className="!border-white !text-white hover:!bg-white/10">
-                Try Demo
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="bg-dark py-12 px-4">
+      <footer className="bg-dark py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-2xl font-extrabold mb-4">
-            <span className="text-teal-400">Darija</span>
-            <span className="text-terracotta-400">Lingo</span>
+          <p className="text-2xl font-extrabold mb-2">
+            <span className="text-teal-400">Ta</span>
+            <span className="text-terracotta-400">gine</span>
           </p>
           <p className="text-dark-200 text-sm">
             Made with love for the Moroccan Darija language and culture.

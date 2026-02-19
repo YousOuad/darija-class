@@ -48,8 +48,8 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
 
           <Link to="/dashboard" className="flex items-center gap-2">
             <span className="text-2xl font-extrabold">
-              <span className="text-teal-500">Darija</span>
-              <span className="text-terracotta-500">Lingo</span>
+              <span className="text-teal-500">Ta</span>
+              <span className="text-terracotta-500">gine</span>
             </span>
           </Link>
         </div>
