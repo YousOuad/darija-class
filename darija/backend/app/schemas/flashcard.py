@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 
 class FlashcardCreate(BaseModel):
-    front_arabic: str = Field(..., min_length=1, max_length=500)
+    front_arabic: str = Field(default="", max_length=500)
     front_latin: str = Field(..., min_length=1, max_length=500)
     back: str = Field(..., min_length=1, max_length=500)
     is_public: bool = True

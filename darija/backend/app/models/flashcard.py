@@ -20,7 +20,7 @@ class Flashcard(Base):
         nullable=False,
         index=True,
     )
-    front_arabic: Mapped[str] = mapped_column(String(500), nullable=False)
+    front_arabic: Mapped[str] = mapped_column(String(500), nullable=False, default="")
     front_latin: Mapped[str] = mapped_column(String(500), nullable=False)
     back: Mapped[str] = mapped_column(String(500), nullable=False)
     is_public: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)

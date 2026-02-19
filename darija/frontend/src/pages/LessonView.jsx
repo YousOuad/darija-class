@@ -20,17 +20,73 @@ function shuffleArray(arr) {
   return shuffled;
 }
 
-function normalizeExercises(exercises) {
+// Detect if a string contains Arabic script characters
+function hasArabic(str) {
+  return /[\u0600-\u06FF]/.test(str || '');
+}
+
+// Build a lookup map from arabic text to romanized from vocabulary
+function buildRomanizedLookup(vocabulary) {
+  const lookup = {};
+  for (const v of vocabulary || []) {
+    if (v.arabic && (v.romanized || v.latin)) {
+      lookup[v.arabic] = v.romanized || v.latin;
+      lookup[v.arabic.replace(/؟$/, '')] = v.romanized || v.latin;
+    }
+  }
+  return lookup;
+}
+
+function normalizeExercises(exercises, vocabulary) {
+  const romanizedLookup = buildRomanizedLookup(vocabulary);
+
+  // Collect romanized answers from translation exercises for use as distractors
+  const translationAnswers = exercises
+    .filter((ex) => ex.type === 'translation')
+    .map((ex) => ex.correct_answer_romanized || '')
+    .filter(Boolean);
+
+  // Turn an option string into {text, arabic, romanized} for ScriptText display
+  function enrichOption(option) {
+    if (hasArabic(option)) {
+      const romanized = romanizedLookup[option] || romanizedLookup[option.replace(/؟$/, '')] || '';
+      return { text: option, arabic: option, romanized };
+    }
+    return { text: option, arabic: '', romanized: '' };
+  }
+
   return exercises.map((ex) => {
+    // Convert translation exercises to multiple choice
+    if (ex.type === 'translation') {
+      const correctRomanized = ex.correct_answer_romanized || '';
+      const otherAnswers = translationAnswers.filter((a) => a !== correctRomanized);
+      const fallbackPool = ['salam', 'shukran', 'bslama', 'labas', 'wakha', 'safi', 'bzzaf', 'chwiya', 'yallah', 'inshallah', 'mr7ba', 'l7amdullah'];
+      const availableDistractors = [...new Set([...otherAnswers, ...fallbackPool])]
+        .filter((d) => d !== correctRomanized);
+      const distractors = shuffleArray(availableDistractors).slice(0, 3);
+      const allOptions = [correctRomanized, ...distractors];
+      const shuffled = shuffleArray(allOptions);
+
+      return {
+        type: 'multiple_choice',
+        question: ex.question,
+        hint: ex.hint,
+        options: shuffled.map((o) => enrichOption(o)),
+        correctIndex: shuffled.indexOf(correctRomanized),
+      };
+    }
+
+    // Standard multiple choice
     if (ex.type === 'multiple_choice' && ex.correct_answer && !ex.options) {
       const allOptions = [ex.correct_answer, ...(ex.distractors || [])];
       const shuffled = shuffleArray(allOptions);
       return {
         ...ex,
-        options: shuffled,
+        options: shuffled.map((o) => enrichOption(o)),
         correctIndex: shuffled.indexOf(ex.correct_answer),
       };
     }
+
     return ex;
   });
 }
@@ -48,9 +104,6 @@ export default function LessonView() {
   const [activeTab, setActiveTab] = useState('vocabulary');
   const [exerciseAnswers, setExerciseAnswers] = useState({});
   const [exerciseChecked, setExerciseChecked] = useState({});
-  const [fillAnswers, setFillAnswers] = useState({});
-  const [fillChecked, setFillChecked] = useState({});
-  const [fillCorrect, setFillCorrect] = useState({});
   const [lesson, setLesson] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -66,15 +119,17 @@ export default function LessonView() {
         const data = response.data;
         // Extract content from content_json and map field names
         const content = data.content_json || {};
+        const rawVocabulary = content.vocabulary || [];
+        const rawExercises = (content.exercises || []).filter(
+          (ex) => ex.type === 'multiple_choice' || ex.type === 'translation'
+        );
         setLesson({
           ...data,
           level: (data.level || '').toUpperCase(),
-          vocabulary: mapVocab(content.vocabulary || []),
+          vocabulary: mapVocab(rawVocabulary),
           grammar: mapGrammar(content.grammar || []),
           phrases: mapPhrases(content.phrases || []),
-          exercises: normalizeExercises(content.exercises || []).filter(
-            (ex) => ex.type === 'multiple_choice' || ex.type === 'translation'
-          ),
+          exercises: normalizeExercises(rawExercises, rawVocabulary),
         });
       } catch {
         setError('Lesson not found or failed to load.');
@@ -108,19 +163,15 @@ export default function LessonView() {
     );
   }
 
-  // -- Exercise progress tracking --
+  // -- Exercise progress tracking (all exercises are multiple choice now) --
   const totalExercises = lesson.exercises.length;
-  const answeredMC = Object.keys(exerciseChecked).length;
-  const answeredTranslation = Object.keys(fillChecked).length;
-  const answeredCount = answeredMC + answeredTranslation;
+  const answeredCount = Object.keys(exerciseChecked).length;
   const allAnswered = totalExercises > 0 && answeredCount >= totalExercises;
 
-  const mcCorrect = Object.entries(exerciseChecked).filter(([idx]) => {
+  const totalCorrect = Object.entries(exerciseChecked).filter(([idx]) => {
     const exercise = lesson.exercises[Number(idx)];
-    return exercise?.type === 'multiple_choice' && exerciseAnswers[Number(idx)] === exercise.correctIndex;
+    return exerciseAnswers[Number(idx)] === exercise?.correctIndex;
   }).length;
-  const transCorrect = Object.values(fillCorrect).filter(Boolean).length;
-  const totalCorrect = mcCorrect + transCorrect;
   const scorePercent = totalExercises > 0 ? Math.round((totalCorrect / totalExercises) * 100) : 0;
   const passed = allAnswered && scorePercent >= 70;
 
@@ -146,37 +197,17 @@ export default function LessonView() {
     setExerciseChecked((prev) => ({ ...prev, [exerciseIndex]: true }));
   };
 
-  const checkFillAnswer = (exerciseIndex) => {
-    if (fillChecked[exerciseIndex]) return;
-    const exercise = lesson.exercises[exerciseIndex];
-    const userAnswer = (fillAnswers[exerciseIndex] || '').trim().toLowerCase();
-    const correct = [
-      exercise.correct_answer,
-      exercise.romanized_answer,
-      exercise.correct_answer_arabic,
-      exercise.correct_answer_romanized,
-    ].filter(Boolean).map((a) => a.toLowerCase());
-    const isCorrect = correct.some((a) => userAnswer === a);
-    setFillChecked((prev) => ({ ...prev, [exerciseIndex]: true }));
-    setFillCorrect((prev) => ({ ...prev, [exerciseIndex]: isCorrect }));
-  };
-
   const handleRetry = () => {
     setExerciseAnswers({});
     setExerciseChecked({});
-    setFillAnswers({});
-    setFillChecked({});
-    setFillCorrect({});
     setLesson((prev) => ({
       ...prev,
       exercises: normalizeExercises(
         prev.exercises.map((ex) => {
-          if (ex.type === 'multiple_choice') {
-            const { options, correctIndex, ...rest } = ex;
-            return rest;
-          }
-          return ex;
-        })
+          const { options, correctIndex, ...rest } = ex;
+          return rest;
+        }),
+        prev.vocabulary
       ),
     }));
   };
@@ -354,6 +385,11 @@ export default function LessonView() {
                         const isCorrect = exerciseChecked[exerciseIndex] && optIndex === exercise.correctIndex;
                         const isWrong = exerciseChecked[exerciseIndex] && isSelected && optIndex !== exercise.correctIndex;
 
+                        // Option can be a string or enriched {text, arabic, romanized}
+                        const optText = typeof option === 'string' ? option : option.text;
+                        const optArabic = typeof option === 'object' ? option.arabic : '';
+                        const optRomanized = typeof option === 'object' ? option.romanized : '';
+
                         return (
                           <button
                             key={optIndex}
@@ -369,53 +405,20 @@ export default function LessonView() {
                             <div className="flex items-center gap-2">
                               {isCorrect && <Check size={16} className="text-green-500" />}
                               {isWrong && <AlertCircle size={16} className="text-red-500" />}
-                              <span className="text-sm font-medium">{option}</span>
+                              {optArabic && optRomanized ? (
+                                <ScriptText
+                                  arabic={optArabic}
+                                  latin={optRomanized}
+                                  className="text-sm font-medium"
+                                />
+                              ) : (
+                                <span className="text-sm font-medium">{optText}</span>
+                              )}
                             </div>
                           </button>
                         );
                       })}
                     </div>
-                  </div>
-                )}
-
-                {/* Translation */}
-                {exercise.type === 'translation' && (
-                  <div>
-                    <p className="font-bold text-dark mb-2">
-                      {exerciseIndex + 1}. {exercise.question}
-                    </p>
-                    {exercise.hint && !fillChecked[exerciseIndex] && (
-                      <p className="text-xs text-dark-300 italic mb-3">Hint: {exercise.hint}</p>
-                    )}
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        value={fillAnswers[exerciseIndex] || ''}
-                        onChange={(e) => setFillAnswers((prev) => ({ ...prev, [exerciseIndex]: e.target.value }))}
-                        onKeyDown={(e) => e.key === 'Enter' && !fillChecked[exerciseIndex] && checkFillAnswer(exerciseIndex)}
-                        disabled={fillChecked[exerciseIndex]}
-                        placeholder="Type your translation..."
-                        className={`flex-1 px-4 py-2 rounded-xl border transition-all duration-200 focus:outline-none text-sm ${
-                          fillChecked[exerciseIndex]
-                            ? fillCorrect[exerciseIndex]
-                              ? 'border-green-400 bg-green-50'
-                              : 'border-red-400 bg-red-50'
-                            : 'border-sand-200 focus:border-teal-400'
-                        }`}
-                      />
-                      {!fillChecked[exerciseIndex] && (
-                        <Button variant="primary" size="sm" onClick={() => checkFillAnswer(exerciseIndex)}>
-                          Check
-                        </Button>
-                      )}
-                    </div>
-                    {fillChecked[exerciseIndex] && (
-                      <p className={`text-sm mt-2 font-medium ${fillCorrect[exerciseIndex] ? 'text-green-600' : 'text-red-600'}`}>
-                        {fillCorrect[exerciseIndex]
-                          ? 'Correct!'
-                          : `Answer: ${exercise.correct_answer_arabic || exercise.correct_answer || ''}${exercise.correct_answer_romanized ? ` (${exercise.correct_answer_romanized})` : ''}`}
-                      </p>
-                    )}
                   </div>
                 )}
 
