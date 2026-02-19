@@ -1,0 +1,37 @@
+# Local development only — production uses Lambda + RDS
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-darija}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-darija_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-darija_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U darija -d darija_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://darija:darija_pass@db:5432/darija_db
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-dev-secret-key}
+      JWT_ALGORITHM: HS256
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CORS_ORIGINS: http://localhost:3000,http://localhost:5173
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - ./curriculum:/curriculum
+
+volumes:
+  postgres_data:

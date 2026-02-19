@@ -1,0 +1,103 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        terracotta: {
+          50: '#fdf2ee',
+          100: '#fbe1d8',
+          200: '#f6c0af',
+          300: '#f09a80',
+          400: '#e06e4e',
+          500: '#C75B39',
+          600: '#b44a2c',
+          700: '#963a24',
+          800: '#7a3122',
+          900: '#652b20',
+        },
+        teal: {
+          50: '#eefbf8',
+          100: '#d5f4ed',
+          200: '#aee9dd',
+          300: '#79d7c8',
+          400: '#49bfae',
+          500: '#2A9D8F',
+          600: '#1f7f74',
+          700: '#1d665f',
+          800: '#1c524d',
+          900: '#1b4441',
+        },
+        gold: {
+          50: '#fdf9ec',
+          100: '#faf0cb',
+          200: '#f5e098',
+          300: '#E9C46A',
+          400: '#e2b044',
+          500: '#d69a2d',
+          600: '#bc7824',
+          700: '#9c5821',
+          800: '#804622',
+          900: '#6b3b20',
+        },
+        sand: {
+          50: '#fefcf5',
+          100: '#F4E8C1',
+          200: '#eedcaa',
+          300: '#e4c985',
+          400: '#d9b360',
+          500: '#cf9d3e',
+          600: '#b88132',
+          700: '#99642c',
+          800: '#7d502a',
+          900: '#674326',
+        },
+        dark: {
+          DEFAULT: '#1A1A2E',
+          50: '#e8e8ed',
+          100: '#c5c5d3',
+          200: '#9e9eb7',
+          300: '#77779b',
+          400: '#595986',
+          500: '#3c3c72',
+          600: '#34346a',
+          700: '#2a2a5f',
+          800: '#212154',
+          900: '#1A1A2E',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        arabic: ['Noto Sans Arabic', 'Tahoma', 'Arial', 'sans-serif'],
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'fade-in': 'fadeIn 0.3s ease-out',
+      },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwindcss-rtl'),
+  ],
+};

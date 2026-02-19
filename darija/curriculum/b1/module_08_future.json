@@ -1,0 +1,921 @@
+{
+  "module_id": "b1_m08",
+  "level": "b1",
+  "module_number": 8,
+  "title": "Future Plans",
+  "description": "Express future plans, hopes, and aspirations in Darija",
+  "lessons": [
+    {
+      "lesson_id": "b1_m08_l01",
+      "order": 1,
+      "title": "Talking About the Future",
+      "vocabulary": [
+        {
+          "arabic": "غادي",
+          "romanized": "ghadi",
+          "english": "going to (future)",
+          "example_sentence": {
+            "arabic": "غادي نكمل الدراسة",
+            "romanized": "ghadi nkml ddrasa",
+            "english": "I'm going to finish my studies"
+          },
+          "category": "grammar",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مستقبل",
+          "romanized": "must9bal",
+          "english": "future",
+          "example_sentence": {
+            "arabic": "المستقبل فيد الله",
+            "romanized": "lmust9bal fydd allah",
+            "english": "The future is in God's hands"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "إن شاء الله",
+          "romanized": "inshallah",
+          "english": "God willing",
+          "example_sentence": {
+            "arabic": "غادي نتزوج إن شاء الله",
+            "romanized": "ghadi ntzwwj inshallah",
+            "english": "I'll get married, God willing"
+          },
+          "category": "expression",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حلم",
+          "romanized": "7lm",
+          "english": "dream",
+          "example_sentence": {
+            "arabic": "الحلم ديالي نولي طبيب",
+            "romanized": "l7lm dyali nwlli Tbib",
+            "english": "My dream is to become a doctor"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تمنى",
+          "romanized": "tmna",
+          "english": "to wish/hope",
+          "example_sentence": {
+            "arabic": "كنتمنى ننجح",
+            "romanized": "kantmna nnj7",
+            "english": "I hope to succeed"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بدا",
+          "romanized": "bda",
+          "english": "to start",
+          "example_sentence": {
+            "arabic": "غادي نبدا الخدمة الجديدة",
+            "romanized": "ghadi nbda lkhdma ljdida",
+            "english": "I'm going to start the new job"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كمل",
+          "romanized": "kml",
+          "english": "to finish/complete",
+          "example_sentence": {
+            "arabic": "غادي نكمل الدراسة",
+            "romanized": "ghadi nkml ddrasa",
+            "english": "I'm going to finish studies"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تزوج",
+          "romanized": "tzwwj",
+          "english": "to get married",
+          "example_sentence": {
+            "arabic": "بغيت نتزوج العام الجاي",
+            "romanized": "bghit ntzwwj l3am jjay",
+            "english": "I want to get married next year"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بنى",
+          "romanized": "bna",
+          "english": "to build",
+          "example_sentence": {
+            "arabic": "غادي نبني الدار",
+            "romanized": "ghadi nbni ddar",
+            "english": "I'm going to build a house"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "العام الجاي",
+          "romanized": "l3am jjay",
+          "english": "next year",
+          "example_sentence": {
+            "arabic": "العام الجاي غادي نسافر",
+            "romanized": "l3am jjay ghadi nsafr",
+            "english": "Next year I'll travel"
+          },
+          "category": "time",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Future with 'ghadi'",
+          "explanation": "'ghadi' + present verb for definite future plans: 'ghadi nmshi' (I will go), 'ghadi ndir' (I will do).",
+          "examples": [
+            {
+              "arabic": "غادي نكمل الدراسة العام الجاي",
+              "romanized": "ghadi nkml ddrasa l3am jjay",
+              "english": "I will finish studies next year"
+            }
+          ],
+          "common_mistakes": [
+            "'ghadi' doesn't change - it's the same for all persons"
+          ]
+        },
+        {
+          "rule": "Expressing Hopes with 'kantmna/bghit'",
+          "explanation": "'kantmna' (I hope) and 'bghit' (I want) for wishes.",
+          "examples": [
+            {
+              "arabic": "كنتمنى يكون المستقبل مزيان",
+              "romanized": "kantmna ykun lmust9bal mzyan",
+              "english": "I hope the future will be good"
+            }
+          ],
+          "common_mistakes": [
+            "'kantmna' is stronger hope than 'bghit' (want)"
+          ]
+        },
+        {
+          "rule": "'Inshallah' in Future Talk",
+          "explanation": "'inshallah' is essential in Darija future talk, showing humility about the future.",
+          "examples": [
+            {
+              "arabic": "غادي نتزوج العام الجاي إن شاء الله",
+              "romanized": "ghadi ntzwwj l3am jjay inshallah",
+              "english": "I'll get married next year, God willing"
+            }
+          ],
+          "common_mistakes": [
+            "Forgetting 'inshallah' when discussing future plans can seem presumptuous"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "أشنو الخطط ديالك للمستقبل؟",
+          "romanized": "ashnu lkhTT dyalk lmust9bal?",
+          "english": "What are your plans for the future?",
+          "context": "Asking about plans"
+        },
+        {
+          "arabic": "بغيت نولي مهندس إن شاء الله",
+          "romanized": "bghit nwlli muhandis inshallah",
+          "english": "I want to become an engineer, God willing",
+          "context": "Career aspiration"
+        },
+        {
+          "arabic": "الحلم ديالي هو نسافر العالم",
+          "romanized": "l7lm dyali hwa nsafr l3alam",
+          "english": "My dream is to travel the world",
+          "context": "Sharing dreams"
+        },
+        {
+          "arabic": "غادي نبدا مشروع جديد",
+          "romanized": "ghadi nbda mshru3 jdid",
+          "english": "I'm going to start a new project",
+          "context": "Business plans"
+        },
+        {
+          "arabic": "ربي يسهل",
+          "romanized": "rbbi yshl",
+          "english": "May God make it easy",
+          "context": "Prayer for success"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you express a future plan in Darija?",
+          "correct_answer": "غادي + verb",
+          "distractors": [
+            "كان + verb",
+            "بغيت + verb",
+            "كنت + verb"
+          ],
+          "hint": "'ghadi' is the future marker"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "___ نكمل الدراسة العام الجاي (I will finish studies next year)",
+          "correct_answer": "غادي",
+          "romanized_answer": "ghadi",
+          "hint": "Future tense marker"
+        },
+        {
+          "type": "matching",
+          "question": "Match future expressions",
+          "pairs": [
+            {
+              "darija": "غادي",
+              "english": "going to"
+            },
+            {
+              "darija": "إن شاء الله",
+              "english": "God willing"
+            },
+            {
+              "darija": "مستقبل",
+              "english": "future"
+            },
+            {
+              "darija": "حلم",
+              "english": "dream"
+            },
+            {
+              "darija": "العام الجاي",
+              "english": "next year"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'My dream is to become a doctor'",
+          "correct_answer_arabic": "الحلم ديالي نولي طبيب",
+          "correct_answer_romanized": "l7lm dyali nwlli Tbib",
+          "hint": "Use 'nwlli' for 'to become'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is 'inshallah' important when discussing future plans?",
+          "correct_answer": "It shows humility by acknowledging that only God knows the future",
+          "distractors": [
+            "It's just a word filler",
+            "It means 'definitely'",
+            "It's only for religious people"
+          ],
+          "hint": "It's a cultural and spiritual practice"
+        }
+      ],
+      "cultural_notes": [
+        "Using 'inshallah' when discussing future plans is deeply cultural, showing humility and acceptance that the future is uncertain.",
+        "Moroccan youth increasingly aspire to entrepreneurship. 'bghit nft7 projet' (I want to open a project/business) is very common."
+      ]
+    },
+    {
+      "lesson_id": "b1_m08_l02",
+      "order": 2,
+      "title": "Life Goals & Milestones",
+      "vocabulary": [
+        {
+          "arabic": "خطة",
+          "romanized": "khTTa",
+          "english": "plan",
+          "example_sentence": {
+            "arabic": "الخطة ديالي واضحة",
+            "romanized": "lkhTTa dyali wad7a",
+            "english": "My plan is clear"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "نية",
+          "romanized": "niya",
+          "english": "intention",
+          "example_sentence": {
+            "arabic": "النية ديالي نسافر",
+            "romanized": "nniya dyali nsafr",
+            "english": "My intention is to travel"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "هدف",
+          "romanized": "hdaf",
+          "english": "goal",
+          "example_sentence": {
+            "arabic": "الهدف ديالي ندير الماستر",
+            "romanized": "lhdaf dyali ndir lmaster",
+            "english": "My goal is to do a master's"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "نجاح",
+          "romanized": "nja7",
+          "english": "success",
+          "example_sentence": {
+            "arabic": "النجاح خاصو التعب",
+            "romanized": "nnja7 khaso tt3b",
+            "english": "Success requires hard work"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ولاد",
+          "romanized": "wlad",
+          "english": "children",
+          "example_sentence": {
+            "arabic": "بغيت نربي الولاد مزيان",
+            "romanized": "bghit nrbbi lwlad mzyan",
+            "english": "I want to raise the children well"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دار",
+          "romanized": "dar",
+          "english": "house/home",
+          "example_sentence": {
+            "arabic": "بغيت نشري واحد الدار",
+            "romanized": "bghit nshri wa7d ddar",
+            "english": "I want to buy a house"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سيارة",
+          "romanized": "siyara",
+          "english": "car",
+          "example_sentence": {
+            "arabic": "غادي نشري سيارة جديدة",
+            "romanized": "ghadi nshri siyara jdida",
+            "english": "I'm going to buy a new car"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هجرة",
+          "romanized": "hjra",
+          "english": "emigration/moving abroad",
+          "example_sentence": {
+            "arabic": "بزاف ديال الشباب كيفكرو فالهجرة",
+            "romanized": "bzzaf dyal shshbab kayfkkru flhjra",
+            "english": "Many young people think about emigrating"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "إستقرار",
+          "romanized": "isti9rar",
+          "english": "stability/settling down",
+          "example_sentence": {
+            "arabic": "بغيت الإستقرار",
+            "romanized": "bghit listi9rar",
+            "english": "I want stability"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "وصل",
+          "romanized": "wsl",
+          "english": "to achieve/reach",
+          "example_sentence": {
+            "arabic": "بغيت نوصل للهدف ديالي",
+            "romanized": "bghit nwsl llhdaf dyali",
+            "english": "I want to reach my goal"
+          },
+          "category": "verb",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Conditional Future: 'ila + past, ghadi + present'",
+          "explanation": "'ila' (if) + past tense, 'ghadi' + present: 'ila nj7t, ghadi nkml' (if I pass, I'll continue).",
+          "examples": [
+            {
+              "arabic": "إلا لقيت خدمة مزيانة، غادي نستقر فكازا",
+              "romanized": "ila l9it khdma mzyana, ghadi nst9rr f casa",
+              "english": "If I find a good job, I'll settle in Casablanca"
+            }
+          ],
+          "common_mistakes": [
+            "The condition uses past tense, the result uses 'ghadi' + present"
+          ]
+        },
+        {
+          "rule": "Time Expressions for Future",
+          "explanation": "ghdda (tomorrow), l3am jjay (next year), shshhr jjay (next month), ssimana jjay (next week), f lmust9bal (in the future).",
+          "examples": [
+            {
+              "arabic": "فالمستقبل، بغيت نفتح شي حانوت",
+              "romanized": "flmust9bal, bghit nft7 shi 7anut",
+              "english": "In the future, I want to open a shop"
+            }
+          ],
+          "common_mistakes": [
+            "'jjay' means 'coming/next' and follows the time word"
+          ]
+        },
+        {
+          "rule": "Expressing Determination: 'ghadi n7awl/ma ghadi nst3slamsh'",
+          "explanation": "'ghadi n7awl' (I'll try), 'ma ghadi nst3slamsh' (I won't give up), 'khassni nkml' (I must continue).",
+          "examples": [
+            {
+              "arabic": "ما غادي نستسلمش حتى نوصل للهدف ديالي",
+              "romanized": "ma ghadi nst3slamsh 7tta nwsl llhdaf dyali",
+              "english": "I won't give up until I reach my goal"
+            }
+          ],
+          "common_mistakes": [
+            "'ma ghadi...sh' is the negative future construction"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "الهدف ديالي نبني دار و نتزوج",
+          "romanized": "lhdaf dyali nbni dar w ntzwwj",
+          "english": "My goal is to build a house and get married",
+          "context": "Life goals"
+        },
+        {
+          "arabic": "إلا نجحت، غادي نكمل فالخارج",
+          "romanized": "ila nj7t, ghadi nkml flkharj",
+          "english": "If I succeed, I'll continue abroad",
+          "context": "Conditional plans"
+        },
+        {
+          "arabic": "ما غادي نستسلمش!",
+          "romanized": "ma ghadi nst3slamsh!",
+          "english": "I won't give up!",
+          "context": "Determination"
+        },
+        {
+          "arabic": "غادي نوصل إن شاء الله",
+          "romanized": "ghadi nwsl inshallah",
+          "english": "I'll get there, God willing",
+          "context": "Confidence"
+        },
+        {
+          "arabic": "الله يوفقك فكلشي",
+          "romanized": "allah ywff9k f kulshi",
+          "english": "May God help you succeed in everything",
+          "context": "Blessing"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'If I find a good job, I'll settle down'?",
+          "correct_answer": "إلا لقيت خدمة مزيانة، غادي نستقر",
+          "distractors": [
+            "بغيت لقيت خدمة مزيانة",
+            "كنت لقيت خدمة مزيانة",
+            "غادي لقيت خدمة مزيانة"
+          ],
+          "hint": "Use 'ila' for 'if' + past tense"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "الهدف ديالي ___ للنجاح (My goal is to reach success)",
+          "correct_answer": "نوصل",
+          "romanized_answer": "nwsl",
+          "hint": "The verb 'to reach/achieve'"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I won't give up!'",
+          "correct_answer_arabic": "ما غادي نستسلمش!",
+          "correct_answer_romanized": "ma ghadi nst3slamsh!",
+          "hint": "Use negative future: 'ma ghadi...sh'"
+        },
+        {
+          "type": "matching",
+          "question": "Match life goals",
+          "pairs": [
+            {
+              "darija": "تزوج",
+              "english": "get married"
+            },
+            {
+              "darija": "بنى دار",
+              "english": "build a house"
+            },
+            {
+              "darija": "شرى سيارة",
+              "english": "buy a car"
+            },
+            {
+              "darija": "هجرة",
+              "english": "emigration"
+            },
+            {
+              "darija": "إستقرار",
+              "english": "stability"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is 'hjra' a common topic about among Moroccan youth?",
+          "correct_answer": "Emigrating abroad for better opportunities",
+          "distractors": [
+            "Moving to a new house",
+            "Getting married",
+            "Starting school"
+          ],
+          "hint": "It's about leaving the country"
+        }
+      ],
+      "cultural_notes": [
+        "Emigration (hjra) is a major topic in Morocco. Many young people aspire to study or work abroad, particularly in Europe and North America.",
+        "The traditional Moroccan life milestones are: education, marriage (3rs), building a house (bna ddar), and having children (wlad)."
+      ]
+    },
+    {
+      "lesson_id": "b1_m08_l03",
+      "order": 3,
+      "title": "Dreams & Aspirations",
+      "vocabulary": [
+        {
+          "arabic": "پروجي",
+          "romanized": "proji",
+          "english": "project/plan",
+          "example_sentence": {
+            "arabic": "عندي واحد الپروجي",
+            "romanized": "3ndi wa7d lproji",
+            "english": "I have a project"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خطط",
+          "romanized": "khtTT",
+          "english": "to plan",
+          "example_sentence": {
+            "arabic": "كنخطط للمستقبل",
+            "romanized": "kankhtTT lmust9bal",
+            "english": "I'm planning for the future"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "طموح",
+          "romanized": "Tmu7",
+          "english": "ambitious/ambition",
+          "example_sentence": {
+            "arabic": "أنا طموح بزاف",
+            "romanized": "ana Tmu7 bzzaf",
+            "english": "I'm very ambitious"
+          },
+          "category": "adjective",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فخور",
+          "romanized": "fkhur",
+          "english": "proud",
+          "example_sentence": {
+            "arabic": "غادي نولي فخور بالنجاح ديالي",
+            "romanized": "ghadi nwlli fkhur bnnja7 dyali",
+            "english": "I'll be proud of my success"
+          },
+          "category": "adjective",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صبر",
+          "romanized": "sbr",
+          "english": "patience",
+          "example_sentence": {
+            "arabic": "الصبر مفتاح الفرج",
+            "romanized": "ssbr mfta7 lfrj",
+            "english": "Patience is the key to relief"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "توكل",
+          "romanized": "twkkl",
+          "english": "to trust in God",
+          "example_sentence": {
+            "arabic": "توكلت على الله",
+            "romanized": "twkklt 3la llah",
+            "english": "I put my trust in God"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "جهد",
+          "romanized": "jhd",
+          "english": "effort",
+          "example_sentence": {
+            "arabic": "خاصك تدير الجهد",
+            "romanized": "khask tdir ljhd",
+            "english": "You need to make an effort"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فرصة",
+          "romanized": "frsa",
+          "english": "opportunity",
+          "example_sentence": {
+            "arabic": "خاصني نستافد من الفرصة",
+            "romanized": "khasni nstafad mn lfrsa",
+            "english": "I need to take advantage of the opportunity"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "نجح",
+          "romanized": "nj7",
+          "english": "to succeed",
+          "example_sentence": {
+            "arabic": "بالجهد كنّجحو",
+            "romanized": "bljhd kannjj7u",
+            "english": "With effort we succeed"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تغيّر",
+          "romanized": "tghyyr",
+          "english": "to change",
+          "example_sentence": {
+            "arabic": "بغيت نغير حياتي",
+            "romanized": "bghit nghyyr 7yati",
+            "english": "I want to change my life"
+          },
+          "category": "verb",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Motivational Expressions",
+          "explanation": "Darija motivational phrases: 'twkkl 3la llah' (trust in God), 'dir ljhd w twkkl' (make effort and trust God), 'ssbr mfta7 lfrj' (patience is the key).",
+          "examples": [
+            {
+              "arabic": "دير الجهد ديالك و توكل على الله، غادي توصل إن شاء الله",
+              "romanized": "dir ljhd dyalk w twkkl 3la llah, ghadi twsl inshallah",
+              "english": "Do your best and trust in God, you'll get there God willing"
+            }
+          ],
+          "common_mistakes": [
+            "Moroccan motivation combines personal effort with spiritual trust"
+          ]
+        },
+        {
+          "rule": "Expressing Regret and Resolve: 'kunt ghadi/daba ghadi'",
+          "explanation": "'kunt ghadi ndir' (I was going to do) for unfulfilled plans, 'daba ghadi ndir' (now I'll do) for new resolve.",
+          "examples": [
+            {
+              "arabic": "كنت غادي نبدا العام اللي فات، ولاكن دابا غادي نبدا بجد",
+              "romanized": "kunt ghadi nbda l3am lli fat, walakin daba ghadi nbda bjdd",
+              "english": "I was going to start last year, but now I'll start seriously"
+            }
+          ],
+          "common_mistakes": [
+            "'kunt ghadi' indicates a past intention that wasn't fulfilled"
+          ]
+        },
+        {
+          "rule": "Inspirational Proverbs for Goals",
+          "explanation": "Use proverbs: 'lli bgha l3sl ysbr l9rss nn7l' (who wants honey must endure stings), 'ssbr mfta7 lfrj' (patience is key).",
+          "examples": [
+            {
+              "arabic": "بحال ما قالو الكبار: الصبر مفتاح الفرج",
+              "romanized": "b7al ma 9alu lkbar: ssbr mfta7 lfrj",
+              "english": "As the elders said: patience is the key to relief"
+            }
+          ],
+          "common_mistakes": [
+            "Using proverbs shows cultural sophistication in Darija"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "دير الجهد و توكل على الله",
+          "romanized": "dir ljhd w twkkl 3la llah",
+          "english": "Make the effort and trust in God",
+          "context": "Motivation"
+        },
+        {
+          "arabic": "بالصبر كلشي كيجي",
+          "romanized": "bssbr kulshi kayji",
+          "english": "With patience, everything comes",
+          "context": "Patience"
+        },
+        {
+          "arabic": "كل واحد عندو الفرصة ديالو",
+          "romanized": "kl wa7d 3ndo lfrsa dyalo",
+          "english": "Everyone has their opportunity",
+          "context": "Equal opportunity"
+        },
+        {
+          "arabic": "الله يوفقنا كاملين",
+          "romanized": "allah ywff9na kamlin",
+          "english": "May God help us all succeed",
+          "context": "Group blessing"
+        },
+        {
+          "arabic": "ما كاين لا مستحيل",
+          "romanized": "ma kayn la musti7il",
+          "english": "Nothing is impossible",
+          "context": "Encouragement"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ssbr mfta7 lfrj' mean?",
+          "correct_answer": "Patience is the key to relief",
+          "distractors": [
+            "Speed is important",
+            "Money opens doors",
+            "Knowledge is power"
+          ],
+          "hint": "A famous Arabic/Darija proverb"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "دير الجهد و ___ على الله (Make effort and trust in God)",
+          "correct_answer": "توكل",
+          "romanized_answer": "twkkl",
+          "hint": "To put trust in God"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I want to change my life'",
+          "correct_answer_arabic": "بغيت نغير حياتي",
+          "correct_answer_romanized": "bghit nghyyr 7yati",
+          "hint": "'nghyyr' means 'to change'"
+        },
+        {
+          "type": "matching",
+          "question": "Match motivational concepts",
+          "pairs": [
+            {
+              "darija": "صبر",
+              "english": "patience"
+            },
+            {
+              "darija": "جهد",
+              "english": "effort"
+            },
+            {
+              "darija": "طموح",
+              "english": "ambitious"
+            },
+            {
+              "darija": "فرصة",
+              "english": "opportunity"
+            },
+            {
+              "darija": "نجاح",
+              "english": "success"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What combines personal effort with spiritual trust in Moroccan culture?",
+          "correct_answer": "'dir ljhd w twkkl 3la llah' (make effort and trust God)",
+          "distractors": [
+            "Only prayer",
+            "Only hard work",
+            "Only luck"
+          ],
+          "hint": "Both action and faith are valued"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan motivation philosophy combines personal effort ('ljhd') with trust in God ('tawakkul'). Both are considered essential for success.",
+        "The proverb 'ssbr mfta7 lfrj' (patience is the key to relief) is one of the most commonly cited in Morocco."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {
+        "darija_arabic": "غادي",
+        "darija_latin": "ghadi",
+        "english": "going to"
+      },
+      {
+        "darija_arabic": "مستقبل",
+        "darija_latin": "must9bal",
+        "english": "future"
+      },
+      {
+        "darija_arabic": "حلم",
+        "darija_latin": "7lm",
+        "english": "dream"
+      },
+      {
+        "darija_arabic": "إن شاء الله",
+        "darija_latin": "inshallah",
+        "english": "God willing"
+      },
+      {
+        "darija_arabic": "هدف",
+        "darija_latin": "hdaf",
+        "english": "goal"
+      },
+      {
+        "darija_arabic": "صبر",
+        "darija_latin": "sbr",
+        "english": "patience"
+      },
+      {
+        "darija_arabic": "جهد",
+        "darija_latin": "jhd",
+        "english": "effort"
+      },
+      {
+        "darija_arabic": "طموح",
+        "darija_latin": "Tmu7",
+        "english": "ambitious"
+      },
+      {
+        "darija_arabic": "فرصة",
+        "darija_latin": "frsa",
+        "english": "opportunity"
+      },
+      {
+        "darija_arabic": "نجاح",
+        "darija_latin": "nja7",
+        "english": "success"
+      }
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "___ نسافر العام الجاي",
+        "sentence_latin": "___ nsafr l3am jjay",
+        "answer_arabic": "غادي",
+        "answer_latin": "ghadi",
+        "hint": "future marker"
+      },
+      {
+        "sentence_arabic": "الصبر ___ الفرج",
+        "sentence_latin": "ssbr ___ lfrj",
+        "answer_arabic": "مفتاح",
+        "answer_latin": "mfta7",
+        "hint": "key"
+      },
+      {
+        "sentence_arabic": "دير الجهد و ___ على الله",
+        "sentence_latin": "dir ljhd w ___ 3la llah",
+        "answer_arabic": "توكل",
+        "answer_latin": "twkkl",
+        "hint": "trust in"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "What role does 'inshallah' play in Moroccan conversation about the future?",
+        "correct_answer": "It's a culturally essential expression showing humility about uncertain future events",
+        "distractors": [
+          "It's optional and rarely used",
+          "It means 'I promise'",
+          "Only religious people use it"
+        ],
+        "explanation": "Using 'inshallah' when discussing future plans is deeply embedded in Moroccan culture."
+      },
+      {
+        "question": "What is the Moroccan philosophy of motivation?",
+        "correct_answer": "Combine personal effort (ljhd) with trust in God (tawakkul)",
+        "distractors": [
+          "Only prayer matters",
+          "Only hard work matters",
+          "Everything is fate"
+        ],
+        "explanation": "Moroccans believe in doing their best (dir ljhd) while trusting God for the outcome (twkkl 3la llah)."
+      }
+    ]
+  }
+}

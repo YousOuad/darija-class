@@ -1,0 +1,1228 @@
+{
+  "module_id": "a2_m01",
+  "level": "a2",
+  "module_number": 1,
+  "title": "Greetings & Introductions",
+  "description": "Learn essential Moroccan greetings and how to introduce yourself in Darija",
+  "lessons": [
+    {
+      "lesson_id": "a2_m01_l01",
+      "order": 1,
+      "title": "Basic Greetings",
+      "vocabulary": [
+        {
+          "arabic": "سلام",
+          "romanized": "salam",
+          "english": "hello / peace",
+          "example_sentence": {
+            "arabic": "سلام، لاباس عليك؟",
+            "romanized": "salam, labas 3lik?",
+            "english": "Hello, how are you?"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لاباس",
+          "romanized": "labas",
+          "english": "how are you / I'm fine",
+          "example_sentence": {
+            "arabic": "لاباس، الحمد لله",
+            "romanized": "labas, l7amdullah",
+            "english": "I'm fine, praise God"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بسلامة",
+          "romanized": "bslama",
+          "english": "goodbye",
+          "example_sentence": {
+            "arabic": "يالاه، بسلامة!",
+            "romanized": "yallah, bslama!",
+            "english": "Alright, goodbye!"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شكرا",
+          "romanized": "shukran",
+          "english": "thank you",
+          "example_sentence": {
+            "arabic": "شكرا بزاف",
+            "romanized": "shukran bzzaf",
+            "english": "Thank you very much"
+          },
+          "category": "politeness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مرحبا",
+          "romanized": "mr7ba",
+          "english": "welcome",
+          "example_sentence": {
+            "arabic": "مرحبا بيك عندنا",
+            "romanized": "mr7ba bik 3ndna",
+            "english": "Welcome to our place"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "الله يعطيك الصحة",
+          "romanized": "allah y3tik ssa7a",
+          "english": "God bless you / thank you (for effort)",
+          "example_sentence": {
+            "arabic": "الله يعطيك الصحة على هاد الخدمة",
+            "romanized": "allah y3tik ssa7a 3la had lkhdma",
+            "english": "God bless you for this work"
+          },
+          "category": "politeness",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صباح الخير",
+          "romanized": "sba7 lkhir",
+          "english": "good morning",
+          "example_sentence": {
+            "arabic": "صباح الخير، كيداير؟",
+            "romanized": "sba7 lkhir, kidayr?",
+            "english": "Good morning, how are you doing?"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مسا الخير",
+          "romanized": "msa lkhir",
+          "english": "good evening",
+          "example_sentence": {
+            "arabic": "مسا الخير، كيداير اليوم؟",
+            "romanized": "msa lkhir, kidayr lyoum?",
+            "english": "Good evening, how are you today?"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تصبح على خير",
+          "romanized": "tsba7 3la khir",
+          "english": "good night",
+          "example_sentence": {
+            "arabic": "يالاه نعس، تصبح على خير",
+            "romanized": "yallah n3ss, tsba7 3la khir",
+            "english": "Let me sleep, good night"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كيداير",
+          "romanized": "kidayr",
+          "english": "how are you doing (to a male)",
+          "example_sentence": {
+            "arabic": "سلام، كيداير اليوم؟",
+            "romanized": "salam, kidayr lyoum?",
+            "english": "Hello, how are you doing today?"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كيدايرة",
+          "romanized": "kidayra",
+          "english": "how are you doing (to a female)",
+          "example_sentence": {
+            "arabic": "سلام ختي، كيدايرة؟",
+            "romanized": "salam khti, kidayra?",
+            "english": "Hello sister, how are you doing?"
+          },
+          "category": "greeting",
+          "difficulty": 1
+        },
+        {
+          "arabic": "الحمد لله",
+          "romanized": "l7amdullah",
+          "english": "praise God / I'm fine",
+          "example_sentence": {
+            "arabic": "كيداير؟ الحمد لله، بيخير",
+            "romanized": "kidayr? l7amdullah, bikhir",
+            "english": "How are you? Fine, thank God"
+          },
+          "category": "response",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بيخير",
+          "romanized": "bikhir",
+          "english": "I'm fine / well",
+          "example_sentence": {
+            "arabic": "أنا بيخير، و نتا؟",
+            "romanized": "ana bikhir, w nta?",
+            "english": "I'm fine, and you?"
+          },
+          "category": "response",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كيف حالك",
+          "romanized": "kif 7alk",
+          "english": "how are you (slightly more formal)",
+          "example_sentence": {
+            "arabic": "كيف حالك اليوم؟",
+            "romanized": "kif 7alk lyoum?",
+            "english": "How are you today?"
+          },
+          "category": "greeting",
+          "difficulty": 2
+        },
+        {
+          "arabic": "إن شاء الله",
+          "romanized": "inshallah",
+          "english": "God willing",
+          "example_sentence": {
+            "arabic": "غادي نتلاقاو غدا إن شاء الله",
+            "romanized": "ghadi ntla9aw ghdda inshallah",
+            "english": "We'll meet tomorrow, God willing"
+          },
+          "category": "expression",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Basic Greeting Structure",
+          "explanation": "In Darija, greetings typically start with 'salam' (peace) followed by a question about wellbeing such as 'labas?' or 'kidayr/kidayra?'",
+          "examples": [
+            {
+              "arabic": "سلام، لاباس عليك؟",
+              "romanized": "salam, labas 3lik?",
+              "english": "Hello, how are you?"
+            },
+            {
+              "arabic": "سلام، كيداير؟",
+              "romanized": "salam, kidayr?",
+              "english": "Hello, how are you doing?"
+            }
+          ],
+          "common_mistakes": [
+            "Using MSA 'kayfa haluk' instead of Darija 'kidayr' in casual settings",
+            "Forgetting to respond with 'l7amdullah' which is culturally expected"
+          ]
+        },
+        {
+          "rule": "Gendered Greeting Forms",
+          "explanation": "Many Darija greetings change form depending on whether you are speaking to a male or female. Males use the -ayr ending, females use -ayra.",
+          "examples": [
+            {
+              "arabic": "كيداير؟ (ذكر) / كيدايرة؟ (أنثى)",
+              "romanized": "kidayr? (male) / kidayra? (female)",
+              "english": "How are you doing? (male/female)"
+            },
+            {
+              "arabic": "لاباس عليك؟ (ذكر) / لاباس عليك؟ (أنثى)",
+              "romanized": "labas 3lik? (male) / labas 3lik? (female)",
+              "english": "Are you okay? (same for both)"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'kidayr' when speaking to a woman - use 'kidayra' instead",
+            "Note that 'labas 3lik' works for both genders"
+          ]
+        },
+        {
+          "rule": "Response Patterns",
+          "explanation": "The standard response to a greeting inquiry always includes 'l7amdullah' (praise God), often followed by returning the question.",
+          "examples": [
+            {
+              "arabic": "لاباس، الحمد لله، و نتا؟",
+              "romanized": "labas, l7amdullah, w nta?",
+              "english": "I'm fine, praise God, and you?"
+            },
+            {
+              "arabic": "بيخير، الحمد لله",
+              "romanized": "bikhir, l7amdullah",
+              "english": "I'm well, praise God"
+            }
+          ],
+          "common_mistakes": [
+            "Just saying 'labas' without 'l7amdullah' can sound curt",
+            "Not returning the greeting question is considered impolite"
+          ]
+        },
+        {
+          "rule": "Time-Based Greetings",
+          "explanation": "Darija has specific greetings for different times of day, similar to English but with Arabic-influenced structure.",
+          "examples": [
+            {
+              "arabic": "صباح الخير (صباح) / مسا الخير (عشية)",
+              "romanized": "sba7 lkhir (morning) / msa lkhir (evening)",
+              "english": "Good morning / Good evening"
+            },
+            {
+              "arabic": "تصبح على خير",
+              "romanized": "tsba7 3la khir",
+              "english": "Good night (when leaving/going to sleep)"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'tsba7 3la khir' as a greeting instead of a farewell - it's only for saying goodnight"
+          ]
+        },
+        {
+          "rule": "Multiple Greeting Exchanges",
+          "explanation": "Moroccan greetings are not a single exchange. It is common to ask about health, family, and work in succession before moving to the main conversation.",
+          "examples": [
+            {
+              "arabic": "سلام! لاباس؟ لاباس عليك؟ كلشي بيخير؟ لعائلة لاباس؟",
+              "romanized": "salam! labas? labas 3lik? kolshi bikhir? l3a'ila labas?",
+              "english": "Hello! How are you? You okay? Everything fine? Family okay?"
+            }
+          ],
+          "common_mistakes": [
+            "Rushing through greetings - Moroccans value this exchange and it shows respect",
+            "Not asking about the other person's family is a missed social opportunity"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "سلام، لاباس عليك؟",
+          "romanized": "salam, labas 3lik?",
+          "english": "Hello, how are you?",
+          "context": "The most common everyday greeting"
+        },
+        {
+          "arabic": "لاباس، الحمد لله",
+          "romanized": "labas, l7amdullah",
+          "english": "I'm fine, praise God",
+          "context": "Standard response to 'labas 3lik?'"
+        },
+        {
+          "arabic": "أش خبارك؟",
+          "romanized": "ash khbarek?",
+          "english": "What's your news? / How have you been?",
+          "context": "A warm way to ask how someone is doing, especially if you haven't seen them in a while"
+        },
+        {
+          "arabic": "مرحبا بيك",
+          "romanized": "mr7ba bik",
+          "english": "Welcome (to a male)",
+          "context": "Said when someone arrives at your home or place"
+        },
+        {
+          "arabic": "الله يسلمك",
+          "romanized": "allah yslmk",
+          "english": "God protect you (response to bslama)",
+          "context": "Response when someone says 'bslama' (goodbye)"
+        },
+        {
+          "arabic": "تبارك الله عليك",
+          "romanized": "tbarkallah 3lik",
+          "english": "God bless you / Well done",
+          "context": "Expression of admiration or congratulation"
+        },
+        {
+          "arabic": "الله يخليك",
+          "romanized": "allah ykhllik",
+          "english": "Please / God keep you",
+          "context": "A polite way to make a request"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What does 'labas' mean?",
+          "correct_answer": "How are you? / I'm fine",
+          "distractors": ["Goodbye", "Thank you", "Please"],
+          "hint": "It's one of the first things Moroccans say after 'salam'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'good morning' in Darija?",
+          "correct_answer": "sba7 lkhir",
+          "distractors": ["msa lkhir", "tsba7 3la khir", "salam 3likum"],
+          "hint": "The word for morning in Darija is 'sba7'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the Darija greeting with its English meaning",
+          "pairs": [
+            {"darija": "سلام", "english": "hello"},
+            {"darija": "بسلامة", "english": "goodbye"},
+            {"darija": "شكرا", "english": "thank you"},
+            {"darija": "مرحبا", "english": "welcome"},
+            {"darija": "صباح الخير", "english": "good morning"}
+          ]
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "Complete the greeting: سلام، ___ عليك؟",
+          "correct_answer": "لاباس",
+          "romanized_answer": "labas",
+          "hint": "This word means 'how are you' or 'you okay?'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "Complete the response: لاباس، ___ لله",
+          "correct_answer": "الحمد",
+          "romanized_answer": "l7amd",
+          "hint": "This phrase means 'praise God'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you ask a woman 'how are you doing?' in Darija?",
+          "correct_answer": "كيدايرة؟",
+          "distractors": ["كيداير؟", "كيف حالك؟", "لاباس عليك؟"],
+          "hint": "The feminine form ends with -a"
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'Thank you very much'",
+          "correct_answer_arabic": "شكرا بزاف",
+          "correct_answer_romanized": "shukran bzzaf",
+          "hint": "'bzzaf' means 'a lot'"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccans typically greet everyone individually when entering a room, shaking hands with each person.",
+        "The greeting exchange can last several minutes with multiple questions about health, family, and work before moving to the main conversation.",
+        "Close friends and family members of the same gender (or opposite gender within family) greet with two kisses on the cheek.",
+        "It is considered very rude to skip greeting someone, even if you are in a hurry."
+      ]
+    },
+    {
+      "lesson_id": "a2_m01_l02",
+      "order": 2,
+      "title": "Introductions & Names",
+      "vocabulary": [
+        {
+          "arabic": "سميتي",
+          "romanized": "smiti",
+          "english": "my name is",
+          "example_sentence": {
+            "arabic": "سميتي يوسف",
+            "romanized": "smiti Youssef",
+            "english": "My name is Youssef"
+          },
+          "category": "introduction",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سميتك",
+          "romanized": "smitek",
+          "english": "your name is / what is your name",
+          "example_sentence": {
+            "arabic": "أش سميتك؟",
+            "romanized": "ash smitek?",
+            "english": "What is your name?"
+          },
+          "category": "introduction",
+          "difficulty": 1
+        },
+        {
+          "arabic": "أنا",
+          "romanized": "ana",
+          "english": "I / me",
+          "example_sentence": {
+            "arabic": "أنا من المغرب",
+            "romanized": "ana mn lmghrib",
+            "english": "I am from Morocco"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نتا",
+          "romanized": "nta",
+          "english": "you (male)",
+          "example_sentence": {
+            "arabic": "نتا منين؟",
+            "romanized": "nta mnin?",
+            "english": "Where are you from?"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نتي",
+          "romanized": "nti",
+          "english": "you (female)",
+          "example_sentence": {
+            "arabic": "نتي منين؟",
+            "romanized": "nti mnin?",
+            "english": "Where are you from? (to a female)"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هو",
+          "romanized": "howa",
+          "english": "he",
+          "example_sentence": {
+            "arabic": "هو صاحبي",
+            "romanized": "howa sa7bi",
+            "english": "He is my friend"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هي",
+          "romanized": "hiya",
+          "english": "she",
+          "example_sentence": {
+            "arabic": "هي ختي",
+            "romanized": "hiya khti",
+            "english": "She is my sister"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حنا",
+          "romanized": "7na",
+          "english": "we",
+          "example_sentence": {
+            "arabic": "حنا مغاربة",
+            "romanized": "7na mgharba",
+            "english": "We are Moroccans"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نتوما",
+          "romanized": "ntuma",
+          "english": "you (plural)",
+          "example_sentence": {
+            "arabic": "نتوما منين؟",
+            "romanized": "ntuma mnin?",
+            "english": "Where are you all from?"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هوما",
+          "romanized": "huma",
+          "english": "they",
+          "example_sentence": {
+            "arabic": "هوما مشاو",
+            "romanized": "huma mshaw",
+            "english": "They left"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "من",
+          "romanized": "mn",
+          "english": "from",
+          "example_sentence": {
+            "arabic": "أنا من كازا",
+            "romanized": "ana mn casa",
+            "english": "I am from Casablanca"
+          },
+          "category": "preposition",
+          "difficulty": 1
+        },
+        {
+          "arabic": "منين",
+          "romanized": "mnin",
+          "english": "from where",
+          "example_sentence": {
+            "arabic": "نتا منين؟",
+            "romanized": "nta mnin?",
+            "english": "Where are you from?"
+          },
+          "category": "question_word",
+          "difficulty": 1
+        },
+        {
+          "arabic": "متشرفين",
+          "romanized": "mtshrfin",
+          "english": "pleased to meet you",
+          "example_sentence": {
+            "arabic": "متشرفين، أنا كمال",
+            "romanized": "mtshrfin, ana Kamal",
+            "english": "Pleased to meet you, I'm Kamal"
+          },
+          "category": "introduction",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صاحبي",
+          "romanized": "sa7bi",
+          "english": "my friend (male)",
+          "example_sentence": {
+            "arabic": "هادا صاحبي أمين",
+            "romanized": "hada sa7bi Amine",
+            "english": "This is my friend Amine"
+          },
+          "category": "relationship",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صاحبتي",
+          "romanized": "sa7bti",
+          "english": "my friend (female)",
+          "example_sentence": {
+            "arabic": "هادي صاحبتي فاطمة",
+            "romanized": "hadi sa7bti Fatima",
+            "english": "This is my friend Fatima"
+          },
+          "category": "relationship",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Personal Pronouns in Darija",
+          "explanation": "Darija has 8 personal pronouns: ana (I), nta (you-m), nti (you-f), howa (he), hiya (she), 7na (we), ntuma (you-pl), huma (they). Unlike MSA, there is no dual form.",
+          "examples": [
+            {
+              "arabic": "أنا طالب، هو أستاذ",
+              "romanized": "ana talib, howa ostad",
+              "english": "I am a student, he is a teacher"
+            },
+            {
+              "arabic": "حنا مغاربة، هوما فرانساويين",
+              "romanized": "7na mgharba, huma fransawiyin",
+              "english": "We are Moroccans, they are French"
+            }
+          ],
+          "common_mistakes": [
+            "Confusing 'nta' (male you) with 'nti' (female you)",
+            "Using MSA pronouns 'anta/anti' instead of Darija 'nta/nti'"
+          ]
+        },
+        {
+          "rule": "Introduction Structure: smiti + name",
+          "explanation": "To introduce yourself, say 'smiti' (my name) followed by your name. To ask someone's name, say 'ash smitek?' (what is your name?).",
+          "examples": [
+            {
+              "arabic": "سميتي سارة، و نتي أش سميتك؟",
+              "romanized": "smiti Sara, w nti ash smitek?",
+              "english": "My name is Sara, and what's your name?"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'ismi' (MSA) instead of 'smiti' (Darija)",
+            "Forgetting to change 'smitek' based on gender context"
+          ]
+        },
+        {
+          "rule": "Asking 'Where are you from?'",
+          "explanation": "Use 'nta/nti mnin?' to ask where someone is from. Respond with 'ana mn + city/country'.",
+          "examples": [
+            {
+              "arabic": "نتا منين؟ أنا من الدار البيضاء",
+              "romanized": "nta mnin? ana mn ddarbiDa",
+              "english": "Where are you from? I'm from Casablanca"
+            },
+            {
+              "arabic": "نتي منين؟ أنا من فاس",
+              "romanized": "nti mnin? ana mn Fas",
+              "english": "Where are you from? I'm from Fes"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'min ayna' (MSA) instead of 'mnin' (Darija)"
+          ]
+        },
+        {
+          "rule": "No Verb 'to be' in Present Tense",
+          "explanation": "Unlike English, Darija does not use a verb 'to be' in the present tense. You simply place the subject and predicate together.",
+          "examples": [
+            {
+              "arabic": "أنا مغربي",
+              "romanized": "ana mghribi",
+              "english": "I am Moroccan (literally: I Moroccan)"
+            },
+            {
+              "arabic": "هي طبيبة",
+              "romanized": "hiya tbiba",
+              "english": "She is a doctor (literally: she doctor)"
+            }
+          ],
+          "common_mistakes": [
+            "Trying to add a 'to be' verb when it's not needed in Darija present tense"
+          ]
+        },
+        {
+          "rule": "Demonstrative Pronouns: hada/hadi",
+          "explanation": "'Hada' (this - masculine) and 'hadi' (this - feminine) are used to introduce people or point to things.",
+          "examples": [
+            {
+              "arabic": "هادا صاحبي",
+              "romanized": "hada sa7bi",
+              "english": "This is my friend (male)"
+            },
+            {
+              "arabic": "هادي ختي",
+              "romanized": "hadi khti",
+              "english": "This is my sister"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'hada' for feminine nouns - use 'hadi' instead"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "أش سميتك؟",
+          "romanized": "ash smitek?",
+          "english": "What is your name?",
+          "context": "Asking someone's name"
+        },
+        {
+          "arabic": "سميتي يوسف، و نتا؟",
+          "romanized": "smiti Youssef, w nta?",
+          "english": "My name is Youssef, and you?",
+          "context": "Introducing yourself and asking back"
+        },
+        {
+          "arabic": "نتا منين؟",
+          "romanized": "nta mnin?",
+          "english": "Where are you from?",
+          "context": "Asking someone's origin"
+        },
+        {
+          "arabic": "أنا من المغرب",
+          "romanized": "ana mn lmghrib",
+          "english": "I am from Morocco",
+          "context": "Stating your nationality"
+        },
+        {
+          "arabic": "متشرفين بيك",
+          "romanized": "mtshrfin bik",
+          "english": "Pleased to meet you",
+          "context": "Formal introduction response"
+        },
+        {
+          "arabic": "هادا صاحبي محمد",
+          "romanized": "hada sa7bi Mohamed",
+          "english": "This is my friend Mohamed",
+          "context": "Introducing someone else"
+        },
+        {
+          "arabic": "أنا ساكن ف كازا",
+          "romanized": "ana sakn f casa",
+          "english": "I live in Casablanca",
+          "context": "Saying where you live"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'What is your name?' in Darija?",
+          "correct_answer": "أش سميتك؟",
+          "distractors": ["أش كتبتي؟", "أش بغيتي؟", "أش كلتي؟"],
+          "hint": "'smiti' means 'my name', 'smitek' means 'your name'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "___ سميتك؟ سميتي فاطمة.",
+          "correct_answer": "أش",
+          "romanized_answer": "ash",
+          "hint": "This is a question word meaning 'what'"
+        },
+        {
+          "type": "matching",
+          "question": "Match each pronoun with its meaning",
+          "pairs": [
+            {"darija": "أنا", "english": "I"},
+            {"darija": "نتا", "english": "you (male)"},
+            {"darija": "نتي", "english": "you (female)"},
+            {"darija": "هو", "english": "he"},
+            {"darija": "هي", "english": "she"},
+            {"darija": "حنا", "english": "we"}
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'I am from Morocco'",
+          "correct_answer_arabic": "أنا من المغرب",
+          "correct_answer_romanized": "ana mn lmghrib",
+          "hint": "'lmghrib' is how Moroccans say Morocco"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which pronoun means 'we' in Darija?",
+          "correct_answer": "حنا",
+          "distractors": ["هوما", "نتوما", "أنا"],
+          "hint": "It starts with '7'"
+        },
+        {
+          "type": "ordering",
+          "question": "Put the introduction dialogue in the correct order",
+          "correct_order": [
+            "سلام، لاباس؟",
+            "لاباس، الحمد لله",
+            "أش سميتك؟",
+            "سميتي أمين، و نتا؟",
+            "سميتي كريم، متشرفين"
+          ]
+        }
+      ],
+      "cultural_notes": [
+        "Moroccans often use nicknames or shortened versions of names. Mohamed might become 'M7ammed', 'Simo', or 'Hamid'.",
+        "When introducing yourself, it's common to mention your city of origin, as regional identity is important in Morocco.",
+        "Moroccans may ask about your family and parents as part of getting to know you - this is normal and shows genuine interest."
+      ]
+    },
+    {
+      "lesson_id": "a2_m01_l03",
+      "order": 3,
+      "title": "Polite Expressions & Essential Words",
+      "vocabulary": [
+        {
+          "arabic": "واخا",
+          "romanized": "wakha",
+          "english": "okay / alright",
+          "example_sentence": {
+            "arabic": "واخا، غادي نمشيو",
+            "romanized": "wakha, ghadi nmshiw",
+            "english": "Okay, we'll go"
+          },
+          "category": "expression",
+          "difficulty": 1
+        },
+        {
+          "arabic": "إيه",
+          "romanized": "iyeh",
+          "english": "yes",
+          "example_sentence": {
+            "arabic": "إيه، أنا موافق",
+            "romanized": "iyeh, ana mwafq",
+            "english": "Yes, I agree"
+          },
+          "category": "basic",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لا",
+          "romanized": "la",
+          "english": "no",
+          "example_sentence": {
+            "arabic": "لا، شكرا",
+            "romanized": "la, shukran",
+            "english": "No, thank you"
+          },
+          "category": "basic",
+          "difficulty": 1
+        },
+        {
+          "arabic": "من فضلك",
+          "romanized": "mn fadlak",
+          "english": "please",
+          "example_sentence": {
+            "arabic": "عطيني الما من فضلك",
+            "romanized": "3tini lma mn fadlak",
+            "english": "Give me the water please"
+          },
+          "category": "politeness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عافاك",
+          "romanized": "3afak",
+          "english": "please (informal)",
+          "example_sentence": {
+            "arabic": "عافاك، عاود",
+            "romanized": "3afak, 3awd",
+            "english": "Please, say it again"
+          },
+          "category": "politeness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صافي",
+          "romanized": "safi",
+          "english": "enough / done / that's it",
+          "example_sentence": {
+            "arabic": "صافي، فهمت",
+            "romanized": "safi, fhmt",
+            "english": "That's it, I understood"
+          },
+          "category": "expression",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بزاف",
+          "romanized": "bzzaf",
+          "english": "a lot / very much",
+          "example_sentence": {
+            "arabic": "كنحبك بزاف",
+            "romanized": "kan7bbk bzzaf",
+            "english": "I love you very much"
+          },
+          "category": "adverb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شوية",
+          "romanized": "chwiya",
+          "english": "a little",
+          "example_sentence": {
+            "arabic": "كنتكلم شوية دالدارجة",
+            "romanized": "kantklm chwiya ddarija",
+            "english": "I speak a little Darija"
+          },
+          "category": "adverb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كيفاش",
+          "romanized": "kifash",
+          "english": "how",
+          "example_sentence": {
+            "arabic": "كيفاش نمشي للمدينة القديمة؟",
+            "romanized": "kifash nmshi lmdina l9dima?",
+            "english": "How do I get to the old city?"
+          },
+          "category": "question_word",
+          "difficulty": 1
+        },
+        {
+          "arabic": "علاش",
+          "romanized": "3lash",
+          "english": "why",
+          "example_sentence": {
+            "arabic": "علاش ما جيتيش؟",
+            "romanized": "3lash ma jitish?",
+            "english": "Why didn't you come?"
+          },
+          "category": "question_word",
+          "difficulty": 2
+        },
+        {
+          "arabic": "أشنو",
+          "romanized": "ashnu",
+          "english": "what",
+          "example_sentence": {
+            "arabic": "أشنو هادا؟",
+            "romanized": "ashnu hada?",
+            "english": "What is this?"
+          },
+          "category": "question_word",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فين",
+          "romanized": "fin",
+          "english": "where",
+          "example_sentence": {
+            "arabic": "فين كاين الحمام؟",
+            "romanized": "fin kayn l7ammam?",
+            "english": "Where is the bathroom?"
+          },
+          "category": "question_word",
+          "difficulty": 1
+        },
+        {
+          "arabic": "يالاه",
+          "romanized": "yallah",
+          "english": "let's go / come on",
+          "example_sentence": {
+            "arabic": "يالاه نمشيو",
+            "romanized": "yallah nmshiw",
+            "english": "Let's go"
+          },
+          "category": "expression",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سمح ليا",
+          "romanized": "sm7 lia",
+          "english": "excuse me / forgive me",
+          "example_sentence": {
+            "arabic": "سمح ليا، فين الطوبيس؟",
+            "romanized": "sm7 lia, fin ttobis?",
+            "english": "Excuse me, where is the bus?"
+          },
+          "category": "politeness",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ما فهمتش",
+          "romanized": "ma fhmtsh",
+          "english": "I don't understand",
+          "example_sentence": {
+            "arabic": "سمح ليا، ما فهمتش. عاود عافاك",
+            "romanized": "sm7 lia, ma fhmtsh. 3awd 3afak",
+            "english": "Sorry, I don't understand. Repeat please"
+          },
+          "category": "communication",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Question Words in Darija",
+          "explanation": "Darija uses its own set of question words: ashnu (what), fin (where), mnin (from where), kifash (how), 3lash (why), shkun (who), sh7al (how much/many), imta (when).",
+          "examples": [
+            {
+              "arabic": "أشنو بغيتي؟",
+              "romanized": "ashnu bghiti?",
+              "english": "What do you want?"
+            },
+            {
+              "arabic": "فين ساكن؟",
+              "romanized": "fin sakn?",
+              "english": "Where do you live?"
+            }
+          ],
+          "common_mistakes": [
+            "Using MSA question words like 'limadha' instead of Darija '3lash'",
+            "Forgetting that 'ashnu' and 'ash' are interchangeable for 'what'"
+          ]
+        },
+        {
+          "rule": "Negation with ma...sh",
+          "explanation": "In Darija, negation wraps around the verb: 'ma' before and 'sh' after. This is unique to Maghrebi Arabic.",
+          "examples": [
+            {
+              "arabic": "ما فهمتش",
+              "romanized": "ma fhmtsh",
+              "english": "I don't understand"
+            },
+            {
+              "arabic": "ما بغيتش",
+              "romanized": "ma bghitsh",
+              "english": "I don't want"
+            }
+          ],
+          "common_mistakes": [
+            "Only using 'ma' without the 'sh' suffix - both parts are needed",
+            "Placing 'sh' in the wrong position"
+          ]
+        },
+        {
+          "rule": "Informal vs Formal 'Please'",
+          "explanation": "'3afak' is the everyday, informal way to say please. 'mn fadlak' is more formal and respectful.",
+          "examples": [
+            {
+              "arabic": "عافاك عطيني واحد الكاس دلما",
+              "romanized": "3afak 3tini wa7d lkas dlma",
+              "english": "Please give me a glass of water (informal)"
+            },
+            {
+              "arabic": "من فضلك، وريني الطريق",
+              "romanized": "mn fadlak, wrrini ttri9",
+              "english": "Please, show me the way (formal)"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'mn fadlak' in casual settings can sound overly stiff"
+          ]
+        },
+        {
+          "rule": "Intensifiers: bzzaf and chwiya",
+          "explanation": "'bzzaf' (a lot/very) and 'chwiya' (a little) are placed after the word they modify.",
+          "examples": [
+            {
+              "arabic": "زوين بزاف",
+              "romanized": "zwin bzzaf",
+              "english": "Very beautiful"
+            },
+            {
+              "arabic": "شوية ديال السكر",
+              "romanized": "chwiya dyal ssukkar",
+              "english": "A little sugar"
+            }
+          ],
+          "common_mistakes": [
+            "Placing 'bzzaf' before the adjective instead of after"
+          ]
+        },
+        {
+          "rule": "Using 'safi' as a Conversation Marker",
+          "explanation": "'safi' is versatile: it can mean 'enough', 'done', 'that's it', 'I understand', or 'okay then'. Its meaning depends on context and tone.",
+          "examples": [
+            {
+              "arabic": "صافي، فهمت",
+              "romanized": "safi, fhmt",
+              "english": "Alright, I understood"
+            },
+            {
+              "arabic": "صافي! بركا!",
+              "romanized": "safi! brka!",
+              "english": "Enough! Stop!"
+            }
+          ],
+          "common_mistakes": [
+            "Not recognizing the different tones and meanings of 'safi'"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "ما فهمتش، عاود عافاك",
+          "romanized": "ma fhmtsh, 3awd 3afak",
+          "english": "I don't understand, repeat please",
+          "context": "When you need someone to repeat themselves"
+        },
+        {
+          "arabic": "كنتكلم شوية دالدارجة",
+          "romanized": "kantklm chwiya ddarija",
+          "english": "I speak a little Darija",
+          "context": "Useful for language learners to set expectations"
+        },
+        {
+          "arabic": "أشنو معنى هاد الكلمة؟",
+          "romanized": "ashnu m3na had lklma?",
+          "english": "What does this word mean?",
+          "context": "Asking for vocabulary help"
+        },
+        {
+          "arabic": "يالاه نمشيو",
+          "romanized": "yallah nmshiw",
+          "english": "Let's go",
+          "context": "Suggesting to leave or start moving"
+        },
+        {
+          "arabic": "لا، شكرا، صافي",
+          "romanized": "la, shukran, safi",
+          "english": "No, thank you, that's enough",
+          "context": "Politely declining"
+        },
+        {
+          "arabic": "واخا، ما كاين مشكيل",
+          "romanized": "wakha, ma kayn mushkil",
+          "english": "Okay, no problem",
+          "context": "Agreeing or accepting something"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'I don't understand' in Darija?",
+          "correct_answer": "ما فهمتش",
+          "distractors": ["ما بغيتش", "ما عرفتش", "ما سمعتش"],
+          "hint": "The verb 'fhm' means 'to understand'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the question words with their meanings",
+          "pairs": [
+            {"darija": "أشنو", "english": "what"},
+            {"darija": "فين", "english": "where"},
+            {"darija": "كيفاش", "english": "how"},
+            {"darija": "علاش", "english": "why"},
+            {"darija": "شحال", "english": "how much"}
+          ]
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "كنتكلم ___ دالدارجة (I speak a little Darija)",
+          "correct_answer": "شوية",
+          "romanized_answer": "chwiya",
+          "hint": "This word means 'a little'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the Darija negation pattern?",
+          "correct_answer": "ma + verb + sh",
+          "distractors": ["la + verb", "mashi + verb", "ma + verb"],
+          "hint": "It wraps around the verb with two parts"
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'Where is the bathroom?'",
+          "correct_answer_arabic": "فين كاين الحمام؟",
+          "correct_answer_romanized": "fin kayn l7ammam?",
+          "hint": "'fin' means where and 'l7ammam' means bathroom"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which word means 'a lot' in Darija?",
+          "correct_answer": "بزاف",
+          "distractors": ["شوية", "صافي", "واخا"],
+          "hint": "It's often used to say 'thank you very much' - shukran ___"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccans use 'inshallah' (God willing) frequently when talking about future plans. It's not just religious - it's part of everyday speech.",
+        "Saying 'la' (no) can be softened by adding 'shukran' (thank you) or 'allah ykhllik' (God keep you) after it.",
+        "The word 'safi' is one of the most versatile words in Darija - pay attention to tone and context to understand its meaning."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {"darija_arabic": "سلام", "darija_latin": "salam", "english": "hello"},
+      {"darija_arabic": "شكرا", "darija_latin": "shukran", "english": "thank you"},
+      {"darija_arabic": "بسلامة", "darija_latin": "bslama", "english": "goodbye"},
+      {"darija_arabic": "مرحبا", "darija_latin": "mr7ba", "english": "welcome"},
+      {"darija_arabic": "واخا", "darija_latin": "wakha", "english": "okay"},
+      {"darija_arabic": "إيه", "darija_latin": "iyeh", "english": "yes"},
+      {"darija_arabic": "لا", "darija_latin": "la", "english": "no"},
+      {"darija_arabic": "بزاف", "darija_latin": "bzzaf", "english": "a lot"},
+      {"darija_arabic": "شوية", "darija_latin": "chwiya", "english": "a little"},
+      {"darija_arabic": "يالاه", "darija_latin": "yallah", "english": "let's go"}
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "___، لاباس عليك؟",
+        "sentence_latin": "___, labas 3lik?",
+        "answer_arabic": "سلام",
+        "answer_latin": "salam",
+        "hint": "A common greeting meaning 'peace'"
+      },
+      {
+        "sentence_arabic": "سميتي محمد، و نتا ___ سميتك؟",
+        "sentence_latin": "smiti Mohamed, w nta ___ smitek?",
+        "answer_arabic": "أش",
+        "answer_latin": "ash",
+        "hint": "Question word meaning 'what'"
+      },
+      {
+        "sentence_arabic": "أنا ___ المغرب",
+        "sentence_latin": "ana ___ lmghrib",
+        "answer_arabic": "من",
+        "answer_latin": "mn",
+        "hint": "Preposition meaning 'from'"
+      },
+      {
+        "sentence_arabic": "شكرا ___",
+        "sentence_latin": "shukran ___",
+        "answer_arabic": "بزاف",
+        "answer_latin": "bzzaf",
+        "hint": "Means 'a lot' or 'very much'"
+      },
+      {
+        "sentence_arabic": "ما ___ ، عاود عافاك",
+        "sentence_latin": "ma ___, 3awd 3afak",
+        "answer_arabic": "فهمتش",
+        "answer_latin": "fhmtsh",
+        "hint": "Verb meaning 'understand' with negation suffix"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "How many times do Moroccans typically kiss on the cheek when greeting close friends or family?",
+        "correct_answer": "Two (one on each cheek)",
+        "distractors": ["One", "Three", "They don't kiss on the cheek"],
+        "explanation": "Moroccans typically greet close friends and family with two kisses, one on each cheek."
+      },
+      {
+        "question": "What is the expected response when someone asks 'labas?'",
+        "correct_answer": "Labas l7amdullah (I'm fine, praise God)",
+        "distractors": ["Just 'iyeh' (yes)", "Silence", "Bslama (goodbye)"],
+        "explanation": "It is culturally expected to include 'l7amdullah' (praise God) in your response, showing gratitude even for ordinary wellbeing."
+      },
+      {
+        "question": "When entering a room full of people, what should you do in Morocco?",
+        "correct_answer": "Greet everyone individually",
+        "distractors": ["Just wave to the group", "Only greet the host", "Wait to be greeted first"],
+        "explanation": "In Moroccan culture, it's polite to greet each person in the room, often with a handshake."
+      }
+    ]
+  }
+}

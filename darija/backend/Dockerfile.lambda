@@ -1,0 +1,14 @@
+FROM public.ecr.aws/lambda/python:3.11
+
+# Install build dependencies for asyncpg
+RUN yum install -y gcc postgresql-devel && yum clean all
+
+# Install Python dependencies
+COPY requirements.txt ${LAMBDA_TASK_ROOT}/
+RUN pip install --no-cache-dir -r ${LAMBDA_TASK_ROOT}/requirements.txt
+
+# Copy application code
+COPY . ${LAMBDA_TASK_ROOT}/
+
+# Mangum handler in app/main.py
+CMD ["app.main.handler"]

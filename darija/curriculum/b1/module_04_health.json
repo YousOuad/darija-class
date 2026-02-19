@@ -1,0 +1,1113 @@
+{
+  "module_id": "b1_m04",
+  "level": "b1",
+  "module_number": 4,
+  "title": "Health & Body",
+  "description": "Learn to describe health issues, body parts, and navigate medical situations in Darija",
+  "lessons": [
+    {
+      "lesson_id": "b1_m04_l01",
+      "order": 1,
+      "title": "Body Parts & Symptoms",
+      "vocabulary": [
+        {
+          "arabic": "راس",
+          "romanized": "ras",
+          "english": "head",
+          "example_sentence": {
+            "arabic": "كيضرني راسي",
+            "romanized": "kaydrni rasi",
+            "english": "My head hurts"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كرش",
+          "romanized": "krsh",
+          "english": "stomach",
+          "example_sentence": {
+            "arabic": "عندي وجع الكرش",
+            "romanized": "3ndi wj3 lkrsh",
+            "english": "I have a stomachache"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "يد",
+          "romanized": "ydd",
+          "english": "hand/arm",
+          "example_sentence": {
+            "arabic": "كسرت يدي",
+            "romanized": "ksrt yddi",
+            "english": "I broke my hand"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رجل",
+          "romanized": "rjl",
+          "english": "foot/leg",
+          "example_sentence": {
+            "arabic": "كيوجعني رجلي",
+            "romanized": "kaywj3ni rjli",
+            "english": "My leg hurts"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عين",
+          "romanized": "3in",
+          "english": "eye",
+          "example_sentence": {
+            "arabic": "عيني حمرا",
+            "romanized": "3ini 7mra",
+            "english": "My eye is red"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ودن",
+          "romanized": "wdn",
+          "english": "ear",
+          "example_sentence": {
+            "arabic": "كيوجعني ودني",
+            "romanized": "kaywj3ni wdni",
+            "english": "My ear hurts"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سنان",
+          "romanized": "snan",
+          "english": "teeth",
+          "example_sentence": {
+            "arabic": "كيوجعني السنان",
+            "romanized": "kaywj3ni ssnan",
+            "english": "My teeth hurt"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ظهر",
+          "romanized": "dhr",
+          "english": "back",
+          "example_sentence": {
+            "arabic": "عندي وجع الظهر",
+            "romanized": "3ndi wj3 ddhr",
+            "english": "I have back pain"
+          },
+          "category": "body",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طبيب",
+          "romanized": "Tbib",
+          "english": "doctor",
+          "example_sentence": {
+            "arabic": "خاصني نمشي للطبيب",
+            "romanized": "khasni nmshi lTTbib",
+            "english": "I need to go to the doctor"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سبيطار",
+          "romanized": "sbiTar",
+          "english": "hospital",
+          "example_sentence": {
+            "arabic": "دّيني للسبيطار!",
+            "romanized": "ddini lsbiTar!",
+            "english": "Take me to the hospital!"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دوا",
+          "romanized": "dwa",
+          "english": "medicine",
+          "example_sentence": {
+            "arabic": "خاصني ناخد الدوا",
+            "romanized": "khasni nakhd ddwa",
+            "english": "I need to take the medicine"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مريض",
+          "romanized": "mrid",
+          "english": "sick (m)",
+          "example_sentence": {
+            "arabic": "أنا مريض اليوم",
+            "romanized": "ana mrid lyoum",
+            "english": "I'm sick today"
+          },
+          "category": "adjective",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سخانة",
+          "romanized": "skhana",
+          "english": "fever",
+          "example_sentence": {
+            "arabic": "عندي السخانة",
+            "romanized": "3ndi sskhana",
+            "english": "I have a fever"
+          },
+          "category": "symptom",
+          "difficulty": 1
+        },
+        {
+          "arabic": "وجع",
+          "romanized": "wj3",
+          "english": "pain",
+          "example_sentence": {
+            "arabic": "فين الوجع؟",
+            "romanized": "fin lwj3?",
+            "english": "Where is the pain?"
+          },
+          "category": "symptom",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صحة",
+          "romanized": "s77a",
+          "english": "health",
+          "example_sentence": {
+            "arabic": "الصحة أهم حاجة",
+            "romanized": "ss77a ahamm 7aja",
+            "english": "Health is the most important thing"
+          },
+          "category": "noun",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Expressing Pain: 'kaywj3ni + body part'",
+          "explanation": "'kaywj3ni' (it hurts me) + body part: 'kaywj3ni rasi' (my head hurts). Literally 'it pains me my head'.",
+          "examples": [
+            {
+              "arabic": "كيوجعني راسي بزاف",
+              "romanized": "kaywj3ni rasi bzzaf",
+              "english": "My head hurts a lot"
+            }
+          ],
+          "common_mistakes": [
+            "The body part takes the possessive suffix: rasi (my head), not ras"
+          ]
+        },
+        {
+          "rule": "Describing Symptoms with '3ndi'",
+          "explanation": "'3ndi' (I have) + symptom: '3ndi skhana' (I have fever), '3ndi ss3al' (I have a cough).",
+          "examples": [
+            {
+              "arabic": "عندي السخانة و السعال",
+              "romanized": "3ndi sskhana w ss3al",
+              "english": "I have a fever and a cough"
+            }
+          ],
+          "common_mistakes": [
+            "Use '3ndi' for conditions you 'have', 'kaywj3ni' for pain"
+          ]
+        },
+        {
+          "rule": "Imperative for Medical Instructions",
+          "explanation": "Doctors use imperatives: 'ftaa7 fmmk' (open your mouth), 'tnffss' (breathe), 'tnffss 3mii9' (breathe deeply).",
+          "examples": [
+            {
+              "arabic": "افتح فمك و تنفس عميق",
+              "romanized": "fta7 fmmk w tnffss 3mi9",
+              "english": "Open your mouth and breathe deeply"
+            }
+          ],
+          "common_mistakes": [
+            "Following medical instructions is important - ask for clarification if needed"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "كيوجعني راسي",
+          "romanized": "kaywj3ni rasi",
+          "english": "My head hurts",
+          "context": "Describing pain"
+        },
+        {
+          "arabic": "خاصني نمشي للطبيب",
+          "romanized": "khasni nmshi lTTbib",
+          "english": "I need to see a doctor",
+          "context": "Seeking medical help"
+        },
+        {
+          "arabic": "عندي حساسية من...",
+          "romanized": "3ndi 7sasiya mn...",
+          "english": "I'm allergic to...",
+          "context": "Reporting allergies"
+        },
+        {
+          "arabic": "فين كاينة أقرب فارماسيان؟",
+          "romanized": "fin kayna a9rb farmasyan?",
+          "english": "Where is the nearest pharmacy?",
+          "context": "Finding a pharmacy"
+        },
+        {
+          "arabic": "الله يشافيك",
+          "romanized": "allah yshafik",
+          "english": "May God heal you",
+          "context": "Wishing someone recovery"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'My head hurts' in Darija?",
+          "correct_answer": "كيوجعني راسي",
+          "distractors": [
+            "عندي راس",
+            "راسي كبير",
+            "كنحب راسي"
+          ],
+          "hint": "'kaywj3ni' means 'it hurts me'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "خاصني نمشي لل___ (I need to see a doctor)",
+          "correct_answer": "طبيب",
+          "romanized_answer": "Tbib",
+          "hint": "The medical professional"
+        },
+        {
+          "type": "matching",
+          "question": "Match body parts",
+          "pairs": [
+            {
+              "darija": "راس",
+              "english": "head"
+            },
+            {
+              "darija": "كرش",
+              "english": "stomach"
+            },
+            {
+              "darija": "يد",
+              "english": "hand"
+            },
+            {
+              "darija": "عين",
+              "english": "eye"
+            },
+            {
+              "darija": "سنان",
+              "english": "teeth"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I have a fever'",
+          "correct_answer_arabic": "عندي السخانة",
+          "correct_answer_romanized": "3ndi sskhana",
+          "hint": "Use '3ndi' for 'I have'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'allah yshafik' mean?",
+          "correct_answer": "May God heal you",
+          "distractors": [
+            "God bless you",
+            "Get well soon",
+            "Be careful"
+          ],
+          "hint": "Said to someone who is sick"
+        }
+      ],
+      "cultural_notes": [
+        "Traditional Moroccan medicine includes herbal remedies sold by '3ttarin' (herbalists) in the souq. Common remedies include thyme, sage, and black seed oil.",
+        "The hammam (public bath) is considered both hygienic and therapeutic. Many Moroccans believe regular hammam visits prevent illness."
+      ]
+    },
+    {
+      "lesson_id": "b1_m04_l02",
+      "order": 2,
+      "title": "At the Doctor & Pharmacy",
+      "vocabulary": [
+        {
+          "arabic": "فارماسيان",
+          "romanized": "farmasyan",
+          "english": "pharmacy",
+          "example_sentence": {
+            "arabic": "سير للفارماسيان",
+            "romanized": "sir lfarmasyan",
+            "english": "Go to the pharmacy"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "روشيطة",
+          "romanized": "roshiTa",
+          "english": "prescription",
+          "example_sentence": {
+            "arabic": "كتب ليا الطبيب روشيطة",
+            "romanized": "ktb lia TTbib roshiTa",
+            "english": "The doctor wrote me a prescription"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تحليل",
+          "romanized": "t7lil",
+          "english": "blood test/analysis",
+          "example_sentence": {
+            "arabic": "خاصني ندير تحليل",
+            "romanized": "khasni ndir t7lil",
+            "english": "I need to do a blood test"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بيقيرة",
+          "romanized": "bi9ira",
+          "english": "injection/shot",
+          "example_sentence": {
+            "arabic": "درت البيقيرة",
+            "romanized": "drt lbi9ira",
+            "english": "I got the injection"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ضماض",
+          "romanized": "dmad",
+          "english": "bandage",
+          "example_sentence": {
+            "arabic": "حط الضماض على الجرحة",
+            "romanized": "7TT ddmad 3la ljr7a",
+            "english": "Put the bandage on the wound"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جرحة",
+          "romanized": "jr7a",
+          "english": "wound/injury",
+          "example_sentence": {
+            "arabic": "الجرحة ما كبيراش",
+            "romanized": "ljr7a ma kbirash",
+            "english": "The wound isn't big"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سعال",
+          "romanized": "s3al",
+          "english": "cough",
+          "example_sentence": {
+            "arabic": "عندي السعال من أسبوع",
+            "romanized": "3ndi ss3al mn usbu3",
+            "english": "I've had a cough for a week"
+          },
+          "category": "symptom",
+          "difficulty": 1
+        },
+        {
+          "arabic": "زكام",
+          "romanized": "zkam",
+          "english": "cold (illness)",
+          "example_sentence": {
+            "arabic": "شدني الزكام",
+            "romanized": "shdni zzkam",
+            "english": "I caught a cold"
+          },
+          "category": "symptom",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حساسية",
+          "romanized": "7sasiya",
+          "english": "allergy",
+          "example_sentence": {
+            "arabic": "عندي حساسية من الغبار",
+            "romanized": "3ndi 7sasiya mn lghbar",
+            "english": "I'm allergic to dust"
+          },
+          "category": "symptom",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صداع",
+          "romanized": "sda3",
+          "english": "headache",
+          "example_sentence": {
+            "arabic": "عندي الصداع",
+            "romanized": "3ndi ssda3",
+            "english": "I have a headache"
+          },
+          "category": "symptom",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دوخة",
+          "romanized": "dwkha",
+          "english": "dizziness",
+          "example_sentence": {
+            "arabic": "كتجيني الدوخة",
+            "romanized": "katjini ddwkha",
+            "english": "I feel dizzy"
+          },
+          "category": "symptom",
+          "difficulty": 2
+        },
+        {
+          "arabic": "راديو",
+          "romanized": "radyo",
+          "english": "x-ray",
+          "example_sentence": {
+            "arabic": "خاصك تدير الراديو",
+            "romanized": "khask tdir rradyo",
+            "english": "You need to get an x-ray"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عملية",
+          "romanized": "3amaliya",
+          "english": "surgery/operation",
+          "example_sentence": {
+            "arabic": "دار العملية و مشات مزيان",
+            "romanized": "dar l3amaliya w mshat mzyan",
+            "english": "He had the surgery and it went well"
+          },
+          "category": "medical",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Telling Medical History",
+          "explanation": "'3mmri ma + past verb + sh' (I've never): '3mmri ma drrt 3amaliya' (I've never had surgery). 'dima 3ndi' for chronic conditions.",
+          "examples": [
+            {
+              "arabic": "عمري ما درت عمالية، و ديما عندي الضغط",
+              "romanized": "3mmri ma drt 3amaliya, w dima 3ndi ddghT",
+              "english": "I've never had surgery, and I always have high blood pressure"
+            }
+          ],
+          "common_mistakes": [
+            "'3mmri ma...sh' is the 'never' construction"
+          ]
+        },
+        {
+          "rule": "Pharmacy Requests",
+          "explanation": "'3tini shi dwa dyal...' (give me medicine for...): '3tini shi dwa dyal ssda3' (give me something for headache).",
+          "examples": [
+            {
+              "arabic": "عطيني شي دوا ديال الصداع عافاك",
+              "romanized": "3tini shi dwa dyal ssda3 3afak",
+              "english": "Give me something for headache please"
+            }
+          ],
+          "common_mistakes": [
+            "Pharmacists in Morocco can recommend medicine without a prescription for common issues"
+          ]
+        },
+        {
+          "rule": "Duration of Illness: 'mn + time'",
+          "explanation": "Express how long you've been sick: 'mn yawmayn' (for two days), 'mn usbu3' (for a week), 'mn shhr' (for a month).",
+          "examples": [
+            {
+              "arabic": "عندي السعال من أسبوع",
+              "romanized": "3ndi ss3al mn usbu3",
+              "english": "I've had a cough for a week"
+            }
+          ],
+          "common_mistakes": [
+            "Use 'mn' (since/for) to express duration of symptoms"
+          ]
+        },
+        {
+          "rule": "Describing Severity: 'bzzaf/chwiya/3adi'",
+          "explanation": "'bzzaf' (a lot), 'chwiya' (a little), '3adi' (normal/moderate): 'kaywj3ni bzzaf' (it hurts a lot).",
+          "examples": [
+            {
+              "arabic": "كيوجعني بزاف، ماشي شوية",
+              "romanized": "kaywj3ni bzzaf, mashi chwiya",
+              "english": "It hurts a lot, not a little"
+            }
+          ],
+          "common_mistakes": [
+            "Being specific about severity helps the doctor diagnose accurately"
+          ]
+        },
+        {
+          "rule": "Following Doctor's Orders: 'khask t-'",
+          "explanation": "Doctor's instructions use 'khask' (you must): 'khask trta7' (you must rest), 'khask takhd ddwa' (you must take the medicine).",
+          "examples": [
+            {
+              "arabic": "خاصك ترتاح و تاخد الدوا مرتين فالنهار",
+              "romanized": "khask trta7 w takhd ddwa mrrtin fnhar",
+              "english": "You must rest and take the medicine twice a day"
+            }
+          ],
+          "common_mistakes": [
+            "'khask' is followed by the present tense verb"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "بغيت نشوف الطبيب عافاك",
+          "romanized": "bghit nshuf TTbib 3afak",
+          "english": "I want to see the doctor please",
+          "context": "At the clinic"
+        },
+        {
+          "arabic": "عطيني شي دوا ديال الزكام",
+          "romanized": "3tini shi dwa dyal zzkam",
+          "english": "Give me something for a cold",
+          "context": "At the pharmacy"
+        },
+        {
+          "arabic": "شحال مرة ناخد الدوا؟",
+          "romanized": "sh7al mrra nakhd ddwa?",
+          "english": "How many times do I take the medicine?",
+          "context": "Dosage question"
+        },
+        {
+          "arabic": "عندي حساسية من البنيسيلين",
+          "romanized": "3ndi 7sasiya mn lpenisilin",
+          "english": "I'm allergic to penicillin",
+          "context": "Important medical info"
+        },
+        {
+          "arabic": "واش خاصني روشيطة؟",
+          "romanized": "wash khasni roshiTa?",
+          "english": "Do I need a prescription?",
+          "context": "Pharmacy inquiry"
+        },
+        {
+          "arabic": "ردّ البال على راسك",
+          "romanized": "rdd lbal 3la rask",
+          "english": "Take care of yourself",
+          "context": "Advice to sick person"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'I caught a cold' in Darija?",
+          "correct_answer": "شدني الزكام",
+          "distractors": [
+            "عندي السخانة",
+            "كيوجعني راسي",
+            "أنا مريض"
+          ],
+          "hint": "'shdni' means 'caught me'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "عطيني شي دوا ديال ___ (Give me something for headache)",
+          "correct_answer": "الصداع",
+          "romanized_answer": "ssda3",
+          "hint": "The word for headache"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'You must rest and take the medicine'",
+          "correct_answer_arabic": "خاصك ترتاح و تاخد الدوا",
+          "correct_answer_romanized": "khask trta7 w takhd ddwa",
+          "hint": "Use 'khask' for 'you must'"
+        },
+        {
+          "type": "matching",
+          "question": "Match medical terms",
+          "pairs": [
+            {
+              "darija": "فارماسيان",
+              "english": "pharmacy"
+            },
+            {
+              "darija": "روشيطة",
+              "english": "prescription"
+            },
+            {
+              "darija": "بيقيرة",
+              "english": "injection"
+            },
+            {
+              "darija": "تحليل",
+              "english": "blood test"
+            },
+            {
+              "darija": "جرحة",
+              "english": "wound"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'roshiTa' mean?",
+          "correct_answer": "Prescription (from French 'recette')",
+          "distractors": [
+            "Receipt",
+            "Recipe",
+            "Ticket"
+          ],
+          "hint": "A French loanword used in medical contexts"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan pharmacists are often the first point of medical contact. They can recommend and sell many medications without a prescription that would require one in other countries.",
+        "Public healthcare in Morocco is available through government hospitals, but many Moroccans prefer private clinics for faster service."
+      ]
+    },
+    {
+      "lesson_id": "b1_m04_l03",
+      "order": 3,
+      "title": "Emergencies & Wellness",
+      "vocabulary": [
+        {
+          "arabic": "إسعاف",
+          "romanized": "is3af",
+          "english": "ambulance/emergency",
+          "example_sentence": {
+            "arabic": "عيطو على الإسعاف!",
+            "romanized": "3iyTu 3la lis3af!",
+            "english": "Call the ambulance!"
+          },
+          "category": "emergency",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مستعجلات",
+          "romanized": "must3jalat",
+          "english": "emergency room",
+          "example_sentence": {
+            "arabic": "مشيت للمستعجلات",
+            "romanized": "mshit llmust3jalat",
+            "english": "I went to the ER"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ضغط",
+          "romanized": "dghT",
+          "english": "blood pressure",
+          "example_sentence": {
+            "arabic": "عندي الضغط مرتافع",
+            "romanized": "3ndi ddghT mrTaf3",
+            "english": "I have high blood pressure"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "سكر",
+          "romanized": "skkr",
+          "english": "diabetes/sugar",
+          "example_sentence": {
+            "arabic": "عندي السكر",
+            "romanized": "3ndi sskkr",
+            "english": "I have diabetes"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ريجيم",
+          "romanized": "rijim",
+          "english": "diet",
+          "example_sentence": {
+            "arabic": "الطبيب قال ليا ندير ريجيم",
+            "romanized": "TTbib 9al lia ndir rijim",
+            "english": "The doctor told me to go on a diet"
+          },
+          "category": "wellness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رياضة",
+          "romanized": "riyada",
+          "english": "exercise/sport",
+          "example_sentence": {
+            "arabic": "خاصك تدير الرياضة",
+            "romanized": "khask tdir rriyada",
+            "english": "You need to exercise"
+          },
+          "category": "wellness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حامل",
+          "romanized": "7aml",
+          "english": "pregnant",
+          "example_sentence": {
+            "arabic": "مراتي حاملة",
+            "romanized": "mrati 7amla",
+            "english": "My wife is pregnant"
+          },
+          "category": "medical",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قابلة",
+          "romanized": "9abla",
+          "english": "midwife",
+          "example_sentence": {
+            "arabic": "القابلة ساعدتها",
+            "romanized": "l9abla sa3dtha",
+            "english": "The midwife helped her"
+          },
+          "category": "medical",
+          "difficulty": 2
+        },
+        {
+          "arabic": "نفسي",
+          "romanized": "nfsi",
+          "english": "psychological/mental",
+          "example_sentence": {
+            "arabic": "الصحة النفسية مهمة",
+            "romanized": "ss77a nnfsiya muhimma",
+            "english": "Mental health is important"
+          },
+          "category": "wellness",
+          "difficulty": 2
+        },
+        {
+          "arabic": "سترسّ",
+          "romanized": "stress",
+          "english": "stress",
+          "example_sentence": {
+            "arabic": "عندي السترسّ بزاف",
+            "romanized": "3ndi stress bzzaf",
+            "english": "I have a lot of stress"
+          },
+          "category": "wellness",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رتاح",
+          "romanized": "rta7",
+          "english": "to rest",
+          "example_sentence": {
+            "arabic": "خاصني نرتاح شوية",
+            "romanized": "khasni nrta7 chwiya",
+            "english": "I need to rest a bit"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تأمين",
+          "romanized": "ta'min",
+          "english": "insurance",
+          "example_sentence": {
+            "arabic": "عندك التأمين الصحي؟",
+            "romanized": "3ndk tta'min ss77i?",
+            "english": "Do you have health insurance?"
+          },
+          "category": "medical",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Emergency Commands",
+          "explanation": "Use imperative for emergencies: '3iyT 3la lis3af!' (call the ambulance!), 'ddini lsbiTar!' (take me to the hospital!), 'sa3dni!' (help me!).",
+          "examples": [
+            {
+              "arabic": "عيطو على الإسعاف دغيا! كاين واحد مضروب!",
+              "romanized": "3iyTu 3la lis3af dghya! kayn wa7d mdrrub!",
+              "english": "Call the ambulance quickly! Someone is hurt!"
+            }
+          ],
+          "common_mistakes": [
+            "In emergencies, use short direct commands - politeness is secondary"
+          ]
+        },
+        {
+          "rule": "Describing Chronic Conditions",
+          "explanation": "'dima 3ndi' (I always have), '3ndi mn zman' (I've had for a long time), 'dima kaywj3ni' (it always hurts me).",
+          "examples": [
+            {
+              "arabic": "ديما عندي الضغط مرتافع من زمان",
+              "romanized": "dima 3ndi ddghT mrTaf3 mn zman",
+              "english": "I've always had high blood pressure for a long time"
+            }
+          ],
+          "common_mistakes": [
+            "Distinguish between acute ('daba' - now) and chronic ('dima' - always) conditions"
+          ]
+        },
+        {
+          "rule": "Giving Wellness Advice: 'khask/7awl'",
+          "explanation": "'khask' (you should), '7awl' (try to), 'ma t-sh' (don't): 'khask tdir rriyada' (you should exercise), 'ma takul-sh bzzaf sskkr' (don't eat too much sugar).",
+          "examples": [
+            {
+              "arabic": "خاصك تدير الرياضة و ما تاكلش بزاف ديال السكر",
+              "romanized": "khask tdir rriyada w ma takulsh bzzaf dyal sskkr",
+              "english": "You should exercise and not eat too much sugar"
+            }
+          ],
+          "common_mistakes": [
+            "'khask' is softer than 'yla9' (you must) for advice"
+          ]
+        },
+        {
+          "rule": "Expressing Worry: 'khayf/9l9an'",
+          "explanation": "'khayf' (afraid), '9l9an' (worried): 'ana 9l9an 3la ss77a dyali' (I'm worried about my health).",
+          "examples": [
+            {
+              "arabic": "أنا قلقانة على الأم ديالي، مريضة بزاف",
+              "romanized": "ana 9l9ana 3la lumm dyali, mrida bzzaf",
+              "english": "I'm worried about my mother, she's very sick"
+            }
+          ],
+          "common_mistakes": [
+            "'9l9an' (m) / '9l9ana' (f) agrees in gender with the speaker"
+          ]
+        },
+        {
+          "rule": "Reporting to Emergency Services",
+          "explanation": "Key info: 'kayn 7adtha' (there's an accident), 'fin? f + location' (where? at + location), 'sh7al mn nnas?' (how many people?).",
+          "examples": [
+            {
+              "arabic": "كاين حادثة فالطريق، واحد مجروح، فالأوتوروت قرب الرباط",
+              "romanized": "kayn 7adtha fTTri9, wa7d mjru7, fl-otorot 9rb rrbaT",
+              "english": "There's an accident on the road, one person injured, on the highway near Rabat"
+            }
+          ],
+          "common_mistakes": [
+            "Give location clearly when calling emergency services"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "عيطو على الإسعاف!",
+          "romanized": "3iyTu 3la lis3af!",
+          "english": "Call the ambulance!",
+          "context": "Emergency"
+        },
+        {
+          "arabic": "عندي الضغط و السكر",
+          "romanized": "3ndi ddghT w sskkr",
+          "english": "I have blood pressure and diabetes",
+          "context": "Medical history"
+        },
+        {
+          "arabic": "الصحة النفسية مهمة بحال الصحة الجسدية",
+          "romanized": "ss77a nnfsiya muhimma b7al ss77a ljsadiya",
+          "english": "Mental health is as important as physical health",
+          "context": "Wellness discussion"
+        },
+        {
+          "arabic": "الله يعطيك الصحة",
+          "romanized": "allah y3Tik ss77a",
+          "english": "May God give you health",
+          "context": "Common blessing"
+        },
+        {
+          "arabic": "بسلامة، ردّ البال على راسك",
+          "romanized": "bslama, rdd lbal 3la rask",
+          "english": "Goodbye, take care of yourself",
+          "context": "Caring farewell"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'Call the ambulance!' in Darija?",
+          "correct_answer": "عيطو على الإسعاف!",
+          "distractors": [
+            "عيطو على الطبيب!",
+            "مشيو للسبيطار!",
+            "جيبو الدوا!"
+          ],
+          "hint": "'is3af' means ambulance/emergency"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "عندي ال___ مرتافع (I have high blood pressure)",
+          "correct_answer": "ضغط",
+          "romanized_answer": "dghT",
+          "hint": "The word for blood pressure"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Mental health is important'",
+          "correct_answer_arabic": "الصحة النفسية مهمة",
+          "correct_answer_romanized": "ss77a nnfsiya muhimma",
+          "hint": "'nfsiya' means psychological/mental"
+        },
+        {
+          "type": "matching",
+          "question": "Match health terms",
+          "pairs": [
+            {
+              "darija": "ضغط",
+              "english": "blood pressure"
+            },
+            {
+              "darija": "سكر",
+              "english": "diabetes"
+            },
+            {
+              "darija": "رياضة",
+              "english": "exercise"
+            },
+            {
+              "darija": "سترسّ",
+              "english": "stress"
+            },
+            {
+              "darija": "تأمين",
+              "english": "insurance"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'allah y3Tik ss77a' mean?",
+          "correct_answer": "May God give you health",
+          "distractors": [
+            "May God heal you",
+            "God is healthy",
+            "Health is from God"
+          ],
+          "hint": "A common Moroccan blessing"
+        }
+      ],
+      "cultural_notes": [
+        "The emergency number in Morocco is 15 for ambulance (SAMU) and 19 for police. 150 is for fire services.",
+        "Moroccan culture increasingly acknowledges mental health importance, though stigma still exists. Traditional approaches include spiritual healing through Quranic recitation and visits to marabouts."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {
+        "darija_arabic": "راس",
+        "darija_latin": "ras",
+        "english": "head"
+      },
+      {
+        "darija_arabic": "كرش",
+        "darija_latin": "krsh",
+        "english": "stomach"
+      },
+      {
+        "darija_arabic": "طبيب",
+        "darija_latin": "Tbib",
+        "english": "doctor"
+      },
+      {
+        "darija_arabic": "دوا",
+        "darija_latin": "dwa",
+        "english": "medicine"
+      },
+      {
+        "darija_arabic": "مريض",
+        "darija_latin": "mrid",
+        "english": "sick"
+      },
+      {
+        "darija_arabic": "سخانة",
+        "darija_latin": "skhana",
+        "english": "fever"
+      },
+      {
+        "darija_arabic": "فارماسيان",
+        "darija_latin": "farmasyan",
+        "english": "pharmacy"
+      },
+      {
+        "darija_arabic": "إسعاف",
+        "darija_latin": "is3af",
+        "english": "ambulance"
+      },
+      {
+        "darija_arabic": "رياضة",
+        "darija_latin": "riyada",
+        "english": "exercise"
+      },
+      {
+        "darija_arabic": "صحة",
+        "darija_latin": "s77a",
+        "english": "health"
+      }
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "كي___ راسي",
+        "sentence_latin": "kay___ rasi",
+        "answer_arabic": "وجعني",
+        "answer_latin": "wj3ni",
+        "hint": "hurts me"
+      },
+      {
+        "sentence_arabic": "عندي ال___",
+        "sentence_latin": "3ndi ss___",
+        "answer_arabic": "سخانة",
+        "answer_latin": "skhana",
+        "hint": "fever"
+      },
+      {
+        "sentence_arabic": "___ يشافيك",
+        "sentence_latin": "___ yshafik",
+        "answer_arabic": "الله",
+        "answer_latin": "allah",
+        "hint": "May God heal you"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "What is an '3ttar' in Moroccan culture?",
+        "correct_answer": "A traditional herbalist who sells natural remedies and spices in the souq",
+        "distractors": [
+          "A doctor",
+          "A pharmacist",
+          "A nurse"
+        ],
+        "explanation": "3ttarin are traditional herbalists found in Moroccan souqs who sell herbs, spices, and natural remedies for various ailments."
+      },
+      {
+        "question": "Why is the hammam considered therapeutic in Morocco?",
+        "correct_answer": "It combines steam bathing, exfoliation, and relaxation for physical and mental health benefits",
+        "distractors": [
+          "It's just for cleaning",
+          "It's a social event only",
+          "It has no health benefits"
+        ],
+        "explanation": "The hammam is believed to improve circulation, relieve stress, cleanse the skin, and promote overall wellbeing in Moroccan culture."
+      },
+      {
+        "question": "What is Morocco's emergency number for ambulance?",
+        "correct_answer": "15 (SAMU)",
+        "distractors": [
+          "911",
+          "112",
+          "999"
+        ],
+        "explanation": "Morocco uses 15 for ambulance (SAMU), 19 for police, and 150 for fire services."
+      }
+    ]
+  }
+}

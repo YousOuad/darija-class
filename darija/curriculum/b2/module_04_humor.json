@@ -1,0 +1,1123 @@
+{
+  "module_id": "b2_m04",
+  "level": "b2",
+  "module_number": 4,
+  "title": "Humor & Slang",
+  "description": "Understand Moroccan humor, modern slang, and wordplay in Darija",
+  "lessons": [
+    {
+      "lesson_id": "b2_m04_l01",
+      "order": 1,
+      "title": "Modern Darija Slang",
+      "vocabulary": [
+        {
+          "arabic": "نكتة",
+          "romanized": "nukta",
+          "english": "joke",
+          "example_sentence": {
+            "arabic": "عندي واحد النكتة واعرة",
+            "romanized": "3ndi wa7d nnukta wa3ra",
+            "english": "I have a great joke"
+          },
+          "category": "humor",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ضحك",
+          "romanized": "d7k",
+          "english": "to laugh",
+          "example_sentence": {
+            "arabic": "ضحكت بزاف",
+            "romanized": "d7kt bzzaf",
+            "english": "I laughed a lot"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "واعر",
+          "romanized": "wa3r",
+          "english": "amazing/great (slang)",
+          "example_sentence": {
+            "arabic": "هاد الفيلم واعر!",
+            "romanized": "had lfilm wa3r!",
+            "english": "This movie is amazing!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مزيان هاد شي",
+          "romanized": "mzyan had shi",
+          "english": "this is great",
+          "example_sentence": {
+            "arabic": "مزيان هاد شي ديال الصح!",
+            "romanized": "mzyan had shi dyal ss7!",
+            "english": "This is really great!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خليها على الله",
+          "romanized": "khliha 3la llah",
+          "english": "leave it to God (forget about it)",
+          "example_sentence": {
+            "arabic": "ما تقلقش، خليها على الله",
+            "romanized": "ma t9l9sh, khliha 3la llah",
+            "english": "Don't worry, leave it to God"
+          },
+          "category": "expression",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حشاك",
+          "romanized": "7shak",
+          "english": "excuse the expression (before something crude)",
+          "example_sentence": {
+            "arabic": "حشاك، كان كيقول كلام خايب",
+            "romanized": "7shak, kan kay9ul klam khayb",
+            "english": "Excuse the expression, he was saying bad things"
+          },
+          "category": "expression",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مسطي",
+          "romanized": "msTi",
+          "english": "crazy/cool (slang)",
+          "example_sentence": {
+            "arabic": "هاد الشي مسطي!",
+            "romanized": "had shshay msTi!",
+            "english": "This is crazy/cool!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "كراش",
+          "romanized": "krash",
+          "english": "crash (failed)",
+          "example_sentence": {
+            "arabic": "الپروجي كراش",
+            "romanized": "lproji krash",
+            "english": "The project crashed/failed"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "طوب",
+          "romanized": "tob",
+          "english": "top/great (from English)",
+          "example_sentence": {
+            "arabic": "هاد الشي طوب!",
+            "romanized": "had shshay tob!",
+            "english": "This is top/great!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هايل",
+          "romanized": "hayl",
+          "english": "awesome/incredible",
+          "example_sentence": {
+            "arabic": "الماكلة هايلة!",
+            "romanized": "lmakla hayla!",
+            "english": "The food is awesome!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تهلا",
+          "romanized": "thlla",
+          "english": "to take care / watch out",
+          "example_sentence": {
+            "arabic": "تهلا فراسك",
+            "romanized": "thlla f rask",
+            "english": "Take care of yourself"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مخلوع",
+          "romanized": "mkhl3",
+          "english": "scared/spooked (slang)",
+          "example_sentence": {
+            "arabic": "ولا مخلوع!",
+            "romanized": "wlla mkhl3!",
+            "english": "He got spooked!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فالمية",
+          "romanized": "flmya",
+          "english": "100% / totally",
+          "example_sentence": {
+            "arabic": "متافق فالمية",
+            "romanized": "mtaf9 flmya",
+            "english": "100% agree"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صاروخ",
+          "romanized": "sarukh",
+          "english": "rocket (very attractive person)",
+          "example_sentence": {
+            "arabic": "هادي صاروخ!",
+            "romanized": "hadi sarukh!",
+            "english": "She's gorgeous! (lit: she's a rocket)"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "حرق",
+          "romanized": "7r9",
+          "english": "to burn (to emigrate illegally)",
+          "example_sentence": {
+            "arabic": "بزاف ديال الشباب بغاو يحرقو",
+            "romanized": "bzzaf dyal shshbab bghaw y7r9u",
+            "english": "Many young people wanted to emigrate illegally"
+          },
+          "category": "slang",
+          "difficulty": 3
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Slang Intensifiers",
+          "explanation": "Modern Darija uses slang intensifiers: 'dyal ss7' (for real), 'bzzaf' (a lot), 'flmya' (100%), 'khlass' (period/done).",
+          "examples": [
+            {
+              "arabic": "هاد الشي واعر ديال الصح!",
+              "romanized": "had shshay wa3r dyal ss7!",
+              "english": "This is really amazing!"
+            }
+          ],
+          "common_mistakes": [
+            "Slang intensifiers are only for informal settings"
+          ]
+        },
+        {
+          "rule": "Humor Structures in Darija",
+          "explanation": "Jokes often use: setup-punchline, wordplay on similar sounds, exaggeration ('mat bdd7k' = died laughing).",
+          "examples": [
+            {
+              "arabic": "قال ليه: علاش ما مشيتيش للطبيب؟ قال ليه: حيت مريض!",
+              "romanized": "9al lih: 3lash ma mshitish lTTbib? 9al lih: 7it mrid!",
+              "english": "He said: why didn't you go to the doctor? He said: because I'm sick!"
+            }
+          ],
+          "common_mistakes": [
+            "Moroccan humor is often self-deprecating and situational"
+          ]
+        },
+        {
+          "rule": "Code-Switching for Humor",
+          "explanation": "Moroccans often switch to French or English for comedic effect, mixing languages within a single sentence.",
+          "examples": [
+            {
+              "arabic": "C'est normal هاد الشي, mais quand même واعر!",
+              "romanized": "c'est normal had shshay, mais quand même wa3r!",
+              "english": "This is normal, but still it's amazing!"
+            }
+          ],
+          "common_mistakes": [
+            "Code-switching is natural in Morocco and not considered incorrect"
+          ]
+        },
+        {
+          "rule": "Modern Social Media Darija",
+          "explanation": "Young Moroccans on social media use: numerals (3, 7, 9) for Arabic sounds, French/English loanwords, emoji-style expressions.",
+          "examples": [
+            {
+              "arabic": "3jbni had lpost, wa3r bzzaf!",
+              "romanized": "3jbni had lpost, wa3r bzzaf!",
+              "english": "I liked this post, so amazing!"
+            }
+          ],
+          "common_mistakes": [
+            "Social media Darija is very informal and constantly evolving"
+          ]
+        },
+        {
+          "rule": "Sarcasm Markers in Darija",
+          "explanation": "Sarcasm is marked by tone and phrases like 'biTTabi3a' (naturally/of course), 'mashallah' (used sarcastically), 'wa3r 3lik' (good for you - sarcastic).",
+          "examples": [
+            {
+              "arabic": "بالطبيعة، هادا هو الحل! (ساخرة)",
+              "romanized": "biTTabi3a, hada hwa l7ll! (sarcastic)",
+              "english": "Naturally, this is the solution! (sarcastic)"
+            }
+          ],
+          "common_mistakes": [
+            "Sarcasm depends heavily on tone - the same words can be sincere or sarcastic"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "مات بالضحك!",
+          "romanized": "mat bdd7k!",
+          "english": "He died laughing! (figurative)",
+          "context": "Describing something hilarious"
+        },
+        {
+          "arabic": "واعر ديال الصح!",
+          "romanized": "wa3r dyal ss7!",
+          "english": "Really amazing!",
+          "context": "Strong positive reaction"
+        },
+        {
+          "arabic": "تهلا فراسك أ صاحبي",
+          "romanized": "thlla f rask a sa7bi",
+          "english": "Take care of yourself, friend",
+          "context": "Casual farewell"
+        },
+        {
+          "arabic": "خليها على الله و سير",
+          "romanized": "khliha 3la llah w sir",
+          "english": "Leave it to God and go",
+          "context": "Dismissing a problem"
+        },
+        {
+          "arabic": "ما تخلعش!",
+          "romanized": "ma tkhl3sh!",
+          "english": "Don't freak out!",
+          "context": "Calming someone down"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What does 'wa3r' mean in modern Darija slang?",
+          "correct_answer": "Amazing/great",
+          "distractors": [
+            "Difficult",
+            "Ugly",
+            "Boring"
+          ],
+          "hint": "It's originally 'rough' but used positively in slang"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "مات بال___! (He died laughing!)",
+          "correct_answer": "ضحك",
+          "romanized_answer": "d7k",
+          "hint": "The word for 'laughter'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the slang",
+          "pairs": [
+            {
+              "darija": "واعر",
+              "english": "amazing"
+            },
+            {
+              "darija": "مسطي",
+              "english": "crazy/cool"
+            },
+            {
+              "darija": "هايل",
+              "english": "awesome"
+            },
+            {
+              "darija": "طوب",
+              "english": "top/great"
+            },
+            {
+              "darija": "فالمية",
+              "english": "100%"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Don't freak out!'",
+          "correct_answer_arabic": "ما تخلعش!",
+          "correct_answer_romanized": "ma tkhl3sh!",
+          "hint": "'tkhl3' means to get spooked/freak out"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does '7r9' literally mean vs its slang meaning?",
+          "correct_answer": "Literally 'burn' - slang for 'emigrate illegally'",
+          "distractors": [
+            "Literally 'run' - slang for 'hurry'",
+            "Literally 'cook' - slang for 'cheat'",
+            "Literally 'fly' - slang for 'succeed'"
+          ],
+          "hint": "It relates to crossing borders"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan humor is famous in the Arab world. Stand-up comedy (one-man-show) has become very popular in Morocco.",
+        "The word '7r9' (burn) for illegal emigration comes from the idea of burning one's papers to become untraceable. It's a sensitive but commonly discussed topic."
+      ]
+    },
+    {
+      "lesson_id": "b2_m04_l02",
+      "order": 2,
+      "title": "Moroccan Wordplay & Jokes",
+      "vocabulary": [
+        {
+          "arabic": "تقشاب",
+          "romanized": "t9shab",
+          "english": "to roast/mock someone (slang)",
+          "example_sentence": {
+            "arabic": "تقشبو بزاف!",
+            "romanized": "t9shbu bzzaf!",
+            "english": "They roasted him a lot!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مول النكت",
+          "romanized": "mul nnukt",
+          "english": "the joker / funny person",
+          "example_sentence": {
+            "arabic": "هاداك مول النكت ديال الگروب",
+            "romanized": "hadak mul nnukt dyal lgroup",
+            "english": "That guy is the joker of the group"
+          },
+          "category": "humor",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كيتناقز",
+          "romanized": "kaytn9z",
+          "english": "being sarcastic / messing around",
+          "example_sentence": {
+            "arabic": "ما تاخدوش بالسريوس، غير كيتناقز",
+            "romanized": "ma takhdush bssriyus, ghir kaytn9z",
+            "english": "Don't take him seriously, he's just messing around"
+          },
+          "category": "humor",
+          "difficulty": 2
+        },
+        {
+          "arabic": "كلام معسل",
+          "romanized": "klam m3ssl",
+          "english": "sweet talk / flattery",
+          "example_sentence": {
+            "arabic": "ما تصدقوش، غير كلام معسل",
+            "romanized": "ma tsd9ush, ghir klam m3ssl",
+            "english": "Don't believe him, it's just sweet talk"
+          },
+          "category": "expression",
+          "difficulty": 2
+        },
+        {
+          "arabic": "طاح ليه الشكل",
+          "romanized": "Ta7 lih shshkl",
+          "english": "he was embarrassed (his face fell)",
+          "example_sentence": {
+            "arabic": "ملي عرف الحقيقة، طاح ليه الشكل",
+            "romanized": "mli 3rf l79i9a, Ta7 lih shshkl",
+            "english": "When he found out the truth, he was embarrassed"
+          },
+          "category": "expression",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ضرب الطبل",
+          "romanized": "drb TTbl",
+          "english": "to show off / brag",
+          "example_sentence": {
+            "arabic": "ديما كيضرب الطبل بالتلفون الجديد ديالو",
+            "romanized": "dima kaydrb TTbl bttilfun jdid dyalu",
+            "english": "He always shows off his new phone"
+          },
+          "category": "expression",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مقود",
+          "romanized": "m9wd",
+          "english": "annoying / irritating (slang)",
+          "example_sentence": {
+            "arabic": "هاد الواحد مقود بزاف!",
+            "romanized": "had lwa7d m9wd bzzaf!",
+            "english": "This guy is so annoying!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فشكل",
+          "romanized": "fshkl",
+          "english": "fail / embarrassment (slang)",
+          "example_sentence": {
+            "arabic": "هاداك الموقف كان فشكل!",
+            "romanized": "hadak lmaw9f kan fshkl!",
+            "english": "That situation was a total fail!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "خرج ليه",
+          "romanized": "khrj lih",
+          "english": "to lose it / snap (slang)",
+          "example_sentence": {
+            "arabic": "خرج ليه من الضحك!",
+            "romanized": "khrj lih mn dd7k!",
+            "english": "He lost it from laughing!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بزز",
+          "romanized": "bzz",
+          "english": "awesome / cool (youth slang)",
+          "example_sentence": {
+            "arabic": "هاد الأغنية بزز!",
+            "romanized": "had lughniya bzz!",
+            "english": "This song is awesome!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عقل",
+          "romanized": "39l",
+          "english": "to remember / recall",
+          "example_sentence": {
+            "arabic": "عقلتي على هاديك النكتة؟",
+            "romanized": "39lti 3la hadik nnukta?",
+            "english": "Do you remember that joke?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قلب عليه الطابلة",
+          "romanized": "9lb 3lih TTabla",
+          "english": "to turn the tables on someone",
+          "example_sentence": {
+            "arabic": "قلب عليه الطابلة و ربح النقاش",
+            "romanized": "9lb 3lih TTabla w rb7 nn9ash",
+            "english": "He turned the tables and won the argument"
+          },
+          "category": "expression",
+          "difficulty": 3
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Joke Setup-Punchline Structure",
+          "explanation": "Moroccan jokes follow '9al lih...' (he told him) format. Setup: 'wa7d rrajl msha l...' (a man went to...). Punchline often uses wordplay or unexpected twist.",
+          "examples": [
+            {
+              "arabic": "واحد الراجل مشا للحانوت، قال ليه: عندك حليب؟ قال ليه: إيه. قال ليه: حلبو من جوج!",
+              "romanized": "wa7d rrajl msha ll7anut, 9al lih: 3ndk 7lib? 9al lih: iyeh. 9al lih: 7lbu mn juj!",
+              "english": "A man went to a shop, said: do you have milk? He said: yes. He said: milk it from 2! (wordplay on 7lib/7lbu)"
+            }
+          ],
+          "common_mistakes": [
+            "Moroccan jokes rely heavily on wordplay that may not translate well"
+          ]
+        },
+        {
+          "rule": "Exaggeration for Comic Effect",
+          "explanation": "Use hyperbole: 'mat bdd7k' (died laughing), 'Tar lih l39l' (his mind flew away), 'n9sm 3lih' (I'd split for him/her). Exaggeration is a key humor device.",
+          "examples": [
+            {
+              "arabic": "ملي سمعت الخبر طار ليا العقل!",
+              "romanized": "mli sm3t lkhbar Tar lia l39l!",
+              "english": "When I heard the news, my mind flew away! (I was shocked)"
+            }
+          ],
+          "common_mistakes": [
+            "Exaggeration is expected in storytelling - being too literal sounds awkward"
+          ]
+        },
+        {
+          "rule": "Rhyming Expressions and Wordplay",
+          "explanation": "Darija loves rhyming pairs: 'dg dg' (knock knock), '7it 7it' (wall wall = very close), 'shwiya bshwiya' (little by little). These add rhythm and humor.",
+          "examples": [
+            {
+              "arabic": "شوية بشوية كيتعلم، يوم بيوم كيفهم",
+              "romanized": "shwiya bshwiya kayit3llm, yum byum kayfhm",
+              "english": "Little by little he learns, day by day he understands"
+            }
+          ],
+          "common_mistakes": [
+            "Rhyming pairs are fixed expressions - don't try to create new ones without understanding the pattern"
+          ]
+        },
+        {
+          "rule": "Storytelling with Dialogue",
+          "explanation": "Funny stories use direct speech heavily: '9al lih' (he said to him), '9alt lih' (she said to him), '9alu lih' (they said to him). Switch between narrator and character voices.",
+          "examples": [
+            {
+              "arabic": "واحد الراجل قال لمراتو: فين الماكلة؟ قالت ليه: فالتلاجة. قال ليها: واش أنا ثلاجة باش نلقاها؟",
+              "romanized": "wa7d rrajl 9al lmratu: fin lmakla? 9alt lih: fttllaja. 9al liha: wash ana tllaja bash nl9aha?",
+              "english": "A man asked his wife: where's the food? She said: in the fridge. He said: am I a fridge to find it?"
+            }
+          ],
+          "common_mistakes": [
+            "Good storytelling requires switching between '9al lih' and '9alt lih' properly for male/female speakers"
+          ]
+        },
+        {
+          "rule": "Double Meaning Words",
+          "explanation": "Many Darija words have double meanings used for humor: '7r9' (burn/emigrate), 'Tb3' (print/follow), 'drb' (hit/play instrument), 'Tl3' (go up/be clever).",
+          "examples": [
+            {
+              "arabic": "طلع عليه = went up to him / figured him out",
+              "romanized": "Tl3 3lih = went up to him / figured him out",
+              "english": "Tl3 3lih has both a literal (went up) and figurative (figured him out) meaning"
+            }
+          ],
+          "common_mistakes": [
+            "Context determines which meaning is intended - pay attention to surrounding words"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "عندي واحد النكتة، بغيتي تسمعها؟",
+          "romanized": "3ndi wa7d nnukta, bghiti tsm3ha?",
+          "english": "I have a joke, want to hear it?",
+          "context": "Setting up a joke"
+        },
+        {
+          "arabic": "ما بان لك والو؟ غير كنضحك!",
+          "romanized": "ma ban lk walu? ghir kand7k!",
+          "english": "Didn't seem like anything? I'm just joking!",
+          "context": "Clarifying you're joking"
+        },
+        {
+          "arabic": "هاد الشي فيه الضحك و البكا!",
+          "romanized": "had shshay fih dd7k w lbka!",
+          "english": "This is both funny and sad!",
+          "context": "Tragicomic situation"
+        },
+        {
+          "arabic": "أنا ما كنسخرش، كنتكلم بالسريوس",
+          "romanized": "ana ma kanskhhrsh, kantklm bssriyus",
+          "english": "I'm not being sarcastic, I'm speaking seriously",
+          "context": "Clarifying sincerity"
+        },
+        {
+          "arabic": "واخا تضحك ولكن هاد الشي حقيقي!",
+          "romanized": "wakha td7k walakin had shshay 79i9i!",
+          "english": "You may laugh but this is real!",
+          "context": "Insisting on truth despite humor"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What does 't9shab' mean in Darija slang?",
+          "correct_answer": "To roast/mock someone",
+          "distractors": [
+            "To compliment someone",
+            "To greet someone",
+            "To ignore someone"
+          ],
+          "hint": "Related to making fun of someone"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "طاح ليه ال___! (He was embarrassed!)",
+          "correct_answer": "شكل",
+          "romanized_answer": "shkl",
+          "hint": "The word for 'face/appearance'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the humorous expressions",
+          "pairs": [
+            {
+              "darija": "ضرب الطبل",
+              "english": "to show off"
+            },
+            {
+              "darija": "طاح ليه الشكل",
+              "english": "was embarrassed"
+            },
+            {
+              "darija": "قلب عليه الطابلة",
+              "english": "turned the tables"
+            },
+            {
+              "darija": "كلام معسل",
+              "english": "sweet talk"
+            },
+            {
+              "darija": "خرج ليه",
+              "english": "lost it / snapped"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Don't take him seriously, he's just messing around'",
+          "correct_answer_arabic": "ما تاخدوش بالسريوس، غير كيتناقز",
+          "correct_answer_romanized": "ma takhdush bssriyus, ghir kaytn9z",
+          "hint": "Use 'kaytn9z' for messing around"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you start telling a joke in Darija?",
+          "correct_answer": "واحد الراجل مشا ل... / قال ليه...",
+          "distractors": [
+            "كان يا ما كان",
+            "فالبداية...",
+            "سمعت بلي..."
+          ],
+          "hint": "Jokes typically start with a character going somewhere or someone saying something"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan humor often involves 'Jouha' stories - a traditional wise fool character shared across North Africa and the Middle East. His stories teach wisdom through comedy.",
+        "Self-deprecating humor is very common in Morocco. People joke about their own cities, professions, and backgrounds. 'Marrakchis' are joked about for being 'shrewd,' 'Fassis' for being 'stingy,' etc. - these are affectionate stereotypes."
+      ]
+    },
+    {
+      "lesson_id": "b2_m04_l03",
+      "order": 3,
+      "title": "Internet & Youth Culture Slang",
+      "vocabulary": [
+        {
+          "arabic": "فليكسي",
+          "romanized": "fliksi",
+          "english": "flexing / showing off (from English)",
+          "example_sentence": {
+            "arabic": "ديما كيفليكسي بالحوايج ديالو الجداد",
+            "romanized": "dima kayfliksi bl7wayj dyalu jdad",
+            "english": "He's always flexing his new clothes"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فايب",
+          "romanized": "vibe",
+          "english": "vibe / atmosphere",
+          "example_sentence": {
+            "arabic": "الفايب ديال هاد البلاصة واعر",
+            "romanized": "lvibe dyal had lblasa wa3r",
+            "english": "The vibe of this place is amazing"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بوز",
+          "romanized": "buz",
+          "english": "buzz / hype",
+          "example_sentence": {
+            "arabic": "هاد الأغنية دارت بوز كبير",
+            "romanized": "had lughniya dart buz kbir",
+            "english": "This song created a big buzz"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لوز",
+          "romanized": "luz",
+          "english": "loser (from English)",
+          "example_sentence": {
+            "arabic": "ما تكونش لوز، حاول!",
+            "romanized": "ma tkunsh luz, 7awl!",
+            "english": "Don't be a loser, try!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "نورمي",
+          "romanized": "normi",
+          "english": "normie / basic person (internet slang)",
+          "example_sentence": {
+            "arabic": "هاداك نورمي ما كيفهمش الميمز",
+            "romanized": "hadak normi ma kayfhmsh lmemes",
+            "english": "That guy is a normie, he doesn't get memes"
+          },
+          "category": "slang",
+          "difficulty": 3
+        },
+        {
+          "arabic": "غاسل",
+          "romanized": "ghasl",
+          "english": "cringe / embarrassing",
+          "example_sentence": {
+            "arabic": "هاد الفيديو غاسل بزاف!",
+            "romanized": "had lvideo ghasl bzzaf!",
+            "english": "This video is so cringe!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "سكيب",
+          "romanized": "skip",
+          "english": "skip / pass on (from English)",
+          "example_sentence": {
+            "arabic": "هاد الفيلم؟ سكيب!",
+            "romanized": "had lfilm? skip!",
+            "english": "This movie? Skip it!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جو",
+          "romanized": "jaw",
+          "english": "atmosphere / mood",
+          "example_sentence": {
+            "arabic": "الجو مزيان الليلة",
+            "romanized": "ljaw mzyan llila",
+            "english": "The mood is great tonight"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رانسي",
+          "romanized": "ransi",
+          "english": "rancid / disgusting (from French)",
+          "example_sentence": {
+            "arabic": "هاد الماكلة رانسية!",
+            "romanized": "had lmakla ransiya!",
+            "english": "This food is disgusting!"
+          },
+          "category": "slang",
+          "difficulty": 2
+        },
+        {
+          "arabic": "كوول",
+          "romanized": "cool",
+          "english": "cool (from English)",
+          "example_sentence": {
+            "arabic": "هاد الصاحب ديالي كوول بزاف",
+            "romanized": "had ssa7b dyali cool bzzaf",
+            "english": "My friend is very cool"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ميم",
+          "romanized": "meme",
+          "english": "meme (internet humor)",
+          "example_sentence": {
+            "arabic": "شفتي هاد الميم؟ مات بالضحك!",
+            "romanized": "shfti had lmeme? mat bdd7k!",
+            "english": "Did you see this meme? I died laughing!"
+          },
+          "category": "slang",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فلوگ",
+          "romanized": "vlog",
+          "english": "vlog",
+          "example_sentence": {
+            "arabic": "بديت واحد الفلوگ على يوتيوب",
+            "romanized": "bdit wa7d lvlog 3la youtube",
+            "english": "I started a vlog on YouTube"
+          },
+          "category": "media",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Franglais-Darija Mixing",
+          "explanation": "Young Moroccans freely mix Darija with French and English: 'ana kanchill f dar' (I'm chilling at home), 'c'est dead had lmawdu3' (this topic is dead). Verbs are often conjugated in Darija form.",
+          "examples": [
+            {
+              "arabic": "أنا كنتشيلي فالقهوة، بغيتي تجوينيني؟",
+              "romanized": "ana kantchili fl9hwa, bghiti tjwynini?",
+              "english": "I'm chilling at the cafe, want to join me?"
+            }
+          ],
+          "common_mistakes": [
+            "The level of mixing depends on the speaker's background and the social context - more educated youth tend to mix more"
+          ]
+        },
+        {
+          "rule": "Internet Abbreviations in Darija",
+          "explanation": "Online Darija: 'wllh' (wllah/I swear), 'mdr' (mort de rire/LOL), 'stp' (s'il te plait), 'cvb' (ca va bien). Numbers replace Arabic letters: 3, 7, 9, 5, 8.",
+          "examples": [
+            {
+              "arabic": "wllh had lpost wa3r mdr",
+              "romanized": "wllh had lpost wa3r mdr",
+              "english": "I swear this post is amazing LOL"
+            }
+          ],
+          "common_mistakes": [
+            "These abbreviations are only for texting and social media - never use them in formal writing"
+          ]
+        },
+        {
+          "rule": "Darija Verb Conjugation of English Loanwords",
+          "explanation": "English verbs are adapted to Darija patterns: 'kan-skip-i' (I skip), 'kay-chill-i' (he chills), 't-ignore-at' (she was ignored). The Darija conjugation prefixes/suffixes wrap the English root.",
+          "examples": [
+            {
+              "arabic": "كنسكيبي هاد النوع ديال الناس",
+              "romanized": "kanskipi had nnu3 dyal nnas",
+              "english": "I skip this type of people"
+            }
+          ],
+          "common_mistakes": [
+            "Not all English verbs can be conjugated this way - only commonly used ones in youth culture"
+          ]
+        },
+        {
+          "rule": "Moroccan Meme Culture Language",
+          "explanation": "Meme language: 'fin ghadi biha l3chir' (where is the country headed), 'nta/nti mn had nnas?' (are you one of those people?), 'matfahmsh' (you wouldn't understand).",
+          "examples": [
+            {
+              "arabic": "ما تفهمش، هادي حاجة ديال لأنترنت",
+              "romanized": "ma tfhmsh, hadi 7aja dyal l-internet",
+              "english": "You wouldn't understand, this is an internet thing"
+            }
+          ],
+          "common_mistakes": [
+            "Internet Darija evolves very quickly - what is trending today may be outdated tomorrow"
+          ]
+        },
+        {
+          "rule": "Generational Language Differences",
+          "explanation": "Older generation: 'zwina' (nice), 'mzyana' (good), 'kbira 3lik' (too much for you). Younger generation: 'wa3r' (amazing), 'tob' (top), 'msTi' (crazy/cool), 'dead' (done/over).",
+          "examples": [
+            {
+              "arabic": "جدي كيقول \"زوينة\" و أنا كنقول \"واعرة\"!",
+              "romanized": "jddi kay9ul \"zwina\" w ana kan9ul \"wa3ra\"!",
+              "english": "My grandpa says \"zwina\" (nice) and I say \"wa3ra\" (amazing)!"
+            }
+          ],
+          "common_mistakes": [
+            "Using youth slang with older people may seem disrespectful - adapt your language to your audience"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "هاد الشي دار بوز فالإنترنت!",
+          "romanized": "had shshay dar buz fl-internet!",
+          "english": "This thing went viral on the internet!",
+          "context": "Discussing viral content"
+        },
+        {
+          "arabic": "الفايب ديال هاد الليلة طوب!",
+          "romanized": "lvibe dyal had llila tob!",
+          "english": "The vibe of tonight is great!",
+          "context": "Describing atmosphere"
+        },
+        {
+          "arabic": "واش أنت فالتيك توك ولا الإنستا؟",
+          "romanized": "wash anta ftik tok wla l-insta?",
+          "english": "Are you on TikTok or Instagram?",
+          "context": "Asking about social media"
+        },
+        {
+          "arabic": "هاد الميم مغربي فالمية!",
+          "romanized": "had lmeme mghribi flmya!",
+          "english": "This meme is 100% Moroccan!",
+          "context": "Reacting to Moroccan memes"
+        },
+        {
+          "arabic": "ولاد الناس ما كيعرفوش هاد الريفيرونس",
+          "romanized": "wlad nnas ma kay3rfush had lreference",
+          "english": "Normal people wouldn't get this reference",
+          "context": "Internet inside joke"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ghasl' mean in Moroccan youth slang?",
+          "correct_answer": "Cringe / embarrassing",
+          "distractors": [
+            "Funny",
+            "Dirty",
+            "Clean"
+          ],
+          "hint": "It literally means 'washing' but is used as slang for something embarrassing"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "هاد الأغنية دارت ___ كبير! (This song created a big buzz!)",
+          "correct_answer": "بوز",
+          "romanized_answer": "buz",
+          "hint": "An English loanword for hype/excitement"
+        },
+        {
+          "type": "matching",
+          "question": "Match the internet slang",
+          "pairs": [
+            {
+              "darija": "فليكسي",
+              "english": "showing off"
+            },
+            {
+              "darija": "سكيب",
+              "english": "skip/pass"
+            },
+            {
+              "darija": "غاسل",
+              "english": "cringe"
+            },
+            {
+              "darija": "بوز",
+              "english": "buzz/hype"
+            },
+            {
+              "darija": "فايب",
+              "english": "vibe"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'This thing went viral on the internet'",
+          "correct_answer_arabic": "هاد الشي دار بوز فالإنترنت",
+          "correct_answer_romanized": "had shshay dar buz fl-internet",
+          "hint": "Use 'dar buz' for went viral"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do young Moroccans adapt English verbs into Darija?",
+          "correct_answer": "They add Darija conjugation prefixes/suffixes around the English root (e.g., kan-skip-i)",
+          "distractors": [
+            "They translate them to Arabic first",
+            "They use them only in English",
+            "They don't use English verbs at all"
+          ],
+          "hint": "Think about how 'skip' becomes 'kanskipi'"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan internet culture has created its own unique blend of Darija, French, and English. Platforms like TikTok, Instagram, and YouTube have given rise to Moroccan content creators who speak in a distinctive mix of languages.",
+        "The 'Moroccan meme culture' is vibrant and self-referential. Popular themes include: traffic in Casablanca, the struggle of '9raya' (studying), family expectations, and the contrast between 'lblad' (Morocco) and 'lkharij' (abroad)."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {
+        "darija_arabic": "نكتة",
+        "darija_latin": "nukta",
+        "english": "joke"
+      },
+      {
+        "darija_arabic": "واعر",
+        "darija_latin": "wa3r",
+        "english": "amazing"
+      },
+      {
+        "darija_arabic": "مسطي",
+        "darija_latin": "msTi",
+        "english": "crazy/cool"
+      },
+      {
+        "darija_arabic": "هايل",
+        "darija_latin": "hayl",
+        "english": "awesome"
+      },
+      {
+        "darija_arabic": "مخلوع",
+        "darija_latin": "mkhl3",
+        "english": "scared"
+      },
+      {
+        "darija_arabic": "تقشاب",
+        "darija_latin": "t9shab",
+        "english": "to roast/mock"
+      },
+      {
+        "darija_arabic": "فشكل",
+        "darija_latin": "fshkl",
+        "english": "fail/embarrassment"
+      },
+      {
+        "darija_arabic": "غاسل",
+        "darija_latin": "ghasl",
+        "english": "cringe"
+      },
+      {
+        "darija_arabic": "بوز",
+        "darija_latin": "buz",
+        "english": "buzz/hype"
+      },
+      {
+        "darija_arabic": "فليكسي",
+        "darija_latin": "fliksi",
+        "english": "showing off"
+      }
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "هاد الشي ___ ديال الصح!",
+        "sentence_latin": "had shshay ___ dyal ss7!",
+        "answer_arabic": "واعر",
+        "answer_latin": "wa3r",
+        "hint": "amazing"
+      },
+      {
+        "sentence_arabic": "طاح ليه ال___!",
+        "sentence_latin": "Ta7 lih shshkl!",
+        "answer_arabic": "شكل",
+        "answer_latin": "shkl",
+        "hint": "face/appearance (embarrassed)"
+      },
+      {
+        "sentence_arabic": "هاد الأغنية دارت ___ كبير!",
+        "sentence_latin": "had lughniya dart ___ kbir!",
+        "answer_arabic": "بوز",
+        "answer_latin": "buz",
+        "hint": "buzz/hype"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "What is 'one-man-show' in Morocco?",
+        "correct_answer": "A popular stand-up comedy format that has grown significantly in recent years",
+        "distractors": [
+          "A TV drama",
+          "A cooking show",
+          "A news program"
+        ],
+        "explanation": "Stand-up comedy has become hugely popular in Morocco, with comedians performing in Darija and often mixing French for comedic effect."
+      },
+      {
+        "question": "Who is Jouha in Moroccan culture?",
+        "correct_answer": "A traditional wise fool character whose stories teach wisdom through comedy",
+        "distractors": [
+          "A famous Moroccan singer",
+          "A historical king",
+          "A modern comedian"
+        ],
+        "explanation": "Jouha (also known as Juha/Nasreddin) is a beloved folk character across North Africa and the Middle East whose humorous stories contain deep wisdom."
+      },
+      {
+        "question": "How do young Moroccans typically communicate online?",
+        "correct_answer": "By mixing Darija, French, and English, using number notation for Arabic sounds",
+        "distractors": [
+          "Only in Standard Arabic",
+          "Only in French",
+          "Only in English"
+        ],
+        "explanation": "Moroccan youth online communication is a unique trilingual blend, using numbers (3, 7, 9) for Arabic sounds and freely mixing all three languages."
+      }
+    ]
+  }
+}

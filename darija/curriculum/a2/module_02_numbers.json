@@ -1,0 +1,1093 @@
+{
+  "module_id": "a2_m02",
+  "level": "a2",
+  "module_number": 2,
+  "title": "Numbers & Time",
+  "description": "Learn to count, tell time, and talk about days and dates in Moroccan Darija",
+  "lessons": [
+    {
+      "lesson_id": "a2_m02_l01",
+      "order": 1,
+      "title": "Numbers 1-20",
+      "vocabulary": [
+        {
+          "arabic": "واحد",
+          "romanized": "wa7d",
+          "english": "one / 1",
+          "example_sentence": {
+            "arabic": "عطيني واحد الخبزة",
+            "romanized": "3tini wa7d lkhobza",
+            "english": "Give me one bread"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جوج",
+          "romanized": "jouj",
+          "english": "two / 2",
+          "example_sentence": {
+            "arabic": "عندي جوج دالولاد",
+            "romanized": "3ndi jouj dlwlad",
+            "english": "I have two children"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تلاتة",
+          "romanized": "tlata",
+          "english": "three / 3",
+          "example_sentence": {
+            "arabic": "كاينين تلاتة دالكيسان",
+            "romanized": "kaynin tlata dlkisan",
+            "english": "There are three glasses"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ربعة",
+          "romanized": "rb3a",
+          "english": "four / 4",
+          "example_sentence": {
+            "arabic": "ربعة ديال الناس",
+            "romanized": "rb3a dyal nnas",
+            "english": "Four people"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خمسة",
+          "romanized": "khmsa",
+          "english": "five / 5",
+          "example_sentence": {
+            "arabic": "خمسة دالدراهم",
+            "romanized": "khmsa ddraham",
+            "english": "Five dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ستة",
+          "romanized": "stta",
+          "english": "six / 6",
+          "example_sentence": {
+            "arabic": "عندي ستة دالإخوان",
+            "romanized": "3ndi stta dlikhwan",
+            "english": "I have six siblings"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سبعة",
+          "romanized": "sb3a",
+          "english": "seven / 7",
+          "example_sentence": {
+            "arabic": "سبعة ديال الصباح",
+            "romanized": "sb3a dyal ssba7",
+            "english": "Seven in the morning"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تمنية",
+          "romanized": "tmnya",
+          "english": "eight / 8",
+          "example_sentence": {
+            "arabic": "تمنية ديال الليل",
+            "romanized": "tmnya dyal llil",
+            "english": "Eight at night"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تسعود",
+          "romanized": "ts3ud",
+          "english": "nine / 9",
+          "example_sentence": {
+            "arabic": "تسعود دالدراهم",
+            "romanized": "ts3ud ddraham",
+            "english": "Nine dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عشرة",
+          "romanized": "3shra",
+          "english": "ten / 10",
+          "example_sentence": {
+            "arabic": "عشرة ديال الدقايق",
+            "romanized": "3shra dyal dda9ay9",
+            "english": "Ten minutes"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حداش",
+          "romanized": "7dash",
+          "english": "eleven / 11",
+          "example_sentence": {
+            "arabic": "حداش ديال الصباح",
+            "romanized": "7dash dyal ssba7",
+            "english": "Eleven in the morning"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طناش",
+          "romanized": "tnash",
+          "english": "twelve / 12",
+          "example_sentence": {
+            "arabic": "طناش ديال النهار",
+            "romanized": "tnash dyal nnhar",
+            "english": "Twelve noon"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تلطاش",
+          "romanized": "tlttash",
+          "english": "thirteen / 13",
+          "example_sentence": {
+            "arabic": "عندو تلطاش دالعام",
+            "romanized": "3ndo tlttash dl3am",
+            "english": "He is thirteen years old"
+          },
+          "category": "number",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ربعطاش",
+          "romanized": "rb3tash",
+          "english": "fourteen / 14",
+          "example_sentence": {
+            "arabic": "ربعطاش ديال الدراهم",
+            "romanized": "rb3tash dyal ddraham",
+            "english": "Fourteen dirhams"
+          },
+          "category": "number",
+          "difficulty": 2
+        },
+        {
+          "arabic": "خمسطاش",
+          "romanized": "khmstash",
+          "english": "fifteen / 15",
+          "example_sentence": {
+            "arabic": "كنخلص خمسطاش درهم",
+            "romanized": "kankhllss khmstash drhm",
+            "english": "I pay fifteen dirhams"
+          },
+          "category": "number",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عشرين",
+          "romanized": "3shrin",
+          "english": "twenty / 20",
+          "example_sentence": {
+            "arabic": "عندي عشرين درهم",
+            "romanized": "3ndi 3shrin drhm",
+            "english": "I have twenty dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Numbers 1-10 in Darija",
+          "explanation": "Darija numbers differ significantly from MSA. The sequence is: wa7d, jouj, tlata, rb3a, khmsa, stta, sb3a, tmnya, ts3ud, 3shra.",
+          "examples": [
+            {
+              "arabic": "واحد، جوج، تلاتة، ربعة، خمسة",
+              "romanized": "wa7d, jouj, tlata, rb3a, khmsa",
+              "english": "One, two, three, four, five"
+            },
+            {
+              "arabic": "ستة، سبعة، تمنية، تسعود، عشرة",
+              "romanized": "stta, sb3a, tmnya, ts3ud, 3shra",
+              "english": "Six, seven, eight, nine, ten"
+            }
+          ],
+          "common_mistakes": [
+            "Using MSA 'ithnan' instead of Darija 'jouj' for two",
+            "Using MSA 'thalatha' instead of Darija 'tlata' for three"
+          ]
+        },
+        {
+          "rule": "Numbers 11-19 Pattern",
+          "explanation": "Numbers 11-19 are formed by combining the unit with '-tash' (from 'tashar'): 7dash (11), tnash (12), tlttash (13), rb3tash (14), khmstash (15), stttash (16), sb3tash (17), tmntash (18), ts3tash (19).",
+          "examples": [
+            {
+              "arabic": "حداش، طناش، تلطاش",
+              "romanized": "7dash, tnash, tlttash",
+              "english": "Eleven, twelve, thirteen"
+            }
+          ],
+          "common_mistakes": [
+            "Forgetting that 11 is '7dash' not 'wa7dtash'",
+            "Mixing up 'tnash' (12) and 'tlttash' (13)"
+          ]
+        },
+        {
+          "rule": "Counting Objects with 'dyal'",
+          "explanation": "When counting objects, use 'number + dyal + noun' or 'number + d + noun' for possessive counting.",
+          "examples": [
+            {
+              "arabic": "تلاتة ديال الكتوبا",
+              "romanized": "tlata dyal lktuba",
+              "english": "Three books"
+            },
+            {
+              "arabic": "خمسة دالدراهم",
+              "romanized": "khmsa ddraham",
+              "english": "Five dirhams"
+            }
+          ],
+          "common_mistakes": [
+            "Forgetting 'dyal/d' between the number and noun"
+          ]
+        },
+        {
+          "rule": "Using 'wa7d' with Nouns",
+          "explanation": "Unlike other numbers, 'wa7d' (one) is placed before the noun with the article: 'wa7d l-noun'.",
+          "examples": [
+            {
+              "arabic": "واحد الراجل",
+              "romanized": "wa7d rrajl",
+              "english": "One man / a man"
+            },
+            {
+              "arabic": "واحد المرا",
+              "romanized": "wa7d lmra",
+              "english": "One woman / a woman"
+            }
+          ],
+          "common_mistakes": [
+            "Placing 'wa7d' after the noun like other numbers"
+          ]
+        },
+        {
+          "rule": "Tens: 20-100",
+          "explanation": "The tens in Darija: 3shrin (20), tlatin (30), rb3in (40), khmsin (50), sttin (60), sb3in (70), tmnin (80), ts3in (90), mya (100).",
+          "examples": [
+            {
+              "arabic": "عشرين، تلاتين، ربعين",
+              "romanized": "3shrin, tlatin, rb3in",
+              "english": "Twenty, thirty, forty"
+            },
+            {
+              "arabic": "خمسين، ستين، سبعين، تمنين، تسعين، ميا",
+              "romanized": "khmsin, sttin, sb3in, tmnin, ts3in, mya",
+              "english": "Fifty, sixty, seventy, eighty, ninety, hundred"
+            }
+          ],
+          "common_mistakes": [
+            "Using MSA 'mi'a' instead of Darija 'mya' for 100"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "شحال عندك دالسنين؟",
+          "romanized": "sh7al 3ndk dssnin?",
+          "english": "How old are you?",
+          "context": "Asking someone's age"
+        },
+        {
+          "arabic": "عندي خمسة و عشرين عام",
+          "romanized": "3ndi khmsa w 3shrin 3am",
+          "english": "I am twenty-five years old",
+          "context": "Stating your age"
+        },
+        {
+          "arabic": "شحال هادا؟",
+          "romanized": "sh7al hada?",
+          "english": "How much is this?",
+          "context": "Asking a price"
+        },
+        {
+          "arabic": "عطيني جوج كيلو",
+          "romanized": "3tini jouj kilo",
+          "english": "Give me two kilos",
+          "context": "Ordering quantities"
+        },
+        {
+          "arabic": "رقم التيليفون ديالي هو...",
+          "romanized": "r9m ttilifon dyali howa...",
+          "english": "My phone number is...",
+          "context": "Giving your phone number"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the Darija word for 'two'?",
+          "correct_answer": "جوج",
+          "distractors": ["واحد", "تلاتة", "ربعة"],
+          "hint": "It starts with 'j'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the numbers with their Darija words",
+          "pairs": [
+            {"darija": "واحد", "english": "1"},
+            {"darija": "خمسة", "english": "5"},
+            {"darija": "عشرة", "english": "10"},
+            {"darija": "عشرين", "english": "20"},
+            {"darija": "ميا", "english": "100"}
+          ]
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "واحد، جوج، ___، ربعة، خمسة",
+          "correct_answer": "تلاتة",
+          "romanized_answer": "tlata",
+          "hint": "The number three"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I have fifteen dirhams'",
+          "correct_answer_arabic": "عندي خمسطاش درهم",
+          "correct_answer_romanized": "3ndi khmstash drhm",
+          "hint": "Use '3ndi' for 'I have'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'twelve' in Darija?",
+          "correct_answer": "طناش",
+          "distractors": ["حداش", "تلطاش", "ربعطاش"],
+          "hint": "It comes after 'eleven' (7dash)"
+        },
+        {
+          "type": "ordering",
+          "question": "Put these numbers in order from smallest to largest",
+          "correct_order": ["واحد", "خمسة", "عشرة", "عشرين", "خمسين", "ميا"]
+        }
+      ],
+      "cultural_notes": [
+        "Many Moroccans use French numbers in everyday transactions, especially for prices. You might hear 'vingt' (20) instead of '3shrin'.",
+        "Phone numbers in Morocco start with 06 or 07 and are often read digit by digit."
+      ]
+    },
+    {
+      "lesson_id": "a2_m02_l02",
+      "order": 2,
+      "title": "Telling Time",
+      "vocabulary": [
+        {
+          "arabic": "ساعة",
+          "romanized": "sa3a",
+          "english": "hour / clock / watch",
+          "example_sentence": {
+            "arabic": "شحال فالساعة؟",
+            "romanized": "sh7al fssa3a?",
+            "english": "What time is it?"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دقيقة",
+          "romanized": "d9i9a",
+          "english": "minute",
+          "example_sentence": {
+            "arabic": "عشرة دالدقايق",
+            "romanized": "3shra dda9ay9",
+            "english": "Ten minutes"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نص",
+          "romanized": "nss",
+          "english": "half",
+          "example_sentence": {
+            "arabic": "الساعة تلاتة و نص",
+            "romanized": "ssa3a tlata w nss",
+            "english": "It's three thirty (3:30)"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ربع",
+          "romanized": "rb3",
+          "english": "quarter",
+          "example_sentence": {
+            "arabic": "الساعة سبعة و ربع",
+            "romanized": "ssa3a sb3a w rb3",
+            "english": "It's seven fifteen (7:15)"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "الا",
+          "romanized": "lla",
+          "english": "minus / to (for time)",
+          "example_sentence": {
+            "arabic": "الساعة ستة الا ربع",
+            "romanized": "ssa3a stta lla rb3",
+            "english": "It's a quarter to six (5:45)"
+          },
+          "category": "time",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صباح",
+          "romanized": "sba7",
+          "english": "morning",
+          "example_sentence": {
+            "arabic": "فالصباح بكري",
+            "romanized": "fssba7 bkri",
+            "english": "In the early morning"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عشية",
+          "romanized": "3shiya",
+          "english": "afternoon / evening",
+          "example_sentence": {
+            "arabic": "غادي نجي فالعشية",
+            "romanized": "ghadi nji fl3shiya",
+            "english": "I will come in the afternoon"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ليل",
+          "romanized": "lil",
+          "english": "night",
+          "example_sentence": {
+            "arabic": "فالليل كنعس",
+            "romanized": "fllil kan3ss",
+            "english": "At night I sleep"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نهار",
+          "romanized": "nhar",
+          "english": "day",
+          "example_sentence": {
+            "arabic": "هاد النهار زوين",
+            "romanized": "had nnhar zwin",
+            "english": "This day is beautiful"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دابا",
+          "romanized": "daba",
+          "english": "now",
+          "example_sentence": {
+            "arabic": "دابا مزيان",
+            "romanized": "daba mzyan",
+            "english": "Now is fine"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بكري",
+          "romanized": "bkri",
+          "english": "early / earlier",
+          "example_sentence": {
+            "arabic": "جيت بكري اليوم",
+            "romanized": "jit bkri lyoum",
+            "english": "I came early today"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "معطل",
+          "romanized": "m3ttl",
+          "english": "late",
+          "example_sentence": {
+            "arabic": "أنا معطل، سمح ليا",
+            "romanized": "ana m3ttl, sm7 lia",
+            "english": "I'm late, sorry"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "اليوم",
+          "romanized": "lyoum",
+          "english": "today",
+          "example_sentence": {
+            "arabic": "اليوم الأحد",
+            "romanized": "lyoum l7dd",
+            "english": "Today is Sunday"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "غدا",
+          "romanized": "ghdda",
+          "english": "tomorrow",
+          "example_sentence": {
+            "arabic": "غادي نشوفك غدا",
+            "romanized": "ghadi nshufk ghdda",
+            "english": "I'll see you tomorrow"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "البارح",
+          "romanized": "lbar7",
+          "english": "yesterday",
+          "example_sentence": {
+            "arabic": "البارح مشيت للسوق",
+            "romanized": "lbar7 mshit lssuq",
+            "english": "Yesterday I went to the market"
+          },
+          "category": "time",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Asking and Telling Time",
+          "explanation": "To ask the time: 'sh7al fssa3a?' (What time is it?). To answer: 'number' for on the hour, add 'w nss' for half past, 'w rb3' for quarter past.",
+          "examples": [
+            {
+              "arabic": "شحال فالساعة؟ الساعة تمنية",
+              "romanized": "sh7al fssa3a? ssa3a tmnya",
+              "english": "What time is it? It's eight o'clock"
+            },
+            {
+              "arabic": "الساعة خمسة و نص",
+              "romanized": "ssa3a khmsa w nss",
+              "english": "It's five thirty"
+            }
+          ],
+          "common_mistakes": [
+            "Forgetting the article 'l' before 'sa3a' - it should be 'ssa3a'",
+            "Using 'ma' for 'minus' instead of 'lla' when saying 'quarter to'"
+          ]
+        },
+        {
+          "rule": "'Minutes to' with 'lla'",
+          "explanation": "For times like 'quarter to' or 'ten to', use 'ssa3a + next hour + lla + minutes': ssa3a stta lla rb3 (5:45).",
+          "examples": [
+            {
+              "arabic": "الساعة ستة الا ربع",
+              "romanized": "ssa3a stta lla rob3",
+              "english": "Quarter to six (5:45)"
+            },
+            {
+              "arabic": "الساعة عشرة الا عشرة",
+              "romanized": "ssa3a 3shra 9el 9semain",
+              "english": "Ten to ten (9:50)"
+            }
+          ],
+          "common_mistakes": [
+            "Confusing which hour to use - use the upcoming hour with 'lla'"
+          ]
+        },
+        {
+          "rule": "Time Expressions: daba, bkri, m3ttl",
+          "explanation": "'daba' (now) is extremely common in Darija. 'bkri' means early. 'm3ttl' means late.",
+          "examples": [
+            {
+              "arabic": "أجي دابا!",
+              "romanized": "aji daba!",
+              "english": "Come now!"
+            },
+            {
+              "arabic": "وصلت بكري بزاف",
+              "romanized": "wslt bkri bzzaf",
+              "english": "I arrived very early"
+            }
+          ],
+          "common_mistakes": [
+            "'daba' can also mean 'right away' or 'soon' depending on context"
+          ]
+        },
+        {
+          "rule": "Days of the Week",
+          "explanation": "Moroccan Darija days: l7dd (Sunday), ltnin (Monday), ttlat (Tuesday), larb3a (Wednesday), lkhmis (Thursday), jjm3a (Friday), ssbt (Saturday).",
+          "examples": [
+            {
+              "arabic": "اليوم الجمعة",
+              "romanized": "lyoum jjm3a",
+              "english": "Today is Friday"
+            },
+            {
+              "arabic": "غادي نمشي نهار الإثنين",
+              "romanized": "ghadi nmshi nhar ltnin",
+              "english": "I'll go on Monday"
+            }
+          ],
+          "common_mistakes": [
+            "Friday (jjm3a) is the most important day - many businesses close for Friday prayer"
+          ]
+        },
+        {
+          "rule": "Combining Numbers for Time",
+          "explanation": "For compound times, combine the hour with 'w' (and) + minutes: ssa3a tlata w 3shra d9ay9 (3:20).",
+          "examples": [
+            {
+              "arabic": "الساعة جوج و عشرين دقيقة",
+              "romanized": "ssa3a jouj w 3shrin d9i9a",
+              "english": "It's 2:20"
+            },
+            {
+              "arabic": "الساعة ربعة و خمسة دالدقايق",
+              "romanized": "ssa3a rb3a w khmsa dda9ay9",
+              "english": "It's 4:05"
+            }
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "شحال فالساعة؟",
+          "romanized": "sh7al fssa3a?",
+          "english": "What time is it?",
+          "context": "Asking the current time"
+        },
+        {
+          "arabic": "فوقاش غادي تجي؟",
+          "romanized": "fu9ash ghadi tji?",
+          "english": "When will you come?",
+          "context": "Asking when someone will arrive"
+        },
+        {
+          "arabic": "مزال بكري",
+          "romanized": "mazal bkri",
+          "english": "It's still early",
+          "context": "Saying there's still time"
+        },
+        {
+          "arabic": "الوقت ما كافيش",
+          "romanized": "lw9t ma kafish",
+          "english": "There isn't enough time",
+          "context": "Expressing time pressure"
+        },
+        {
+          "arabic": "بكري فالصباح",
+          "romanized": "bkri fssba7",
+          "english": "Early in the morning",
+          "context": "Specifying morning time"
+        },
+        {
+          "arabic": "أشمن نهار؟",
+          "romanized": "ashmn nhar?",
+          "english": "Which day?",
+          "context": "Asking about a specific day"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you ask 'What time is it?' in Darija?",
+          "correct_answer": "شحال فالساعة؟",
+          "distractors": ["أشنو الساعة؟", "فين الساعة؟", "كيفاش الساعة؟"],
+          "hint": "'sh7al' means 'how much' and is used for time"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "الساعة خمسة و ___ (It's 5:30)",
+          "correct_answer": "نص",
+          "romanized_answer": "nss",
+          "hint": "This word means 'half'"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'It's quarter to eight'",
+          "correct_answer_arabic": "الساعة تمنية الا ربع",
+          "correct_answer_romanized": "ssa3a tmnya lla rb3",
+          "hint": "Use 'lla' for 'minus/to' and 'rb3' for 'quarter'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What day is 'الجمعة' (jjm3a)?",
+          "correct_answer": "Friday",
+          "distractors": ["Monday", "Wednesday", "Saturday"],
+          "hint": "It's the day of congregational prayer"
+        },
+        {
+          "type": "matching",
+          "question": "Match the time words",
+          "pairs": [
+            {"darija": "دابا", "english": "now"},
+            {"darija": "غدا", "english": "tomorrow"},
+            {"darija": "البارح", "english": "yesterday"},
+            {"darija": "اليوم", "english": "today"},
+            {"darija": "بكري", "english": "early"}
+          ]
+        }
+      ],
+      "cultural_notes": [
+        "Moroccans have a relaxed relationship with time. Being 15-30 minutes late is common and generally accepted socially.",
+        "The expression 'inshallah ghedda' (God willing, tomorrow) sometimes means something might not happen at all."
+      ]
+    },
+    {
+      "lesson_id": "a2_m02_l03",
+      "order": 3,
+      "title": "Larger Numbers & Money",
+      "vocabulary": [
+        {
+          "arabic": "تلاتين",
+          "romanized": "tlatin",
+          "english": "thirty / 30",
+          "example_sentence": {
+            "arabic": "عندي تلاتين درهم",
+            "romanized": "3ndi tlatin drhm",
+            "english": "I have thirty dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ربعين",
+          "romanized": "rb3in",
+          "english": "forty / 40",
+          "example_sentence": {
+            "arabic": "الثمن ربعين درهم",
+            "romanized": "ttmn rb3in drhm",
+            "english": "The price is forty dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خمسين",
+          "romanized": "khmsin",
+          "english": "fifty / 50",
+          "example_sentence": {
+            "arabic": "خمسين فالمية",
+            "romanized": "khmsin flmya",
+            "english": "Fifty percent"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ميا",
+          "romanized": "mya",
+          "english": "one hundred / 100",
+          "example_sentence": {
+            "arabic": "ميا درهم",
+            "romanized": "mya drhm",
+            "english": "One hundred dirhams"
+          },
+          "category": "number",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ميتين",
+          "romanized": "miytin",
+          "english": "two hundred / 200",
+          "example_sentence": {
+            "arabic": "ميتين درهم بزاف",
+            "romanized": "miytin drhm bzzaf",
+            "english": "Two hundred dirhams is a lot"
+          },
+          "category": "number",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ألف",
+          "romanized": "alf",
+          "english": "one thousand / 1000",
+          "example_sentence": {
+            "arabic": "ألف درهم",
+            "romanized": "alf drhm",
+            "english": "One thousand dirhams"
+          },
+          "category": "number",
+          "difficulty": 2
+        },
+        {
+          "arabic": "درهم",
+          "romanized": "drhm",
+          "english": "dirham (Moroccan currency)",
+          "example_sentence": {
+            "arabic": "شحال بالدراهم؟",
+            "romanized": "sh7al bddraham?",
+            "english": "How much in dirhams?"
+          },
+          "category": "money",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ريال",
+          "romanized": "riyal",
+          "english": "riyal (old unit, 1 dirham = 20 riyals)",
+          "example_sentence": {
+            "arabic": "هادا بعشرين ريال",
+            "romanized": "hada b3shrin riyal",
+            "english": "This is for twenty riyals (1 dirham)"
+          },
+          "category": "money",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فلوس",
+          "romanized": "flus",
+          "english": "money",
+          "example_sentence": {
+            "arabic": "ما عنديش الفلوس",
+            "romanized": "ma 3ndish lflus",
+            "english": "I don't have money"
+          },
+          "category": "money",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صرف",
+          "romanized": "srf",
+          "english": "change (money)",
+          "example_sentence": {
+            "arabic": "عندك الصرف؟",
+            "romanized": "3ndk ssrf?",
+            "english": "Do you have change?"
+          },
+          "category": "money",
+          "difficulty": 2
+        },
+        {
+          "arabic": "خلص",
+          "romanized": "khlls",
+          "english": "to pay",
+          "example_sentence": {
+            "arabic": "بغيت نخلص",
+            "romanized": "bghit nkhlls",
+            "english": "I want to pay"
+          },
+          "category": "money",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ثمن",
+          "romanized": "tmn",
+          "english": "price",
+          "example_sentence": {
+            "arabic": "أشنو الثمن؟",
+            "romanized": "ashnu ttmn?",
+            "english": "What's the price?"
+          },
+          "category": "money",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Compound Numbers (21-99)",
+          "explanation": "Compound numbers use 'w' (and): wa7d w 3shrin (21), tnin w tlatin (32), khmsa w rb3in (45).",
+          "examples": [
+            {
+              "arabic": "واحد و عشرين",
+              "romanized": "wa7d w 3shrin",
+              "english": "Twenty-one"
+            },
+            {
+              "arabic": "تلاتة و ستين",
+              "romanized": "tlata w sttin",
+              "english": "Sixty-three"
+            }
+          ],
+          "common_mistakes": [
+            "The unit comes BEFORE the tens: 'tlata w 3shrin' (23) NOT '3shrin w tlata'"
+          ]
+        },
+        {
+          "rule": "The Riyal System",
+          "explanation": "Many Moroccans, especially in markets, still quote prices in riyals. 1 dirham = 20 riyals. So '100 riyals' = 5 dirhams.",
+          "examples": [
+            {
+              "arabic": "ميا ريال (= خمسة دراهم)",
+              "romanized": "mya riyal (= khmsa draham)",
+              "english": "100 riyals (= 5 dirhams)"
+            },
+            {
+              "arabic": "ألف ريال (= خمسين درهم)",
+              "romanized": "alf riyal (= khmsin drhm)",
+              "english": "1000 riyals (= 50 dirhams)"
+            }
+          ],
+          "common_mistakes": [
+            "Getting confused between dirham and riyal prices - always clarify which unit is being used"
+          ]
+        },
+        {
+          "rule": "Asking Prices",
+          "explanation": "Use 'sh7al' (how much) or 'bsh7al' (for how much) to ask prices: 'sh7al hada?' or 'bsh7al had chi?'",
+          "examples": [
+            {
+              "arabic": "بشحال هاد الطماطم؟",
+              "romanized": "bsh7al had ttmatm?",
+              "english": "How much are these tomatoes?"
+            },
+            {
+              "arabic": "شحال الكيلو؟",
+              "romanized": "sh7al lkilo?",
+              "english": "How much per kilo?"
+            }
+          ],
+          "common_mistakes": [
+            "'sh7al' and 'bsh7al' are interchangeable for asking prices"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "شحال الثمن؟",
+          "romanized": "sh7al ttmn?",
+          "english": "What's the price?",
+          "context": "Asking for a price"
+        },
+        {
+          "arabic": "غالية بزاف!",
+          "romanized": "ghalya bzzaf!",
+          "english": "Too expensive!",
+          "context": "Reacting to a high price"
+        },
+        {
+          "arabic": "نقص شوية",
+          "romanized": "n9ss chwiya",
+          "english": "Lower the price a bit",
+          "context": "Bargaining"
+        },
+        {
+          "arabic": "عندك الصرف؟",
+          "romanized": "3ndk ssrf?",
+          "english": "Do you have change?",
+          "context": "When paying with a large bill"
+        },
+        {
+          "arabic": "بشحال الكيلو؟",
+          "romanized": "bsh7al lkilo?",
+          "english": "How much per kilo?",
+          "context": "At the market"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'thirty-five' in Darija?",
+          "correct_answer": "خمسة و تلاتين",
+          "distractors": ["تلاتين و خمسة", "تلاتة و خمسين", "خمسة و عشرين"],
+          "hint": "The unit comes before the tens, joined by 'w' (and)"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "عندي ___ درهم (I have 100 dirhams)",
+          "correct_answer": "ميا",
+          "romanized_answer": "mya",
+          "hint": "The Darija word for one hundred"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If a vendor says 'mya riyal', how many dirhams is that?",
+          "correct_answer": "5 dirhams",
+          "distractors": ["100 dirhams", "20 dirhams", "10 dirhams"],
+          "hint": "1 dirham = 20 riyals"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'How much is this?'",
+          "correct_answer_arabic": "شحال هادا؟",
+          "correct_answer_romanized": "sh7al hada?",
+          "hint": "'sh7al' means 'how much'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the money terms",
+          "pairs": [
+            {"darija": "فلوس", "english": "money"},
+            {"darija": "درهم", "english": "dirham"},
+            {"darija": "ثمن", "english": "price"},
+            {"darija": "صرف", "english": "change"},
+            {"darija": "خلص", "english": "to pay"}
+          ]
+        }
+      ],
+      "cultural_notes": [
+        "The riyal system is widely used in souqs and by older generations. Always clarify 'b-ddraham wlla b-rriyal?' (in dirhams or riyals?).",
+        "French numbers are commonly used for larger amounts. You might hear 'cent' (100), 'mille' (1000) mixed into Darija speech."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {"darija_arabic": "واحد", "darija_latin": "wa7d", "english": "one"},
+      {"darija_arabic": "جوج", "darija_latin": "jouj", "english": "two"},
+      {"darija_arabic": "تلاتة", "darija_latin": "tlata", "english": "three"},
+      {"darija_arabic": "خمسة", "darija_latin": "khmsa", "english": "five"},
+      {"darija_arabic": "عشرة", "darija_latin": "3shra", "english": "ten"},
+      {"darija_arabic": "عشرين", "darija_latin": "3shrin", "english": "twenty"},
+      {"darija_arabic": "ميا", "darija_latin": "mya", "english": "hundred"},
+      {"darija_arabic": "ساعة", "darija_latin": "sa3a", "english": "hour"},
+      {"darija_arabic": "نهار", "darija_latin": "nhar", "english": "day"},
+      {"darija_arabic": "دابا", "darija_latin": "daba", "english": "now"}
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "شحال ف___؟",
+        "sentence_latin": "sh7al f___?",
+        "answer_arabic": "الساعة",
+        "answer_latin": "ssa3a",
+        "hint": "What time is it?"
+      },
+      {
+        "sentence_arabic": "الساعة خمسة و ___",
+        "sentence_latin": "ssa3a khmsa w ___",
+        "answer_arabic": "نص",
+        "answer_latin": "nss",
+        "hint": "It's five thirty"
+      },
+      {
+        "sentence_arabic": "عندي ___ درهم",
+        "sentence_latin": "3ndi ___ drhm",
+        "answer_arabic": "عشرين",
+        "answer_latin": "3shrin",
+        "hint": "Twenty"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "What is the old Moroccan monetary unit still used in souqs?",
+        "correct_answer": "Riyal (20 riyals = 1 dirham)",
+        "distractors": ["Franc", "Dinar", "Pound"],
+        "explanation": "Many Moroccan vendors, especially in traditional markets, still quote prices in riyals. 20 riyals equal 1 dirham."
+      },
+      {
+        "question": "Why do many Moroccans use French numbers?",
+        "correct_answer": "Due to the historical French protectorate influence on Morocco",
+        "distractors": ["Because Darija has no numbers", "Because French is easier", "They don't use French numbers"],
+        "explanation": "Morocco was under French protectorate (1912-1956), and French remains widely used in education, business, and daily life."
+      },
+      {
+        "question": "What is the Moroccan attitude towards punctuality?",
+        "correct_answer": "Generally relaxed - being 15-30 minutes late is socially acceptable",
+        "distractors": ["Extremely strict about time", "Always exactly on time", "Time doesn't matter at all"],
+        "explanation": "Moroccan culture is more relationship-oriented than time-oriented, though professional settings are becoming more punctual."
+      }
+    ]
+  }
+}

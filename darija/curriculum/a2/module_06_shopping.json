@@ -1,0 +1,380 @@
+{
+  "module_id": "a2_m06",
+  "level": "a2",
+  "module_number": 6,
+  "title": "Shopping & Money",
+  "description": "Learn to shop, bargain, and handle money transactions in Moroccan Darija",
+  "lessons": [
+    {
+      "lesson_id": "a2_m06_l01",
+      "order": 1,
+      "title": "At the Souq",
+      "vocabulary": [
+        { "arabic": "شحال", "romanized": "sh7al", "english": "how much", "example_sentence": { "arabic": "شحال هادا؟", "romanized": "sh7al hada?", "english": "How much is this?" }, "category": "shopping", "difficulty": 1 },
+        { "arabic": "غالي", "romanized": "ghali", "english": "expensive (m)", "example_sentence": { "arabic": "غالي بزاف!", "romanized": "ghali bzzaf!", "english": "Too expensive!" }, "category": "adjective", "difficulty": 1 },
+        { "arabic": "رخيص", "romanized": "rkhis", "english": "cheap (m)", "example_sentence": { "arabic": "هادا رخيص", "romanized": "hada rkhis", "english": "This is cheap" }, "category": "adjective", "difficulty": 1 },
+        { "arabic": "فلوس", "romanized": "flus", "english": "money", "example_sentence": { "arabic": "ما عنديش الفلوس", "romanized": "ma 3ndish lflus", "english": "I don't have money" }, "category": "money", "difficulty": 1 },
+        { "arabic": "بغيت نشري", "romanized": "bghit nshri", "english": "I want to buy", "example_sentence": { "arabic": "بغيت نشري واحد الجلابة", "romanized": "bghit nshri wa7d ljllaba", "english": "I want to buy a djellaba" }, "category": "shopping", "difficulty": 1 },
+        { "arabic": "باع", "romanized": "ba3", "english": "to sell (past)", "example_sentence": { "arabic": "باع ليا رخيص", "romanized": "ba3 lia rkhis", "english": "He sold it to me cheap" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "هاد شي", "romanized": "had shi", "english": "this thing / this stuff", "example_sentence": { "arabic": "بشحال هاد شي؟", "romanized": "bsh7al had shi?", "english": "How much is this?" }, "category": "pronoun", "difficulty": 1 },
+        { "arabic": "بشحال", "romanized": "bsh7al", "english": "for how much", "example_sentence": { "arabic": "بشحال الكيلو؟", "romanized": "bsh7al lkilo?", "english": "How much per kilo?" }, "category": "question", "difficulty": 1 },
+        { "arabic": "نقص", "romanized": "n9ss", "english": "to lower / reduce", "example_sentence": { "arabic": "نقص شوية!", "romanized": "n9ss chwiya!", "english": "Lower the price a bit!" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "آخر ثمن", "romanized": "akhr tmn", "english": "last/final price", "example_sentence": { "arabic": "أشنو آخر ثمن؟", "romanized": "ashnu akhr tmn?", "english": "What's the final price?" }, "category": "shopping", "difficulty": 2 },
+        { "arabic": "جلابة", "romanized": "jllaba", "english": "djellaba (traditional robe)", "example_sentence": { "arabic": "بغيت واحد الجلابة", "romanized": "bghit wa7d ljllaba", "english": "I want a djellaba" }, "category": "clothing", "difficulty": 1 },
+        { "arabic": "بلغة", "romanized": "blgha", "english": "traditional leather slippers", "example_sentence": { "arabic": "هاد البلغة زوينة", "romanized": "had lblgha zwina", "english": "These slippers are beautiful" }, "category": "clothing", "difficulty": 2 },
+        { "arabic": "حوايج", "romanized": "7wayj", "english": "clothes", "example_sentence": { "arabic": "بغيت نشري شي حوايج", "romanized": "bghit nshri shi 7wayj", "english": "I want to buy some clothes" }, "category": "clothing", "difficulty": 1 },
+        { "arabic": "سلعة", "romanized": "sl3a", "english": "merchandise / goods", "example_sentence": { "arabic": "السلعة ديالو مزيانة", "romanized": "ssl3a dyalo mzyana", "english": "His merchandise is good" }, "category": "shopping", "difficulty": 2 },
+        { "arabic": "خلص", "romanized": "khlls", "english": "to pay", "example_sentence": { "arabic": "خلصت ميتين درهم", "romanized": "khllst miytin drhm", "english": "I paid two hundred dirhams" }, "category": "verb", "difficulty": 1 }
+      ],
+      "grammar": [
+        {
+          "rule": "Bargaining Language",
+          "explanation": "Key phrases: 'ghali bzzaf' (too expensive), 'n9ss chwiya' (lower a bit), 'akhr tmn?' (final price?), 'ma ymknsh' (impossible/no way).",
+          "examples": [
+            { "arabic": "غالي بزاف! نقص شوية", "romanized": "ghali bzzaf! n9ss chwiya", "english": "Too expensive! Lower the price a bit" },
+            { "arabic": "أشنو آخر ثمن؟", "romanized": "ashnu akhr tmn?", "english": "What's the final price?" }
+          ],
+          "common_mistakes": ["Starting with the seller's price - always counter-offer at about half"]
+        },
+        {
+          "rule": "Comparative Forms",
+          "explanation": "To compare: ktar mn (more than), a9l mn (less than), b7al (like/same as). Adjective comparatives: kbr mn (bigger than), sghr mn (smaller than).",
+          "examples": [
+            { "arabic": "هادا غالي كتر من هاداك", "romanized": "hada ghali ktar mn hadak", "english": "This is more expensive than that one" },
+            { "arabic": "هادا أرخص", "romanized": "hada arkhss", "english": "This is cheaper" }
+          ],
+          "common_mistakes": ["Using MSA comparative 'akbar' instead of Darija 'kbr'"]
+        },
+        {
+          "rule": "Demonstratives for Shopping",
+          "explanation": "'hada' (this-m), 'hadi' (this-f), 'hadak' (that-m), 'hadik' (that-f), 'haduk' (those). Essential for pointing at items.",
+          "examples": [
+            { "arabic": "بشحال هادا؟ و هاداك؟", "romanized": "bsh7al hada? w hadak?", "english": "How much is this? And that one?" },
+            { "arabic": "بغيت هادي، ماشي هاديك", "romanized": "bghit hadi, mashi hadik", "english": "I want this one, not that one" }
+          ],
+          "common_mistakes": ["Confusing 'hadi' (this-f) with 'hadik' (that-f)"]
+        },
+        {
+          "rule": "Expressing Quantity",
+          "explanation": "bzzaf (a lot), chwiya (a little), kafi (enough), zid (more/add): 'zid wa7d' (add one more), 'kafi, shukran' (enough, thanks).",
+          "examples": [
+            { "arabic": "زيد شوية", "romanized": "zid chwiya", "english": "Add a little more" },
+            { "arabic": "كافي، شكرا", "romanized": "kafi, shukran", "english": "That's enough, thank you" }
+          ],
+          "common_mistakes": ["'zid' can mean both 'add more' and 'continue'"]
+        },
+        {
+          "rule": "Color Adjectives for Shopping",
+          "explanation": "Colors: k7l (black), byd (white), 7mr (red), khdhr (green), zr9 (blue), sfr (yellow). Feminine adds -a: k7la, byda, 7mra.",
+          "examples": [
+            { "arabic": "بغيت الكحل", "romanized": "bghit lk7l", "english": "I want the black one" },
+            { "arabic": "واش عندك بالأحمر؟", "romanized": "wash 3ndk bl7mr?", "english": "Do you have it in red?" }
+          ],
+          "common_mistakes": ["Colors agree in gender: the masculine and feminine forms differ"]
+        }
+      ],
+      "phrases": [
+        { "arabic": "بشحال هاد شي؟", "romanized": "bsh7al had shi?", "english": "How much is this?", "context": "Asking price" },
+        { "arabic": "غالي بزاف، نقص شوية!", "romanized": "ghali bzzaf, n9ss chwiya!", "english": "Too expensive, lower the price!", "context": "Bargaining" },
+        { "arabic": "أشنو آخر ثمن؟", "romanized": "ashnu akhr tmn?", "english": "What's your final price?", "context": "Bargaining" },
+        { "arabic": "واش عندك حاجة خرا؟", "romanized": "wash 3ndk 7aja khra?", "english": "Do you have something else?", "context": "Browsing" },
+        { "arabic": "غادي نتفكر و نرجع", "romanized": "ghadi ntfkkr w nrj3", "english": "I'll think about it and come back", "context": "Walking away tactic" }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'too expensive' in Darija?",
+          "correct_answer": "غالي بزاف",
+          "distractors": ["رخيص بزاف", "مزيان بزاف", "كبير بزاف"],
+          "hint": "'ghali' means expensive"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "بشحال ___ شي؟ (How much is this?)",
+          "correct_answer": "هاد",
+          "romanized_answer": "had",
+          "hint": "Demonstrative for 'this'"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'What's the final price?'",
+          "correct_answer_arabic": "أشنو آخر ثمن؟",
+          "correct_answer_romanized": "ashnu akhr tmn?",
+          "hint": "'akhr' means last/final"
+        },
+        {
+          "type": "matching",
+          "question": "Match the shopping vocabulary",
+          "pairs": [
+            {"darija": "غالي", "english": "expensive"},
+            {"darija": "رخيص", "english": "cheap"},
+            {"darija": "فلوس", "english": "money"},
+            {"darija": "خلص", "english": "to pay"},
+            {"darija": "نقص", "english": "to lower/reduce"}
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is a 'jllaba'?",
+          "correct_answer": "A traditional Moroccan robe",
+          "distractors": ["A type of food", "A musical instrument", "A city"],
+          "hint": "It's a piece of clothing"
+        }
+      ],
+      "cultural_notes": [
+        "Bargaining (mssawda) is expected in souqs and with street vendors. Fixed-price shops will have a sign or simply won't negotiate.",
+        "Walking away is a powerful bargaining tactic. If the vendor calls you back, you know the price can go lower.",
+        "Souqs are organized by trade: leather souq, spice souq, carpet souq, etc. Each area specializes in specific goods."
+      ]
+    },
+    {
+      "lesson_id": "a2_m06_l02",
+      "order": 2,
+      "title": "Sizes, Colors & Preferences",
+      "vocabulary": [
+        { "arabic": "كبير", "romanized": "kbir", "english": "big/large", "example_sentence": { "arabic": "عندك واحد كبير؟", "romanized": "3ndk wa7d kbir?", "english": "Do you have a bigger one?" }, "category": "size", "difficulty": 1 },
+        { "arabic": "صغير", "romanized": "sghir", "english": "small", "example_sentence": { "arabic": "هادا صغير عليا", "romanized": "hada sghir 3lia", "english": "This is small for me" }, "category": "size", "difficulty": 1 },
+        { "arabic": "وسطاني", "romanized": "wsTani", "english": "medium", "example_sentence": { "arabic": "بغيت واحد وسطاني", "romanized": "bghit wa7d wsTani", "english": "I want a medium one" }, "category": "size", "difficulty": 1 },
+        { "arabic": "كحل", "romanized": "k7l", "english": "black", "example_sentence": { "arabic": "بغيت الكحل", "romanized": "bghit lk7l", "english": "I want the black one" }, "category": "color", "difficulty": 1 },
+        { "arabic": "بيض", "romanized": "byd", "english": "white", "example_sentence": { "arabic": "واش عندك بالبيض؟", "romanized": "wash 3ndk blbyd?", "english": "Do you have it in white?" }, "category": "color", "difficulty": 1 },
+        { "arabic": "حمر", "romanized": "7mr", "english": "red", "example_sentence": { "arabic": "الحمر زوين", "romanized": "l7mr zwin", "english": "The red one is nice" }, "category": "color", "difficulty": 1 },
+        { "arabic": "خضر", "romanized": "khdhr", "english": "green", "example_sentence": { "arabic": "عجبتني الخضر", "romanized": "3jbtni lkhdhr", "english": "I like the green one" }, "category": "color", "difficulty": 1 },
+        { "arabic": "زرق", "romanized": "zr9", "english": "blue", "example_sentence": { "arabic": "الزرق مزيان", "romanized": "zzr9 mzyan", "english": "The blue one is nice" }, "category": "color", "difficulty": 1 },
+        { "arabic": "صفر", "romanized": "sfr", "english": "yellow", "example_sentence": { "arabic": "ما بغيتش الصفر", "romanized": "ma bghitsh ssfr", "english": "I don't want the yellow one" }, "category": "color", "difficulty": 1 },
+        { "arabic": "جرب", "romanized": "jrrb", "english": "to try (on)", "example_sentence": { "arabic": "يمكن ليا نجرب؟", "romanized": "ymkn lia njrrb?", "english": "Can I try it on?" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "عجبني", "romanized": "3jbni", "english": "I liked it", "example_sentence": { "arabic": "عجبني هادا!", "romanized": "3jbni hada!", "english": "I liked this one!" }, "category": "expression", "difficulty": 1 },
+        { "arabic": "ما عجبنيش", "romanized": "ma 3jbnish", "english": "I didn't like it", "example_sentence": { "arabic": "ما عجبنيش اللون", "romanized": "ma 3jbnish llon", "english": "I didn't like the color" }, "category": "expression", "difficulty": 1 }
+      ],
+      "grammar": [
+        {
+          "rule": "Asking to Try Something",
+          "explanation": "'ymkn lia' (can I) + verb: 'ymkn lia njrrb?' (can I try?), 'ymkn lia nshuf?' (can I see?).",
+          "examples": [
+            { "arabic": "يمكن ليا نجرب هاد الجلابة؟", "romanized": "ymkn lia njrrb had ljllaba?", "english": "Can I try this djellaba?" }
+          ],
+          "common_mistakes": ["Using 'wa9ila' (maybe) instead of 'ymkn lia' (can I)"]
+        },
+        {
+          "rule": "Expressing Fit: 3la + Pronoun",
+          "explanation": "'kbir 3lia' (too big for me), 'sghir 3lik' (too small for you). The preposition '3la' + pronoun suffix expresses 'for someone'.",
+          "examples": [
+            { "arabic": "هادا كبير عليا", "romanized": "hada kbir 3lia", "english": "This is too big for me" },
+            { "arabic": "هادي صغيرة عليك", "romanized": "hadi sghira 3lik", "english": "This is too small for you" }
+          ],
+          "common_mistakes": ["Forgetting to use '3la' + pronoun for expressing fit"]
+        },
+        {
+          "rule": "Expressing Preference",
+          "explanation": "Use '3jbni' (past: I liked) or 'ka y3jbni' (present: I like). 'hada 7sn' (this is better), 'bghit hadak' (I want that one).",
+          "examples": [
+            { "arabic": "هادا عجبني كتر من هاداك", "romanized": "hada 3jbni ktar mn hadak", "english": "I liked this one more than that one" },
+            { "arabic": "هادا حسن", "romanized": "hada 7sn", "english": "This one is better" }
+          ],
+          "common_mistakes": ["Mixing up present 'ka y3jbni' and past '3jbni'"]
+        }
+      ],
+      "phrases": [
+        { "arabic": "يمكن ليا نجرب؟", "romanized": "ymkn lia njrrb?", "english": "Can I try it on?", "context": "At a clothing shop" },
+        { "arabic": "واش عندك لون خور؟", "romanized": "wash 3ndk lon khur?", "english": "Do you have another color?", "context": "Asking for alternatives" },
+        { "arabic": "هادا كبير عليا، عطيني أصغر", "romanized": "hada kbir 3lia, 3tini asghr", "english": "This is too big for me, give me a smaller one", "context": "Size issue" },
+        { "arabic": "عجبني! غادي ناخدو", "romanized": "3jbni! ghadi nakhdo", "english": "I like it! I'll take it", "context": "Making a purchase" },
+        { "arabic": "ما عجبنيش، شكرا", "romanized": "ma 3jbnish, shukran", "english": "I don't like it, thank you", "context": "Politely declining" }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'Can I try it?' in Darija?",
+          "correct_answer": "يمكن ليا نجرب؟",
+          "distractors": ["بغيت نجرب", "خاصني نجرب", "غادي نجرب"],
+          "hint": "'ymkn lia' means 'can I'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "هادا ___ عليا (This is too big for me)",
+          "correct_answer": "كبير",
+          "romanized_answer": "kbir",
+          "hint": "Adjective meaning 'big'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the colors",
+          "pairs": [
+            {"darija": "كحل", "english": "black"},
+            {"darija": "بيض", "english": "white"},
+            {"darija": "حمر", "english": "red"},
+            {"darija": "خضر", "english": "green"},
+            {"darija": "زرق", "english": "blue"}
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I liked this one'",
+          "correct_answer_arabic": "عجبني هادا",
+          "correct_answer_romanized": "3jbni hada",
+          "hint": "'3jbni' means 'I liked'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'sghir 3lia' mean?",
+          "correct_answer": "Too small for me",
+          "distractors": ["I am small", "Small price", "A small child"],
+          "hint": "'3lia' means 'for me'"
+        }
+      ],
+      "cultural_notes": [
+        "Moroccan souqs are divided by specialty: the tanneries (leather), the 3ttarin (spice sellers), the dbbaghin (dyers), etc.",
+        "Quality goods include Moroccan leather (from Fes), argan oil (from Souss), saffron (from Taliouine), and pottery (from Safi)."
+      ]
+    },
+    {
+      "lesson_id": "a2_m06_l03",
+      "order": 3,
+      "title": "Making Purchases & Paying",
+      "vocabulary": [
+        { "arabic": "شرى", "romanized": "shra", "english": "to buy (past)", "example_sentence": { "arabic": "شريت واحد الطاجين", "romanized": "shrit wa7d ttajin", "english": "I bought a tagine pot" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "كريدي", "romanized": "kridi", "english": "credit card", "example_sentence": { "arabic": "واش تقبلو الكريدي؟", "romanized": "wash t9blo lkridi?", "english": "Do you accept credit cards?" }, "category": "payment", "difficulty": 1 },
+        { "arabic": "كاش", "romanized": "cash", "english": "cash", "example_sentence": { "arabic": "غير بالكاش", "romanized": "ghir blkash", "english": "Cash only" }, "category": "payment", "difficulty": 1 },
+        { "arabic": "ساك", "romanized": "sak", "english": "bag", "example_sentence": { "arabic": "عطيني واحد الساك", "romanized": "3tini wa7d ssak", "english": "Give me a bag" }, "category": "shopping", "difficulty": 1 },
+        { "arabic": "كادو", "romanized": "kadu", "english": "gift", "example_sentence": { "arabic": "هاد شي كادو", "romanized": "had shi kadu", "english": "This is a gift" }, "category": "shopping", "difficulty": 1 },
+        { "arabic": "غلف", "romanized": "ghllf", "english": "to wrap", "example_sentence": { "arabic": "غلف ليا هادا عافاك", "romanized": "ghllf lia hada 3afak", "english": "Wrap this for me please" }, "category": "verb", "difficulty": 2 },
+        { "arabic": "رجع", "romanized": "rj3", "english": "to return", "example_sentence": { "arabic": "يمكن ليا نرجع هاد شي؟", "romanized": "ymkn lia nrj3 had shi?", "english": "Can I return this?" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "بدل", "romanized": "bddl", "english": "to exchange", "example_sentence": { "arabic": "بغيت نبدل هادا", "romanized": "bghit nbddl hada", "english": "I want to exchange this" }, "category": "verb", "difficulty": 1 },
+        { "arabic": "جديد", "romanized": "jdid", "english": "new", "example_sentence": { "arabic": "بغيت شي حاجة جديدة", "romanized": "bghit shi 7aja jdida", "english": "I want something new" }, "category": "adjective", "difficulty": 1 },
+        { "arabic": "قديم", "romanized": "9dim", "english": "old/used", "example_sentence": { "arabic": "هادا قديم", "romanized": "hada 9dim", "english": "This is old" }, "category": "adjective", "difficulty": 1 },
+        { "arabic": "صولد", "romanized": "sold", "english": "sale/discount", "example_sentence": { "arabic": "كاين الصولد؟", "romanized": "kayn ssold?", "english": "Is there a sale?" }, "category": "shopping", "difficulty": 1 },
+        { "arabic": "تخفيض", "romanized": "tkhfid", "english": "discount", "example_sentence": { "arabic": "واش كاين شي تخفيض؟", "romanized": "wash kayn shi tkhfid?", "english": "Is there any discount?" }, "category": "shopping", "difficulty": 2 }
+      ],
+      "grammar": [
+        {
+          "rule": "Past Tense of Shopping Verbs",
+          "explanation": "shra (bought): shrit (I), shriti (you), shra (he), shrat (she). khlls (paid): khllst (I), khllsti (you), khlls (he), khllsat (she).",
+          "examples": [
+            { "arabic": "شريت واحد الجلابة و خلصت ميا درهم", "romanized": "shrit wa7d ljllaba w khllst mya drhm", "english": "I bought a djellaba and paid 100 dirhams" }
+          ],
+          "common_mistakes": ["Irregular: 'shra' becomes 'shrit' for I (not 'shrat')"]
+        },
+        {
+          "rule": "Future Shopping Plans with 'ghadi'",
+          "explanation": "'ghadi' + verb for future: 'ghadi nshri' (I will buy), 'ghadi nkhlls' (I will pay).",
+          "examples": [
+            { "arabic": "غادي نشري هاد شي غدا", "romanized": "ghadi nshri had shi ghdda", "english": "I'll buy this tomorrow" },
+            { "arabic": "غادي نخلص بالكريدي", "romanized": "ghadi nkhlls blkridi", "english": "I'll pay by credit card" }
+          ],
+          "common_mistakes": ["Forgetting 'ghadi' before the verb for future tense"]
+        },
+        {
+          "rule": "Decision Making: 'ghadi nakhdo/nakhd'ha'",
+          "explanation": "'ghadi nakhdo' (I'll take it - m), 'ghadi nakhdha' (I'll take it - f). The pronoun suffix agrees with the item's gender.",
+          "examples": [
+            { "arabic": "غادي ناخدو (مذكر) / غادي ناخدها (مؤنث)", "romanized": "ghadi nakhdo (m) / ghadi nakhdha (f)", "english": "I'll take it (m/f)" }
+          ],
+          "common_mistakes": ["Using the wrong gender suffix for the object"]
+        }
+      ],
+      "phrases": [
+        { "arabic": "غادي ناخدو", "romanized": "ghadi nakhdo", "english": "I'll take it", "context": "Making a purchase decision" },
+        { "arabic": "واش تقبلو الكريدي؟", "romanized": "wash t9blo lkridi?", "english": "Do you accept credit cards?", "context": "Asking about payment" },
+        { "arabic": "غلف ليا هادا، كادو", "romanized": "ghllf lia hada, kadu", "english": "Wrap this for me, it's a gift", "context": "Requesting gift wrapping" },
+        { "arabic": "يمكن ليا نرجع هاد شي ليك؟", "romanized": "ymkn lia nrj3 had shi lik?", "english": "Can I return this to you?", "context": "Asking about returns" },
+        { "arabic": "الله يبارك فيك", "romanized": "allah ybark fik", "english": "God bless you (thank you for the transaction)", "context": "After completing a purchase" }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'I bought' in Darija?",
+          "correct_answer": "شريت",
+          "distractors": ["بعت", "خلصت", "جربت"],
+          "hint": "Past tense of 'shra' (to buy)"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "واش تقبلو ال___؟ (Do you accept credit cards?)",
+          "correct_answer": "كريدي",
+          "romanized_answer": "kridi",
+          "hint": "A payment method"
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'I'll take it'",
+          "correct_answer_arabic": "غادي ناخدو",
+          "correct_answer_romanized": "ghadi nakhdo",
+          "hint": "Use 'ghadi' + 'nakhdo'"
+        },
+        {
+          "type": "matching",
+          "question": "Match the shopping terms",
+          "pairs": [
+            {"darija": "شرى", "english": "to buy"},
+            {"darija": "باع", "english": "to sell"},
+            {"darija": "خلص", "english": "to pay"},
+            {"darija": "رجع", "english": "to return"},
+            {"darija": "بدل", "english": "to exchange"}
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'sold' mean in Moroccan Darija?",
+          "correct_answer": "Sale/discount (from French 'soldes')",
+          "distractors": ["Soldier", "To sell", "Gold"],
+          "hint": "It's a French loanword used in shopping"
+        }
+      ],
+      "cultural_notes": [
+        "Most traditional souq vendors prefer cash. Credit cards are mainly accepted in modern shops and malls.",
+        "When you complete a purchase in a souq, both buyer and seller often say 'allah ybark fik' (God bless you) - it's a sign of a good transaction.",
+        "Moroccan souqs are social spaces. Vendors may offer you tea while you browse - accepting is polite and part of the shopping experience."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {"darija_arabic": "شحال", "darija_latin": "sh7al", "english": "how much"},
+      {"darija_arabic": "غالي", "darija_latin": "ghali", "english": "expensive"},
+      {"darija_arabic": "رخيص", "darija_latin": "rkhis", "english": "cheap"},
+      {"darija_arabic": "فلوس", "darija_latin": "flus", "english": "money"},
+      {"darija_arabic": "نقص", "darija_latin": "n9ss", "english": "lower/reduce"},
+      {"darija_arabic": "شرى", "darija_latin": "shra", "english": "to buy"},
+      {"darija_arabic": "خلص", "darija_latin": "khlls", "english": "to pay"},
+      {"darija_arabic": "كحل", "darija_latin": "k7l", "english": "black"},
+      {"darija_arabic": "كبير", "darija_latin": "kbir", "english": "big"},
+      {"darija_arabic": "صغير", "darija_latin": "sghir", "english": "small"}
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "___ بزاف! نقص شوية",
+        "sentence_latin": "___ bzzaf! n9ss chwiya",
+        "answer_arabic": "غالي",
+        "answer_latin": "ghali",
+        "hint": "Too ___! (expensive)"
+      },
+      {
+        "sentence_arabic": "بشحال ___ شي؟",
+        "sentence_latin": "bsh7al ___ shi?",
+        "answer_arabic": "هاد",
+        "answer_latin": "had",
+        "hint": "How much is ___ (this)?"
+      },
+      {
+        "sentence_arabic": "غادي ___",
+        "sentence_latin": "ghadi ___",
+        "answer_arabic": "ناخدو",
+        "answer_latin": "nakhdo",
+        "hint": "I'll take it"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "When should you bargain in Morocco?",
+        "correct_answer": "In traditional souqs and with street vendors, but not in fixed-price shops or supermarkets",
+        "distractors": ["Always, everywhere", "Never, it's considered rude", "Only in restaurants"],
+        "explanation": "Bargaining is expected and enjoyed in souqs. Fixed-price shops, supermarkets, and pharmacies have set prices."
+      },
+      {
+        "question": "What is a good bargaining strategy in a Moroccan souq?",
+        "correct_answer": "Start at about half the asking price and negotiate from there",
+        "distractors": ["Accept the first price offered", "Offer 10% less", "Never make a counter-offer"],
+        "explanation": "Vendors typically start high, expecting negotiation. Starting at half and meeting somewhere in between is the norm."
+      }
+    ]
+  }
+}

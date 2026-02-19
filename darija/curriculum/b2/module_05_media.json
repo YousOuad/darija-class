@@ -1,0 +1,1123 @@
+{
+  "module_id": "b2_m05",
+  "level": "b2",
+  "module_number": 5,
+  "title": "Media & News",
+  "description": "Understand and discuss media, news, and current events in Darija",
+  "lessons": [
+    {
+      "lesson_id": "b2_m05_l01",
+      "order": 1,
+      "title": "News & Media Vocabulary",
+      "vocabulary": [
+        {
+          "arabic": "أخبار",
+          "romanized": "akhbar",
+          "english": "news",
+          "example_sentence": {
+            "arabic": "سمعتي الأخبار؟",
+            "romanized": "sm3ti lakhbar?",
+            "english": "Did you hear the news?"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جريدة",
+          "romanized": "jarida",
+          "english": "newspaper",
+          "example_sentence": {
+            "arabic": "قريت الجريدة",
+            "romanized": "9rit ljarida",
+            "english": "I read the newspaper"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تلفزيون",
+          "romanized": "tilfizyon",
+          "english": "television",
+          "example_sentence": {
+            "arabic": "شفت فالتلفزيون",
+            "romanized": "shft fttilfizyon",
+            "english": "I saw on television"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "إنترنت",
+          "romanized": "internet",
+          "english": "internet",
+          "example_sentence": {
+            "arabic": "قريت فالإنترنت",
+            "romanized": "9rit fl-internet",
+            "english": "I read on the internet"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فيسبوك",
+          "romanized": "facebook",
+          "english": "Facebook",
+          "example_sentence": {
+            "arabic": "شفت فالفيسبوك",
+            "romanized": "shft flfacebook",
+            "english": "I saw on Facebook"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فيديو",
+          "romanized": "video",
+          "english": "video",
+          "example_sentence": {
+            "arabic": "هاد الفيديو وصل بزاف ديال الناس",
+            "romanized": "had lvideo wsl bzzaf dyal nnas",
+            "english": "This video reached a lot of people"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صحافة",
+          "romanized": "s7afa",
+          "english": "journalism/press",
+          "example_sentence": {
+            "arabic": "حرية الصحافة مهمة",
+            "romanized": "7urriyat ss7afa muhimma",
+            "english": "Press freedom is important"
+          },
+          "category": "media",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صحافي",
+          "romanized": "s7afi",
+          "english": "journalist",
+          "example_sentence": {
+            "arabic": "الصحافي كتب مقال",
+            "romanized": "ss7afi ktb m9al",
+            "english": "The journalist wrote an article"
+          },
+          "category": "media",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مقال",
+          "romanized": "m9al",
+          "english": "article",
+          "example_sentence": {
+            "arabic": "هاد المقال مهم",
+            "romanized": "had lm9al muhimm",
+            "english": "This article is important"
+          },
+          "category": "media",
+          "difficulty": 2
+        },
+        {
+          "arabic": "خبر عاجل",
+          "romanized": "khbar 3ajl",
+          "english": "breaking news",
+          "example_sentence": {
+            "arabic": "خبر عاجل!",
+            "romanized": "khbar 3ajl!",
+            "english": "Breaking news!"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ترند",
+          "romanized": "trend",
+          "english": "trending",
+          "example_sentence": {
+            "arabic": "هاد الموضوع ولا ترند",
+            "romanized": "had lmawdu3 wlla trend",
+            "english": "This topic became trending"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شارك",
+          "romanized": "shark",
+          "english": "to share (online)",
+          "example_sentence": {
+            "arabic": "شارك المنشور",
+            "romanized": "shark lmnshur",
+            "english": "Share the post"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تعليق",
+          "romanized": "t3li9",
+          "english": "comment",
+          "example_sentence": {
+            "arabic": "كتب واحد التعليق",
+            "romanized": "ktb wa7d tt3li9",
+            "english": "He wrote a comment"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بودكاست",
+          "romanized": "podcast",
+          "english": "podcast",
+          "example_sentence": {
+            "arabic": "كنسمع واحد البودكاست بالدارجة",
+            "romanized": "kansm3 wa7d lpodcast bddarija",
+            "english": "I listen to a podcast in Darija"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فايك نيوز",
+          "romanized": "fake news",
+          "english": "fake news",
+          "example_sentence": {
+            "arabic": "ما تصدقش الفايك نيوز",
+            "romanized": "ma tsd9sh lfake news",
+            "english": "Don't believe fake news"
+          },
+          "category": "media",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Reporting News in Darija",
+          "explanation": "Use '7sb lakhbar' (according to the news), 'tbyn blli' (it was revealed that), 'l-akhbar 9alat' (the news said).",
+          "examples": [
+            {
+              "arabic": "حسب الأخبار، الحكومة غادي تدير تغييرات",
+              "romanized": "7sb lakhbar, l7ukuma ghadi tdir tghiyirat",
+              "english": "According to the news, the government will make changes"
+            }
+          ],
+          "common_mistakes": [
+            "Always cite sources when reporting news"
+          ]
+        },
+        {
+          "rule": "Passive Voice for News",
+          "explanation": "News uses passive: 'tt9al' (it was said), 'tta3ln' (it was announced), 'tktb' (it was written).",
+          "examples": [
+            {
+              "arabic": "تعلن اليوم بلي الثمن غادي ينزل",
+              "romanized": "tt3ln lyoum blli ttmn ghadi ynzl",
+              "english": "It was announced today that the price will decrease"
+            }
+          ],
+          "common_mistakes": [
+            "Passive is more common in news language than everyday Darija"
+          ]
+        },
+        {
+          "rule": "Expressing Reactions to News",
+          "explanation": "'ma sd9t!' (I can't believe it!), 'wllah?' (really?), 'hadi kbira!' (this is big!), 'ma 3ndi m3aha' (I don't care about it).",
+          "examples": [
+            {
+              "arabic": "وللاه؟ ما صدقت! هادي كبيرة!",
+              "romanized": "wllah? ma sd9t! hadi kbira!",
+              "english": "Really? I can't believe it! This is huge!"
+            }
+          ],
+          "common_mistakes": [
+            "Expressing reactions shows engagement in conversation"
+          ]
+        },
+        {
+          "rule": "Discussing Credibility",
+          "explanation": "'mw99 fih' (trustworthy), 'ma 9ddsh ttw99 fih' (unreliable), 'fake news' (fake news), 'ms77 lkhbar' (verify the news).",
+          "examples": [
+            {
+              "arabic": "خاصنا نمسحو الخبر قبل ما نشاركوه",
+              "romanized": "khasna nms7u lkhbar 9bl ma nsharku",
+              "english": "We need to verify the news before sharing it"
+            }
+          ],
+          "common_mistakes": [
+            "Media literacy is increasingly important in Morocco"
+          ]
+        },
+        {
+          "rule": "Social Media Vocabulary",
+          "explanation": "Like: 'like/j'aime', Share: 'shark/partaj', Comment: 't3li9', Follow: 'tabba3', Unfollow: 'dfollowi'.",
+          "examples": [
+            {
+              "arabic": "دير لايك و شارك و تبع الصفحة",
+              "romanized": "dir like w shark w tb3 sssf7a",
+              "english": "Like, share, and follow the page"
+            }
+          ],
+          "common_mistakes": [
+            "Social media terms are mostly borrowed from English/French"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "واش سمعتي الأخبار؟",
+          "romanized": "wash sm3ti lakhbar?",
+          "english": "Did you hear the news?",
+          "context": "Discussing current events"
+        },
+        {
+          "arabic": "حسب الأخبار...",
+          "romanized": "7sb lakhbar...",
+          "english": "According to the news...",
+          "context": "Reporting news"
+        },
+        {
+          "arabic": "هاد الشي ولا ترند فالمغرب",
+          "romanized": "had shshay wlla trend flmghrib",
+          "english": "This became trending in Morocco",
+          "context": "Social media discussion"
+        },
+        {
+          "arabic": "ما تصدقش كلشي اللي كتقرا فالإنترنت",
+          "romanized": "ma tsd9sh kulshi lli kat9ra fl-internet",
+          "english": "Don't believe everything you read online",
+          "context": "Media literacy"
+        },
+        {
+          "arabic": "خبر عاجل: المنتخب المغربي ربح!",
+          "romanized": "khbar 3ajl: lmntkhab lmghribi rb7!",
+          "english": "Breaking news: The Moroccan team won!",
+          "context": "Sports news"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'Did you hear the news?' in Darija?",
+          "correct_answer": "واش سمعتي الأخبار؟",
+          "distractors": [
+            "واش شفتي الأخبار؟",
+            "واش قريتي الأخبار؟",
+            "واش عرفتي الأخبار؟"
+          ],
+          "hint": "'sm3ti' means 'did you hear'"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "___ الأخبار، الحكومة غادي تدير تغييرات",
+          "correct_answer": "حسب",
+          "romanized_answer": "7sb",
+          "hint": "'According to'"
+        },
+        {
+          "type": "matching",
+          "question": "Match media terms",
+          "pairs": [
+            {
+              "darija": "أخبار",
+              "english": "news"
+            },
+            {
+              "darija": "جريدة",
+              "english": "newspaper"
+            },
+            {
+              "darija": "صحافي",
+              "english": "journalist"
+            },
+            {
+              "darija": "مقال",
+              "english": "article"
+            },
+            {
+              "darija": "ترند",
+              "english": "trending"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Don't believe everything you read online'",
+          "correct_answer_arabic": "ما تصدقش كلشي اللي كتقرا فالإنترنت",
+          "correct_answer_romanized": "ma tsd9sh kulshi lli kat9ra fl-internet",
+          "hint": "Use 'ma...sh' negation"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What are the main Moroccan TV channels?",
+          "correct_answer": "2M and Al Aoula (الأولى)",
+          "distractors": [
+            "BBC Arabic and Al Jazeera",
+            "CNN and Fox",
+            "TF1 and France 2"
+          ],
+          "hint": "National Moroccan channels"
+        }
+      ],
+      "cultural_notes": [
+        "2M and Al Aoula are Morocco's main national TV channels. 2M broadcasts in both Darija and French.",
+        "Social media, especially Facebook and YouTube, has become the primary news source for many Moroccans, particularly young people."
+      ]
+    },
+    {
+      "lesson_id": "b2_m05_l02",
+      "order": 2,
+      "title": "Social Media & Digital Life",
+      "vocabulary": [
+        {
+          "arabic": "منشور",
+          "romanized": "mnshur",
+          "english": "post (social media)",
+          "example_sentence": {
+            "arabic": "دير واحد المنشور على هاد الموضوع",
+            "romanized": "dir wa7d lmnshur 3la had lmawdu3",
+            "english": "Make a post about this topic"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تبع",
+          "romanized": "tb3",
+          "english": "to follow (social media)",
+          "example_sentence": {
+            "arabic": "تبع الصفحة ديالنا!",
+            "romanized": "tb3 sssf7a dyalna!",
+            "english": "Follow our page!"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لايك",
+          "romanized": "like",
+          "english": "like (social media)",
+          "example_sentence": {
+            "arabic": "دير لايك إلا عجبك",
+            "romanized": "dir like ila 3jbk",
+            "english": "Like it if you enjoyed it"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ستوري",
+          "romanized": "story",
+          "english": "story (Instagram/WhatsApp)",
+          "example_sentence": {
+            "arabic": "شفت الستوري ديالو؟",
+            "romanized": "shft lstory dyalu?",
+            "english": "Did you see his story?"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هاشتاگ",
+          "romanized": "hashtag",
+          "english": "hashtag",
+          "example_sentence": {
+            "arabic": "خاصك تحط الهاشتاگ باش يوصل",
+            "romanized": "khassk t7T lhashtag bash ywsl",
+            "english": "You need to put a hashtag so it reaches people"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كونتو",
+          "romanized": "konto",
+          "english": "account (from French 'compte')",
+          "example_sentence": {
+            "arabic": "الكونتو ديالي فيه بزاف ديال الفولورز",
+            "romanized": "lkonto dyali fih bzzaf dyal lfolowers",
+            "english": "My account has a lot of followers"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نوتيفيكاسيون",
+          "romanized": "notifikasyon",
+          "english": "notification",
+          "example_sentence": {
+            "arabic": "فعّل النوتيفيكاسيون باش ما يفوتك والو",
+            "romanized": "f33l nnotifikasyon bash ma yfutk walu",
+            "english": "Enable notifications so you don't miss anything"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بلوكي",
+          "romanized": "bloki",
+          "english": "to block (someone online)",
+          "example_sentence": {
+            "arabic": "بلوكيتو حيت كان كيزعزع",
+            "romanized": "blokitu 7it kan kayz3z3",
+            "english": "I blocked him because he was being annoying"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "أنبوكس",
+          "romanized": "inbox",
+          "english": "inbox / direct message",
+          "example_sentence": {
+            "arabic": "صيفطي ليا فالأنبوكس",
+            "romanized": "syfTi lia fl-inbox",
+            "english": "Send me a DM"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لايف",
+          "romanized": "live",
+          "english": "live stream",
+          "example_sentence": {
+            "arabic": "غادي ندير واحد اللايف الليلة",
+            "romanized": "ghadi ndir wa7d llive llila",
+            "english": "I'm going to do a live stream tonight"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "يوتيوبر",
+          "romanized": "youtuber",
+          "english": "YouTuber",
+          "example_sentence": {
+            "arabic": "بغيت نولي يوتيوبر",
+            "romanized": "bghit nwlli youtuber",
+            "english": "I want to become a YouTuber"
+          },
+          "category": "media",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كونتنو",
+          "romanized": "contenu",
+          "english": "content (from French)",
+          "example_sentence": {
+            "arabic": "خاصك تدير كونتنو مزيان",
+            "romanized": "khassk tdir contenu mzyan",
+            "english": "You need to create good content"
+          },
+          "category": "media",
+          "difficulty": 1
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Commanding Online Actions",
+          "explanation": "Social media commands use Darija imperative: 'dir like' (give a like), 'shark' (share), 'tb3' (follow), 'ktb t3li9' (write a comment), 'aboni' (subscribe).",
+          "examples": [
+            {
+              "arabic": "دير لايك و شارك و أبوني فالقناة!",
+              "romanized": "dir like w shark w aboni fl9ana!",
+              "english": "Like, share, and subscribe to the channel!"
+            }
+          ],
+          "common_mistakes": [
+            "These commands are so common in Moroccan YouTube that they've become a meme themselves"
+          ]
+        },
+        {
+          "rule": "Describing Online Trends",
+          "explanation": "'wlla trend' (became trending), 'dar buzz' (created buzz), 'tvirali' (went viral), 'Tl3 f top' (reached the top). These describe content popularity.",
+          "examples": [
+            {
+              "arabic": "الفيديو ديالو تفيرالي و دار بوز كبير",
+              "romanized": "lvideo dyalu tvirali w dar buz kbir",
+              "english": "His video went viral and created a big buzz"
+            }
+          ],
+          "common_mistakes": [
+            "'dar buzz' is more common than 'tvirali' in everyday Darija"
+          ]
+        },
+        {
+          "rule": "Online Privacy Language",
+          "explanation": "'bloki' (block), 'riporti' (report), '7yyd' (remove/delete), '5bbi' (hide), 'privatiser' (make private). Online safety vocabulary.",
+          "examples": [
+            {
+              "arabic": "حيّد هاد التعليق و بلوكي هاد الشخص",
+              "romanized": "7yyd had tt3li9 w bloki had shshkhS",
+              "english": "Delete this comment and block this person"
+            }
+          ],
+          "common_mistakes": [
+            "Online safety is important - Moroccans increasingly discuss digital privacy"
+          ]
+        },
+        {
+          "rule": "Expressing Online Reactions",
+          "explanation": "Online reactions: 'LOL/mdr' (laughing), 'wa3r' (great), 'hram 3lik' (shame on you), 'Allah y7fdk' (God protect you - supportive), 'masha'allah' (praise).",
+          "examples": [
+            {
+              "arabic": "ما شاء الله عليك! واعر الكونتنو!",
+              "romanized": "masha'allah 3lik! wa3r lcontenu!",
+              "english": "Masha'allah! Great content!"
+            }
+          ],
+          "common_mistakes": [
+            "Religious expressions like 'masha'allah' are genuine compliments in online comments, not just religious"
+          ]
+        },
+        {
+          "rule": "WhatsApp Communication Style",
+          "explanation": "WhatsApp is the most used app in Morocco. Common: voice messages ('vocale'/'messaj soti'), groups ('grupo'), status ('stata'), forwarding ('transfiri').",
+          "examples": [
+            {
+              "arabic": "صيفط ليا واحد الفوكال و أنا نجاوبك",
+              "romanized": "syfT lia wa7d lfocal w ana njawbk",
+              "english": "Send me a voice message and I'll reply"
+            }
+          ],
+          "common_mistakes": [
+            "Moroccans heavily prefer voice messages over typing - it's faster and more personal"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "دير أبوني و فعّل الجرص!",
+          "romanized": "dir aboni w f33l ljrs!",
+          "english": "Subscribe and turn on notifications!",
+          "context": "YouTube-style call to action"
+        },
+        {
+          "arabic": "صيفط ليا الرابط فالواتساب",
+          "romanized": "syfT lia rrabiT flwhatsapp",
+          "english": "Send me the link on WhatsApp",
+          "context": "Sharing content"
+        },
+        {
+          "arabic": "واش عندك إنستا؟",
+          "romanized": "wash 3ndk insta?",
+          "english": "Do you have Instagram?",
+          "context": "Asking for social media"
+        },
+        {
+          "arabic": "ما تنشريش التصاور ديالي بلا إذن",
+          "romanized": "ma tnshriish ttsawer dyali bla idn",
+          "english": "Don't post my photos without permission",
+          "context": "Privacy concerns"
+        },
+        {
+          "arabic": "هاد اللايف فيه بزاف ديال الناس!",
+          "romanized": "had llive fih bzzaf dyal nnas!",
+          "english": "This live stream has a lot of viewers!",
+          "context": "Live streaming"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the most popular messaging app in Morocco?",
+          "correct_answer": "WhatsApp",
+          "distractors": [
+            "Telegram",
+            "iMessage",
+            "Signal"
+          ],
+          "hint": "Moroccans use it for voice messages, groups, and daily communication"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "دير لايك و شارك و ___ فالقناة! (Like, share, and subscribe!)",
+          "correct_answer": "أبوني",
+          "romanized_answer": "aboni",
+          "hint": "From French 'abonner'"
+        },
+        {
+          "type": "matching",
+          "question": "Match social media terms",
+          "pairs": [
+            {
+              "darija": "منشور",
+              "english": "post"
+            },
+            {
+              "darija": "تبع",
+              "english": "follow"
+            },
+            {
+              "darija": "بلوكي",
+              "english": "block"
+            },
+            {
+              "darija": "ستوري",
+              "english": "story"
+            },
+            {
+              "darija": "كونتنو",
+              "english": "content"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Send me a voice message on WhatsApp'",
+          "correct_answer_arabic": "صيفط ليا واحد الفوكال فالواتساب",
+          "correct_answer_romanized": "syfT lia wa7d lfocal flwhatsapp",
+          "hint": "Use 'focal' for voice message"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'dar buz' mean?",
+          "correct_answer": "Went viral / created hype",
+          "distractors": [
+            "Made a mistake",
+            "Got deleted",
+            "Was ignored"
+          ],
+          "hint": "'buz' comes from the English 'buzz'"
+        }
+      ],
+      "cultural_notes": [
+        "WhatsApp dominates communication in Morocco. Voice messages are preferred over typing, and family/friend groups are essential for daily life coordination.",
+        "Moroccan YouTubers and TikTokers have created a vibrant content ecosystem. Channels covering comedy, cooking, vlogs, and social commentary in Darija attract millions of views."
+      ]
+    },
+    {
+      "lesson_id": "b2_m05_l03",
+      "order": 3,
+      "title": "Discussing Current Events",
+      "vocabulary": [
+        {
+          "arabic": "انتخابات",
+          "romanized": "intikhabat",
+          "english": "elections",
+          "example_sentence": {
+            "arabic": "الانتخابات غادي تكون هاد العام",
+            "romanized": "l-intikhabat ghadi tkun had l3am",
+            "english": "The elections will be this year"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "اقتصاد",
+          "romanized": "i9tiSad",
+          "english": "economy",
+          "example_sentence": {
+            "arabic": "الاقتصاد كيتحسن شوية",
+            "romanized": "l-i9tiSad kayit7ssn chwiya",
+            "english": "The economy is improving a little"
+          },
+          "category": "economics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بطالة",
+          "romanized": "bTala",
+          "english": "unemployment",
+          "example_sentence": {
+            "arabic": "البطالة مشكل كبير فالمغرب",
+            "romanized": "lbTala mushkl kbir flmghrib",
+            "english": "Unemployment is a big problem in Morocco"
+          },
+          "category": "economics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "غلاء المعيشة",
+          "romanized": "ghla lm3isha",
+          "english": "cost of living / inflation",
+          "example_sentence": {
+            "arabic": "غلاء المعيشة كيأثر على الناس",
+            "romanized": "ghla lm3isha kay-athr 3la nnas",
+            "english": "The cost of living is affecting people"
+          },
+          "category": "economics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "تعليم",
+          "romanized": "t3lim",
+          "english": "education (system)",
+          "example_sentence": {
+            "arabic": "التعليم خاصو إصلاح",
+            "romanized": "tt3lim khasu islah",
+            "english": "The education system needs reform"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صحة",
+          "romanized": "s77a",
+          "english": "health (system)",
+          "example_sentence": {
+            "arabic": "القطاع الصحي فيه مشاكل",
+            "romanized": "l9Ta3 ss77i fih mshakil",
+            "english": "The health sector has problems"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مظاهرة",
+          "romanized": "muDahara",
+          "english": "protest / demonstration",
+          "example_sentence": {
+            "arabic": "كانت واحد المظاهرة فوسط المدينة",
+            "romanized": "kant wa7d lmuDahara fwsT lmdina",
+            "english": "There was a protest in the city center"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "حكومة",
+          "romanized": "7ukuma",
+          "english": "government",
+          "example_sentence": {
+            "arabic": "الحكومة خدات قرار جديد",
+            "romanized": "l7ukuma khdat 9rar jdid",
+            "english": "The government made a new decision"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "إضراب",
+          "romanized": "iDrab",
+          "english": "strike",
+          "example_sentence": {
+            "arabic": "الأساتذة دارو إضراب",
+            "romanized": "l-asatida daru iDrab",
+            "english": "The teachers went on strike"
+          },
+          "category": "politics",
+          "difficulty": 2
+        },
+        {
+          "arabic": "مناخ",
+          "romanized": "mnakh",
+          "english": "climate",
+          "example_sentence": {
+            "arabic": "تغيّر المناخ كيأثر على المغرب",
+            "romanized": "tghyyr lmnakh kay-athr 3la lmghrib",
+            "english": "Climate change is affecting Morocco"
+          },
+          "category": "environment",
+          "difficulty": 2
+        },
+        {
+          "arabic": "جفاف",
+          "romanized": "jfaf",
+          "english": "drought",
+          "example_sentence": {
+            "arabic": "المغرب عانى من الجفاف هاد العام",
+            "romanized": "lmghrib 3ana mn ljfaf had l3am",
+            "english": "Morocco suffered from drought this year"
+          },
+          "category": "environment",
+          "difficulty": 2
+        },
+        {
+          "arabic": "زلزال",
+          "romanized": "zlzal",
+          "english": "earthquake",
+          "example_sentence": {
+            "arabic": "الزلزال ضرب منطقة الحوز",
+            "romanized": "zzlzal drb mnT9at l7uz",
+            "english": "The earthquake hit the Al Haouz region"
+          },
+          "category": "news",
+          "difficulty": 2
+        }
+      ],
+      "grammar": [
+        {
+          "rule": "Expressing Opinions on News",
+          "explanation": "'ana shayf blli...' (I think that...), '3la 7sabi...' (in my opinion...), 'kayban lia blli...' (it seems to me that...), 'ana mtaf9 m3a...' (I agree with...).",
+          "examples": [
+            {
+              "arabic": "أنا شايف بلي خاصنا نديرو حاجة للبيئة",
+              "romanized": "ana shayf blli khasna ndiru 7aja llbi2a",
+              "english": "I think we need to do something for the environment"
+            }
+          ],
+          "common_mistakes": [
+            "When discussing politics, preface opinions with '3la 7sabi' to show it's personal view, not fact"
+          ]
+        },
+        {
+          "rule": "Cause and Effect in News",
+          "explanation": "'7it/hit' (because), 'b sbab' (due to), 'lhadshi...' (that's why), 'nti9a dyal' (as a result of). Used to explain news causation.",
+          "examples": [
+            {
+              "arabic": "بسباب الجفاف، الماء ولا غالي",
+              "romanized": "bsbab ljfaf, lma wlla ghali",
+              "english": "Due to the drought, water became expensive"
+            }
+          ],
+          "common_mistakes": [
+            "'b sbab' is more formal than '7it' - use it for news discussion"
+          ]
+        },
+        {
+          "rule": "Comparing Past and Present",
+          "explanation": "'mn 9bl kan...' (before it was...), 'daba wlla...' (now it became...), 'f had l-awakhir...' (recently...), 'tghyyrat bzzaf...' (many things changed...).",
+          "examples": [
+            {
+              "arabic": "من قبل كان التعليم أحسن، دابا تغير بزاف",
+              "romanized": "mn 9bl kan tt3lim a7sn, daba tghyyr bzzaf",
+              "english": "Before, education was better, now it has changed a lot"
+            }
+          ],
+          "common_mistakes": [
+            "Nostalgia for the past is common in Moroccan discussion - 'mn 9bl kan...' is a frequent opening"
+          ]
+        },
+        {
+          "rule": "Discussing Solutions",
+          "explanation": "'khaSS + verb' (need to), 'l7ll hwa...' (the solution is...), 'lazm ndiru...' (we must do...), 'ila bghinaw ntqddmu...' (if we want to progress...).",
+          "examples": [
+            {
+              "arabic": "الحل هو خاصنا نستثمرو فالتعليم",
+              "romanized": "l7ll hwa khasna nstthhmru ftt3lim",
+              "english": "The solution is we need to invest in education"
+            }
+          ],
+          "common_mistakes": [
+            "Propose solutions carefully - Moroccans appreciate constructive discussion over pure criticism"
+          ]
+        },
+        {
+          "rule": "Agreeing and Disagreeing on Issues",
+          "explanation": "Agree: '3ndk l79' (you're right), 'mtaf9 m3ak' (I agree). Disagree softly: 'wa9ila la' (maybe not), 'mashi blkull' (not entirely). Disagree firmly: 'la, ma mtaf9sh' (no, I disagree).",
+          "examples": [
+            {
+              "arabic": "عندك الحق، ولكن من جهة أخرى...",
+              "romanized": "3ndk l79, walakin mn ji7a ukhra...",
+              "english": "You're right, but on the other hand..."
+            }
+          ],
+          "common_mistakes": [
+            "Even when disagreeing, acknowledge the other person's point first with '3ndk l79 walakin...'"
+          ]
+        }
+      ],
+      "phrases": [
+        {
+          "arabic": "أنا شايف بلي الوضعية غادي تتحسن",
+          "romanized": "ana shayf blli lwd3iya ghadi tit7ssn",
+          "english": "I think the situation will improve",
+          "context": "Optimistic view on current events"
+        },
+        {
+          "arabic": "المغرب خاصو إصلاحات كبار",
+          "romanized": "lmghrib khasu islahhat kbar",
+          "english": "Morocco needs major reforms",
+          "context": "Discussing national issues"
+        },
+        {
+          "arabic": "بسباب غلاء المعيشة، الناس كتعاني",
+          "romanized": "bsbab ghla lm3isha, nnas kat3ani",
+          "english": "Due to the cost of living, people are suffering",
+          "context": "Economic discussion"
+        },
+        {
+          "arabic": "خاصنا نتضامنو مع بعضياتنا",
+          "romanized": "khasna ntDamnu m3a b3Diyatna",
+          "english": "We need to show solidarity with each other",
+          "context": "After a crisis"
+        },
+        {
+          "arabic": "المجتمع المدني خاصو يلعب دور أكبر",
+          "romanized": "lmujtama3 lmadani khasu yl3b dur akbr",
+          "english": "Civil society needs to play a bigger role",
+          "context": "Political discussion"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'unemployment' in Darija?",
+          "correct_answer": "بطالة (bTala)",
+          "distractors": [
+            "غلاء (ghla)",
+            "إضراب (iDrab)",
+            "مظاهرة (muDahara)"
+          ],
+          "hint": "Related to not having work"
+        },
+        {
+          "type": "fill_in_blank",
+          "question": "أنا شايف ___ خاصنا نديرو حاجة (I think we need to do something)",
+          "correct_answer": "بلي",
+          "romanized_answer": "blli",
+          "hint": "The connector 'that'"
+        },
+        {
+          "type": "matching",
+          "question": "Match current events vocabulary",
+          "pairs": [
+            {
+              "darija": "انتخابات",
+              "english": "elections"
+            },
+            {
+              "darija": "بطالة",
+              "english": "unemployment"
+            },
+            {
+              "darija": "جفاف",
+              "english": "drought"
+            },
+            {
+              "darija": "إضراب",
+              "english": "strike"
+            },
+            {
+              "darija": "زلزال",
+              "english": "earthquake"
+            }
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Due to the drought, water became expensive'",
+          "correct_answer_arabic": "بسباب الجفاف، الماء ولا غالي",
+          "correct_answer_romanized": "bsbab ljfaf, lma wlla ghali",
+          "hint": "Use 'b sbab' for 'due to'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you softly disagree in Darija?",
+          "correct_answer": "عندك الحق ولكن... (you're right, but...)",
+          "distractors": [
+            "لا، غلط! (no, wrong!)",
+            "ما عمري غادي نتافق! (I'll never agree!)",
+            "سكت! (shut up!)"
+          ],
+          "hint": "Moroccan culture values indirect disagreement"
+        }
+      ],
+      "cultural_notes": [
+        "Discussing politics in Morocco is common in cafes and social gatherings. The term '9hawi' (cafes) are considered informal parliament where people debate everything from football to government policy.",
+        "The 2023 Al Haouz earthquake was a pivotal moment that showed Moroccan solidarity (tDamun). The hashtag #Pray_for_Morocco trended worldwide, and communities organized massive relief efforts."
+      ]
+    }
+  ],
+  "game_content": {
+    "word_match": [
+      {
+        "darija_arabic": "أخبار",
+        "darija_latin": "akhbar",
+        "english": "news"
+      },
+      {
+        "darija_arabic": "جريدة",
+        "darija_latin": "jarida",
+        "english": "newspaper"
+      },
+      {
+        "darija_arabic": "صحافي",
+        "darija_latin": "s7afi",
+        "english": "journalist"
+      },
+      {
+        "darija_arabic": "ترند",
+        "darija_latin": "trend",
+        "english": "trending"
+      },
+      {
+        "darija_arabic": "شارك",
+        "darija_latin": "shark",
+        "english": "share"
+      },
+      {
+        "darija_arabic": "منشور",
+        "darija_latin": "mnshur",
+        "english": "post"
+      },
+      {
+        "darija_arabic": "لايك",
+        "darija_latin": "like",
+        "english": "like"
+      },
+      {
+        "darija_arabic": "بطالة",
+        "darija_latin": "bTala",
+        "english": "unemployment"
+      },
+      {
+        "darija_arabic": "زلزال",
+        "darija_latin": "zlzal",
+        "english": "earthquake"
+      },
+      {
+        "darija_arabic": "حكومة",
+        "darija_latin": "7ukuma",
+        "english": "government"
+      }
+    ],
+    "fill_blanks": [
+      {
+        "sentence_arabic": "واش ___ الأخبار؟",
+        "sentence_latin": "wash ___ lakhbar?",
+        "answer_arabic": "سمعتي",
+        "answer_latin": "sm3ti",
+        "hint": "Did you hear"
+      },
+      {
+        "sentence_arabic": "دير لايك و شارك و ___ فالقناة!",
+        "sentence_latin": "dir like w shark w ___ fl9ana!",
+        "answer_arabic": "أبوني",
+        "answer_latin": "aboni",
+        "hint": "subscribe"
+      },
+      {
+        "sentence_arabic": "أنا شايف ___ الوضعية غادي تتحسن",
+        "sentence_latin": "ana shayf ___ lwd3iya ghadi tit7ssn",
+        "answer_arabic": "بلي",
+        "answer_latin": "blli",
+        "hint": "that (connector)"
+      }
+    ],
+    "cultural_quiz": [
+      {
+        "question": "What is the primary source of news for young Moroccans?",
+        "correct_answer": "Social media (Facebook, YouTube, Instagram)",
+        "distractors": [
+          "Newspapers",
+          "Radio",
+          "TV only"
+        ],
+        "explanation": "Social media has overtaken traditional media as the primary news source for Morocco's youth."
+      },
+      {
+        "question": "What is the role of '9hawi' (cafes) in Moroccan society?",
+        "correct_answer": "They serve as informal gathering places where people discuss politics, sports, and current events",
+        "distractors": [
+          "They are only for drinking coffee",
+          "They are formal business meeting places",
+          "They are only for tourists"
+        ],
+        "explanation": "Moroccan cafes are central to social life and serve as informal forums for debate and discussion on all topics."
+      },
+      {
+        "question": "Which messaging app dominates daily communication in Morocco?",
+        "correct_answer": "WhatsApp",
+        "distractors": [
+          "Telegram",
+          "Facebook Messenger",
+          "SMS"
+        ],
+        "explanation": "WhatsApp is overwhelmingly the most used communication app in Morocco, with voice messages being a particularly popular feature."
+      }
+    ]
+  }
+}
