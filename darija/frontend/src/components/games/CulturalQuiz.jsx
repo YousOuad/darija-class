@@ -4,21 +4,21 @@ import { Check, X, Lightbulb, Info } from 'lucide-react';
 import GameWrapper from './GameWrapper';
 
 export default function CulturalQuiz({ data, onComplete }) {
-  if (!data || Object.keys(data).length === 0) {
-    return (
-      <div className="text-center py-16">
-        <p className="text-dark-400">No game data available.</p>
-      </div>
-    );
-  }
-
   const questions = data?.questions || (data?.question ? [data] : []);
 
-  if (questions.length === 0) {
+  if (!data || Object.keys(data).length === 0 || questions.length === 0) {
     return (
-      <div className="text-center py-16">
-        <p className="text-dark-400">No quiz questions available.</p>
-      </div>
+      <GameWrapper
+        title="Cultural Quiz"
+        score={0}
+        maxScore={0}
+        gameComplete
+        onNext={() => onComplete?.({ correct: false, score: 0, total: 0 })}
+      >
+        <div className="text-center py-8">
+          <p className="text-dark-400">No quiz questions available.</p>
+        </div>
+      </GameWrapper>
     );
   }
 
