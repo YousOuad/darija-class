@@ -37,8 +37,8 @@ export default function Login() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="text-3xl font-extrabold">
-            <span className="text-teal-500">Darija</span>
-            <span className="text-terracotta-500">Lingo</span>
+            <span className="text-teal-500">Ta</span>
+            <span className="text-terracotta-500">gine</span>
           </Link>
           <p className="text-dark-300 mt-2">Welcome back! Log in to continue learning.</p>
         </div>

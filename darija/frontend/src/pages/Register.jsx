@@ -23,8 +23,8 @@ export default function Register() {
       setLocalError('Passwords do not match.');
       return;
     }
-    if (password.length < 6) {
-      setLocalError('Password must be at least 6 characters.');
+    if (password.length < 8) {
+      setLocalError('Password must be at least 8 characters.');
       return;
     }
 
@@ -53,8 +53,8 @@ export default function Register() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="text-3xl font-extrabold">
-            <span className="text-teal-500">Darija</span>
-            <span className="text-terracotta-500">Lingo</span>
+            <span className="text-teal-500">Ta</span>
+            <span className="text-terracotta-500">gine</span>
           </Link>
           <p className="text-dark-300 mt-2">Create your account and start learning today!</p>
         </div>
@@ -116,7 +116,7 @@ export default function Register() {
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => { setPassword(e.target.value); clearError(); setLocalError(''); }}
-                  placeholder="At least 6 characters"
+                  placeholder="At least 8 characters"
                   required
                   className="w-full pl-10 pr-10 py-3 rounded-xl border border-sand-200
                     focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-300/30

@@ -12,10 +12,15 @@ const useAuthStore = create((set, get) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await authAPI.login({ email, password });
-      const { token, user } = response.data;
-      localStorage.setItem('darijalingo_token', token);
+      const { access_token } = response.data;
+      localStorage.setItem('darijalingo_token', access_token);
+      set({ token: access_token, isAuthenticated: true });
+
+      // Fetch user profile
+      const meResponse = await authAPI.getMe();
+      const user = meResponse.data;
       localStorage.setItem('darijalingo_user', JSON.stringify(user));
-      set({ user, token, isAuthenticated: true, isLoading: false });
+      set({ user, isLoading: false });
       return user;
     } catch (error) {
       const message = error.response?.data?.detail || 'Login failed. Please try again.';
@@ -28,10 +33,15 @@ const useAuthStore = create((set, get) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await authAPI.register({ display_name: displayName, email, password });
-      const { token, user } = response.data;
-      localStorage.setItem('darijalingo_token', token);
+      const { access_token } = response.data;
+      localStorage.setItem('darijalingo_token', access_token);
+      set({ token: access_token, isAuthenticated: true });
+
+      // Fetch user profile
+      const meResponse = await authAPI.getMe();
+      const user = meResponse.data;
       localStorage.setItem('darijalingo_user', JSON.stringify(user));
-      set({ user, token, isAuthenticated: true, isLoading: false });
+      set({ user, isLoading: false });
       return user;
     } catch (error) {
       const message = error.response?.data?.detail || 'Registration failed. Please try again.';
@@ -49,9 +59,9 @@ const useAuthStore = create((set, get) => ({
   refreshToken: async () => {
     try {
       const response = await authAPI.refresh();
-      const { token } = response.data;
-      localStorage.setItem('darijalingo_token', token);
-      set({ token });
+      const { access_token } = response.data;
+      localStorage.setItem('darijalingo_token', access_token);
+      set({ token: access_token });
     } catch {
       get().logout();
     }
