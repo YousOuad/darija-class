@@ -334,26 +334,69 @@
           "type": "multiple_choice",
           "question": "What is the Darija word for 'two'?",
           "correct_answer": "جوج",
-          "distractors": ["واحد", "تلاتة", "ربعة"],
+          "distractors": [
+            "واحد",
+            "تلاتة",
+            "ربعة"
+          ],
           "hint": "It starts with 'j'"
         },
         {
-          "type": "matching",
-          "question": "Match the numbers with their Darija words",
-          "pairs": [
-            {"darija": "واحد", "english": "1"},
-            {"darija": "خمسة", "english": "5"},
-            {"darija": "عشرة", "english": "10"},
-            {"darija": "عشرين", "english": "20"},
-            {"darija": "ميا", "english": "100"}
+          "type": "multiple_choice",
+          "question": "What does 'واحد' mean?",
+          "correct_answer": "1",
+          "distractors": [
+            "10",
+            "20",
+            "5"
           ]
         },
         {
-          "type": "fill_in_blank",
-          "question": "واحد، جوج، ___، ربعة، خمسة",
-          "correct_answer": "تلاتة",
-          "romanized_answer": "tlata",
-          "hint": "The number three"
+          "type": "multiple_choice",
+          "question": "What does 'خمسة' mean?",
+          "correct_answer": "5",
+          "distractors": [
+            "1",
+            "20",
+            "100"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عشرة' mean?",
+          "correct_answer": "10",
+          "distractors": [
+            "20",
+            "1",
+            "100"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عشرين' mean?",
+          "correct_answer": "20",
+          "distractors": [
+            "1",
+            "5",
+            "10"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ميا' mean?",
+          "correct_answer": "100",
+          "distractors": [
+            "20",
+            "10",
+            "5"
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'The number three'",
+          "correct_answer_arabic": "تلاتة",
+          "correct_answer_romanized": "tlata",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -366,13 +409,12 @@
           "type": "multiple_choice",
           "question": "How do you say 'twelve' in Darija?",
           "correct_answer": "طناش",
-          "distractors": ["حداش", "تلطاش", "ربعطاش"],
+          "distractors": [
+            "حداش",
+            "تلطاش",
+            "ربعطاش"
+          ],
           "hint": "It comes after 'eleven' (7dash)"
-        },
-        {
-          "type": "ordering",
-          "question": "Put these numbers in order from smallest to largest",
-          "correct_order": ["واحد", "خمسة", "عشرة", "عشرين", "خمسين", "ميا"]
         }
       ],
       "cultural_notes": [
@@ -704,15 +746,19 @@
           "type": "multiple_choice",
           "question": "How do you ask 'What time is it?' in Darija?",
           "correct_answer": "شحال فالساعة؟",
-          "distractors": ["أشنو الساعة؟", "فين الساعة؟", "كيفاش الساعة؟"],
+          "distractors": [
+            "أشنو الساعة؟",
+            "فين الساعة؟",
+            "كيفاش الساعة؟"
+          ],
           "hint": "'sh7al' means 'how much' and is used for time"
         },
         {
-          "type": "fill_in_blank",
-          "question": "الساعة خمسة و ___ (It's 5:30)",
-          "correct_answer": "نص",
-          "romanized_answer": "nss",
-          "hint": "This word means 'half'"
+          "type": "translation",
+          "question": "Translate to Darija: 'This word means 'half''",
+          "correct_answer_arabic": "نص",
+          "correct_answer_romanized": "nss",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -725,18 +771,61 @@
           "type": "multiple_choice",
           "question": "What day is 'الجمعة' (jjm3a)?",
           "correct_answer": "Friday",
-          "distractors": ["Monday", "Wednesday", "Saturday"],
+          "distractors": [
+            "Monday",
+            "Wednesday",
+            "Saturday"
+          ],
           "hint": "It's the day of congregational prayer"
         },
         {
-          "type": "matching",
-          "question": "Match the time words",
-          "pairs": [
-            {"darija": "دابا", "english": "now"},
-            {"darija": "غدا", "english": "tomorrow"},
-            {"darija": "البارح", "english": "yesterday"},
-            {"darija": "اليوم", "english": "today"},
-            {"darija": "بكري", "english": "early"}
+          "type": "multiple_choice",
+          "question": "What does 'دابا' mean?",
+          "correct_answer": "now",
+          "distractors": [
+            "yesterday",
+            "early",
+            "today"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'غدا' mean?",
+          "correct_answer": "tomorrow",
+          "distractors": [
+            "yesterday",
+            "today",
+            "early"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'البارح' mean?",
+          "correct_answer": "yesterday",
+          "distractors": [
+            "now",
+            "today",
+            "early"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'اليوم' mean?",
+          "correct_answer": "today",
+          "distractors": [
+            "tomorrow",
+            "now",
+            "early"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بكري' mean?",
+          "correct_answer": "early",
+          "distractors": [
+            "today",
+            "tomorrow",
+            "now"
           ]
         }
       ],
@@ -991,21 +1080,29 @@
           "type": "multiple_choice",
           "question": "How do you say 'thirty-five' in Darija?",
           "correct_answer": "خمسة و تلاتين",
-          "distractors": ["تلاتين و خمسة", "تلاتة و خمسين", "خمسة و عشرين"],
+          "distractors": [
+            "تلاتين و خمسة",
+            "تلاتة و خمسين",
+            "خمسة و عشرين"
+          ],
           "hint": "The unit comes before the tens, joined by 'w' (and)"
         },
         {
-          "type": "fill_in_blank",
-          "question": "عندي ___ درهم (I have 100 dirhams)",
-          "correct_answer": "ميا",
-          "romanized_answer": "mya",
-          "hint": "The Darija word for one hundred"
+          "type": "translation",
+          "question": "Translate to Darija: 'The Darija word for one hundred'",
+          "correct_answer_arabic": "ميا",
+          "correct_answer_romanized": "mya",
+          "hint": ""
         },
         {
           "type": "multiple_choice",
           "question": "If a vendor says 'mya riyal', how many dirhams is that?",
           "correct_answer": "5 dirhams",
-          "distractors": ["100 dirhams", "20 dirhams", "10 dirhams"],
+          "distractors": [
+            "100 dirhams",
+            "20 dirhams",
+            "10 dirhams"
+          ],
           "hint": "1 dirham = 20 riyals"
         },
         {
@@ -1016,14 +1113,53 @@
           "hint": "'sh7al' means 'how much'"
         },
         {
-          "type": "matching",
-          "question": "Match the money terms",
-          "pairs": [
-            {"darija": "فلوس", "english": "money"},
-            {"darija": "درهم", "english": "dirham"},
-            {"darija": "ثمن", "english": "price"},
-            {"darija": "صرف", "english": "change"},
-            {"darija": "خلص", "english": "to pay"}
+          "type": "multiple_choice",
+          "question": "What does 'فلوس' mean?",
+          "correct_answer": "money",
+          "distractors": [
+            "change",
+            "dirham",
+            "to pay"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'درهم' mean?",
+          "correct_answer": "dirham",
+          "distractors": [
+            "money",
+            "price",
+            "change"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ثمن' mean?",
+          "correct_answer": "price",
+          "distractors": [
+            "change",
+            "money",
+            "to pay"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'صرف' mean?",
+          "correct_answer": "change",
+          "distractors": [
+            "price",
+            "money",
+            "dirham"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خلص' mean?",
+          "correct_answer": "to pay",
+          "distractors": [
+            "change",
+            "price",
+            "dirham"
           ]
         }
       ],
@@ -1035,16 +1171,56 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "واحد", "darija_latin": "wa7d", "english": "one"},
-      {"darija_arabic": "جوج", "darija_latin": "jouj", "english": "two"},
-      {"darija_arabic": "تلاتة", "darija_latin": "tlata", "english": "three"},
-      {"darija_arabic": "خمسة", "darija_latin": "khmsa", "english": "five"},
-      {"darija_arabic": "عشرة", "darija_latin": "3shra", "english": "ten"},
-      {"darija_arabic": "عشرين", "darija_latin": "3shrin", "english": "twenty"},
-      {"darija_arabic": "ميا", "darija_latin": "mya", "english": "hundred"},
-      {"darija_arabic": "ساعة", "darija_latin": "sa3a", "english": "hour"},
-      {"darija_arabic": "نهار", "darija_latin": "nhar", "english": "day"},
-      {"darija_arabic": "دابا", "darija_latin": "daba", "english": "now"}
+      {
+        "darija_arabic": "واحد",
+        "darija_latin": "wa7d",
+        "english": "one"
+      },
+      {
+        "darija_arabic": "جوج",
+        "darija_latin": "jouj",
+        "english": "two"
+      },
+      {
+        "darija_arabic": "تلاتة",
+        "darija_latin": "tlata",
+        "english": "three"
+      },
+      {
+        "darija_arabic": "خمسة",
+        "darija_latin": "khmsa",
+        "english": "five"
+      },
+      {
+        "darija_arabic": "عشرة",
+        "darija_latin": "3shra",
+        "english": "ten"
+      },
+      {
+        "darija_arabic": "عشرين",
+        "darija_latin": "3shrin",
+        "english": "twenty"
+      },
+      {
+        "darija_arabic": "ميا",
+        "darija_latin": "mya",
+        "english": "hundred"
+      },
+      {
+        "darija_arabic": "ساعة",
+        "darija_latin": "sa3a",
+        "english": "hour"
+      },
+      {
+        "darija_arabic": "نهار",
+        "darija_latin": "nhar",
+        "english": "day"
+      },
+      {
+        "darija_arabic": "دابا",
+        "darija_latin": "daba",
+        "english": "now"
+      }
     ],
     "fill_blanks": [
       {
@@ -1052,40 +1228,55 @@
         "sentence_latin": "sh7al f___?",
         "answer_arabic": "الساعة",
         "answer_latin": "ssa3a",
-        "hint": "What time is it?"
+        "hint": "What time is it?",
+        "english": "What time is it?"
       },
       {
         "sentence_arabic": "الساعة خمسة و ___",
         "sentence_latin": "ssa3a khmsa w ___",
         "answer_arabic": "نص",
         "answer_latin": "nss",
-        "hint": "It's five thirty"
+        "hint": "It's five thirty",
+        "english": "It's half past five"
       },
       {
         "sentence_arabic": "عندي ___ درهم",
         "sentence_latin": "3ndi ___ drhm",
         "answer_arabic": "عشرين",
         "answer_latin": "3shrin",
-        "hint": "Twenty"
+        "hint": "Twenty",
+        "english": "I have twenty dirhams"
       }
     ],
     "cultural_quiz": [
       {
         "question": "What is the old Moroccan monetary unit still used in souqs?",
         "correct_answer": "Riyal (20 riyals = 1 dirham)",
-        "distractors": ["Franc", "Dinar", "Pound"],
+        "distractors": [
+          "Franc",
+          "Dinar",
+          "Pound"
+        ],
         "explanation": "Many Moroccan vendors, especially in traditional markets, still quote prices in riyals. 20 riyals equal 1 dirham."
       },
       {
         "question": "Why do many Moroccans use French numbers?",
         "correct_answer": "Due to the historical French protectorate influence on Morocco",
-        "distractors": ["Because Darija has no numbers", "Because French is easier", "They don't use French numbers"],
+        "distractors": [
+          "Because Darija has no numbers",
+          "Because French is easier",
+          "They don't use French numbers"
+        ],
         "explanation": "Morocco was under French protectorate (1912-1956), and French remains widely used in education, business, and daily life."
       },
       {
         "question": "What is the Moroccan attitude towards punctuality?",
         "correct_answer": "Generally relaxed - being 15-30 minutes late is socially acceptable",
-        "distractors": ["Extremely strict about time", "Always exactly on time", "Time doesn't matter at all"],
+        "distractors": [
+          "Extremely strict about time",
+          "Always exactly on time",
+          "Time doesn't matter at all"
+        ],
         "explanation": "Moroccan culture is more relationship-oriented than time-oriented, though professional settings are becoming more punctual."
       }
     ]

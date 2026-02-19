@@ -232,36 +232,60 @@
           "hint": "The comparative of 'mzyan'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "هادا كبير ___ من هاداك (This is bigger than that)",
-          "correct_answer": "كتر",
-          "romanized_answer": "ktar",
-          "hint": "'more than'"
+          "type": "translation",
+          "question": "Translate to Darija: ''more than''",
+          "correct_answer_arabic": "كتر",
+          "correct_answer_romanized": "ktar",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the opposites",
-          "pairs": [
-            {
-              "darija": "كبير",
-              "english": "صغير"
-            },
-            {
-              "darija": "طويل",
-              "english": "قصير"
-            },
-            {
-              "darija": "ساهل",
-              "english": "صعيب"
-            },
-            {
-              "darija": "زوين",
-              "english": "خايب"
-            },
-            {
-              "darija": "غالي",
-              "english": "رخيص"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'كبير' mean?",
+          "correct_answer": "صغير",
+          "distractors": [
+            "قصير",
+            "صعيب",
+            "خايب"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طويل' mean?",
+          "correct_answer": "قصير",
+          "distractors": [
+            "صغير",
+            "صعيب",
+            "خايب"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ساهل' mean?",
+          "correct_answer": "صعيب",
+          "distractors": [
+            "رخيص",
+            "خايب",
+            "صغير"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'زوين' mean?",
+          "correct_answer": "خايب",
+          "distractors": [
+            "رخيص",
+            "صغير",
+            "قصير"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'غالي' mean?",
+          "correct_answer": "رخيص",
+          "distractors": [
+            "خايب",
+            "قصير",
+            "صعيب"
           ]
         },
         {
@@ -527,11 +551,11 @@
           "hint": "Temperature opposite"
         },
         {
-          "type": "fill_in_blank",
-          "question": "فاس ___ عن كازا (Fes is different from Casa)",
-          "correct_answer": "مختالفة",
-          "romanized_answer": "mkhtalf",
-          "hint": "The word for different (feminine)"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for different (feminine)'",
+          "correct_answer_arabic": "مختالفة",
+          "correct_answer_romanized": "mkhtalf",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -541,29 +565,53 @@
           "hint": "All adjectives must be feminine to agree with 'ddar'"
         },
         {
-          "type": "matching",
-          "question": "Match adjectives and opposites",
-          "pairs": [
-            {
-              "darija": "غالي",
-              "english": "رخيص"
-            },
-            {
-              "darija": "سخون",
-              "english": "بارد"
-            },
-            {
-              "darija": "نقي",
-              "english": "وسخ"
-            },
-            {
-              "darija": "هادي",
-              "english": "مزحم"
-            },
-            {
-              "darija": "ساهل",
-              "english": "صعيب"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'غالي' mean?",
+          "correct_answer": "رخيص",
+          "distractors": [
+            "مزحم",
+            "وسخ",
+            "بارد"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سخون' mean?",
+          "correct_answer": "بارد",
+          "distractors": [
+            "رخيص",
+            "وسخ",
+            "مزحم"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نقي' mean?",
+          "correct_answer": "وسخ",
+          "distractors": [
+            "بارد",
+            "صعيب",
+            "مزحم"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هادي' mean?",
+          "correct_answer": "مزحم",
+          "distractors": [
+            "وسخ",
+            "رخيص",
+            "بارد"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ساهل' mean?",
+          "correct_answer": "صعيب",
+          "distractors": [
+            "وسخ",
+            "رخيص",
+            "بارد"
           ]
         },
         {
@@ -774,11 +822,11 @@
           "hint": "From the root 'fDDl'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "أنا ___ معاك (I agree with you)",
-          "correct_answer": "متافق",
-          "romanized_answer": "mtaf9",
-          "hint": "The word for 'agree'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'agree''",
+          "correct_answer_arabic": "متافق",
+          "correct_answer_romanized": "mtaf9",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -788,29 +836,53 @@
           "hint": "'3la 7sabi' means 'in my opinion'"
         },
         {
-          "type": "matching",
-          "question": "Match opinion expressions",
-          "pairs": [
-            {
-              "darija": "متافق",
-              "english": "agree"
-            },
-            {
-              "darija": "على حسابي",
-              "english": "in my opinion"
-            },
-            {
-              "darija": "عندك الحق",
-              "english": "you're right"
-            },
-            {
-              "darija": "كنفضل",
-              "english": "I prefer"
-            },
-            {
-              "darija": "كيبان ليا",
-              "english": "it seems to me"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'متافق' mean?",
+          "correct_answer": "agree",
+          "distractors": [
+            "you're right",
+            "it seems to me",
+            "I prefer"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'على حسابي' mean?",
+          "correct_answer": "in my opinion",
+          "distractors": [
+            "I prefer",
+            "you're right",
+            "it seems to me"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عندك الحق' mean?",
+          "correct_answer": "you're right",
+          "distractors": [
+            "agree",
+            "I prefer",
+            "it seems to me"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كنفضل' mean?",
+          "correct_answer": "I prefer",
+          "distractors": [
+            "agree",
+            "it seems to me",
+            "in my opinion"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كيبان ليا' mean?",
+          "correct_answer": "it seems to me",
+          "distractors": [
+            "I prefer",
+            "you're right",
+            "agree"
           ]
         },
         {
@@ -890,21 +962,24 @@
         "sentence_latin": "hada ___ mn hadak",
         "answer_arabic": "حسن",
         "answer_latin": "7sn",
-        "hint": "better"
+        "hint": "better",
+        "english": "This one is better than that one"
       },
       {
         "sentence_arabic": "أنا ___ معاك",
         "sentence_latin": "ana ___ m3ak",
         "answer_arabic": "متافق",
         "answer_latin": "mtaf9",
-        "hint": "agree"
+        "hint": "agree",
+        "english": "I agree with you"
       },
       {
         "sentence_arabic": "كنفضل الأتاي ___ القهوة",
         "sentence_latin": "kanfDDl latay ___ l9hwa",
         "answer_arabic": "على",
         "answer_latin": "3la",
-        "hint": "over"
+        "hint": "over",
+        "english": "I prefer tea over coffee"
       }
     ],
     "cultural_quiz": [

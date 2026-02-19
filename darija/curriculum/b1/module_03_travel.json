@@ -10,42 +10,378 @@
       "order": 1,
       "title": "Planning a Trip",
       "vocabulary": [
-        {"arabic": "سافر", "romanized": "safr", "english": "to travel", "example_sentence": {"arabic": "بغيت نسافر لمراكش", "romanized": "bghit nsafr l mrraksh", "english": "I want to travel to Marrakech"}, "category": "verb", "difficulty": 1},
-        {"arabic": "طيارة", "romanized": "Tiyara", "english": "airplane", "example_sentence": {"arabic": "خديت الطيارة من كازا", "romanized": "khdit TTiyara mn casa", "english": "I took the plane from Casablanca"}, "category": "transport", "difficulty": 1},
-        {"arabic": "لوطيل", "romanized": "loTil", "english": "hotel", "example_sentence": {"arabic": "حجزت فواحد اللوطيل", "romanized": "7jzt f wa7d lloTil", "english": "I booked a hotel"}, "category": "accommodation", "difficulty": 1},
-        {"arabic": "رياض", "romanized": "ryad", "english": "riad (traditional house)", "example_sentence": {"arabic": "بغيت نبات فشي رياض فالمدينة", "romanized": "bghit nbat f shi ryad flmdina", "english": "I want to stay at a riad in the medina"}, "category": "accommodation", "difficulty": 1},
-        {"arabic": "حجز", "romanized": "7jz", "english": "to book/reserve", "example_sentence": {"arabic": "حجزت البيي أونلاين", "romanized": "7jzt lbiy online", "english": "I booked the ticket online"}, "category": "verb", "difficulty": 1},
-        {"arabic": "پاسپور", "romanized": "paspor", "english": "passport", "example_sentence": {"arabic": "وريني الپاسپور ديالك", "romanized": "wrrini lpaspor dyalk", "english": "Show me your passport"}, "category": "document", "difficulty": 1},
-        {"arabic": "فيزا", "romanized": "viza", "english": "visa", "example_sentence": {"arabic": "واش خاصني فيزا؟", "romanized": "wash khasni viza?", "english": "Do I need a visa?"}, "category": "document", "difficulty": 1},
-        {"arabic": "وصل", "romanized": "wsl", "english": "to arrive", "example_sentence": {"arabic": "وصلت للمطار", "romanized": "wslt lmtar", "english": "I arrived at the airport"}, "category": "verb", "difficulty": 1},
-        {"arabic": "شكارة", "romanized": "shkara", "english": "suitcase/bag", "example_sentence": {"arabic": "الشكارة ديالي ثقيلة", "romanized": "shshkara dyali t9ila", "english": "My suitcase is heavy"}, "category": "luggage", "difficulty": 1},
-        {"arabic": "بات", "romanized": "bat", "english": "to spend the night", "example_sentence": {"arabic": "بتنا فالرياض", "romanized": "btna frryad", "english": "We spent the night at the riad"}, "category": "verb", "difficulty": 1},
-        {"arabic": "سفرية", "romanized": "sifriya", "english": "trip/journey", "example_sentence": {"arabic": "السفرية كانت مزيانة", "romanized": "ssifriya kant mzyana", "english": "The trip was great"}, "category": "noun", "difficulty": 1},
-        {"arabic": "سياحة", "romanized": "siya7a", "english": "tourism", "example_sentence": {"arabic": "المغرب بلاد السياحة", "romanized": "lmghrib blad ssiya7a", "english": "Morocco is a tourism country"}, "category": "noun", "difficulty": 2},
-        {"arabic": "زار", "romanized": "zar", "english": "to visit", "example_sentence": {"arabic": "زرت شفشاون", "romanized": "zrt shfshawn", "english": "I visited Chefchaouen"}, "category": "verb", "difficulty": 1},
-        {"arabic": "رحلة", "romanized": "r7la", "english": "excursion/trip", "example_sentence": {"arabic": "درنا رحلة للصحرا", "romanized": "drna r7la lss7ra", "english": "We did a trip to the Sahara"}, "category": "noun", "difficulty": 1},
-        {"arabic": "بحر", "romanized": "b7r", "english": "sea/beach", "example_sentence": {"arabic": "مشينا للبحر", "romanized": "mshina lb7r", "english": "We went to the beach"}, "category": "place", "difficulty": 1}
+        {
+          "arabic": "سافر",
+          "romanized": "safr",
+          "english": "to travel",
+          "example_sentence": {
+            "arabic": "بغيت نسافر لمراكش",
+            "romanized": "bghit nsafr l mrraksh",
+            "english": "I want to travel to Marrakech"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طيارة",
+          "romanized": "Tiyara",
+          "english": "airplane",
+          "example_sentence": {
+            "arabic": "خديت الطيارة من كازا",
+            "romanized": "khdit TTiyara mn casa",
+            "english": "I took the plane from Casablanca"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لوطيل",
+          "romanized": "loTil",
+          "english": "hotel",
+          "example_sentence": {
+            "arabic": "حجزت فواحد اللوطيل",
+            "romanized": "7jzt f wa7d lloTil",
+            "english": "I booked a hotel"
+          },
+          "category": "accommodation",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رياض",
+          "romanized": "ryad",
+          "english": "riad (traditional house)",
+          "example_sentence": {
+            "arabic": "بغيت نبات فشي رياض فالمدينة",
+            "romanized": "bghit nbat f shi ryad flmdina",
+            "english": "I want to stay at a riad in the medina"
+          },
+          "category": "accommodation",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حجز",
+          "romanized": "7jz",
+          "english": "to book/reserve",
+          "example_sentence": {
+            "arabic": "حجزت البيي أونلاين",
+            "romanized": "7jzt lbiy online",
+            "english": "I booked the ticket online"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "پاسپور",
+          "romanized": "paspor",
+          "english": "passport",
+          "example_sentence": {
+            "arabic": "وريني الپاسپور ديالك",
+            "romanized": "wrrini lpaspor dyalk",
+            "english": "Show me your passport"
+          },
+          "category": "document",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فيزا",
+          "romanized": "viza",
+          "english": "visa",
+          "example_sentence": {
+            "arabic": "واش خاصني فيزا؟",
+            "romanized": "wash khasni viza?",
+            "english": "Do I need a visa?"
+          },
+          "category": "document",
+          "difficulty": 1
+        },
+        {
+          "arabic": "وصل",
+          "romanized": "wsl",
+          "english": "to arrive",
+          "example_sentence": {
+            "arabic": "وصلت للمطار",
+            "romanized": "wslt lmtar",
+            "english": "I arrived at the airport"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شكارة",
+          "romanized": "shkara",
+          "english": "suitcase/bag",
+          "example_sentence": {
+            "arabic": "الشكارة ديالي ثقيلة",
+            "romanized": "shshkara dyali t9ila",
+            "english": "My suitcase is heavy"
+          },
+          "category": "luggage",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بات",
+          "romanized": "bat",
+          "english": "to spend the night",
+          "example_sentence": {
+            "arabic": "بتنا فالرياض",
+            "romanized": "btna frryad",
+            "english": "We spent the night at the riad"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سفرية",
+          "romanized": "sifriya",
+          "english": "trip/journey",
+          "example_sentence": {
+            "arabic": "السفرية كانت مزيانة",
+            "romanized": "ssifriya kant mzyana",
+            "english": "The trip was great"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سياحة",
+          "romanized": "siya7a",
+          "english": "tourism",
+          "example_sentence": {
+            "arabic": "المغرب بلاد السياحة",
+            "romanized": "lmghrib blad ssiya7a",
+            "english": "Morocco is a tourism country"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "زار",
+          "romanized": "zar",
+          "english": "to visit",
+          "example_sentence": {
+            "arabic": "زرت شفشاون",
+            "romanized": "zrt shfshawn",
+            "english": "I visited Chefchaouen"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رحلة",
+          "romanized": "r7la",
+          "english": "excursion/trip",
+          "example_sentence": {
+            "arabic": "درنا رحلة للصحرا",
+            "romanized": "drna r7la lss7ra",
+            "english": "We did a trip to the Sahara"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بحر",
+          "romanized": "b7r",
+          "english": "sea/beach",
+          "example_sentence": {
+            "arabic": "مشينا للبحر",
+            "romanized": "mshina lb7r",
+            "english": "We went to the beach"
+          },
+          "category": "place",
+          "difficulty": 1
+        }
       ],
       "grammar": [
-        {"rule": "Future Tense with 'ghadi'", "explanation": "'ghadi' + present tense verb for future: 'ghadi nsafr' (I will travel), 'ghadi nmshi' (I will go).", "examples": [{"arabic": "غادي نسافر الشهر الجاي", "romanized": "ghadi nsafr shshhr jjay", "english": "I will travel next month"}], "common_mistakes": ["'ghadi' is invariable - it doesn't change for person"]},
-        {"rule": "Travel Prepositions", "explanation": "'l-' (to), 'mn' (from), 'f' (in/at): 'mshit l-Fas mn Casa' (I went to Fes from Casa).", "examples": [{"arabic": "مشيت من كازا لفاس فالتران", "romanized": "mshit mn casa l Fas fttran", "english": "I went from Casablanca to Fes by train"}], "common_mistakes": ["Using 'ila' (MSA to) instead of 'l-' (Darija to)"]},
-        {"rule": "Duration with 'mn...7tta'", "explanation": "Express duration: 'mn + start + 7tta + end': 'mn ltnin 7tta ljm3a' (from Monday to Friday).", "examples": [{"arabic": "غادي نبقى من الثنين حتى الجمعة", "romanized": "ghadi nb9a mn ltnin 7tta ljm3a", "english": "I'll stay from Monday to Friday"}], "common_mistakes": ["Confusing '7tta' (until) with 'l-' (to) for time durations"]},
-        {"rule": "Asking Permission: 'wash ymkn lia'", "explanation": "'wash ymkn lia' (can I) for polite requests: 'wash ymkn lia nshuf l-bit?' (can I see the room?).", "examples": [{"arabic": "واش يمكن ليا نشوف البيت؟", "romanized": "wash ymkn lia nshuf lbit?", "english": "Can I see the room?"}], "common_mistakes": ["Using 'n9dr' (I can) is less polite than 'wash ymkn lia'"]},
-        {"rule": "Comparisons for Travel", "explanation": "Use 'ktar mn' (more than), 'a7sn mn' (better than): 'Fas a7sn mn Casa llsiya7a' (Fes is better than Casa for tourism).", "examples": [{"arabic": "فاس أحسن من كازا للسياحة", "romanized": "Fas a7sn mn casa llsiya7a", "english": "Fes is better than Casablanca for tourism"}], "common_mistakes": ["'a7sn' is the comparative of 'mzyan' (good)"]}
+        {
+          "rule": "Future Tense with 'ghadi'",
+          "explanation": "'ghadi' + present tense verb for future: 'ghadi nsafr' (I will travel), 'ghadi nmshi' (I will go).",
+          "examples": [
+            {
+              "arabic": "غادي نسافر الشهر الجاي",
+              "romanized": "ghadi nsafr shshhr jjay",
+              "english": "I will travel next month"
+            }
+          ],
+          "common_mistakes": [
+            "'ghadi' is invariable - it doesn't change for person"
+          ]
+        },
+        {
+          "rule": "Travel Prepositions",
+          "explanation": "'l-' (to), 'mn' (from), 'f' (in/at): 'mshit l-Fas mn Casa' (I went to Fes from Casa).",
+          "examples": [
+            {
+              "arabic": "مشيت من كازا لفاس فالتران",
+              "romanized": "mshit mn casa l Fas fttran",
+              "english": "I went from Casablanca to Fes by train"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'ila' (MSA to) instead of 'l-' (Darija to)"
+          ]
+        },
+        {
+          "rule": "Duration with 'mn...7tta'",
+          "explanation": "Express duration: 'mn + start + 7tta + end': 'mn ltnin 7tta ljm3a' (from Monday to Friday).",
+          "examples": [
+            {
+              "arabic": "غادي نبقى من الثنين حتى الجمعة",
+              "romanized": "ghadi nb9a mn ltnin 7tta ljm3a",
+              "english": "I'll stay from Monday to Friday"
+            }
+          ],
+          "common_mistakes": [
+            "Confusing '7tta' (until) with 'l-' (to) for time durations"
+          ]
+        },
+        {
+          "rule": "Asking Permission: 'wash ymkn lia'",
+          "explanation": "'wash ymkn lia' (can I) for polite requests: 'wash ymkn lia nshuf l-bit?' (can I see the room?).",
+          "examples": [
+            {
+              "arabic": "واش يمكن ليا نشوف البيت؟",
+              "romanized": "wash ymkn lia nshuf lbit?",
+              "english": "Can I see the room?"
+            }
+          ],
+          "common_mistakes": [
+            "Using 'n9dr' (I can) is less polite than 'wash ymkn lia'"
+          ]
+        },
+        {
+          "rule": "Comparisons for Travel",
+          "explanation": "Use 'ktar mn' (more than), 'a7sn mn' (better than): 'Fas a7sn mn Casa llsiya7a' (Fes is better than Casa for tourism).",
+          "examples": [
+            {
+              "arabic": "فاس أحسن من كازا للسياحة",
+              "romanized": "Fas a7sn mn casa llsiya7a",
+              "english": "Fes is better than Casablanca for tourism"
+            }
+          ],
+          "common_mistakes": [
+            "'a7sn' is the comparative of 'mzyan' (good)"
+          ]
+        }
       ],
       "phrases": [
-        {"arabic": "بغيت نحجز واحد البيت", "romanized": "bghit n7jz wa7d lbit", "english": "I want to book a room", "context": "Hotel booking"},
-        {"arabic": "شحال الليلة؟", "romanized": "sh7al llila?", "english": "How much per night?", "context": "Asking hotel price"},
-        {"arabic": "واش الفطور داخل؟", "romanized": "wash lftur dakhel?", "english": "Is breakfast included?", "context": "Hotel inquiry"},
-        {"arabic": "فوقاش كتمشي الطيارة؟", "romanized": "fu9ash katmshi TTiyara?", "english": "When does the plane leave?", "context": "Flight inquiry"},
-        {"arabic": "بغيت نبدل الحجز", "romanized": "bghit nbddl l7jz", "english": "I want to change the reservation", "context": "Modifying booking"}
+        {
+          "arabic": "بغيت نحجز واحد البيت",
+          "romanized": "bghit n7jz wa7d lbit",
+          "english": "I want to book a room",
+          "context": "Hotel booking"
+        },
+        {
+          "arabic": "شحال الليلة؟",
+          "romanized": "sh7al llila?",
+          "english": "How much per night?",
+          "context": "Asking hotel price"
+        },
+        {
+          "arabic": "واش الفطور داخل؟",
+          "romanized": "wash lftur dakhel?",
+          "english": "Is breakfast included?",
+          "context": "Hotel inquiry"
+        },
+        {
+          "arabic": "فوقاش كتمشي الطيارة؟",
+          "romanized": "fu9ash katmshi TTiyara?",
+          "english": "When does the plane leave?",
+          "context": "Flight inquiry"
+        },
+        {
+          "arabic": "بغيت نبدل الحجز",
+          "romanized": "bghit nbddl l7jz",
+          "english": "I want to change the reservation",
+          "context": "Modifying booking"
+        }
       ],
       "exercises": [
-        {"type": "multiple_choice", "question": "How do you say 'I want to book a room'?", "correct_answer": "بغيت نحجز واحد البيت", "distractors": ["بغيت نشري واحد البيت", "بغيت نشوف واحد البيت", "بغيت ندير واحد البيت"], "hint": "'7jz' means to book/reserve"},
-        {"type": "fill_in_blank", "question": "غادي ___ الشهر الجاي (I will travel next month)", "correct_answer": "نسافر", "romanized_answer": "nsafr", "hint": "Verb for traveling"},
-        {"type": "translation", "question": "Translate: 'How much per night?'", "correct_answer_arabic": "شحال الليلة؟", "correct_answer_romanized": "sh7al llila?", "hint": "'llila' means 'per night'"},
-        {"type": "matching", "question": "Match travel vocabulary", "pairs": [{"darija": "طيارة", "english": "airplane"}, {"darija": "لوطيل", "english": "hotel"}, {"darija": "حجز", "english": "to book"}, {"darija": "شكارة", "english": "suitcase"}, {"darija": "بحر", "english": "beach"}]},
-        {"type": "multiple_choice", "question": "What is a 'ryad'?", "correct_answer": "A traditional Moroccan house converted into a guesthouse", "distractors": ["A restaurant", "A mosque", "A garden"], "hint": "From the Arabic word for 'garden'"}
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'I want to book a room'?",
+          "correct_answer": "بغيت نحجز واحد البيت",
+          "distractors": [
+            "بغيت نشري واحد البيت",
+            "بغيت نشوف واحد البيت",
+            "بغيت ندير واحد البيت"
+          ],
+          "hint": "'7jz' means to book/reserve"
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'Verb for traveling'",
+          "correct_answer_arabic": "نسافر",
+          "correct_answer_romanized": "nsafr",
+          "hint": ""
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'How much per night?'",
+          "correct_answer_arabic": "شحال الليلة؟",
+          "correct_answer_romanized": "sh7al llila?",
+          "hint": "'llila' means 'per night'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طيارة' mean?",
+          "correct_answer": "airplane",
+          "distractors": [
+            "to book",
+            "suitcase",
+            "beach"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'لوطيل' mean?",
+          "correct_answer": "hotel",
+          "distractors": [
+            "to book",
+            "suitcase",
+            "airplane"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حجز' mean?",
+          "correct_answer": "to book",
+          "distractors": [
+            "suitcase",
+            "beach",
+            "hotel"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'شكارة' mean?",
+          "correct_answer": "suitcase",
+          "distractors": [
+            "airplane",
+            "beach",
+            "hotel"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بحر' mean?",
+          "correct_answer": "beach",
+          "distractors": [
+            "hotel",
+            "airplane",
+            "to book"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is a 'ryad'?",
+          "correct_answer": "A traditional Moroccan house converted into a guesthouse",
+          "distractors": [
+            "A restaurant",
+            "A mosque",
+            "A garden"
+          ],
+          "hint": "From the Arabic word for 'garden'"
+        }
       ],
       "cultural_notes": [
         "Riads are traditional Moroccan homes built around a central courtyard, many converted into guesthouses in cities like Marrakech and Fes.",
@@ -57,42 +393,372 @@
       "order": 2,
       "title": "Getting Around Morocco",
       "vocabulary": [
-        {"arabic": "تران", "romanized": "tran", "english": "train", "example_sentence": {"arabic": "التران كيمشي لفاس فجوج سوايع", "romanized": "ttran kaymshi l Fas f juj sway3", "english": "The train goes to Fes in two hours"}, "category": "transport", "difficulty": 1},
-        {"arabic": "طوبيس", "romanized": "Tobis", "english": "bus", "example_sentence": {"arabic": "خديت الطوبيس من لمحطة", "romanized": "khdit TT Tobis mn lm7TTa", "english": "I took the bus from the station"}, "category": "transport", "difficulty": 1},
-        {"arabic": "طاكسي كبير", "romanized": "taxi kbir", "english": "grand taxi (shared intercity)", "example_sentence": {"arabic": "مشينا فالطاكسي الكبير لطنجة", "romanized": "mshina fTTaksi lkbir lTanja", "english": "We went by grand taxi to Tangier"}, "category": "transport", "difficulty": 1},
-        {"arabic": "طاكسي صغير", "romanized": "taxi sghir", "english": "petit taxi (city)", "example_sentence": {"arabic": "خود شي طاكسي صغير", "romanized": "khud shi taxi sghir", "english": "Take a petit taxi"}, "category": "transport", "difficulty": 1},
-        {"arabic": "محطة", "romanized": "m7TTa", "english": "station", "example_sentence": {"arabic": "المحطة قريبة من هنا", "romanized": "lm7TTa 9riba mn hna", "english": "The station is close from here"}, "category": "place", "difficulty": 1},
-        {"arabic": "مطار", "romanized": "mTar", "english": "airport", "example_sentence": {"arabic": "وصلنا للمطار بكري", "romanized": "wslna lmTar bkri", "english": "We arrived at the airport early"}, "category": "place", "difficulty": 1},
-        {"arabic": "بلاصة", "romanized": "blasa", "english": "seat/place", "example_sentence": {"arabic": "واش كاينة شي بلاصة؟", "romanized": "wash kayna shi blasa?", "english": "Is there a seat available?"}, "category": "noun", "difficulty": 1},
-        {"arabic": "بيي", "romanized": "biy", "english": "ticket", "example_sentence": {"arabic": "شحال البيي لمراكش؟", "romanized": "sh7al lbiy l mrraksh?", "english": "How much is the ticket to Marrakech?"}, "category": "noun", "difficulty": 1},
-        {"arabic": "كونطور", "romanized": "konTur", "english": "ticket counter", "example_sentence": {"arabic": "شري البيي من الكونطور", "romanized": "shri lbiy mn lkonTur", "english": "Buy the ticket from the counter"}, "category": "place", "difficulty": 1},
-        {"arabic": "ترامواي", "romanized": "tramway", "english": "tramway", "example_sentence": {"arabic": "الترامواي كيوصلك للمدينة", "romanized": "ttramway kaywslk llmdina", "english": "The tramway takes you to the medina"}, "category": "transport", "difficulty": 1},
-        {"arabic": "رمسة", "romanized": "rmsa", "english": "direction/way", "example_sentence": {"arabic": "أشمن رمسة خاصني نمشي؟", "romanized": "ashmn rmsa khasni nmshi?", "english": "Which direction should I go?"}, "category": "noun", "difficulty": 2},
-        {"arabic": "أوتوروت", "romanized": "otorot", "english": "highway", "example_sentence": {"arabic": "مشينا فالأوتوروت", "romanized": "mshina fl-otorot", "english": "We went on the highway"}, "category": "place", "difficulty": 1},
-        {"arabic": "كوميتي", "romanized": "komiti", "english": "check-in/committee", "example_sentence": {"arabic": "درت الكوميتي فالمطار", "romanized": "drt lkomiti flmTar", "english": "I did the check-in at the airport"}, "category": "noun", "difficulty": 2},
-        {"arabic": "تأخر", "romanized": "ta'khkhr", "english": "delay", "example_sentence": {"arabic": "التران فيه تأخر", "romanized": "ttran fih ta'khkhr", "english": "The train is delayed"}, "category": "noun", "difficulty": 1}
+        {
+          "arabic": "تران",
+          "romanized": "tran",
+          "english": "train",
+          "example_sentence": {
+            "arabic": "التران كيمشي لفاس فجوج سوايع",
+            "romanized": "ttran kaymshi l Fas f juj sway3",
+            "english": "The train goes to Fes in two hours"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طوبيس",
+          "romanized": "Tobis",
+          "english": "bus",
+          "example_sentence": {
+            "arabic": "خديت الطوبيس من لمحطة",
+            "romanized": "khdit TT Tobis mn lm7TTa",
+            "english": "I took the bus from the station"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طاكسي كبير",
+          "romanized": "taxi kbir",
+          "english": "grand taxi (shared intercity)",
+          "example_sentence": {
+            "arabic": "مشينا فالطاكسي الكبير لطنجة",
+            "romanized": "mshina fTTaksi lkbir lTanja",
+            "english": "We went by grand taxi to Tangier"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طاكسي صغير",
+          "romanized": "taxi sghir",
+          "english": "petit taxi (city)",
+          "example_sentence": {
+            "arabic": "خود شي طاكسي صغير",
+            "romanized": "khud shi taxi sghir",
+            "english": "Take a petit taxi"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "محطة",
+          "romanized": "m7TTa",
+          "english": "station",
+          "example_sentence": {
+            "arabic": "المحطة قريبة من هنا",
+            "romanized": "lm7TTa 9riba mn hna",
+            "english": "The station is close from here"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مطار",
+          "romanized": "mTar",
+          "english": "airport",
+          "example_sentence": {
+            "arabic": "وصلنا للمطار بكري",
+            "romanized": "wslna lmTar bkri",
+            "english": "We arrived at the airport early"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بلاصة",
+          "romanized": "blasa",
+          "english": "seat/place",
+          "example_sentence": {
+            "arabic": "واش كاينة شي بلاصة؟",
+            "romanized": "wash kayna shi blasa?",
+            "english": "Is there a seat available?"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بيي",
+          "romanized": "biy",
+          "english": "ticket",
+          "example_sentence": {
+            "arabic": "شحال البيي لمراكش؟",
+            "romanized": "sh7al lbiy l mrraksh?",
+            "english": "How much is the ticket to Marrakech?"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كونطور",
+          "romanized": "konTur",
+          "english": "ticket counter",
+          "example_sentence": {
+            "arabic": "شري البيي من الكونطور",
+            "romanized": "shri lbiy mn lkonTur",
+            "english": "Buy the ticket from the counter"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ترامواي",
+          "romanized": "tramway",
+          "english": "tramway",
+          "example_sentence": {
+            "arabic": "الترامواي كيوصلك للمدينة",
+            "romanized": "ttramway kaywslk llmdina",
+            "english": "The tramway takes you to the medina"
+          },
+          "category": "transport",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رمسة",
+          "romanized": "rmsa",
+          "english": "direction/way",
+          "example_sentence": {
+            "arabic": "أشمن رمسة خاصني نمشي؟",
+            "romanized": "ashmn rmsa khasni nmshi?",
+            "english": "Which direction should I go?"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "أوتوروت",
+          "romanized": "otorot",
+          "english": "highway",
+          "example_sentence": {
+            "arabic": "مشينا فالأوتوروت",
+            "romanized": "mshina fl-otorot",
+            "english": "We went on the highway"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كوميتي",
+          "romanized": "komiti",
+          "english": "check-in/committee",
+          "example_sentence": {
+            "arabic": "درت الكوميتي فالمطار",
+            "romanized": "drt lkomiti flmTar",
+            "english": "I did the check-in at the airport"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "تأخر",
+          "romanized": "ta'khkhr",
+          "english": "delay",
+          "example_sentence": {
+            "arabic": "التران فيه تأخر",
+            "romanized": "ttran fih ta'khkhr",
+            "english": "The train is delayed"
+          },
+          "category": "noun",
+          "difficulty": 1
+        }
       ],
       "grammar": [
-        {"rule": "Asking for Directions with Transport", "explanation": "Use 'fin kayn/kayna?' (where is?) for locations: 'fin kayna lm7TTa?' (where is the station?). Use 'kifash nmshi l-?' (how do I go to?).", "examples": [{"arabic": "كيفاش نمشي للمحطة ديال التران؟", "romanized": "kifash nmshi llm7TTa dyal ttran?", "english": "How do I get to the train station?"}], "common_mistakes": ["'fin' is for 'where', 'kifash' is for 'how' - don't confuse them"]},
-        {"rule": "Transport with 'f' Preposition", "explanation": "Use 'f' (in) for vehicles: 'f TTran' (on the train), 'f TTobis' (on the bus), 'f TTaksi' (in the taxi).", "examples": [{"arabic": "جيت فالتران من الرباط لكازا", "romanized": "jit fttran mn rrbaT l casa", "english": "I came by train from Rabat to Casablanca"}], "common_mistakes": ["Use 'f' not 'b-' for means of transport in Darija"]},
-        {"rule": "Expressing Urgency: 'bzzrba/dghya'", "explanation": "'bzzrba' (quickly) and 'dghya' (hurry): 'dghya! ghadi tf9dna TTiyara!' (hurry! we'll miss the plane!).", "examples": [{"arabic": "دغيا! التران غادي يمشي!", "romanized": "dghya! ttran ghadi ymshi!", "english": "Hurry! The train is about to leave!"}], "common_mistakes": ["'dghya' is more urgent than 'bzzrba'"]},
-        {"rule": "Past Tense for Travel Narration", "explanation": "Use past tense to narrate travel: 'mshit' (I went), 'wslt' (I arrived), 'shft' (I saw), 'rj3t' (I returned).", "examples": [{"arabic": "مشيت لمراكش، زرت جامع الفنا، و رجعت فاللّيل", "romanized": "mshit l mrraksh, zrt jama3 lfna, w rj3t fllil", "english": "I went to Marrakech, visited Jemaa el-Fna, and returned at night"}], "common_mistakes": ["Past tense verbs in Darija drop the prefix and add suffixes: mshit (I went), msha (he went), mshat (she went)"]},
-        {"rule": "Negotiating Taxi Fares", "explanation": "Key phrases: 'sh7al l-?' (how much to?), 'bzzaf!' (too much!), 'n9ss!' (cut in half!), 'khllini f...' (leave me for...).", "examples": [{"arabic": "شحال للمدينة القديمة؟ بزاف! عطيني ب 20 درهم", "romanized": "sh7al llmdina l9dima? bzzaf! 3Tini b 20 drham", "english": "How much to the old medina? Too much! Give me 20 dirhams"}], "common_mistakes": ["Always negotiate grand taxi prices before getting in; petit taxis should use meters"]}
+        {
+          "rule": "Asking for Directions with Transport",
+          "explanation": "Use 'fin kayn/kayna?' (where is?) for locations: 'fin kayna lm7TTa?' (where is the station?). Use 'kifash nmshi l-?' (how do I go to?).",
+          "examples": [
+            {
+              "arabic": "كيفاش نمشي للمحطة ديال التران؟",
+              "romanized": "kifash nmshi llm7TTa dyal ttran?",
+              "english": "How do I get to the train station?"
+            }
+          ],
+          "common_mistakes": [
+            "'fin' is for 'where', 'kifash' is for 'how' - don't confuse them"
+          ]
+        },
+        {
+          "rule": "Transport with 'f' Preposition",
+          "explanation": "Use 'f' (in) for vehicles: 'f TTran' (on the train), 'f TTobis' (on the bus), 'f TTaksi' (in the taxi).",
+          "examples": [
+            {
+              "arabic": "جيت فالتران من الرباط لكازا",
+              "romanized": "jit fttran mn rrbaT l casa",
+              "english": "I came by train from Rabat to Casablanca"
+            }
+          ],
+          "common_mistakes": [
+            "Use 'f' not 'b-' for means of transport in Darija"
+          ]
+        },
+        {
+          "rule": "Expressing Urgency: 'bzzrba/dghya'",
+          "explanation": "'bzzrba' (quickly) and 'dghya' (hurry): 'dghya! ghadi tf9dna TTiyara!' (hurry! we'll miss the plane!).",
+          "examples": [
+            {
+              "arabic": "دغيا! التران غادي يمشي!",
+              "romanized": "dghya! ttran ghadi ymshi!",
+              "english": "Hurry! The train is about to leave!"
+            }
+          ],
+          "common_mistakes": [
+            "'dghya' is more urgent than 'bzzrba'"
+          ]
+        },
+        {
+          "rule": "Past Tense for Travel Narration",
+          "explanation": "Use past tense to narrate travel: 'mshit' (I went), 'wslt' (I arrived), 'shft' (I saw), 'rj3t' (I returned).",
+          "examples": [
+            {
+              "arabic": "مشيت لمراكش، زرت جامع الفنا، و رجعت فاللّيل",
+              "romanized": "mshit l mrraksh, zrt jama3 lfna, w rj3t fllil",
+              "english": "I went to Marrakech, visited Jemaa el-Fna, and returned at night"
+            }
+          ],
+          "common_mistakes": [
+            "Past tense verbs in Darija drop the prefix and add suffixes: mshit (I went), msha (he went), mshat (she went)"
+          ]
+        },
+        {
+          "rule": "Negotiating Taxi Fares",
+          "explanation": "Key phrases: 'sh7al l-?' (how much to?), 'bzzaf!' (too much!), 'n9ss!' (cut in half!), 'khllini f...' (leave me for...).",
+          "examples": [
+            {
+              "arabic": "شحال للمدينة القديمة؟ بزاف! عطيني ب 20 درهم",
+              "romanized": "sh7al llmdina l9dima? bzzaf! 3Tini b 20 drham",
+              "english": "How much to the old medina? Too much! Give me 20 dirhams"
+            }
+          ],
+          "common_mistakes": [
+            "Always negotiate grand taxi prices before getting in; petit taxis should use meters"
+          ]
+        }
       ],
       "phrases": [
-        {"arabic": "فوقاش كيمشي التران لفاس؟", "romanized": "fu9ash kaymshi ttran l Fas?", "english": "When does the train to Fes leave?", "context": "Train station"},
-        {"arabic": "واش كاينة شي بلاصة فالطوبيس؟", "romanized": "wash kayna shi blasa fTTobis?", "english": "Is there a seat on the bus?", "context": "Bus travel"},
-        {"arabic": "شحال من ساعة للوصول؟", "romanized": "sh7al mn sa3a llwsul?", "english": "How many hours to arrive?", "context": "Travel duration"},
-        {"arabic": "فين نلقى شي طاكسي؟", "romanized": "fin nl9a shi taxi?", "english": "Where can I find a taxi?", "context": "Looking for transport"},
-        {"arabic": "التران تأخر شوية", "romanized": "ttran ta'khkhr chwiya", "english": "The train is a bit delayed", "context": "Delay announcement"},
-        {"arabic": "بغيت بيي ديال الذهاب و الإياب", "romanized": "bghit biy dyal ddhab w l-iyab", "english": "I want a round-trip ticket", "context": "Buying tickets"}
+        {
+          "arabic": "فوقاش كيمشي التران لفاس؟",
+          "romanized": "fu9ash kaymshi ttran l Fas?",
+          "english": "When does the train to Fes leave?",
+          "context": "Train station"
+        },
+        {
+          "arabic": "واش كاينة شي بلاصة فالطوبيس؟",
+          "romanized": "wash kayna shi blasa fTTobis?",
+          "english": "Is there a seat on the bus?",
+          "context": "Bus travel"
+        },
+        {
+          "arabic": "شحال من ساعة للوصول؟",
+          "romanized": "sh7al mn sa3a llwsul?",
+          "english": "How many hours to arrive?",
+          "context": "Travel duration"
+        },
+        {
+          "arabic": "فين نلقى شي طاكسي؟",
+          "romanized": "fin nl9a shi taxi?",
+          "english": "Where can I find a taxi?",
+          "context": "Looking for transport"
+        },
+        {
+          "arabic": "التران تأخر شوية",
+          "romanized": "ttran ta'khkhr chwiya",
+          "english": "The train is a bit delayed",
+          "context": "Delay announcement"
+        },
+        {
+          "arabic": "بغيت بيي ديال الذهاب و الإياب",
+          "romanized": "bghit biy dyal ddhab w l-iyab",
+          "english": "I want a round-trip ticket",
+          "context": "Buying tickets"
+        }
       ],
       "exercises": [
-        {"type": "multiple_choice", "question": "What is a 'taxi kbir' in Morocco?", "correct_answer": "A shared intercity taxi, usually a Mercedes", "distractors": ["A luxury taxi", "A city bus", "A private car service"], "hint": "They travel between cities on fixed routes"},
-        {"type": "fill_in_blank", "question": "شحال ___ لمراكش؟ (How much is the ticket to Marrakech?)", "correct_answer": "البيي", "romanized_answer": "lbiy", "hint": "The word for ticket"},
-        {"type": "translation", "question": "Translate: 'Hurry! The train is about to leave!'", "correct_answer_arabic": "دغيا! التران غادي يمشي!", "correct_answer_romanized": "dghya! ttran ghadi ymshi!", "hint": "'dghya' means hurry"},
-        {"type": "matching", "question": "Match transport types", "pairs": [{"darija": "تران", "english": "train"}, {"darija": "طوبيس", "english": "bus"}, {"darija": "طاكسي كبير", "english": "grand taxi"}, {"darija": "ترامواي", "english": "tramway"}, {"darija": "طيارة", "english": "airplane"}]},
-        {"type": "multiple_choice", "question": "How do you ask 'Where is the station?' in Darija?", "correct_answer": "فين كاينة المحطة؟", "distractors": ["كيفاش المحطة؟", "شحال المحطة؟", "أشنو المحطة؟"], "hint": "'fin kayna' means 'where is'"}
+        {
+          "type": "multiple_choice",
+          "question": "What is a 'taxi kbir' in Morocco?",
+          "correct_answer": "A shared intercity taxi, usually a Mercedes",
+          "distractors": [
+            "A luxury taxi",
+            "A city bus",
+            "A private car service"
+          ],
+          "hint": "They travel between cities on fixed routes"
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for ticket'",
+          "correct_answer_arabic": "البيي",
+          "correct_answer_romanized": "lbiy",
+          "hint": ""
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'Hurry! The train is about to leave!'",
+          "correct_answer_arabic": "دغيا! التران غادي يمشي!",
+          "correct_answer_romanized": "dghya! ttran ghadi ymshi!",
+          "hint": "'dghya' means hurry"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تران' mean?",
+          "correct_answer": "train",
+          "distractors": [
+            "bus",
+            "airplane",
+            "tramway"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طوبيس' mean?",
+          "correct_answer": "bus",
+          "distractors": [
+            "airplane",
+            "tramway",
+            "train"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طاكسي كبير' mean?",
+          "correct_answer": "grand taxi",
+          "distractors": [
+            "airplane",
+            "bus",
+            "train"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ترامواي' mean?",
+          "correct_answer": "tramway",
+          "distractors": [
+            "airplane",
+            "bus",
+            "grand taxi"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طيارة' mean?",
+          "correct_answer": "airplane",
+          "distractors": [
+            "bus",
+            "train",
+            "grand taxi"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How do you ask 'Where is the station?' in Darija?",
+          "correct_answer": "فين كاينة المحطة؟",
+          "distractors": [
+            "كيفاش المحطة؟",
+            "شحال المحطة؟",
+            "أشنو المحطة؟"
+          ],
+          "hint": "'fin kayna' means 'where is'"
+        }
       ],
       "cultural_notes": [
         "Grand taxis are typically shared Mercedes sedans that travel fixed routes between cities. Six passengers share the ride. You can pay for extra seats for more comfort.",
@@ -104,41 +770,360 @@
       "order": 3,
       "title": "At the Destination",
       "vocabulary": [
-        {"arabic": "مدينة قديمة", "romanized": "mdina 9dima", "english": "old medina", "example_sentence": {"arabic": "المدينة القديمة ديال فاس زوينة بزاف", "romanized": "lmdina l9dima dyal Fas zwina bzzaf", "english": "The old medina of Fes is very beautiful"}, "category": "place", "difficulty": 1},
-        {"arabic": "سوق", "romanized": "su9", "english": "market/souq", "example_sentence": {"arabic": "مشينا نتمشاو فالسوق", "romanized": "mshina ntmshaw fsssu9", "english": "We went to walk around the souq"}, "category": "place", "difficulty": 1},
-        {"arabic": "مسجد", "romanized": "msjd", "english": "mosque", "example_sentence": {"arabic": "زرنا مسجد الحسن الثاني", "romanized": "zrna msjd l7asan ttani", "english": "We visited the Hassan II Mosque"}, "category": "place", "difficulty": 1},
-        {"arabic": "قصبة", "romanized": "9sba", "english": "kasbah/fortress", "example_sentence": {"arabic": "القصبة ديال الوداية زوينة", "romanized": "l9sba dyal lwdaya zwina", "english": "The Kasbah of the Udayas is beautiful"}, "category": "place", "difficulty": 2},
-        {"arabic": "صحرا", "romanized": "s7ra", "english": "Sahara/desert", "example_sentence": {"arabic": "بغيت نمشي للصحرا", "romanized": "bghit nmshi lss7ra", "english": "I want to go to the Sahara"}, "category": "place", "difficulty": 1},
-        {"arabic": "جبل", "romanized": "jbl", "english": "mountain", "example_sentence": {"arabic": "الجبال ديال الأطلس كبار بزاف", "romanized": "ljbal dyal l-aTlas kbar bzzaf", "english": "The Atlas Mountains are very big"}, "category": "place", "difficulty": 1},
-        {"arabic": "تصويرة", "romanized": "tswira", "english": "photo", "example_sentence": {"arabic": "واش يمكن ندير تصويرة هنا؟", "romanized": "wash ymkn ndir tswira hna?", "english": "Can I take a photo here?"}, "category": "noun", "difficulty": 1},
-        {"arabic": "گيد", "romanized": "gid", "english": "guide (tourist)", "example_sentence": {"arabic": "خدينا واحد الگيد فالمدينة", "romanized": "khdina wa7d lgid flmdina", "english": "We got a guide in the medina"}, "category": "noun", "difficulty": 1},
-        {"arabic": "تذكار", "romanized": "tdhkar", "english": "souvenir", "example_sentence": {"arabic": "شريت شي تذكارات من المغرب", "romanized": "shrit shi tdhkarat mn lmghrib", "english": "I bought some souvenirs from Morocco"}, "category": "noun", "difficulty": 1},
-        {"arabic": "ضاع", "romanized": "da3", "english": "to get lost", "example_sentence": {"arabic": "ضعت فالمدينة القديمة", "romanized": "d3t flmdina l9dima", "english": "I got lost in the old medina"}, "category": "verb", "difficulty": 1},
-        {"arabic": "خريطة", "romanized": "khriTa", "english": "map", "example_sentence": {"arabic": "عندك شي خريطة عافاك؟", "romanized": "3ndk shi khriTa 3afak?", "english": "Do you have a map please?"}, "category": "noun", "difficulty": 1},
-        {"arabic": "مناخ", "romanized": "mnakh", "english": "climate/weather", "example_sentence": {"arabic": "المناخ فمراكش سخون فالصيف", "romanized": "lmnakh f mrraksh skhun fssif", "english": "The climate in Marrakech is hot in summer"}, "category": "noun", "difficulty": 2},
-        {"arabic": "سلامة", "romanized": "slama", "english": "safety", "example_sentence": {"arabic": "المغرب بلاد ديال السلامة", "romanized": "lmghrib blad dyal sslama", "english": "Morocco is a safe country"}, "category": "noun", "difficulty": 2}
+        {
+          "arabic": "مدينة قديمة",
+          "romanized": "mdina 9dima",
+          "english": "old medina",
+          "example_sentence": {
+            "arabic": "المدينة القديمة ديال فاس زوينة بزاف",
+            "romanized": "lmdina l9dima dyal Fas zwina bzzaf",
+            "english": "The old medina of Fes is very beautiful"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سوق",
+          "romanized": "su9",
+          "english": "market/souq",
+          "example_sentence": {
+            "arabic": "مشينا نتمشاو فالسوق",
+            "romanized": "mshina ntmshaw fsssu9",
+            "english": "We went to walk around the souq"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مسجد",
+          "romanized": "msjd",
+          "english": "mosque",
+          "example_sentence": {
+            "arabic": "زرنا مسجد الحسن الثاني",
+            "romanized": "zrna msjd l7asan ttani",
+            "english": "We visited the Hassan II Mosque"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قصبة",
+          "romanized": "9sba",
+          "english": "kasbah/fortress",
+          "example_sentence": {
+            "arabic": "القصبة ديال الوداية زوينة",
+            "romanized": "l9sba dyal lwdaya zwina",
+            "english": "The Kasbah of the Udayas is beautiful"
+          },
+          "category": "place",
+          "difficulty": 2
+        },
+        {
+          "arabic": "صحرا",
+          "romanized": "s7ra",
+          "english": "Sahara/desert",
+          "example_sentence": {
+            "arabic": "بغيت نمشي للصحرا",
+            "romanized": "bghit nmshi lss7ra",
+            "english": "I want to go to the Sahara"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جبل",
+          "romanized": "jbl",
+          "english": "mountain",
+          "example_sentence": {
+            "arabic": "الجبال ديال الأطلس كبار بزاف",
+            "romanized": "ljbal dyal l-aTlas kbar bzzaf",
+            "english": "The Atlas Mountains are very big"
+          },
+          "category": "place",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تصويرة",
+          "romanized": "tswira",
+          "english": "photo",
+          "example_sentence": {
+            "arabic": "واش يمكن ندير تصويرة هنا؟",
+            "romanized": "wash ymkn ndir tswira hna?",
+            "english": "Can I take a photo here?"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "گيد",
+          "romanized": "gid",
+          "english": "guide (tourist)",
+          "example_sentence": {
+            "arabic": "خدينا واحد الگيد فالمدينة",
+            "romanized": "khdina wa7d lgid flmdina",
+            "english": "We got a guide in the medina"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تذكار",
+          "romanized": "tdhkar",
+          "english": "souvenir",
+          "example_sentence": {
+            "arabic": "شريت شي تذكارات من المغرب",
+            "romanized": "shrit shi tdhkarat mn lmghrib",
+            "english": "I bought some souvenirs from Morocco"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ضاع",
+          "romanized": "da3",
+          "english": "to get lost",
+          "example_sentence": {
+            "arabic": "ضعت فالمدينة القديمة",
+            "romanized": "d3t flmdina l9dima",
+            "english": "I got lost in the old medina"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خريطة",
+          "romanized": "khriTa",
+          "english": "map",
+          "example_sentence": {
+            "arabic": "عندك شي خريطة عافاك؟",
+            "romanized": "3ndk shi khriTa 3afak?",
+            "english": "Do you have a map please?"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مناخ",
+          "romanized": "mnakh",
+          "english": "climate/weather",
+          "example_sentence": {
+            "arabic": "المناخ فمراكش سخون فالصيف",
+            "romanized": "lmnakh f mrraksh skhun fssif",
+            "english": "The climate in Marrakech is hot in summer"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "سلامة",
+          "romanized": "slama",
+          "english": "safety",
+          "example_sentence": {
+            "arabic": "المغرب بلاد ديال السلامة",
+            "romanized": "lmghrib blad dyal sslama",
+            "english": "Morocco is a safe country"
+          },
+          "category": "noun",
+          "difficulty": 2
+        }
       ],
       "grammar": [
-        {"rule": "Narrating Travel Experiences", "explanation": "Use sequencing words: 'lwwl' (first), 'mn b3d' (then), 'fllkhkhr' (finally): 'lwwl mshina lssu9, mn b3d klina, fllkhkhr rj3na' (first we went to the souq, then we ate, finally we returned).", "examples": [{"arabic": "لوّل زرنا المسجد، من بعد مشينا للسوق، فاللخر كلينا فواحد الرستورا", "romanized": "lwwl zrna lmsjd, mn b3d mshina lssu9, fllkhkhr klina f wa7d lristora", "english": "First we visited the mosque, then we went to the souq, finally we ate at a restaurant"}], "common_mistakes": ["Use these connectors to make your travel stories flow naturally"]},
-        {"rule": "Expressing Impressions with 'banliya/3jbni'", "explanation": "'3jbni' (I liked), 'banliya' (it seemed to me), 'khlani n7ss b-' (it made me feel): '3jbatni mrraksh bzzaf' (I really liked Marrakech).", "examples": [{"arabic": "عجبتني مراكش بزاف، بانت ليا مدينة واعرة", "romanized": "3jbatni mrraksh bzzaf, bant lia mdina wa3ra", "english": "I really liked Marrakech, it seemed like an amazing city"}], "common_mistakes": ["'3jbni' is for things that please you, 'banliya' for how things appeared to you"]},
-        {"rule": "Warnings and Advice: 'rdd lbal/t7ffD'", "explanation": "'rdd lbal' (watch out), 't7ffD' (be careful), 'ma t-sh' (don't): 'rdd lbal mn nnas lli kaydi9o 3lik' (watch out for people who trick you).", "examples": [{"arabic": "ردّ البال من الناس اللي كيديقو عليك فالمدينة القديمة", "romanized": "rdd lbal mn nnas lli kaydi9u 3lik flmdina l9dima", "english": "Watch out for people who trick you in the old medina"}], "common_mistakes": ["'rdd lbal' is friendly advice, not aggressive"]},
-        {"rule": "Describing Places with Adjectives", "explanation": "Place + adjective (agrees in gender): 'mdina zwina' (beautiful city-f), 'msjd kbir' (big mosque-m), 'blasa hdiya' (quiet place-f).", "examples": [{"arabic": "شفشاون بلاصة هادية و زوينة بزاف", "romanized": "shfshawn blasa hadya w zwina bzzaf", "english": "Chefchaouen is a very peaceful and beautiful place"}], "common_mistakes": ["Remember feminine adjectives end in -a: kbir/kbira, zwin/zwina, hdi/hdiya"]},
-        {"rule": "Asking for Recommendations: 'ashnu t9tr7 3liya?'", "explanation": "Ask locals for tips: 'ashnu t9tr7 3liya nzur?' (what do you recommend I visit?), 'fin a7sn blasa nakul?' (where is the best place to eat?).", "examples": [{"arabic": "أشنو تقترح عليا نزور فمراكش؟", "romanized": "ashnu t9tr7 3liya nzur f mrraksh?", "english": "What do you recommend I visit in Marrakech?"}], "common_mistakes": ["Moroccans love sharing recommendations - don't hesitate to ask"]}
+        {
+          "rule": "Narrating Travel Experiences",
+          "explanation": "Use sequencing words: 'lwwl' (first), 'mn b3d' (then), 'fllkhkhr' (finally): 'lwwl mshina lssu9, mn b3d klina, fllkhkhr rj3na' (first we went to the souq, then we ate, finally we returned).",
+          "examples": [
+            {
+              "arabic": "لوّل زرنا المسجد، من بعد مشينا للسوق، فاللخر كلينا فواحد الرستورا",
+              "romanized": "lwwl zrna lmsjd, mn b3d mshina lssu9, fllkhkhr klina f wa7d lristora",
+              "english": "First we visited the mosque, then we went to the souq, finally we ate at a restaurant"
+            }
+          ],
+          "common_mistakes": [
+            "Use these connectors to make your travel stories flow naturally"
+          ]
+        },
+        {
+          "rule": "Expressing Impressions with 'banliya/3jbni'",
+          "explanation": "'3jbni' (I liked), 'banliya' (it seemed to me), 'khlani n7ss b-' (it made me feel): '3jbatni mrraksh bzzaf' (I really liked Marrakech).",
+          "examples": [
+            {
+              "arabic": "عجبتني مراكش بزاف، بانت ليا مدينة واعرة",
+              "romanized": "3jbatni mrraksh bzzaf, bant lia mdina wa3ra",
+              "english": "I really liked Marrakech, it seemed like an amazing city"
+            }
+          ],
+          "common_mistakes": [
+            "'3jbni' is for things that please you, 'banliya' for how things appeared to you"
+          ]
+        },
+        {
+          "rule": "Warnings and Advice: 'rdd lbal/t7ffD'",
+          "explanation": "'rdd lbal' (watch out), 't7ffD' (be careful), 'ma t-sh' (don't): 'rdd lbal mn nnas lli kaydi9o 3lik' (watch out for people who trick you).",
+          "examples": [
+            {
+              "arabic": "ردّ البال من الناس اللي كيديقو عليك فالمدينة القديمة",
+              "romanized": "rdd lbal mn nnas lli kaydi9u 3lik flmdina l9dima",
+              "english": "Watch out for people who trick you in the old medina"
+            }
+          ],
+          "common_mistakes": [
+            "'rdd lbal' is friendly advice, not aggressive"
+          ]
+        },
+        {
+          "rule": "Describing Places with Adjectives",
+          "explanation": "Place + adjective (agrees in gender): 'mdina zwina' (beautiful city-f), 'msjd kbir' (big mosque-m), 'blasa hdiya' (quiet place-f).",
+          "examples": [
+            {
+              "arabic": "شفشاون بلاصة هادية و زوينة بزاف",
+              "romanized": "shfshawn blasa hadya w zwina bzzaf",
+              "english": "Chefchaouen is a very peaceful and beautiful place"
+            }
+          ],
+          "common_mistakes": [
+            "Remember feminine adjectives end in -a: kbir/kbira, zwin/zwina, hdi/hdiya"
+          ]
+        },
+        {
+          "rule": "Asking for Recommendations: 'ashnu t9tr7 3liya?'",
+          "explanation": "Ask locals for tips: 'ashnu t9tr7 3liya nzur?' (what do you recommend I visit?), 'fin a7sn blasa nakul?' (where is the best place to eat?).",
+          "examples": [
+            {
+              "arabic": "أشنو تقترح عليا نزور فمراكش؟",
+              "romanized": "ashnu t9tr7 3liya nzur f mrraksh?",
+              "english": "What do you recommend I visit in Marrakech?"
+            }
+          ],
+          "common_mistakes": [
+            "Moroccans love sharing recommendations - don't hesitate to ask"
+          ]
+        }
       ],
       "phrases": [
-        {"arabic": "ضعت! فين كاينة ساحة جامع الفنا؟", "romanized": "d3t! fin kayna sa7t jama3 lfna?", "english": "I'm lost! Where is Jemaa el-Fna square?", "context": "Lost in the medina"},
-        {"arabic": "واش يمكن ندير تصويرة هنا؟", "romanized": "wash ymkn ndir tswira hna?", "english": "Can I take a photo here?", "context": "Asking permission"},
-        {"arabic": "أشنو أحسن بلاصة نزور فهاد المدينة؟", "romanized": "ashnu a7sn blasa nzur f had lmdina?", "english": "What's the best place to visit in this city?", "context": "Asking for recommendations"},
-        {"arabic": "السفرية ديالي للمغرب كانت واعرة!", "romanized": "ssifriya dyali llmghrib kant wa3ra!", "english": "My trip to Morocco was amazing!", "context": "Sharing experience"},
-        {"arabic": "المدينة القديمة خاصك تزورها", "romanized": "lmdina l9dima khask tzurha", "english": "You must visit the old medina", "context": "Recommending"},
-        {"arabic": "ردّ البال من الشمش!", "romanized": "rdd lbal mn shshmsh!", "english": "Watch out for the sun!", "context": "Travel advice"}
+        {
+          "arabic": "ضعت! فين كاينة ساحة جامع الفنا؟",
+          "romanized": "d3t! fin kayna sa7t jama3 lfna?",
+          "english": "I'm lost! Where is Jemaa el-Fna square?",
+          "context": "Lost in the medina"
+        },
+        {
+          "arabic": "واش يمكن ندير تصويرة هنا؟",
+          "romanized": "wash ymkn ndir tswira hna?",
+          "english": "Can I take a photo here?",
+          "context": "Asking permission"
+        },
+        {
+          "arabic": "أشنو أحسن بلاصة نزور فهاد المدينة؟",
+          "romanized": "ashnu a7sn blasa nzur f had lmdina?",
+          "english": "What's the best place to visit in this city?",
+          "context": "Asking for recommendations"
+        },
+        {
+          "arabic": "السفرية ديالي للمغرب كانت واعرة!",
+          "romanized": "ssifriya dyali llmghrib kant wa3ra!",
+          "english": "My trip to Morocco was amazing!",
+          "context": "Sharing experience"
+        },
+        {
+          "arabic": "المدينة القديمة خاصك تزورها",
+          "romanized": "lmdina l9dima khask tzurha",
+          "english": "You must visit the old medina",
+          "context": "Recommending"
+        },
+        {
+          "arabic": "ردّ البال من الشمش!",
+          "romanized": "rdd lbal mn shshmsh!",
+          "english": "Watch out for the sun!",
+          "context": "Travel advice"
+        }
       ],
       "exercises": [
-        {"type": "multiple_choice", "question": "How do you say 'I got lost in the medina' in Darija?", "correct_answer": "ضعت فالمدينة القديمة", "distractors": ["مشيت فالمدينة القديمة", "لقيت المدينة القديمة", "خرجت من المدينة القديمة"], "hint": "'d3t' means I got lost"},
-        {"type": "fill_in_blank", "question": "واش يمكن ندير ___ هنا؟ (Can I take a photo here?)", "correct_answer": "تصويرة", "romanized_answer": "tswira", "hint": "The word for photo"},
-        {"type": "translation", "question": "Translate: 'First we visited the mosque, then we went to the souq'", "correct_answer_arabic": "لوّل زرنا المسجد، من بعد مشينا للسوق", "correct_answer_romanized": "lwwl zrna lmsjd, mn b3d mshina lssu9", "hint": "Use 'lwwl' and 'mn b3d'"},
-        {"type": "matching", "question": "Match Moroccan landmarks", "pairs": [{"darija": "مسجد الحسن الثاني", "english": "Hassan II Mosque"}, {"darija": "جامع الفنا", "english": "Jemaa el-Fna"}, {"darija": "قصبة الوداية", "english": "Kasbah of Udayas"}, {"darija": "الصحرا", "english": "Sahara Desert"}, {"darija": "الأطلس", "english": "Atlas Mountains"}]},
-        {"type": "multiple_choice", "question": "What does 'rdd lbal' mean?", "correct_answer": "Watch out / Be careful", "distractors": ["Come back", "Look around", "Run away"], "hint": "Friendly warning advice"}
+        {
+          "type": "multiple_choice",
+          "question": "How do you say 'I got lost in the medina' in Darija?",
+          "correct_answer": "ضعت فالمدينة القديمة",
+          "distractors": [
+            "مشيت فالمدينة القديمة",
+            "لقيت المدينة القديمة",
+            "خرجت من المدينة القديمة"
+          ],
+          "hint": "'d3t' means I got lost"
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for photo'",
+          "correct_answer_arabic": "تصويرة",
+          "correct_answer_romanized": "tswira",
+          "hint": ""
+        },
+        {
+          "type": "translation",
+          "question": "Translate: 'First we visited the mosque, then we went to the souq'",
+          "correct_answer_arabic": "لوّل زرنا المسجد، من بعد مشينا للسوق",
+          "correct_answer_romanized": "lwwl zrna lmsjd, mn b3d mshina lssu9",
+          "hint": "Use 'lwwl' and 'mn b3d'"
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مسجد الحسن الثاني' mean?",
+          "correct_answer": "Hassan II Mosque",
+          "distractors": [
+            "Jemaa el-Fna",
+            "Kasbah of Udayas",
+            "Atlas Mountains"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جامع الفنا' mean?",
+          "correct_answer": "Jemaa el-Fna",
+          "distractors": [
+            "Kasbah of Udayas",
+            "Sahara Desert",
+            "Atlas Mountains"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'قصبة الوداية' mean?",
+          "correct_answer": "Kasbah of Udayas",
+          "distractors": [
+            "Hassan II Mosque",
+            "Sahara Desert",
+            "Atlas Mountains"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'الصحرا' mean?",
+          "correct_answer": "Sahara Desert",
+          "distractors": [
+            "Hassan II Mosque",
+            "Jemaa el-Fna",
+            "Atlas Mountains"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'الأطلس' mean?",
+          "correct_answer": "Atlas Mountains",
+          "distractors": [
+            "Sahara Desert",
+            "Kasbah of Udayas",
+            "Jemaa el-Fna"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'rdd lbal' mean?",
+          "correct_answer": "Watch out / Be careful",
+          "distractors": [
+            "Come back",
+            "Look around",
+            "Run away"
+          ],
+          "hint": "Friendly warning advice"
+        }
       ],
       "cultural_notes": [
         "Getting lost in a Moroccan medina is part of the experience. Don't panic - locals are usually happy to help with directions. The medinas of Fes and Marrakech are UNESCO World Heritage sites.",
@@ -148,26 +1133,114 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "سافر", "darija_latin": "safr", "english": "travel"},
-      {"darija_arabic": "طيارة", "darija_latin": "Tiyara", "english": "airplane"},
-      {"darija_arabic": "لوطيل", "darija_latin": "loTil", "english": "hotel"},
-      {"darija_arabic": "حجز", "darija_latin": "7jz", "english": "book/reserve"},
-      {"darija_arabic": "تران", "darija_latin": "tran", "english": "train"},
-      {"darija_arabic": "طوبيس", "darija_latin": "Tobis", "english": "bus"},
-      {"darija_arabic": "بيي", "darija_latin": "biy", "english": "ticket"},
-      {"darija_arabic": "محطة", "darija_latin": "m7TTa", "english": "station"},
-      {"darija_arabic": "ضاع", "darija_latin": "da3", "english": "got lost"},
-      {"darija_arabic": "تصويرة", "darija_latin": "tswira", "english": "photo"}
+      {
+        "darija_arabic": "سافر",
+        "darija_latin": "safr",
+        "english": "travel"
+      },
+      {
+        "darija_arabic": "طيارة",
+        "darija_latin": "Tiyara",
+        "english": "airplane"
+      },
+      {
+        "darija_arabic": "لوطيل",
+        "darija_latin": "loTil",
+        "english": "hotel"
+      },
+      {
+        "darija_arabic": "حجز",
+        "darija_latin": "7jz",
+        "english": "book/reserve"
+      },
+      {
+        "darija_arabic": "تران",
+        "darija_latin": "tran",
+        "english": "train"
+      },
+      {
+        "darija_arabic": "طوبيس",
+        "darija_latin": "Tobis",
+        "english": "bus"
+      },
+      {
+        "darija_arabic": "بيي",
+        "darija_latin": "biy",
+        "english": "ticket"
+      },
+      {
+        "darija_arabic": "محطة",
+        "darija_latin": "m7TTa",
+        "english": "station"
+      },
+      {
+        "darija_arabic": "ضاع",
+        "darija_latin": "da3",
+        "english": "got lost"
+      },
+      {
+        "darija_arabic": "تصويرة",
+        "darija_latin": "tswira",
+        "english": "photo"
+      }
     ],
     "fill_blanks": [
-      {"sentence_arabic": "بغيت ___ واحد البيت", "sentence_latin": "bghit ___ wa7d lbit", "answer_arabic": "نحجز", "answer_latin": "n7jz", "hint": "to book"},
-      {"sentence_arabic": "شحال ___؟", "sentence_latin": "sh7al ___?", "answer_arabic": "الليلة", "answer_latin": "llila", "hint": "per night"},
-      {"sentence_arabic": "___ فالمدينة القديمة!", "sentence_latin": "___ flmdina l9dima!", "answer_arabic": "ضعت", "answer_latin": "d3t", "hint": "I got lost"}
+      {
+        "sentence_arabic": "بغيت ___ واحد البيت",
+        "sentence_latin": "bghit ___ wa7d lbit",
+        "answer_arabic": "نحجز",
+        "answer_latin": "n7jz",
+        "hint": "to book",
+        "english": "I want to book a room"
+      },
+      {
+        "sentence_arabic": "شحال ___؟",
+        "sentence_latin": "sh7al ___?",
+        "answer_arabic": "الليلة",
+        "answer_latin": "llila",
+        "hint": "per night",
+        "english": "How much per night?"
+      },
+      {
+        "sentence_arabic": "___ فالمدينة القديمة!",
+        "sentence_latin": "___ flmdina l9dima!",
+        "answer_arabic": "ضعت",
+        "answer_latin": "d3t",
+        "hint": "I got lost",
+        "english": "I got lost in the old town!"
+      }
     ],
     "cultural_quiz": [
-      {"question": "What is the Al Boraq?", "correct_answer": "Africa's first high-speed train, connecting Tangier to Casablanca", "distractors": ["A traditional boat", "A bus company", "An airline"], "explanation": "Launched in 2018, the Al Boraq high-speed train travels at up to 320 km/h, connecting Tangier to Casablanca in about 2 hours."},
-      {"question": "What is a grand taxi?", "correct_answer": "A shared taxi that travels between cities, typically a Mercedes sedan", "distractors": ["A luxury limousine", "A bus", "A rental car"], "explanation": "Grand taxis are shared vehicles, usually old Mercedes sedans, that travel fixed routes between cities. Passengers share the ride and cost."},
-      {"question": "Can non-Muslims visit mosques in Morocco?", "correct_answer": "Generally only the Hassan II Mosque in Casablanca is open to non-Muslim visitors", "distractors": ["All mosques are open to everyone", "No mosques allow visitors", "Only during Ramadan"], "explanation": "The Hassan II Mosque in Casablanca is the most notable exception, offering guided tours to visitors of all faiths."}
+      {
+        "question": "What is the Al Boraq?",
+        "correct_answer": "Africa's first high-speed train, connecting Tangier to Casablanca",
+        "distractors": [
+          "A traditional boat",
+          "A bus company",
+          "An airline"
+        ],
+        "explanation": "Launched in 2018, the Al Boraq high-speed train travels at up to 320 km/h, connecting Tangier to Casablanca in about 2 hours."
+      },
+      {
+        "question": "What is a grand taxi?",
+        "correct_answer": "A shared taxi that travels between cities, typically a Mercedes sedan",
+        "distractors": [
+          "A luxury limousine",
+          "A bus",
+          "A rental car"
+        ],
+        "explanation": "Grand taxis are shared vehicles, usually old Mercedes sedans, that travel fixed routes between cities. Passengers share the ride and cost."
+      },
+      {
+        "question": "Can non-Muslims visit mosques in Morocco?",
+        "correct_answer": "Generally only the Hassan II Mosque in Casablanca is open to non-Muslim visitors",
+        "distractors": [
+          "All mosques are open to everyone",
+          "No mosques allow visitors",
+          "Only during Ramadan"
+        ],
+        "explanation": "The Hassan II Mosque in Casablanca is the most notable exception, offering guided tours to visitors of all faiths."
+      }
     ]
   }
 }

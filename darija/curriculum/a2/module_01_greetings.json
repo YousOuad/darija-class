@@ -336,54 +336,98 @@
           "type": "multiple_choice",
           "question": "What does 'labas' mean?",
           "correct_answer": "How are you? / I'm fine",
-          "distractors": ["Goodbye", "Thank you", "Please"],
+          "distractors": [
+            "Goodbye",
+            "Thank you",
+            "Please"
+          ],
           "hint": "It's one of the first things Moroccans say after 'salam'"
         },
         {
           "type": "multiple_choice",
           "question": "How do you say 'good morning' in Darija?",
           "correct_answer": "sba7 lkhir",
-          "distractors": ["msa lkhir", "tsba7 3la khir", "salam 3likum"],
+          "distractors": [
+            "msa lkhir",
+            "tsba7 3la khir",
+            "salam 3likum"
+          ],
           "hint": "The word for morning in Darija is 'sba7'"
         },
         {
-          "type": "matching",
-          "question": "Match the Darija greeting with its English meaning",
-          "pairs": [
-            {"darija": "سلام", "english": "hello"},
-            {"darija": "بسلامة", "english": "goodbye"},
-            {"darija": "شكرا", "english": "thank you"},
-            {"darija": "مرحبا", "english": "welcome"},
-            {"darija": "صباح الخير", "english": "good morning"}
+          "type": "multiple_choice",
+          "question": "What does 'سلام' mean?",
+          "correct_answer": "hello",
+          "distractors": [
+            "goodbye",
+            "good morning",
+            "thank you"
           ]
         },
         {
-          "type": "fill_in_blank",
-          "question": "Complete the greeting: سلام، ___ عليك؟",
-          "correct_answer": "لاباس",
-          "romanized_answer": "labas",
-          "hint": "This word means 'how are you' or 'you okay?'"
+          "type": "multiple_choice",
+          "question": "What does 'بسلامة' mean?",
+          "correct_answer": "goodbye",
+          "distractors": [
+            "thank you",
+            "hello",
+            "welcome"
+          ]
         },
         {
-          "type": "fill_in_blank",
-          "question": "Complete the response: لاباس، ___ لله",
-          "correct_answer": "الحمد",
-          "romanized_answer": "l7amd",
-          "hint": "This phrase means 'praise God'"
+          "type": "multiple_choice",
+          "question": "What does 'شكرا' mean?",
+          "correct_answer": "thank you",
+          "distractors": [
+            "hello",
+            "welcome",
+            "good morning"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مرحبا' mean?",
+          "correct_answer": "welcome",
+          "distractors": [
+            "good morning",
+            "hello",
+            "thank you"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'صباح الخير' mean?",
+          "correct_answer": "good morning",
+          "distractors": [
+            "hello",
+            "welcome",
+            "thank you"
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'This word means 'how are you' or 'you okay?''",
+          "correct_answer_arabic": "لاباس",
+          "correct_answer_romanized": "labas",
+          "hint": ""
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'This phrase means 'praise God''",
+          "correct_answer_arabic": "الحمد",
+          "correct_answer_romanized": "l7amd",
+          "hint": ""
         },
         {
           "type": "multiple_choice",
           "question": "How do you ask a woman 'how are you doing?' in Darija?",
           "correct_answer": "كيدايرة؟",
-          "distractors": ["كيداير؟", "كيف حالك؟", "لاباس عليك؟"],
+          "distractors": [
+            "كيداير؟",
+            "كيف حالك؟",
+            "لاباس عليك؟"
+          ],
           "hint": "The feminine form ends with -a"
-        },
-        {
-          "type": "translation",
-          "question": "Translate to Darija: 'Thank you very much'",
-          "correct_answer_arabic": "شكرا بزاف",
-          "correct_answer_romanized": "shukran bzzaf",
-          "hint": "'bzzaf' means 'a lot'"
         }
       ],
       "cultural_notes": [
@@ -722,26 +766,78 @@
           "type": "multiple_choice",
           "question": "How do you say 'What is your name?' in Darija?",
           "correct_answer": "أش سميتك؟",
-          "distractors": ["أش كتبتي؟", "أش بغيتي؟", "أش كلتي؟"],
+          "distractors": [
+            "أش كتبتي؟",
+            "أش بغيتي؟",
+            "أش كلتي؟"
+          ],
           "hint": "'smiti' means 'my name', 'smitek' means 'your name'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ سميتك؟ سميتي فاطمة.",
-          "correct_answer": "أش",
-          "romanized_answer": "ash",
-          "hint": "This is a question word meaning 'what'"
+          "type": "translation",
+          "question": "Translate to Darija: 'This is a question word meaning 'what''",
+          "correct_answer_arabic": "أش",
+          "correct_answer_romanized": "ash",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match each pronoun with its meaning",
-          "pairs": [
-            {"darija": "أنا", "english": "I"},
-            {"darija": "نتا", "english": "you (male)"},
-            {"darija": "نتي", "english": "you (female)"},
-            {"darija": "هو", "english": "he"},
-            {"darija": "هي", "english": "she"},
-            {"darija": "حنا", "english": "we"}
+          "type": "multiple_choice",
+          "question": "What does 'أنا' mean?",
+          "correct_answer": "I",
+          "distractors": [
+            "we",
+            "you (male)",
+            "he"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نتا' mean?",
+          "correct_answer": "you (male)",
+          "distractors": [
+            "you (female)",
+            "she",
+            "I"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نتي' mean?",
+          "correct_answer": "you (female)",
+          "distractors": [
+            "she",
+            "he",
+            "I"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هو' mean?",
+          "correct_answer": "he",
+          "distractors": [
+            "you (male)",
+            "she",
+            "we"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هي' mean?",
+          "correct_answer": "she",
+          "distractors": [
+            "you (female)",
+            "you (male)",
+            "I"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حنا' mean?",
+          "correct_answer": "we",
+          "distractors": [
+            "you (female)",
+            "I",
+            "he"
           ]
         },
         {
@@ -755,19 +851,12 @@
           "type": "multiple_choice",
           "question": "Which pronoun means 'we' in Darija?",
           "correct_answer": "حنا",
-          "distractors": ["هوما", "نتوما", "أنا"],
+          "distractors": [
+            "هوما",
+            "نتوما",
+            "أنا"
+          ],
           "hint": "It starts with '7'"
-        },
-        {
-          "type": "ordering",
-          "question": "Put the introduction dialogue in the correct order",
-          "correct_order": [
-            "سلام، لاباس؟",
-            "لاباس، الحمد لله",
-            "أش سميتك؟",
-            "سميتي أمين، و نتا؟",
-            "سميتي كريم، متشرفين"
-          ]
         }
       ],
       "cultural_notes": [
@@ -1104,32 +1193,79 @@
           "type": "multiple_choice",
           "question": "How do you say 'I don't understand' in Darija?",
           "correct_answer": "ما فهمتش",
-          "distractors": ["ما بغيتش", "ما عرفتش", "ما سمعتش"],
+          "distractors": [
+            "ما بغيتش",
+            "ما عرفتش",
+            "ما سمعتش"
+          ],
           "hint": "The verb 'fhm' means 'to understand'"
         },
         {
-          "type": "matching",
-          "question": "Match the question words with their meanings",
-          "pairs": [
-            {"darija": "أشنو", "english": "what"},
-            {"darija": "فين", "english": "where"},
-            {"darija": "كيفاش", "english": "how"},
-            {"darija": "علاش", "english": "why"},
-            {"darija": "شحال", "english": "how much"}
+          "type": "multiple_choice",
+          "question": "What does 'أشنو' mean?",
+          "correct_answer": "what",
+          "distractors": [
+            "how much",
+            "where",
+            "how"
           ]
         },
         {
-          "type": "fill_in_blank",
-          "question": "كنتكلم ___ دالدارجة (I speak a little Darija)",
-          "correct_answer": "شوية",
-          "romanized_answer": "chwiya",
-          "hint": "This word means 'a little'"
+          "type": "multiple_choice",
+          "question": "What does 'فين' mean?",
+          "correct_answer": "where",
+          "distractors": [
+            "why",
+            "how much",
+            "how"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كيفاش' mean?",
+          "correct_answer": "how",
+          "distractors": [
+            "what",
+            "why",
+            "where"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'علاش' mean?",
+          "correct_answer": "why",
+          "distractors": [
+            "what",
+            "where",
+            "how much"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'شحال' mean?",
+          "correct_answer": "how much",
+          "distractors": [
+            "how",
+            "why",
+            "where"
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'This word means 'a little''",
+          "correct_answer_arabic": "شوية",
+          "correct_answer_romanized": "chwiya",
+          "hint": ""
         },
         {
           "type": "multiple_choice",
           "question": "What is the Darija negation pattern?",
           "correct_answer": "ma + verb + sh",
-          "distractors": ["la + verb", "mashi + verb", "ma + verb"],
+          "distractors": [
+            "la + verb",
+            "mashi + verb",
+            "ma + verb"
+          ],
           "hint": "It wraps around the verb with two parts"
         },
         {
@@ -1143,7 +1279,11 @@
           "type": "multiple_choice",
           "question": "Which word means 'a lot' in Darija?",
           "correct_answer": "بزاف",
-          "distractors": ["شوية", "صافي", "واخا"],
+          "distractors": [
+            "شوية",
+            "صافي",
+            "واخا"
+          ],
           "hint": "It's often used to say 'thank you very much' - shukran ___"
         }
       ],
@@ -1156,16 +1296,56 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "سلام", "darija_latin": "salam", "english": "hello"},
-      {"darija_arabic": "شكرا", "darija_latin": "shukran", "english": "thank you"},
-      {"darija_arabic": "بسلامة", "darija_latin": "bslama", "english": "goodbye"},
-      {"darija_arabic": "مرحبا", "darija_latin": "mr7ba", "english": "welcome"},
-      {"darija_arabic": "واخا", "darija_latin": "wakha", "english": "okay"},
-      {"darija_arabic": "إيه", "darija_latin": "iyeh", "english": "yes"},
-      {"darija_arabic": "لا", "darija_latin": "la", "english": "no"},
-      {"darija_arabic": "بزاف", "darija_latin": "bzzaf", "english": "a lot"},
-      {"darija_arabic": "شوية", "darija_latin": "chwiya", "english": "a little"},
-      {"darija_arabic": "يالاه", "darija_latin": "yallah", "english": "let's go"}
+      {
+        "darija_arabic": "سلام",
+        "darija_latin": "salam",
+        "english": "hello"
+      },
+      {
+        "darija_arabic": "شكرا",
+        "darija_latin": "shukran",
+        "english": "thank you"
+      },
+      {
+        "darija_arabic": "بسلامة",
+        "darija_latin": "bslama",
+        "english": "goodbye"
+      },
+      {
+        "darija_arabic": "مرحبا",
+        "darija_latin": "mr7ba",
+        "english": "welcome"
+      },
+      {
+        "darija_arabic": "واخا",
+        "darija_latin": "wakha",
+        "english": "okay"
+      },
+      {
+        "darija_arabic": "إيه",
+        "darija_latin": "iyeh",
+        "english": "yes"
+      },
+      {
+        "darija_arabic": "لا",
+        "darija_latin": "la",
+        "english": "no"
+      },
+      {
+        "darija_arabic": "بزاف",
+        "darija_latin": "bzzaf",
+        "english": "a lot"
+      },
+      {
+        "darija_arabic": "شوية",
+        "darija_latin": "chwiya",
+        "english": "a little"
+      },
+      {
+        "darija_arabic": "يالاه",
+        "darija_latin": "yallah",
+        "english": "let's go"
+      }
     ],
     "fill_blanks": [
       {
@@ -1173,54 +1353,71 @@
         "sentence_latin": "___, labas 3lik?",
         "answer_arabic": "سلام",
         "answer_latin": "salam",
-        "hint": "A common greeting meaning 'peace'"
+        "hint": "A common greeting meaning 'peace'",
+        "english": "Hello, how are you?"
       },
       {
         "sentence_arabic": "سميتي محمد، و نتا ___ سميتك؟",
         "sentence_latin": "smiti Mohamed, w nta ___ smitek?",
         "answer_arabic": "أش",
         "answer_latin": "ash",
-        "hint": "Question word meaning 'what'"
+        "hint": "Question word meaning 'what'",
+        "english": "My name is Mohamed, and you, what is your name?"
       },
       {
         "sentence_arabic": "أنا ___ المغرب",
         "sentence_latin": "ana ___ lmghrib",
         "answer_arabic": "من",
         "answer_latin": "mn",
-        "hint": "Preposition meaning 'from'"
+        "hint": "Preposition meaning 'from'",
+        "english": "I am from Morocco"
       },
       {
         "sentence_arabic": "شكرا ___",
         "sentence_latin": "shukran ___",
         "answer_arabic": "بزاف",
         "answer_latin": "bzzaf",
-        "hint": "Means 'a lot' or 'very much'"
+        "hint": "Means 'a lot' or 'very much'",
+        "english": "Thank you very much"
       },
       {
         "sentence_arabic": "ما ___ ، عاود عافاك",
         "sentence_latin": "ma ___, 3awd 3afak",
         "answer_arabic": "فهمتش",
         "answer_latin": "fhmtsh",
-        "hint": "Verb meaning 'understand' with negation suffix"
+        "hint": "Verb meaning 'understand' with negation suffix",
+        "english": "I didn't understand, repeat please"
       }
     ],
     "cultural_quiz": [
       {
         "question": "How many times do Moroccans typically kiss on the cheek when greeting close friends or family?",
         "correct_answer": "Two (one on each cheek)",
-        "distractors": ["One", "Three", "They don't kiss on the cheek"],
+        "distractors": [
+          "One",
+          "Three",
+          "They don't kiss on the cheek"
+        ],
         "explanation": "Moroccans typically greet close friends and family with two kisses, one on each cheek."
       },
       {
         "question": "What is the expected response when someone asks 'labas?'",
         "correct_answer": "Labas l7amdullah (I'm fine, praise God)",
-        "distractors": ["Just 'iyeh' (yes)", "Silence", "Bslama (goodbye)"],
+        "distractors": [
+          "Just 'iyeh' (yes)",
+          "Silence",
+          "Bslama (goodbye)"
+        ],
         "explanation": "It is culturally expected to include 'l7amdullah' (praise God) in your response, showing gratitude even for ordinary wellbeing."
       },
       {
         "question": "When entering a room full of people, what should you do in Morocco?",
         "correct_answer": "Greet everyone individually",
-        "distractors": ["Just wave to the group", "Only greet the host", "Wait to be greeted first"],
+        "distractors": [
+          "Just wave to the group",
+          "Only greet the host",
+          "Wait to be greeted first"
+        ],
         "explanation": "In Moroccan culture, it's polite to greet each person in the room, often with a handshake."
       }
     ]

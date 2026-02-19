@@ -14,106 +14,181 @@
           "arabic": "عائلة",
           "romanized": "3a'ila",
           "english": "family",
-          "example_sentence": { "arabic": "العائلة ديالي كبيرة", "romanized": "l3a'ila dyali kbira", "english": "My family is big" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "العائلة ديالي كبيرة",
+            "romanized": "l3a'ila dyali kbira",
+            "english": "My family is big"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "ماما",
           "romanized": "mama",
           "english": "mom",
-          "example_sentence": { "arabic": "ماما كتطيب مزيان", "romanized": "mama kattiyb mzyan", "english": "Mom cooks well" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "ماما كتطيب مزيان",
+            "romanized": "mama kattiyb mzyan",
+            "english": "Mom cooks well"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "بابا",
           "romanized": "baba",
           "english": "dad",
-          "example_sentence": { "arabic": "بابا كيخدم فالبانكا", "romanized": "baba kaykhdem flbanka", "english": "Dad works at the bank" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "بابا كيخدم فالبانكا",
+            "romanized": "baba kaykhdem flbanka",
+            "english": "Dad works at the bank"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "خويا",
           "romanized": "khuya",
           "english": "my brother",
-          "example_sentence": { "arabic": "خويا كبير مني", "romanized": "khuya kbir mnni", "english": "My brother is older than me" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "خويا كبير مني",
+            "romanized": "khuya kbir mnni",
+            "english": "My brother is older than me"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "ختي",
           "romanized": "khti",
           "english": "my sister",
-          "example_sentence": { "arabic": "ختي كتقرا فالجامعة", "romanized": "khti kat9ra fljami3a", "english": "My sister studies at university" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "ختي كتقرا فالجامعة",
+            "romanized": "khti kat9ra fljami3a",
+            "english": "My sister studies at university"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "جد",
           "romanized": "jdd",
           "english": "grandfather",
-          "example_sentence": { "arabic": "الجد ديالي عندو تسعين عام", "romanized": "ljdd dyali 3ndo ts3in 3am", "english": "My grandfather is ninety years old" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الجد ديالي عندو تسعين عام",
+            "romanized": "ljdd dyali 3ndo ts3in 3am",
+            "english": "My grandfather is ninety years old"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "جدة",
           "romanized": "jdda",
           "english": "grandmother",
-          "example_sentence": { "arabic": "الجدة كتطيب الحريرة بنينة", "romanized": "ljdda kattiyb l7rira bnina", "english": "Grandmother makes delicious harira" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الجدة كتطيب الحريرة بنينة",
+            "romanized": "ljdda kattiyb l7rira bnina",
+            "english": "Grandmother makes delicious harira"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "راجل",
           "romanized": "rajl",
           "english": "man / husband",
-          "example_sentence": { "arabic": "الراجل ديالها مهندس", "romanized": "rrajl dyalha muhandis", "english": "Her husband is an engineer" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الراجل ديالها مهندس",
+            "romanized": "rrajl dyalha muhandis",
+            "english": "Her husband is an engineer"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "مرا",
           "romanized": "mra",
           "english": "woman / wife",
-          "example_sentence": { "arabic": "المرا ديالو طبيبة", "romanized": "lmra dyalo tbiba", "english": "His wife is a doctor" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "المرا ديالو طبيبة",
+            "romanized": "lmra dyalo tbiba",
+            "english": "His wife is a doctor"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "ولد",
           "romanized": "wld",
           "english": "boy / son",
-          "example_sentence": { "arabic": "الولد ديالهم صغير", "romanized": "lwld dyalhm sghir", "english": "Their son is young" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الولد ديالهم صغير",
+            "romanized": "lwld dyalhm sghir",
+            "english": "Their son is young"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "بنت",
           "romanized": "bnt",
           "english": "girl / daughter",
-          "example_sentence": { "arabic": "البنت ديالو زوينة", "romanized": "lbnt dyalo zwina", "english": "His daughter is pretty" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "البنت ديالو زوينة",
+            "romanized": "lbnt dyalo zwina",
+            "english": "His daughter is pretty"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "ولاد",
           "romanized": "wlad",
           "english": "children / boys",
-          "example_sentence": { "arabic": "عندنا تلاتة دالولاد", "romanized": "3ndna tlata dlwlad", "english": "We have three children" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "عندنا تلاتة دالولاد",
+            "romanized": "3ndna tlata dlwlad",
+            "english": "We have three children"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "بنات",
           "romanized": "bnat",
           "english": "girls / daughters",
-          "example_sentence": { "arabic": "عنده جوج دالبنات", "romanized": "3ndo jouj dlbnat", "english": "He has two daughters" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "عنده جوج دالبنات",
+            "romanized": "3ndo jouj dlbnat",
+            "english": "He has two daughters"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "دري",
           "romanized": "drri",
           "english": "child / kid",
-          "example_sentence": { "arabic": "الدري مزال صغير", "romanized": "ddrri mzal sghir", "english": "The kid is still young" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الدري مزال صغير",
+            "romanized": "ddrri mzal sghir",
+            "english": "The kid is still young"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "بيبي",
           "romanized": "bibi",
           "english": "baby",
-          "example_sentence": { "arabic": "البيبي كيبكي", "romanized": "lbibi kaybki", "english": "The baby is crying" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "البيبي كيبكي",
+            "romanized": "lbibi kaybki",
+            "english": "The baby is crying"
+          },
+          "category": "family",
+          "difficulty": 1
         }
       ],
       "grammar": [
@@ -121,8 +196,16 @@
           "rule": "Possessive Pronouns (Attached Suffixes)",
           "explanation": "Darija uses suffixes attached to nouns for possession: -i (my), -k (your-m), -k (your-f), -o/-h (his), -ha (her), -na (our), -kum (your-pl), -hum (their).",
           "examples": [
-            { "arabic": "خويا (أخي)، خوك (أخوك)، خوه (أخوه)", "romanized": "khuya (my brother), khuk (your brother), khuh (his brother)", "english": "my brother, your brother, his brother" },
-            { "arabic": "ختي، ختك، خته", "romanized": "khti, khtk, khto", "english": "my sister, your sister, his sister" }
+            {
+              "arabic": "خويا (أخي)، خوك (أخوك)، خوه (أخوه)",
+              "romanized": "khuya (my brother), khuk (your brother), khuh (his brother)",
+              "english": "my brother, your brother, his brother"
+            },
+            {
+              "arabic": "ختي، ختك، خته",
+              "romanized": "khti, khtk, khto",
+              "english": "my sister, your sister, his sister"
+            }
           ],
           "common_mistakes": [
             "Confusing -o (his) with -ha (her)",
@@ -133,8 +216,16 @@
           "rule": "Possessive with 'dyal'",
           "explanation": "For nouns that don't easily take suffixes, use 'dyal' + pronoun: dyali (mine), dyalk (yours-m), dyalha (hers), dyalo (his), dyalna (ours), dyalkum (yours-pl), dyalhum (theirs).",
           "examples": [
-            { "arabic": "الدار ديالنا", "romanized": "ddar dyalna", "english": "Our house" },
-            { "arabic": "الطوموبيل ديالو", "romanized": "ttomobil dyalo", "english": "His car" }
+            {
+              "arabic": "الدار ديالنا",
+              "romanized": "ddar dyalna",
+              "english": "Our house"
+            },
+            {
+              "arabic": "الطوموبيل ديالو",
+              "romanized": "ttomobil dyalo",
+              "english": "His car"
+            }
           ],
           "common_mistakes": [
             "Using 'dyal' when the suffix form exists and is more natural, e.g. say 'khuya' not 'lkhu dyal'"
@@ -144,8 +235,16 @@
           "rule": "Asking About Family",
           "explanation": "Use 'sh7al 3ndk d...' to ask how many family members someone has. Use '3ndk...' to ask if they have someone.",
           "examples": [
-            { "arabic": "شحال عندك دالإخوان؟", "romanized": "sh7al 3ndk dlikhwan?", "english": "How many siblings do you have?" },
-            { "arabic": "عندك الولاد؟", "romanized": "3ndk lwlad?", "english": "Do you have children?" }
+            {
+              "arabic": "شحال عندك دالإخوان؟",
+              "romanized": "sh7al 3ndk dlikhwan?",
+              "english": "How many siblings do you have?"
+            },
+            {
+              "arabic": "عندك الولاد؟",
+              "romanized": "3ndk lwlad?",
+              "english": "Do you have children?"
+            }
           ],
           "common_mistakes": [
             "Asking about someone's wife directly can be considered impolite in traditional settings"
@@ -155,8 +254,16 @@
           "rule": "Gender Agreement with Family Terms",
           "explanation": "Darija family terms have natural gender. Adjectives must agree: khuya kbir (big brother), khti kbira (big sister).",
           "examples": [
-            { "arabic": "خويا الكبير / ختي الكبيرة", "romanized": "khuya lkbir / khti lkbira", "english": "My older brother / my older sister" },
-            { "arabic": "خويا الصغير / ختي الصغيرة", "romanized": "khuya ssghir / khti ssghira", "english": "My younger brother / my younger sister" }
+            {
+              "arabic": "خويا الكبير / ختي الكبيرة",
+              "romanized": "khuya lkbir / khti lkbira",
+              "english": "My older brother / my older sister"
+            },
+            {
+              "arabic": "خويا الصغير / ختي الصغيرة",
+              "romanized": "khuya ssghir / khti ssghira",
+              "english": "My younger brother / my younger sister"
+            }
           ],
           "common_mistakes": [
             "Forgetting to add the feminine -a ending to adjectives with feminine family members"
@@ -166,8 +273,16 @@
           "rule": "Plural Forms for Family",
           "explanation": "Some family plural forms: wlad (children/sons), bnat (daughters/girls), ikhwan (siblings/brothers), khwtat (sisters).",
           "examples": [
-            { "arabic": "الإخوان ديالي تلاتة", "romanized": "likhwan dyali tlata", "english": "I have three siblings" },
-            { "arabic": "الولاد كيلعبو", "romanized": "lwlad kayl3bo", "english": "The kids are playing" }
+            {
+              "arabic": "الإخوان ديالي تلاتة",
+              "romanized": "likhwan dyali tlata",
+              "english": "I have three siblings"
+            },
+            {
+              "arabic": "الولاد كيلعبو",
+              "romanized": "lwlad kayl3bo",
+              "english": "The kids are playing"
+            }
           ],
           "common_mistakes": [
             "'wlad' can mean both 'children' and 'boys' - context determines meaning"
@@ -175,37 +290,105 @@
         }
       ],
       "phrases": [
-        { "arabic": "شحال عندك دالإخوان؟", "romanized": "sh7al 3ndk dlikhwan?", "english": "How many siblings do you have?", "context": "Asking about family size" },
-        { "arabic": "عندي جوج دالإخوان و واحد الخت", "romanized": "3ndi jouj dlikhwan w wa7d lkht", "english": "I have two brothers and one sister", "context": "Describing siblings" },
-        { "arabic": "الوالدين لاباس عليهم؟", "romanized": "lwaldin labas 3lihm?", "english": "Are your parents well?", "context": "Polite inquiry about parents" },
-        { "arabic": "العائلة ديالي ساكنة فكازا", "romanized": "l3a'ila dyali sakna f casa", "english": "My family lives in Casablanca", "context": "Describing where family lives" },
-        { "arabic": "هادا خويا الكبير", "romanized": "hada khuya lkbir", "english": "This is my older brother", "context": "Introducing a family member" }
+        {
+          "arabic": "شحال عندك دالإخوان؟",
+          "romanized": "sh7al 3ndk dlikhwan?",
+          "english": "How many siblings do you have?",
+          "context": "Asking about family size"
+        },
+        {
+          "arabic": "عندي جوج دالإخوان و واحد الخت",
+          "romanized": "3ndi jouj dlikhwan w wa7d lkht",
+          "english": "I have two brothers and one sister",
+          "context": "Describing siblings"
+        },
+        {
+          "arabic": "الوالدين لاباس عليهم؟",
+          "romanized": "lwaldin labas 3lihm?",
+          "english": "Are your parents well?",
+          "context": "Polite inquiry about parents"
+        },
+        {
+          "arabic": "العائلة ديالي ساكنة فكازا",
+          "romanized": "l3a'ila dyali sakna f casa",
+          "english": "My family lives in Casablanca",
+          "context": "Describing where family lives"
+        },
+        {
+          "arabic": "هادا خويا الكبير",
+          "romanized": "hada khuya lkbir",
+          "english": "This is my older brother",
+          "context": "Introducing a family member"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you say 'my sister' in Darija?",
           "correct_answer": "ختي",
-          "distractors": ["خويا", "بنتي", "مراتي"],
+          "distractors": [
+            "خويا",
+            "بنتي",
+            "مراتي"
+          ],
           "hint": "It starts with 'kh'"
         },
         {
-          "type": "matching",
-          "question": "Match the family members",
-          "pairs": [
-            {"darija": "ماما", "english": "mom"},
-            {"darija": "بابا", "english": "dad"},
-            {"darija": "خويا", "english": "my brother"},
-            {"darija": "جدة", "english": "grandmother"},
-            {"darija": "ولد", "english": "boy/son"}
+          "type": "multiple_choice",
+          "question": "What does 'ماما' mean?",
+          "correct_answer": "mom",
+          "distractors": [
+            "my brother",
+            "boy/son",
+            "dad"
           ]
         },
         {
-          "type": "fill_in_blank",
-          "question": "العائلة ___ كبيرة (My family is big)",
-          "correct_answer": "ديالي",
-          "romanized_answer": "dyali",
-          "hint": "Possessive 'my' using the dyal construction"
+          "type": "multiple_choice",
+          "question": "What does 'بابا' mean?",
+          "correct_answer": "dad",
+          "distractors": [
+            "my brother",
+            "grandmother",
+            "boy/son"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خويا' mean?",
+          "correct_answer": "my brother",
+          "distractors": [
+            "boy/son",
+            "grandmother",
+            "dad"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جدة' mean?",
+          "correct_answer": "grandmother",
+          "distractors": [
+            "my brother",
+            "mom",
+            "boy/son"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ولد' mean?",
+          "correct_answer": "boy/son",
+          "distractors": [
+            "grandmother",
+            "mom",
+            "my brother"
+          ]
+        },
+        {
+          "type": "translation",
+          "question": "Translate to Darija: 'Possessive 'my' using the dyal construction'",
+          "correct_answer_arabic": "ديالي",
+          "correct_answer_romanized": "dyali",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -218,7 +401,11 @@
           "type": "multiple_choice",
           "question": "What does 'khuya lkbir' mean?",
           "correct_answer": "My older brother",
-          "distractors": ["My younger brother", "My big sister", "My friend"],
+          "distractors": [
+            "My younger brother",
+            "My big sister",
+            "My friend"
+          ],
           "hint": "'kbir' means big/older"
         }
       ],
@@ -236,85 +423,145 @@
           "arabic": "عمي",
           "romanized": "3mmi",
           "english": "my paternal uncle",
-          "example_sentence": { "arabic": "عمي ساكن فمراكش", "romanized": "3mmi sakn f mrraksh", "english": "My uncle lives in Marrakech" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "عمي ساكن فمراكش",
+            "romanized": "3mmi sakn f mrraksh",
+            "english": "My uncle lives in Marrakech"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "عمتي",
           "romanized": "3mmti",
           "english": "my paternal aunt",
-          "example_sentence": { "arabic": "عمتي كتطيب مزيان", "romanized": "3mmti kattiyb mzyan", "english": "My aunt cooks well" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "عمتي كتطيب مزيان",
+            "romanized": "3mmti kattiyb mzyan",
+            "english": "My aunt cooks well"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "خالي",
           "romanized": "khali",
           "english": "my maternal uncle",
-          "example_sentence": { "arabic": "خالي عندو حانوت", "romanized": "khali 3ndo 7anut", "english": "My uncle has a shop" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "خالي عندو حانوت",
+            "romanized": "khali 3ndo 7anut",
+            "english": "My uncle has a shop"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "خالتي",
           "romanized": "khalti",
           "english": "my maternal aunt",
-          "example_sentence": { "arabic": "خالتي ساكنة فالرباط", "romanized": "khalti sakna f rrbat", "english": "My aunt lives in Rabat" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "خالتي ساكنة فالرباط",
+            "romanized": "khalti sakna f rrbat",
+            "english": "My aunt lives in Rabat"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "ولد عمي",
           "romanized": "wld 3mmi",
           "english": "my cousin (paternal uncle's son)",
-          "example_sentence": { "arabic": "ولد عمي تزوج", "romanized": "wld 3mmi tzwwj", "english": "My cousin got married" },
-          "category": "family", "difficulty": 2
+          "example_sentence": {
+            "arabic": "ولد عمي تزوج",
+            "romanized": "wld 3mmi tzwwj",
+            "english": "My cousin got married"
+          },
+          "category": "family",
+          "difficulty": 2
         },
         {
           "arabic": "بنت خالتي",
           "romanized": "bnt khalti",
           "english": "my cousin (maternal aunt's daughter)",
-          "example_sentence": { "arabic": "بنت خالتي فالجامعة", "romanized": "bnt khalti fljami3a", "english": "My cousin is at university" },
-          "category": "family", "difficulty": 2
+          "example_sentence": {
+            "arabic": "بنت خالتي فالجامعة",
+            "romanized": "bnt khalti fljami3a",
+            "english": "My cousin is at university"
+          },
+          "category": "family",
+          "difficulty": 2
         },
         {
           "arabic": "نسيب",
           "romanized": "nsib",
           "english": "in-law / relative by marriage",
-          "example_sentence": { "arabic": "النسيب ديالي راجل مزيان", "romanized": "nnsib dyali rajl mzyan", "english": "My in-law is a good man" },
-          "category": "family", "difficulty": 2
+          "example_sentence": {
+            "arabic": "النسيب ديالي راجل مزيان",
+            "romanized": "nnsib dyali rajl mzyan",
+            "english": "My in-law is a good man"
+          },
+          "category": "family",
+          "difficulty": 2
         },
         {
           "arabic": "مراتي",
           "romanized": "mrati",
           "english": "my wife",
-          "example_sentence": { "arabic": "مراتي كتخدم فالمدرسة", "romanized": "mrati katkhdm flmdrsa", "english": "My wife works at the school" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "مراتي كتخدم فالمدرسة",
+            "romanized": "mrati katkhdm flmdrsa",
+            "english": "My wife works at the school"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "راجلي",
           "romanized": "rajli",
           "english": "my husband",
-          "example_sentence": { "arabic": "راجلي كيخدم فالبنك", "romanized": "rajli kaykhdem flbnk", "english": "My husband works at the bank" },
-          "category": "family", "difficulty": 1
+          "example_sentence": {
+            "arabic": "راجلي كيخدم فالبنك",
+            "romanized": "rajli kaykhdem flbnk",
+            "english": "My husband works at the bank"
+          },
+          "category": "family",
+          "difficulty": 1
         },
         {
           "arabic": "جار",
           "romanized": "jar",
           "english": "neighbor",
-          "example_sentence": { "arabic": "الجار ديالنا ناس مزيانين", "romanized": "ljar dyalna nas mzyanin", "english": "Our neighbors are good people" },
-          "category": "relationship", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الجار ديالنا ناس مزيانين",
+            "romanized": "ljar dyalna nas mzyanin",
+            "english": "Our neighbors are good people"
+          },
+          "category": "relationship",
+          "difficulty": 1
         },
         {
           "arabic": "صاحب",
           "romanized": "sa7b",
           "english": "friend (male)",
-          "example_sentence": { "arabic": "هادا صاحبي من الصغر", "romanized": "hada sa7bi mn ssghur", "english": "This is my friend since childhood" },
-          "category": "relationship", "difficulty": 1
+          "example_sentence": {
+            "arabic": "هادا صاحبي من الصغر",
+            "romanized": "hada sa7bi mn ssghur",
+            "english": "This is my friend since childhood"
+          },
+          "category": "relationship",
+          "difficulty": 1
         },
         {
           "arabic": "صاحبة",
           "romanized": "sa7ba",
           "english": "friend (female)",
-          "example_sentence": { "arabic": "هادي صاحبتي فاطمة", "romanized": "hadi sa7bti Fatima", "english": "This is my friend Fatima" },
-          "category": "relationship", "difficulty": 1
+          "example_sentence": {
+            "arabic": "هادي صاحبتي فاطمة",
+            "romanized": "hadi sa7bti Fatima",
+            "english": "This is my friend Fatima"
+          },
+          "category": "relationship",
+          "difficulty": 1
         }
       ],
       "grammar": [
@@ -322,78 +569,192 @@
           "rule": "Cousin Terminology",
           "explanation": "Darija specifies which parent's side: 'wld 3mmi' (paternal uncle's son), 'bnt khalti' (maternal aunt's daughter). There is no single word for 'cousin'.",
           "examples": [
-            { "arabic": "ولد عمي كبر مني", "romanized": "wld 3mmi kbr mnni", "english": "My cousin (paternal) is older than me" },
-            { "arabic": "بنت خالي صاحبتي", "romanized": "bnt khali sa7bti", "english": "My cousin (maternal) is my friend" }
+            {
+              "arabic": "ولد عمي كبر مني",
+              "romanized": "wld 3mmi kbr mnni",
+              "english": "My cousin (paternal) is older than me"
+            },
+            {
+              "arabic": "بنت خالي صاحبتي",
+              "romanized": "bnt khali sa7bti",
+              "english": "My cousin (maternal) is my friend"
+            }
           ],
-          "common_mistakes": ["Trying to use a generic word for cousin - Darija requires specifying the exact relationship"]
+          "common_mistakes": [
+            "Trying to use a generic word for cousin - Darija requires specifying the exact relationship"
+          ]
         },
         {
           "rule": "Possessive Suffix Patterns",
           "explanation": "Full possessive suffix paradigm: -i (my), -k (your m/f), -o (his), -ha (her), -na (our), -kum (your pl), -hum (their).",
           "examples": [
-            { "arabic": "داري، دارك، دارو، دارها، دارنا", "romanized": "dari, dark, daro, darha, darna", "english": "my house, your house, his house, her house, our house" }
+            {
+              "arabic": "داري، دارك، دارو، دارها، دارنا",
+              "romanized": "dari, dark, daro, darha, darna",
+              "english": "my house, your house, his house, her house, our house"
+            }
           ],
-          "common_mistakes": ["Mixing up -o (his) and -ha (her)"]
+          "common_mistakes": [
+            "Mixing up -o (his) and -ha (her)"
+          ]
         },
         {
           "rule": "Using '3nd' for Having",
           "explanation": "'3ndi' (I have), '3ndk' (you have), '3ndo' (he has), '3ndha' (she has), '3ndna' (we have), '3ndkum' (you-pl have), '3ndhum' (they have).",
           "examples": [
-            { "arabic": "عندي جوج دالإخوان", "romanized": "3ndi jouj dlikhwan", "english": "I have two siblings" },
-            { "arabic": "عندها تلاتة دالولاد", "romanized": "3ndha tlata dlwlad", "english": "She has three children" }
+            {
+              "arabic": "عندي جوج دالإخوان",
+              "romanized": "3ndi jouj dlikhwan",
+              "english": "I have two siblings"
+            },
+            {
+              "arabic": "عندها تلاتة دالولاد",
+              "romanized": "3ndha tlata dlwlad",
+              "english": "She has three children"
+            }
           ],
-          "common_mistakes": ["Using a verb 'to have' instead of the '3nd' construction"]
+          "common_mistakes": [
+            "Using a verb 'to have' instead of the '3nd' construction"
+          ]
         },
         {
           "rule": "Describing Relationships",
           "explanation": "Use 'dyal' to show relationship: 'lmra dyal khuya' (my brother's wife), 'lwlad dyal khti' (my sister's children).",
           "examples": [
-            { "arabic": "المرا ديال خويا", "romanized": "lmra dyal khuya", "english": "My brother's wife" },
-            { "arabic": "الولاد ديال ختي", "romanized": "lwlad dyal khti", "english": "My sister's children" }
+            {
+              "arabic": "المرا ديال خويا",
+              "romanized": "lmra dyal khuya",
+              "english": "My brother's wife"
+            },
+            {
+              "arabic": "الولاد ديال ختي",
+              "romanized": "lwlad dyal khti",
+              "english": "My sister's children"
+            }
           ],
-          "common_mistakes": ["Word order - the possessed comes first, then 'dyal', then the possessor"]
+          "common_mistakes": [
+            "Word order - the possessed comes first, then 'dyal', then the possessor"
+          ]
         },
         {
           "rule": "Marital Status",
           "explanation": "To express marital status: 'mtzwwj' (married-m), 'mtzwwja' (married-f), '3azb' (single-m), '3azba' (single-f), 'mtll9' (divorced-m), 'mtll9a' (divorced-f).",
           "examples": [
-            { "arabic": "أنا مزوج و عندي جوج دالولاد", "romanized": "ana mtzwwj w 3ndi jouj dlwlad", "english": "I'm married and have two children" },
-            { "arabic": "هي عازبة مزال", "romanized": "hiya 3azba mzal", "english": "She is still single" }
+            {
+              "arabic": "أنا مزوج و عندي جوج دالولاد",
+              "romanized": "ana mtzwwj w 3ndi jouj dlwlad",
+              "english": "I'm married and have two children"
+            },
+            {
+              "arabic": "هي عازبة مزال",
+              "romanized": "hiya 3azba mzal",
+              "english": "She is still single"
+            }
           ],
-          "common_mistakes": ["Forgetting gender agreement: mtzwwj (m) vs mtzwwja (f)"]
+          "common_mistakes": [
+            "Forgetting gender agreement: mtzwwj (m) vs mtzwwja (f)"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "واش نتا مزوج؟", "romanized": "wash nta mtzwwj?", "english": "Are you married?", "context": "Asking marital status (to a male)" },
-        { "arabic": "الوالدين ديالك لاباس؟", "romanized": "lwaldin dyalk labas?", "english": "Are your parents well?", "context": "Polite inquiry" },
-        { "arabic": "الله يرحم الوالدين", "romanized": "allah yr7m lwaldin", "english": "God bless your parents", "context": "Common expression of respect" },
-        { "arabic": "عندك شي خوت؟", "romanized": "3ndk shi khut?", "english": "Do you have siblings?", "context": "Asking about siblings" },
-        { "arabic": "حنا ناس ديال العائلة", "romanized": "7na nas dyal l3a'ila", "english": "We are family people", "context": "Emphasizing family values" }
+        {
+          "arabic": "واش نتا مزوج؟",
+          "romanized": "wash nta mtzwwj?",
+          "english": "Are you married?",
+          "context": "Asking marital status (to a male)"
+        },
+        {
+          "arabic": "الوالدين ديالك لاباس؟",
+          "romanized": "lwaldin dyalk labas?",
+          "english": "Are your parents well?",
+          "context": "Polite inquiry"
+        },
+        {
+          "arabic": "الله يرحم الوالدين",
+          "romanized": "allah yr7m lwaldin",
+          "english": "God bless your parents",
+          "context": "Common expression of respect"
+        },
+        {
+          "arabic": "عندك شي خوت؟",
+          "romanized": "3ndk shi khut?",
+          "english": "Do you have siblings?",
+          "context": "Asking about siblings"
+        },
+        {
+          "arabic": "حنا ناس ديال العائلة",
+          "romanized": "7na nas dyal l3a'ila",
+          "english": "We are family people",
+          "context": "Emphasizing family values"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "What does 'khalti' mean?",
           "correct_answer": "My maternal aunt",
-          "distractors": ["My paternal aunt", "My grandmother", "My mother"],
+          "distractors": [
+            "My paternal aunt",
+            "My grandmother",
+            "My mother"
+          ],
           "hint": "She is your mother's sister"
         },
         {
-          "type": "fill_in_blank",
-          "question": "عندي تلاتة دال___ (I have three children)",
-          "correct_answer": "ولاد",
-          "romanized_answer": "wlad",
-          "hint": "Plural of 'wld' (boy/son)"
+          "type": "translation",
+          "question": "Translate to Darija: 'Plural of 'wld' (boy/son)'",
+          "correct_answer_arabic": "ولاد",
+          "correct_answer_romanized": "wlad",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the possessive forms",
-          "pairs": [
-            {"darija": "داري", "english": "my house"},
-            {"darija": "دارك", "english": "your house"},
-            {"darija": "دارو", "english": "his house"},
-            {"darija": "دارها", "english": "her house"},
-            {"darija": "دارنا", "english": "our house"}
+          "type": "multiple_choice",
+          "question": "What does 'داري' mean?",
+          "correct_answer": "my house",
+          "distractors": [
+            "your house",
+            "our house",
+            "her house"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دارك' mean?",
+          "correct_answer": "your house",
+          "distractors": [
+            "our house",
+            "her house",
+            "my house"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دارو' mean?",
+          "correct_answer": "his house",
+          "distractors": [
+            "our house",
+            "your house",
+            "her house"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دارها' mean?",
+          "correct_answer": "her house",
+          "distractors": [
+            "his house",
+            "our house",
+            "my house"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دارنا' mean?",
+          "correct_answer": "our house",
+          "distractors": [
+            "my house",
+            "his house",
+            "your house"
           ]
         },
         {
@@ -407,7 +768,11 @@
           "type": "multiple_choice",
           "question": "How do you say 'I'm married' (for a woman)?",
           "correct_answer": "أنا مزوجة",
-          "distractors": ["أنا مزوج", "أنا عازبة", "أنا متلقة"],
+          "distractors": [
+            "أنا مزوج",
+            "أنا عازبة",
+            "أنا متلقة"
+          ],
           "hint": "The feminine form of 'mtzwwj' is..."
         }
       ],
@@ -426,85 +791,145 @@
           "arabic": "كبير",
           "romanized": "kbir",
           "english": "big / old (age)",
-          "example_sentence": { "arabic": "الراجل كبير فالعمر", "romanized": "rrajl kbir fl3mr", "english": "The man is old" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الراجل كبير فالعمر",
+            "romanized": "rrajl kbir fl3mr",
+            "english": "The man is old"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "صغير",
           "romanized": "sghir",
           "english": "small / young",
-          "example_sentence": { "arabic": "الدري مزال صغير", "romanized": "ddrri mzal sghir", "english": "The child is still young" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الدري مزال صغير",
+            "romanized": "ddrri mzal sghir",
+            "english": "The child is still young"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "طويل",
           "romanized": "twil",
           "english": "tall / long",
-          "example_sentence": { "arabic": "خويا طويل", "romanized": "khuya twil", "english": "My brother is tall" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "خويا طويل",
+            "romanized": "khuya twil",
+            "english": "My brother is tall"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "قصير",
           "romanized": "9sir",
           "english": "short",
-          "example_sentence": { "arabic": "ختي قصيرة", "romanized": "khti 9sira", "english": "My sister is short" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "ختي قصيرة",
+            "romanized": "khti 9sira",
+            "english": "My sister is short"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "زوين",
           "romanized": "zwin",
           "english": "beautiful / handsome",
-          "example_sentence": { "arabic": "هادي بنت زوينة", "romanized": "hadi bnt zwina", "english": "This is a beautiful girl" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "هادي بنت زوينة",
+            "romanized": "hadi bnt zwina",
+            "english": "This is a beautiful girl"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "سمين",
           "romanized": "smin",
           "english": "fat / chubby",
-          "example_sentence": { "arabic": "الراجل سمين شوية", "romanized": "rrajl smin chwiya", "english": "The man is a bit chubby" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "الراجل سمين شوية",
+            "romanized": "rrajl smin chwiya",
+            "english": "The man is a bit chubby"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "رقيق",
           "romanized": "r9i9",
           "english": "thin / slim",
-          "example_sentence": { "arabic": "المرا رقيقة", "romanized": "lmra r9i9a", "english": "The woman is slim" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "المرا رقيقة",
+            "romanized": "lmra r9i9a",
+            "english": "The woman is slim"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "شعر",
           "romanized": "sh3r",
           "english": "hair",
-          "example_sentence": { "arabic": "عندها شعر طويل", "romanized": "3ndha sh3r twil", "english": "She has long hair" },
-          "category": "body", "difficulty": 1
+          "example_sentence": {
+            "arabic": "عندها شعر طويل",
+            "romanized": "3ndha sh3r twil",
+            "english": "She has long hair"
+          },
+          "category": "body",
+          "difficulty": 1
         },
         {
           "arabic": "كحل",
           "romanized": "k7l",
           "english": "black (for hair/eyes)",
-          "example_sentence": { "arabic": "شعرو كحل", "romanized": "sh3ro k7l", "english": "His hair is black" },
-          "category": "color", "difficulty": 1
+          "example_sentence": {
+            "arabic": "شعرو كحل",
+            "romanized": "sh3ro k7l",
+            "english": "His hair is black"
+          },
+          "category": "color",
+          "difficulty": 1
         },
         {
           "arabic": "شهب",
           "romanized": "shhb",
           "english": "blond / light-colored",
-          "example_sentence": { "arabic": "شعرها شهب", "romanized": "sh3rha shhb", "english": "Her hair is blond" },
-          "category": "color", "difficulty": 2
+          "example_sentence": {
+            "arabic": "شعرها شهب",
+            "romanized": "sh3rha shhb",
+            "english": "Her hair is blond"
+          },
+          "category": "color",
+          "difficulty": 2
         },
         {
           "arabic": "مزيان",
           "romanized": "mzyan",
           "english": "good / handsome",
-          "example_sentence": { "arabic": "ولد مزيان", "romanized": "wld mzyan", "english": "A good/handsome boy" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "ولد مزيان",
+            "romanized": "wld mzyan",
+            "english": "A good/handsome boy"
+          },
+          "category": "adjective",
+          "difficulty": 1
         },
         {
           "arabic": "ضريف",
           "romanized": "drif",
           "english": "nice / kind",
-          "example_sentence": { "arabic": "ناس ضراف", "romanized": "nas draf", "english": "Kind people" },
-          "category": "adjective", "difficulty": 1
+          "example_sentence": {
+            "arabic": "ناس ضراف",
+            "romanized": "nas draf",
+            "english": "Kind people"
+          },
+          "category": "adjective",
+          "difficulty": 1
         }
       ],
       "grammar": [
@@ -512,69 +937,148 @@
           "rule": "Adjective Agreement (Gender)",
           "explanation": "Adjectives agree in gender with the noun. Most masculine adjectives add -a for feminine: kbir/kbira, sghir/sghira, twil/twila, zwin/zwina.",
           "examples": [
-            { "arabic": "راجل طويل / مرا طويلة", "romanized": "rajl twil / mra twila", "english": "A tall man / a tall woman" },
-            { "arabic": "ولد زوين / بنت زوينة", "romanized": "wld zwin / bnt zwina", "english": "A handsome boy / a beautiful girl" }
+            {
+              "arabic": "راجل طويل / مرا طويلة",
+              "romanized": "rajl twil / mra twila",
+              "english": "A tall man / a tall woman"
+            },
+            {
+              "arabic": "ولد زوين / بنت زوينة",
+              "romanized": "wld zwin / bnt zwina",
+              "english": "A handsome boy / a beautiful girl"
+            }
           ],
-          "common_mistakes": ["Forgetting the -a feminine ending on adjectives"]
+          "common_mistakes": [
+            "Forgetting the -a feminine ending on adjectives"
+          ]
         },
         {
           "rule": "Adjective Agreement (Plural)",
           "explanation": "For plural people, adjectives often take -in (m) or -at (f): kbar (big-pl), sghar (small-pl), mzyanin (good-pl).",
           "examples": [
-            { "arabic": "الولاد مزيانين", "romanized": "lwlad mzyanin", "english": "The boys are good" },
-            { "arabic": "البنات زوينات", "romanized": "lbnat zwinat", "english": "The girls are pretty" }
+            {
+              "arabic": "الولاد مزيانين",
+              "romanized": "lwlad mzyanin",
+              "english": "The boys are good"
+            },
+            {
+              "arabic": "البنات زوينات",
+              "romanized": "lbnat zwinat",
+              "english": "The girls are pretty"
+            }
           ],
-          "common_mistakes": ["Using singular adjectives with plural nouns"]
+          "common_mistakes": [
+            "Using singular adjectives with plural nouns"
+          ]
         },
         {
           "rule": "Describing with '3ndo/3ndha'",
           "explanation": "To describe features, use '3ndo' (he has) or '3ndha' (she has): '3ndha 3inin kbar' (she has big eyes).",
           "examples": [
-            { "arabic": "عندها عينين كبار و شعر طويل", "romanized": "3ndha 3inin kbar w sh3r twil", "english": "She has big eyes and long hair" },
-            { "arabic": "عندو لحية", "romanized": "3ndo l7ya", "english": "He has a beard" }
+            {
+              "arabic": "عندها عينين كبار و شعر طويل",
+              "romanized": "3ndha 3inin kbar w sh3r twil",
+              "english": "She has big eyes and long hair"
+            },
+            {
+              "arabic": "عندو لحية",
+              "romanized": "3ndo l7ya",
+              "english": "He has a beard"
+            }
           ],
-          "common_mistakes": ["Using 'kayn' instead of '3ndo/3ndha' for personal features"]
+          "common_mistakes": [
+            "Using 'kayn' instead of '3ndo/3ndha' for personal features"
+          ]
         },
         {
           "rule": "Word Order: Noun + Adjective",
           "explanation": "In Darija, the adjective follows the noun: rajl kbir (big man), bnt zwina (pretty girl), dar kbira (big house).",
           "examples": [
-            { "arabic": "راجل كبير", "romanized": "rajl kbir", "english": "A big/old man" },
-            { "arabic": "دار كبيرة", "romanized": "dar kbira", "english": "A big house" }
+            {
+              "arabic": "راجل كبير",
+              "romanized": "rajl kbir",
+              "english": "A big/old man"
+            },
+            {
+              "arabic": "دار كبيرة",
+              "romanized": "dar kbira",
+              "english": "A big house"
+            }
           ],
-          "common_mistakes": ["Putting the adjective before the noun (English influence)"]
+          "common_mistakes": [
+            "Putting the adjective before the noun (English influence)"
+          ]
         },
         {
           "rule": "Asking About Appearance",
           "explanation": "Use 'kifash...' or 'b7al ash...' to ask about appearance. 'kif kayn?' (what does he look like?).",
           "examples": [
-            { "arabic": "كيفاش كاين؟ طويل ورقيق", "romanized": "kifash kayn? twil w r9i9", "english": "What does he look like? Tall and thin" },
-            { "arabic": "أشنو لون شعرها؟", "romanized": "ashnu lon sh3rha?", "english": "What color is her hair?" }
+            {
+              "arabic": "كيفاش كاين؟ طويل ورقيق",
+              "romanized": "kifash kayn? twil w r9i9",
+              "english": "What does he look like? Tall and thin"
+            },
+            {
+              "arabic": "أشنو لون شعرها؟",
+              "romanized": "ashnu lon sh3rha?",
+              "english": "What color is her hair?"
+            }
           ],
-          "common_mistakes": ["Confusing 'kifash' (how) with 'kif' (like/as)"]
+          "common_mistakes": [
+            "Confusing 'kifash' (how) with 'kif' (like/as)"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "بابا ديالي راجل طويل و كبير", "romanized": "baba dyali rajl twil w kbir", "english": "My dad is a tall, big man", "context": "Describing a family member" },
-        { "arabic": "ختي زوينة و ضريفة", "romanized": "khti zwina w drifa", "english": "My sister is pretty and kind", "context": "Complimenting a sibling" },
-        { "arabic": "عندو عينين كحلين", "romanized": "3ndo 3inin k7lin", "english": "He has black eyes", "context": "Describing eye color" },
-        { "arabic": "كيف كايناللي هي؟", "romanized": "kif kayna hiya?", "english": "What does she look like?", "context": "Asking about appearance" },
-        { "arabic": "بحال بابا", "romanized": "b7al baba", "english": "Like dad / He takes after his dad", "context": "Comparing resemblance" }
+        {
+          "arabic": "بابا ديالي راجل طويل و كبير",
+          "romanized": "baba dyali rajl twil w kbir",
+          "english": "My dad is a tall, big man",
+          "context": "Describing a family member"
+        },
+        {
+          "arabic": "ختي زوينة و ضريفة",
+          "romanized": "khti zwina w drifa",
+          "english": "My sister is pretty and kind",
+          "context": "Complimenting a sibling"
+        },
+        {
+          "arabic": "عندو عينين كحلين",
+          "romanized": "3ndo 3inin k7lin",
+          "english": "He has black eyes",
+          "context": "Describing eye color"
+        },
+        {
+          "arabic": "كيف كايناللي هي؟",
+          "romanized": "kif kayna hiya?",
+          "english": "What does she look like?",
+          "context": "Asking about appearance"
+        },
+        {
+          "arabic": "بحال بابا",
+          "romanized": "b7al baba",
+          "english": "Like dad / He takes after his dad",
+          "context": "Comparing resemblance"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "What is the feminine form of 'zwin' (handsome)?",
           "correct_answer": "زوينة",
-          "distractors": ["زوين", "زوينين", "مزيانة"],
+          "distractors": [
+            "زوين",
+            "زوينين",
+            "مزيانة"
+          ],
           "hint": "Add -a to make it feminine"
         },
         {
-          "type": "fill_in_blank",
-          "question": "ختي ___ و ضريفة (My sister is beautiful and kind)",
-          "correct_answer": "زوينة",
-          "romanized_answer": "zwina",
-          "hint": "Feminine form of 'zwin'"
+          "type": "translation",
+          "question": "Translate to Darija: 'Feminine form of 'zwin''",
+          "correct_answer_arabic": "زوينة",
+          "correct_answer_romanized": "zwina",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -584,21 +1088,64 @@
           "hint": "Use '3ndha' for 'she has'"
         },
         {
-          "type": "matching",
-          "question": "Match the opposites",
-          "pairs": [
-            {"darija": "كبير", "english": "صغير"},
-            {"darija": "طويل", "english": "قصير"},
-            {"darija": "سمين", "english": "رقيق"},
-            {"darija": "كحل", "english": "شهب"},
-            {"darija": "مزيان", "english": "خايب"}
+          "type": "multiple_choice",
+          "question": "What does 'كبير' mean?",
+          "correct_answer": "صغير",
+          "distractors": [
+            "شهب",
+            "قصير",
+            "رقيق"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طويل' mean?",
+          "correct_answer": "قصير",
+          "distractors": [
+            "خايب",
+            "صغير",
+            "رقيق"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سمين' mean?",
+          "correct_answer": "رقيق",
+          "distractors": [
+            "صغير",
+            "شهب",
+            "قصير"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كحل' mean?",
+          "correct_answer": "شهب",
+          "distractors": [
+            "قصير",
+            "رقيق",
+            "صغير"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مزيان' mean?",
+          "correct_answer": "خايب",
+          "distractors": [
+            "رقيق",
+            "شهب",
+            "صغير"
           ]
         },
         {
           "type": "multiple_choice",
           "question": "Which sentence correctly describes a tall woman?",
           "correct_answer": "مرا طويلة",
-          "distractors": ["مرا طويل", "طويلة مرا", "مرا كبير"],
+          "distractors": [
+            "مرا طويل",
+            "طويلة مرا",
+            "مرا كبير"
+          ],
           "hint": "Adjective follows noun and must agree in gender"
         }
       ],
@@ -610,16 +1157,56 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "ماما", "darija_latin": "mama", "english": "mom"},
-      {"darija_arabic": "بابا", "darija_latin": "baba", "english": "dad"},
-      {"darija_arabic": "خويا", "darija_latin": "khuya", "english": "my brother"},
-      {"darija_arabic": "ختي", "darija_latin": "khti", "english": "my sister"},
-      {"darija_arabic": "جدة", "darija_latin": "jdda", "english": "grandmother"},
-      {"darija_arabic": "مراتي", "darija_latin": "mrati", "english": "my wife"},
-      {"darija_arabic": "ولاد", "darija_latin": "wlad", "english": "children"},
-      {"darija_arabic": "زوين", "darija_latin": "zwin", "english": "handsome"},
-      {"darija_arabic": "كبير", "darija_latin": "kbir", "english": "big/old"},
-      {"darija_arabic": "صغير", "darija_latin": "sghir", "english": "small/young"}
+      {
+        "darija_arabic": "ماما",
+        "darija_latin": "mama",
+        "english": "mom"
+      },
+      {
+        "darija_arabic": "بابا",
+        "darija_latin": "baba",
+        "english": "dad"
+      },
+      {
+        "darija_arabic": "خويا",
+        "darija_latin": "khuya",
+        "english": "my brother"
+      },
+      {
+        "darija_arabic": "ختي",
+        "darija_latin": "khti",
+        "english": "my sister"
+      },
+      {
+        "darija_arabic": "جدة",
+        "darija_latin": "jdda",
+        "english": "grandmother"
+      },
+      {
+        "darija_arabic": "مراتي",
+        "darija_latin": "mrati",
+        "english": "my wife"
+      },
+      {
+        "darija_arabic": "ولاد",
+        "darija_latin": "wlad",
+        "english": "children"
+      },
+      {
+        "darija_arabic": "زوين",
+        "darija_latin": "zwin",
+        "english": "handsome"
+      },
+      {
+        "darija_arabic": "كبير",
+        "darija_latin": "kbir",
+        "english": "big/old"
+      },
+      {
+        "darija_arabic": "صغير",
+        "darija_latin": "sghir",
+        "english": "small/young"
+      }
     ],
     "fill_blanks": [
       {
@@ -627,40 +1214,55 @@
         "sentence_latin": "___ kattiyb mzyan",
         "answer_arabic": "ماما",
         "answer_latin": "mama",
-        "hint": "A mother figure"
+        "hint": "A mother figure",
+        "english": "Mom cooks well"
       },
       {
         "sentence_arabic": "العائلة ___ كبيرة",
         "sentence_latin": "l3a'ila ___ kbira",
         "answer_arabic": "ديالي",
         "answer_latin": "dyali",
-        "hint": "Possessive 'my'"
+        "hint": "Possessive 'my'",
+        "english": "My family is big"
       },
       {
         "sentence_arabic": "عندي جوج دال___",
         "sentence_latin": "3ndi jouj dl___",
         "answer_arabic": "إخوان",
         "answer_latin": "ikhwan",
-        "hint": "Siblings/brothers"
+        "hint": "Siblings/brothers",
+        "english": "I have two brothers"
       }
     ],
     "cultural_quiz": [
       {
         "question": "What do Moroccans call unrelated older men or women as a sign of respect?",
         "correct_answer": "'3mmi' (uncle) for men, 'khalti' (auntie) for women",
-        "distractors": ["Only their first name", "Sir and Madam", "No special term"],
+        "distractors": [
+          "Only their first name",
+          "Sir and Madam",
+          "No special term"
+        ],
         "explanation": "Using family terms for non-relatives is a Moroccan cultural practice showing respect and warmth."
       },
       {
         "question": "What is the traditional Moroccan family gathering meal?",
         "correct_answer": "Friday couscous lunch",
-        "distractors": ["Monday tagine dinner", "Saturday breakfast", "Thursday pastilla"],
+        "distractors": [
+          "Monday tagine dinner",
+          "Saturday breakfast",
+          "Thursday pastilla"
+        ],
         "explanation": "Friday couscous is a sacred tradition where families gather after Friday prayer for a communal couscous meal."
       },
       {
         "question": "Why do Moroccans say 'tbarkallah' when complimenting someone?",
         "correct_answer": "To protect against the evil eye (l3in)",
-        "distractors": ["Just to be polite", "It's a formal requirement", "To ask for God's forgiveness"],
+        "distractors": [
+          "Just to be polite",
+          "It's a formal requirement",
+          "To ask for God's forgiveness"
+        ],
         "explanation": "Belief in the evil eye is common in Morocco. Saying 'tbarkallah' when admiring someone or something is meant to protect them from jealousy or harm."
       }
     ]

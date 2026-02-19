@@ -272,36 +272,60 @@
           "hint": "'sidi' means 'sir' or 'mister'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "واش ___ ليا ناخد موعد؟ (Would it be possible for me to have an appointment?)",
-          "correct_answer": "يمكن",
-          "romanized_answer": "ymkn",
-          "hint": "A polite way to ask 'can I'"
+          "type": "translation",
+          "question": "Translate to Darija: 'A polite way to ask 'can I''",
+          "correct_answer_arabic": "يمكن",
+          "correct_answer_romanized": "ymkn",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match formal with informal",
-          "pairs": [
-            {
-              "darija": "من فضلك",
-              "english": "عافاك"
-            },
-            {
-              "darija": "السيد",
-              "english": "صاحبي"
-            },
-            {
-              "darija": "نتوما",
-              "english": "نتا"
-            },
-            {
-              "darija": "إلا سمحتم",
-              "english": "واش يمكن"
-            },
-            {
-              "darija": "للا",
-              "english": "ختي"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'من فضلك' mean?",
+          "correct_answer": "عافاك",
+          "distractors": [
+            "ختي",
+            "صاحبي",
+            "واش يمكن"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'السيد' mean?",
+          "correct_answer": "صاحبي",
+          "distractors": [
+            "ختي",
+            "واش يمكن",
+            "نتا"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نتوما' mean?",
+          "correct_answer": "نتا",
+          "distractors": [
+            "واش يمكن",
+            "عافاك",
+            "ختي"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إلا سمحتم' mean?",
+          "correct_answer": "واش يمكن",
+          "distractors": [
+            "صاحبي",
+            "نتا",
+            "عافاك"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'للا' mean?",
+          "correct_answer": "ختي",
+          "distractors": [
+            "نتا",
+            "واش يمكن",
+            "عافاك"
           ]
         },
         {
@@ -543,11 +567,11 @@
           "hint": "A local government office"
         },
         {
-          "type": "fill_in_blank",
-          "question": "بغيت نودي واحد ال___ (I want to submit an application)",
-          "correct_answer": "طلب",
-          "romanized_answer": "Tlb",
-          "hint": "The word for request/application"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for request/application'",
+          "correct_answer_arabic": "طلب",
+          "correct_answer_romanized": "Tlb",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -557,29 +581,53 @@
           "hint": "'wata'i9' means documents"
         },
         {
-          "type": "matching",
-          "question": "Match administrative terms",
-          "pairs": [
-            {
-              "darija": "طلب",
-              "english": "application"
-            },
-            {
-              "darija": "تصريح",
-              "english": "declaration"
-            },
-            {
-              "darija": "ملف",
-              "english": "file"
-            },
-            {
-              "darija": "ختم",
-              "english": "stamp"
-            },
-            {
-              "darija": "تسجيل",
-              "english": "registration"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'طلب' mean?",
+          "correct_answer": "application",
+          "distractors": [
+            "file",
+            "registration",
+            "stamp"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تصريح' mean?",
+          "correct_answer": "declaration",
+          "distractors": [
+            "stamp",
+            "application",
+            "file"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ملف' mean?",
+          "correct_answer": "file",
+          "distractors": [
+            "registration",
+            "application",
+            "declaration"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ختم' mean?",
+          "correct_answer": "stamp",
+          "distractors": [
+            "file",
+            "declaration",
+            "registration"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تسجيل' mean?",
+          "correct_answer": "registration",
+          "distractors": [
+            "file",
+            "stamp",
+            "application"
           ]
         },
         {
@@ -790,11 +838,11 @@
           "hint": "Think about social hierarchy and context"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ نمشيو! (Let's go!)",
-          "correct_answer": "يالاه",
-          "romanized_answer": "yalah",
-          "hint": "An informal 'let's go'"
+          "type": "translation",
+          "question": "Translate to Darija: 'An informal 'let's go''",
+          "correct_answer_arabic": "يالاه",
+          "correct_answer_romanized": "yalah",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -804,29 +852,53 @@
           "hint": "Use 'sm7li' and 'a sidi'"
         },
         {
-          "type": "matching",
-          "question": "Match formal with informal equivalents",
-          "pairs": [
-            {
-              "darija": "من فضلكم",
-              "english": "عافاك"
-            },
-            {
-              "darija": "سيدي",
-              "english": "خويا"
-            },
-            {
-              "darija": "السلام عليكم",
-              "english": "واش راك"
-            },
-            {
-              "darija": "إلا سمحتم",
-              "english": "يالاه"
-            },
-            {
-              "darija": "للا",
-              "english": "ختي"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'من فضلكم' mean?",
+          "correct_answer": "عافاك",
+          "distractors": [
+            "واش راك",
+            "ختي",
+            "يالاه"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سيدي' mean?",
+          "correct_answer": "خويا",
+          "distractors": [
+            "ختي",
+            "واش راك",
+            "يالاه"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'السلام عليكم' mean?",
+          "correct_answer": "واش راك",
+          "distractors": [
+            "عافاك",
+            "خويا",
+            "ختي"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إلا سمحتم' mean?",
+          "correct_answer": "يالاه",
+          "distractors": [
+            "واش راك",
+            "خويا",
+            "ختي"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'للا' mean?",
+          "correct_answer": "ختي",
+          "distractors": [
+            "عافاك",
+            "خويا",
+            "يالاه"
           ]
         },
         {
@@ -906,7 +978,8 @@
         "sentence_latin": "___ lmudir, wash ymkn lia...",
         "answer_arabic": "سيدي",
         "answer_latin": "sidi",
-        "hint": "sir/mister"
+        "hint": "sir/mister",
+        "english": "Sir, may I..."
       }
     ],
     "cultural_quiz": [

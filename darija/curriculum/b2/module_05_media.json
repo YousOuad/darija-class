@@ -308,36 +308,60 @@
           "hint": "'sm3ti' means 'did you hear'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ الأخبار، الحكومة غادي تدير تغييرات",
-          "correct_answer": "حسب",
-          "romanized_answer": "7sb",
-          "hint": "'According to'"
+          "type": "translation",
+          "question": "Translate to Darija: ''According to''",
+          "correct_answer_arabic": "حسب",
+          "correct_answer_romanized": "7sb",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match media terms",
-          "pairs": [
-            {
-              "darija": "أخبار",
-              "english": "news"
-            },
-            {
-              "darija": "جريدة",
-              "english": "newspaper"
-            },
-            {
-              "darija": "صحافي",
-              "english": "journalist"
-            },
-            {
-              "darija": "مقال",
-              "english": "article"
-            },
-            {
-              "darija": "ترند",
-              "english": "trending"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'أخبار' mean?",
+          "correct_answer": "news",
+          "distractors": [
+            "trending",
+            "journalist",
+            "article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جريدة' mean?",
+          "correct_answer": "newspaper",
+          "distractors": [
+            "news",
+            "journalist",
+            "article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'صحافي' mean?",
+          "correct_answer": "journalist",
+          "distractors": [
+            "trending",
+            "news",
+            "newspaper"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مقال' mean?",
+          "correct_answer": "article",
+          "distractors": [
+            "trending",
+            "newspaper",
+            "journalist"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ترند' mean?",
+          "correct_answer": "trending",
+          "distractors": [
+            "article",
+            "newspaper",
+            "journalist"
           ]
         },
         {
@@ -631,36 +655,60 @@
           "hint": "Moroccans use it for voice messages, groups, and daily communication"
         },
         {
-          "type": "fill_in_blank",
-          "question": "دير لايك و شارك و ___ فالقناة! (Like, share, and subscribe!)",
-          "correct_answer": "أبوني",
-          "romanized_answer": "aboni",
-          "hint": "From French 'abonner'"
+          "type": "translation",
+          "question": "Translate to Darija: 'From French 'abonner''",
+          "correct_answer_arabic": "أبوني",
+          "correct_answer_romanized": "aboni",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match social media terms",
-          "pairs": [
-            {
-              "darija": "منشور",
-              "english": "post"
-            },
-            {
-              "darija": "تبع",
-              "english": "follow"
-            },
-            {
-              "darija": "بلوكي",
-              "english": "block"
-            },
-            {
-              "darija": "ستوري",
-              "english": "story"
-            },
-            {
-              "darija": "كونتنو",
-              "english": "content"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'منشور' mean?",
+          "correct_answer": "post",
+          "distractors": [
+            "block",
+            "story",
+            "follow"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تبع' mean?",
+          "correct_answer": "follow",
+          "distractors": [
+            "content",
+            "post",
+            "block"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بلوكي' mean?",
+          "correct_answer": "block",
+          "distractors": [
+            "post",
+            "follow",
+            "story"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ستوري' mean?",
+          "correct_answer": "story",
+          "distractors": [
+            "content",
+            "follow",
+            "post"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كونتنو' mean?",
+          "correct_answer": "content",
+          "distractors": [
+            "story",
+            "post",
+            "block"
           ]
         },
         {
@@ -954,36 +1002,60 @@
           "hint": "Related to not having work"
         },
         {
-          "type": "fill_in_blank",
-          "question": "أنا شايف ___ خاصنا نديرو حاجة (I think we need to do something)",
-          "correct_answer": "بلي",
-          "romanized_answer": "blli",
-          "hint": "The connector 'that'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The connector 'that''",
+          "correct_answer_arabic": "بلي",
+          "correct_answer_romanized": "blli",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match current events vocabulary",
-          "pairs": [
-            {
-              "darija": "انتخابات",
-              "english": "elections"
-            },
-            {
-              "darija": "بطالة",
-              "english": "unemployment"
-            },
-            {
-              "darija": "جفاف",
-              "english": "drought"
-            },
-            {
-              "darija": "إضراب",
-              "english": "strike"
-            },
-            {
-              "darija": "زلزال",
-              "english": "earthquake"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'انتخابات' mean?",
+          "correct_answer": "elections",
+          "distractors": [
+            "strike",
+            "unemployment",
+            "drought"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بطالة' mean?",
+          "correct_answer": "unemployment",
+          "distractors": [
+            "elections",
+            "strike",
+            "drought"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جفاف' mean?",
+          "correct_answer": "drought",
+          "distractors": [
+            "elections",
+            "strike",
+            "earthquake"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إضراب' mean?",
+          "correct_answer": "strike",
+          "distractors": [
+            "earthquake",
+            "drought",
+            "elections"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'زلزال' mean?",
+          "correct_answer": "earthquake",
+          "distractors": [
+            "elections",
+            "unemployment",
+            "drought"
           ]
         },
         {
@@ -1070,21 +1142,24 @@
         "sentence_latin": "wash ___ lakhbar?",
         "answer_arabic": "سمعتي",
         "answer_latin": "sm3ti",
-        "hint": "Did you hear"
+        "hint": "Did you hear",
+        "english": "Did you hear the news?"
       },
       {
         "sentence_arabic": "دير لايك و شارك و ___ فالقناة!",
         "sentence_latin": "dir like w shark w ___ fl9ana!",
         "answer_arabic": "أبوني",
         "answer_latin": "aboni",
-        "hint": "subscribe"
+        "hint": "subscribe",
+        "english": "Like, share, and subscribe to the channel!"
       },
       {
         "sentence_arabic": "أنا شايف ___ الوضعية غادي تتحسن",
         "sentence_latin": "ana shayf ___ lwd3iya ghadi tit7ssn",
         "answer_arabic": "بلي",
         "answer_latin": "blli",
-        "hint": "that (connector)"
+        "hint": "that (connector)",
+        "english": "I believe that the situation will improve"
       }
     ],
     "cultural_quiz": [

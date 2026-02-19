@@ -50,7 +50,9 @@ async def load_curriculum(request: Request, db: AsyncSession = Depends(get_db)):
                 Lesson.level == level, Lesson.module == module_id, Lesson.title == title
             )
         )
-        if existing.scalar_one_or_none() is not None:
+        existing_lesson = existing.scalar_one_or_none()
+        if existing_lesson is not None:
+            existing_lesson.content_json = lesson_data
             skipped += 1
             continue
 

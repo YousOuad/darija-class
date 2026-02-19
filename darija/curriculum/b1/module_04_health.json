@@ -280,36 +280,60 @@
           "hint": "'kaywj3ni' means 'it hurts me'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "خاصني نمشي لل___ (I need to see a doctor)",
-          "correct_answer": "طبيب",
-          "romanized_answer": "Tbib",
-          "hint": "The medical professional"
+          "type": "translation",
+          "question": "Translate to Darija: 'The medical professional'",
+          "correct_answer_arabic": "طبيب",
+          "correct_answer_romanized": "Tbib",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match body parts",
-          "pairs": [
-            {
-              "darija": "راس",
-              "english": "head"
-            },
-            {
-              "darija": "كرش",
-              "english": "stomach"
-            },
-            {
-              "darija": "يد",
-              "english": "hand"
-            },
-            {
-              "darija": "عين",
-              "english": "eye"
-            },
-            {
-              "darija": "سنان",
-              "english": "teeth"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'راس' mean?",
+          "correct_answer": "head",
+          "distractors": [
+            "teeth",
+            "eye",
+            "hand"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كرش' mean?",
+          "correct_answer": "stomach",
+          "distractors": [
+            "teeth",
+            "head",
+            "hand"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'يد' mean?",
+          "correct_answer": "hand",
+          "distractors": [
+            "teeth",
+            "stomach",
+            "head"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عين' mean?",
+          "correct_answer": "eye",
+          "distractors": [
+            "hand",
+            "teeth",
+            "stomach"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سنان' mean?",
+          "correct_answer": "teeth",
+          "distractors": [
+            "stomach",
+            "eye",
+            "hand"
           ]
         },
         {
@@ -621,11 +645,11 @@
           "hint": "'shdni' means 'caught me'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "عطيني شي دوا ديال ___ (Give me something for headache)",
-          "correct_answer": "الصداع",
-          "romanized_answer": "ssda3",
-          "hint": "The word for headache"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for headache'",
+          "correct_answer_arabic": "الصداع",
+          "correct_answer_romanized": "ssda3",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -635,29 +659,53 @@
           "hint": "Use 'khask' for 'you must'"
         },
         {
-          "type": "matching",
-          "question": "Match medical terms",
-          "pairs": [
-            {
-              "darija": "فارماسيان",
-              "english": "pharmacy"
-            },
-            {
-              "darija": "روشيطة",
-              "english": "prescription"
-            },
-            {
-              "darija": "بيقيرة",
-              "english": "injection"
-            },
-            {
-              "darija": "تحليل",
-              "english": "blood test"
-            },
-            {
-              "darija": "جرحة",
-              "english": "wound"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'فارماسيان' mean?",
+          "correct_answer": "pharmacy",
+          "distractors": [
+            "prescription",
+            "blood test",
+            "injection"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'روشيطة' mean?",
+          "correct_answer": "prescription",
+          "distractors": [
+            "injection",
+            "wound",
+            "blood test"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بيقيرة' mean?",
+          "correct_answer": "injection",
+          "distractors": [
+            "blood test",
+            "wound",
+            "pharmacy"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تحليل' mean?",
+          "correct_answer": "blood test",
+          "distractors": [
+            "prescription",
+            "pharmacy",
+            "injection"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جرحة' mean?",
+          "correct_answer": "wound",
+          "distractors": [
+            "blood test",
+            "injection",
+            "pharmacy"
           ]
         },
         {
@@ -944,11 +992,11 @@
           "hint": "'is3af' means ambulance/emergency"
         },
         {
-          "type": "fill_in_blank",
-          "question": "عندي ال___ مرتافع (I have high blood pressure)",
-          "correct_answer": "ضغط",
-          "romanized_answer": "dghT",
-          "hint": "The word for blood pressure"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for blood pressure'",
+          "correct_answer_arabic": "ضغط",
+          "correct_answer_romanized": "dghT",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -958,29 +1006,53 @@
           "hint": "'nfsiya' means psychological/mental"
         },
         {
-          "type": "matching",
-          "question": "Match health terms",
-          "pairs": [
-            {
-              "darija": "ضغط",
-              "english": "blood pressure"
-            },
-            {
-              "darija": "سكر",
-              "english": "diabetes"
-            },
-            {
-              "darija": "رياضة",
-              "english": "exercise"
-            },
-            {
-              "darija": "سترسّ",
-              "english": "stress"
-            },
-            {
-              "darija": "تأمين",
-              "english": "insurance"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'ضغط' mean?",
+          "correct_answer": "blood pressure",
+          "distractors": [
+            "exercise",
+            "diabetes",
+            "insurance"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سكر' mean?",
+          "correct_answer": "diabetes",
+          "distractors": [
+            "insurance",
+            "exercise",
+            "stress"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'رياضة' mean?",
+          "correct_answer": "exercise",
+          "distractors": [
+            "insurance",
+            "blood pressure",
+            "stress"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سترسّ' mean?",
+          "correct_answer": "stress",
+          "distractors": [
+            "insurance",
+            "diabetes",
+            "blood pressure"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تأمين' mean?",
+          "correct_answer": "insurance",
+          "distractors": [
+            "stress",
+            "diabetes",
+            "blood pressure"
           ]
         },
         {
@@ -1060,21 +1132,24 @@
         "sentence_latin": "kay___ rasi",
         "answer_arabic": "وجعني",
         "answer_latin": "wj3ni",
-        "hint": "hurts me"
+        "hint": "hurts me",
+        "english": "My head hurts"
       },
       {
         "sentence_arabic": "عندي ال___",
         "sentence_latin": "3ndi ss___",
         "answer_arabic": "سخانة",
         "answer_latin": "skhana",
-        "hint": "fever"
+        "hint": "fever",
+        "english": "I have a fever"
       },
       {
         "sentence_arabic": "___ يشافيك",
         "sentence_latin": "___ yshafik",
         "answer_arabic": "الله",
         "answer_latin": "allah",
-        "hint": "May God heal you"
+        "hint": "May God heal you",
+        "english": "May God heal you"
       }
     ],
     "cultural_quiz": [

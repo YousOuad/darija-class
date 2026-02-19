@@ -220,36 +220,60 @@
           "hint": "'ghadi' is the future marker"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ نكمل الدراسة العام الجاي (I will finish studies next year)",
-          "correct_answer": "غادي",
-          "romanized_answer": "ghadi",
-          "hint": "Future tense marker"
+          "type": "translation",
+          "question": "Translate to Darija: 'Future tense marker'",
+          "correct_answer_arabic": "غادي",
+          "correct_answer_romanized": "ghadi",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match future expressions",
-          "pairs": [
-            {
-              "darija": "غادي",
-              "english": "going to"
-            },
-            {
-              "darija": "إن شاء الله",
-              "english": "God willing"
-            },
-            {
-              "darija": "مستقبل",
-              "english": "future"
-            },
-            {
-              "darija": "حلم",
-              "english": "dream"
-            },
-            {
-              "darija": "العام الجاي",
-              "english": "next year"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'غادي' mean?",
+          "correct_answer": "going to",
+          "distractors": [
+            "next year",
+            "dream",
+            "future"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إن شاء الله' mean?",
+          "correct_answer": "God willing",
+          "distractors": [
+            "next year",
+            "going to",
+            "dream"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مستقبل' mean?",
+          "correct_answer": "future",
+          "distractors": [
+            "dream",
+            "going to",
+            "God willing"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حلم' mean?",
+          "correct_answer": "dream",
+          "distractors": [
+            "God willing",
+            "next year",
+            "future"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'العام الجاي' mean?",
+          "correct_answer": "next year",
+          "distractors": [
+            "dream",
+            "future",
+            "God willing"
           ]
         },
         {
@@ -491,11 +515,11 @@
           "hint": "Use 'ila' for 'if' + past tense"
         },
         {
-          "type": "fill_in_blank",
-          "question": "الهدف ديالي ___ للنجاح (My goal is to reach success)",
-          "correct_answer": "نوصل",
-          "romanized_answer": "nwsl",
-          "hint": "The verb 'to reach/achieve'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The verb 'to reach/achieve''",
+          "correct_answer_arabic": "نوصل",
+          "correct_answer_romanized": "nwsl",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -505,29 +529,53 @@
           "hint": "Use negative future: 'ma ghadi...sh'"
         },
         {
-          "type": "matching",
-          "question": "Match life goals",
-          "pairs": [
-            {
-              "darija": "تزوج",
-              "english": "get married"
-            },
-            {
-              "darija": "بنى دار",
-              "english": "build a house"
-            },
-            {
-              "darija": "شرى سيارة",
-              "english": "buy a car"
-            },
-            {
-              "darija": "هجرة",
-              "english": "emigration"
-            },
-            {
-              "darija": "إستقرار",
-              "english": "stability"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'تزوج' mean?",
+          "correct_answer": "get married",
+          "distractors": [
+            "stability",
+            "emigration",
+            "buy a car"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بنى دار' mean?",
+          "correct_answer": "build a house",
+          "distractors": [
+            "emigration",
+            "stability",
+            "buy a car"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'شرى سيارة' mean?",
+          "correct_answer": "buy a car",
+          "distractors": [
+            "emigration",
+            "build a house",
+            "stability"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هجرة' mean?",
+          "correct_answer": "emigration",
+          "distractors": [
+            "build a house",
+            "get married",
+            "buy a car"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إستقرار' mean?",
+          "correct_answer": "stability",
+          "distractors": [
+            "buy a car",
+            "get married",
+            "emigration"
           ]
         },
         {
@@ -762,11 +810,11 @@
           "hint": "A famous Arabic/Darija proverb"
         },
         {
-          "type": "fill_in_blank",
-          "question": "دير الجهد و ___ على الله (Make effort and trust in God)",
-          "correct_answer": "توكل",
-          "romanized_answer": "twkkl",
-          "hint": "To put trust in God"
+          "type": "translation",
+          "question": "Translate to Darija: 'To put trust in God'",
+          "correct_answer_arabic": "توكل",
+          "correct_answer_romanized": "twkkl",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -776,29 +824,53 @@
           "hint": "'nghyyr' means 'to change'"
         },
         {
-          "type": "matching",
-          "question": "Match motivational concepts",
-          "pairs": [
-            {
-              "darija": "صبر",
-              "english": "patience"
-            },
-            {
-              "darija": "جهد",
-              "english": "effort"
-            },
-            {
-              "darija": "طموح",
-              "english": "ambitious"
-            },
-            {
-              "darija": "فرصة",
-              "english": "opportunity"
-            },
-            {
-              "darija": "نجاح",
-              "english": "success"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'صبر' mean?",
+          "correct_answer": "patience",
+          "distractors": [
+            "ambitious",
+            "effort",
+            "success"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جهد' mean?",
+          "correct_answer": "effort",
+          "distractors": [
+            "opportunity",
+            "success",
+            "ambitious"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طموح' mean?",
+          "correct_answer": "ambitious",
+          "distractors": [
+            "patience",
+            "success",
+            "effort"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فرصة' mean?",
+          "correct_answer": "opportunity",
+          "distractors": [
+            "effort",
+            "success",
+            "patience"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نجاح' mean?",
+          "correct_answer": "success",
+          "distractors": [
+            "ambitious",
+            "patience",
+            "opportunity"
           ]
         },
         {
@@ -878,21 +950,24 @@
         "sentence_latin": "___ nsafr l3am jjay",
         "answer_arabic": "غادي",
         "answer_latin": "ghadi",
-        "hint": "future marker"
+        "hint": "future marker",
+        "english": "I'm going to travel next year"
       },
       {
         "sentence_arabic": "الصبر ___ الفرج",
         "sentence_latin": "ssbr ___ lfrj",
         "answer_arabic": "مفتاح",
         "answer_latin": "mfta7",
-        "hint": "key"
+        "hint": "key",
+        "english": "Education is the key to progress"
       },
       {
         "sentence_arabic": "دير الجهد و ___ على الله",
         "sentence_latin": "dir ljhd w ___ 3la llah",
         "answer_arabic": "توكل",
         "answer_latin": "twkkl",
-        "hint": "trust in"
+        "hint": "trust in",
+        "english": "Do your best and trust in God"
       }
     ],
     "cultural_quiz": [

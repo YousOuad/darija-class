@@ -256,36 +256,60 @@
           "hint": "A fundamental human right"
         },
         {
-          "type": "fill_in_blank",
-          "question": "التعليم ___ التقدم (Education is the key to progress)",
-          "correct_answer": "مفتاح",
-          "romanized_answer": "mfta7",
-          "hint": "A word meaning 'key'"
+          "type": "translation",
+          "question": "Translate to Darija: 'A word meaning 'key''",
+          "correct_answer_arabic": "مفتاح",
+          "correct_answer_romanized": "mfta7",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match abstract concepts",
-          "pairs": [
-            {
-              "darija": "حرية",
-              "english": "freedom"
-            },
-            {
-              "darija": "عدالة",
-              "english": "justice"
-            },
-            {
-              "darija": "مساواة",
-              "english": "equality"
-            },
-            {
-              "darija": "بيئة",
-              "english": "environment"
-            },
-            {
-              "darija": "تنمية",
-              "english": "development"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'حرية' mean?",
+          "correct_answer": "freedom",
+          "distractors": [
+            "environment",
+            "justice",
+            "development"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عدالة' mean?",
+          "correct_answer": "justice",
+          "distractors": [
+            "environment",
+            "development",
+            "freedom"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مساواة' mean?",
+          "correct_answer": "equality",
+          "distractors": [
+            "development",
+            "freedom",
+            "environment"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بيئة' mean?",
+          "correct_answer": "environment",
+          "distractors": [
+            "equality",
+            "justice",
+            "development"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تنمية' mean?",
+          "correct_answer": "development",
+          "distractors": [
+            "environment",
+            "justice",
+            "freedom"
           ]
         },
         {
@@ -527,11 +551,11 @@
           "hint": "Changing something for the better"
         },
         {
-          "type": "fill_in_blank",
-          "question": "خاصنا نلقاو ___ (We need to find the solution)",
-          "correct_answer": "الحل",
-          "romanized_answer": "l7ll",
-          "hint": "The word for 'solution'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'solution''",
+          "correct_answer_arabic": "الحل",
+          "correct_answer_romanized": "l7ll",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -541,29 +565,53 @@
           "hint": "'shsh3b' means 'the people'"
         },
         {
-          "type": "matching",
-          "question": "Match debate terms",
-          "pairs": [
-            {
-              "darija": "حجة",
-              "english": "argument"
-            },
-            {
-              "darija": "نقاش",
-              "english": "debate"
-            },
-            {
-              "darija": "إصلاح",
-              "english": "reform"
-            },
-            {
-              "darija": "قانون",
-              "english": "law"
-            },
-            {
-              "darija": "تغيير",
-              "english": "change"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'حجة' mean?",
+          "correct_answer": "argument",
+          "distractors": [
+            "debate",
+            "reform",
+            "law"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نقاش' mean?",
+          "correct_answer": "debate",
+          "distractors": [
+            "argument",
+            "change",
+            "reform"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إصلاح' mean?",
+          "correct_answer": "reform",
+          "distractors": [
+            "change",
+            "argument",
+            "law"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'قانون' mean?",
+          "correct_answer": "law",
+          "distractors": [
+            "debate",
+            "argument",
+            "change"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تغيير' mean?",
+          "correct_answer": "change",
+          "distractors": [
+            "argument",
+            "law",
+            "reform"
           ]
         },
         {
@@ -798,11 +846,11 @@
           "hint": "From the root '3alam' (world)"
         },
         {
-          "type": "fill_in_blank",
-          "question": "الهوية المغربية ___ (Moroccan identity is diverse)",
-          "correct_answer": "متنوعة",
-          "romanized_answer": "mtnww3a",
-          "hint": "The word for diverse/varied"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for diverse/varied'",
+          "correct_answer_arabic": "متنوعة",
+          "correct_answer_romanized": "mtnww3a",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -812,29 +860,53 @@
           "hint": "An Arabic expression meaning something has both good and bad sides"
         },
         {
-          "type": "matching",
-          "question": "Match global concepts",
-          "pairs": [
-            {
-              "darija": "عولمة",
-              "english": "globalization"
-            },
-            {
-              "darija": "مناخ",
-              "english": "climate"
-            },
-            {
-              "darija": "هجرة",
-              "english": "migration"
-            },
-            {
-              "darija": "هوية",
-              "english": "identity"
-            },
-            {
-              "darija": "تكنولوجيا",
-              "english": "technology"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'عولمة' mean?",
+          "correct_answer": "globalization",
+          "distractors": [
+            "technology",
+            "identity",
+            "climate"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مناخ' mean?",
+          "correct_answer": "climate",
+          "distractors": [
+            "technology",
+            "migration",
+            "identity"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هجرة' mean?",
+          "correct_answer": "migration",
+          "distractors": [
+            "identity",
+            "technology",
+            "climate"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هوية' mean?",
+          "correct_answer": "identity",
+          "distractors": [
+            "migration",
+            "technology",
+            "globalization"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تكنولوجيا' mean?",
+          "correct_answer": "technology",
+          "distractors": [
+            "globalization",
+            "identity",
+            "migration"
           ]
         },
         {
@@ -914,21 +986,24 @@
         "sentence_latin": "l___ 79 dyal kl wa7d",
         "answer_arabic": "حرية",
         "answer_latin": "7urriya",
-        "hint": "freedom"
+        "hint": "freedom",
+        "english": "Freedom is everyone's right"
       },
       {
         "sentence_arabic": "خاصنا نحميو ال___",
         "sentence_latin": "khasna n7miw l___",
         "answer_arabic": "بيئة",
         "answer_latin": "bi'a",
-        "hint": "environment"
+        "hint": "environment",
+        "english": "We must protect the environment"
       },
       {
         "sentence_arabic": "التعليم ___ التقدم",
         "sentence_latin": "tta3lim ___ tta9ddum",
         "answer_arabic": "مفتاح",
         "answer_latin": "mfta7",
-        "hint": "key"
+        "hint": "key",
+        "english": "Education is the key to progress"
       }
     ],
     "cultural_quiz": [

@@ -10,100 +10,383 @@
       "order": 1,
       "title": "Conversation Connectors",
       "vocabulary": [
-        { "arabic": "و", "romanized": "w", "english": "and", "example_sentence": { "arabic": "أنا و خويا مشينا للسوق", "romanized": "ana w khuya mshina lssu9", "english": "My brother and I went to the market" }, "category": "connector", "difficulty": 1 },
-        { "arabic": "ولاكن", "romanized": "walakin", "english": "but", "example_sentence": { "arabic": "بغيت نمشي ولاكن ما عنديش الوقت", "romanized": "bghit nmshi walakin ma 3ndish lw9t", "english": "I want to go but I don't have time" }, "category": "connector", "difficulty": 1 },
-        { "arabic": "حيت", "romanized": "7it", "english": "because", "example_sentence": { "arabic": "ما مشيتش حيت كنت مريض", "romanized": "ma mshitsh 7it knt mrid", "english": "I didn't go because I was sick" }, "category": "connector", "difficulty": 1 },
-        { "arabic": "باش", "romanized": "bash", "english": "in order to / so that", "example_sentence": { "arabic": "كنقرا باش نتعلم", "romanized": "kan9ra bash nt3llm", "english": "I study in order to learn" }, "category": "connector", "difficulty": 2 },
-        { "arabic": "إلا", "romanized": "ila", "english": "if", "example_sentence": { "arabic": "إلا بغيتي تجي، عيط ليا", "romanized": "ila bghiti tji, 3yyt lia", "english": "If you want to come, call me" }, "category": "connector", "difficulty": 2 },
-        { "arabic": "دابا", "romanized": "daba", "english": "now / right now", "example_sentence": { "arabic": "دابا خاصني نمشي", "romanized": "daba khasni nmshi", "english": "Now I need to go" }, "category": "time", "difficulty": 1 },
-        { "arabic": "من بعد", "romanized": "mn b3d", "english": "after / later / then", "example_sentence": { "arabic": "من بعد غادي نتلاقاو", "romanized": "mn b3d ghadi ntla9aw", "english": "We'll meet later" }, "category": "time", "difficulty": 1 },
-        { "arabic": "قبل", "romanized": "9bl", "english": "before", "example_sentence": { "arabic": "قبل ما تمشي، عيط ليا", "romanized": "9bl ma tmshi, 3yyt lia", "english": "Before you go, call me" }, "category": "time", "difficulty": 1 },
-        { "arabic": "بحال", "romanized": "b7al", "english": "like / similar to", "example_sentence": { "arabic": "هادا بحال هاداك", "romanized": "hada b7al hadak", "english": "This is like that one" }, "category": "comparison", "difficulty": 1 },
-        { "arabic": "يعني", "romanized": "y3ni", "english": "it means / I mean", "example_sentence": { "arabic": "يعني ماشي مشكيل", "romanized": "y3ni mashi mushkil", "english": "I mean, it's not a problem" }, "category": "filler", "difficulty": 1 },
-        { "arabic": "والو", "romanized": "walu", "english": "nothing", "example_sentence": { "arabic": "ما كاين والو", "romanized": "ma kayn walu", "english": "There's nothing" }, "category": "pronoun", "difficulty": 1 },
-        { "arabic": "كلشي", "romanized": "kulshi", "english": "everything / everyone", "example_sentence": { "arabic": "كلشي بيخير", "romanized": "kulshi bikhir", "english": "Everything is fine" }, "category": "pronoun", "difficulty": 1 },
-        { "arabic": "شي", "romanized": "shi", "english": "some / any", "example_sentence": { "arabic": "واش كاين شي حاجة؟", "romanized": "wash kayn shi 7aja?", "english": "Is there anything?" }, "category": "pronoun", "difficulty": 1 },
-        { "arabic": "حاجة", "romanized": "7aja", "english": "thing / something", "example_sentence": { "arabic": "بغيت نقول ليك شي حاجة", "romanized": "bghit n9ul lik shi 7aja", "english": "I want to tell you something" }, "category": "noun", "difficulty": 1 },
-        { "arabic": "واش", "romanized": "wash", "english": "question marker (is/do/does)", "example_sentence": { "arabic": "واش فهمتي؟", "romanized": "wash fhmti?", "english": "Did you understand?" }, "category": "question", "difficulty": 1 }
+        {
+          "arabic": "و",
+          "romanized": "w",
+          "english": "and",
+          "example_sentence": {
+            "arabic": "أنا و خويا مشينا للسوق",
+            "romanized": "ana w khuya mshina lssu9",
+            "english": "My brother and I went to the market"
+          },
+          "category": "connector",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ولاكن",
+          "romanized": "walakin",
+          "english": "but",
+          "example_sentence": {
+            "arabic": "بغيت نمشي ولاكن ما عنديش الوقت",
+            "romanized": "bghit nmshi walakin ma 3ndish lw9t",
+            "english": "I want to go but I don't have time"
+          },
+          "category": "connector",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حيت",
+          "romanized": "7it",
+          "english": "because",
+          "example_sentence": {
+            "arabic": "ما مشيتش حيت كنت مريض",
+            "romanized": "ma mshitsh 7it knt mrid",
+            "english": "I didn't go because I was sick"
+          },
+          "category": "connector",
+          "difficulty": 1
+        },
+        {
+          "arabic": "باش",
+          "romanized": "bash",
+          "english": "in order to / so that",
+          "example_sentence": {
+            "arabic": "كنقرا باش نتعلم",
+            "romanized": "kan9ra bash nt3llm",
+            "english": "I study in order to learn"
+          },
+          "category": "connector",
+          "difficulty": 2
+        },
+        {
+          "arabic": "إلا",
+          "romanized": "ila",
+          "english": "if",
+          "example_sentence": {
+            "arabic": "إلا بغيتي تجي، عيط ليا",
+            "romanized": "ila bghiti tji, 3yyt lia",
+            "english": "If you want to come, call me"
+          },
+          "category": "connector",
+          "difficulty": 2
+        },
+        {
+          "arabic": "دابا",
+          "romanized": "daba",
+          "english": "now / right now",
+          "example_sentence": {
+            "arabic": "دابا خاصني نمشي",
+            "romanized": "daba khasni nmshi",
+            "english": "Now I need to go"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "من بعد",
+          "romanized": "mn b3d",
+          "english": "after / later / then",
+          "example_sentence": {
+            "arabic": "من بعد غادي نتلاقاو",
+            "romanized": "mn b3d ghadi ntla9aw",
+            "english": "We'll meet later"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قبل",
+          "romanized": "9bl",
+          "english": "before",
+          "example_sentence": {
+            "arabic": "قبل ما تمشي، عيط ليا",
+            "romanized": "9bl ma tmshi, 3yyt lia",
+            "english": "Before you go, call me"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بحال",
+          "romanized": "b7al",
+          "english": "like / similar to",
+          "example_sentence": {
+            "arabic": "هادا بحال هاداك",
+            "romanized": "hada b7al hadak",
+            "english": "This is like that one"
+          },
+          "category": "comparison",
+          "difficulty": 1
+        },
+        {
+          "arabic": "يعني",
+          "romanized": "y3ni",
+          "english": "it means / I mean",
+          "example_sentence": {
+            "arabic": "يعني ماشي مشكيل",
+            "romanized": "y3ni mashi mushkil",
+            "english": "I mean, it's not a problem"
+          },
+          "category": "filler",
+          "difficulty": 1
+        },
+        {
+          "arabic": "والو",
+          "romanized": "walu",
+          "english": "nothing",
+          "example_sentence": {
+            "arabic": "ما كاين والو",
+            "romanized": "ma kayn walu",
+            "english": "There's nothing"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كلشي",
+          "romanized": "kulshi",
+          "english": "everything / everyone",
+          "example_sentence": {
+            "arabic": "كلشي بيخير",
+            "romanized": "kulshi bikhir",
+            "english": "Everything is fine"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شي",
+          "romanized": "shi",
+          "english": "some / any",
+          "example_sentence": {
+            "arabic": "واش كاين شي حاجة؟",
+            "romanized": "wash kayn shi 7aja?",
+            "english": "Is there anything?"
+          },
+          "category": "pronoun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حاجة",
+          "romanized": "7aja",
+          "english": "thing / something",
+          "example_sentence": {
+            "arabic": "بغيت نقول ليك شي حاجة",
+            "romanized": "bghit n9ul lik shi 7aja",
+            "english": "I want to tell you something"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "واش",
+          "romanized": "wash",
+          "english": "question marker (is/do/does)",
+          "example_sentence": {
+            "arabic": "واش فهمتي؟",
+            "romanized": "wash fhmti?",
+            "english": "Did you understand?"
+          },
+          "category": "question",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Question Formation with 'wash'",
           "explanation": "'wash' turns any statement into a yes/no question: 'nta mghribi' (you're Moroccan) -> 'wash nta mghribi?' (are you Moroccan?).",
           "examples": [
-            { "arabic": "واش فهمتي؟", "romanized": "wash fhmti?", "english": "Did you understand?" },
-            { "arabic": "واش بغيتي تجي معانا؟", "romanized": "wash bghiti tji m3ana?", "english": "Do you want to come with us?" }
+            {
+              "arabic": "واش فهمتي؟",
+              "romanized": "wash fhmti?",
+              "english": "Did you understand?"
+            },
+            {
+              "arabic": "واش بغيتي تجي معانا؟",
+              "romanized": "wash bghiti tji m3ana?",
+              "english": "Do you want to come with us?"
+            }
           ],
-          "common_mistakes": ["In casual speech, 'wash' can be dropped and the question is indicated by intonation alone"]
+          "common_mistakes": [
+            "In casual speech, 'wash' can be dropped and the question is indicated by intonation alone"
+          ]
         },
         {
           "rule": "Cause and Effect with '7it' and 'bash'",
           "explanation": "'7it' (because) explains reason. 'bash' (in order to) explains purpose. They are not interchangeable.",
           "examples": [
-            { "arabic": "ما جيتش حيت كنت مشغول", "romanized": "ma jitsh 7it knt mshghul", "english": "I didn't come because I was busy" },
-            { "arabic": "مشيت للمدرسة باش نتعلم", "romanized": "mshit lmdrsa bash nt3llm", "english": "I went to school in order to learn" }
+            {
+              "arabic": "ما جيتش حيت كنت مشغول",
+              "romanized": "ma jitsh 7it knt mshghul",
+              "english": "I didn't come because I was busy"
+            },
+            {
+              "arabic": "مشيت للمدرسة باش نتعلم",
+              "romanized": "mshit lmdrsa bash nt3llm",
+              "english": "I went to school in order to learn"
+            }
           ],
-          "common_mistakes": ["Using '7it' (because) when you mean 'bash' (in order to)"]
+          "common_mistakes": [
+            "Using '7it' (because) when you mean 'bash' (in order to)"
+          ]
         },
         {
           "rule": "Conditional with 'ila'",
           "explanation": "'ila' (if) introduces conditions: 'ila bghiti' (if you want), 'ila kan lw9t' (if there's time).",
           "examples": [
-            { "arabic": "إلا بغيتي نعاونك، قول ليا", "romanized": "ila bghiti n3awnk, 9ul lia", "english": "If you want me to help you, tell me" },
-            { "arabic": "إلا صبتي الوقت، عيط ليا", "romanized": "ila sbti lw9t, 3yyt lia", "english": "If you find time, call me" }
+            {
+              "arabic": "إلا بغيتي نعاونك، قول ليا",
+              "romanized": "ila bghiti n3awnk, 9ul lia",
+              "english": "If you want me to help you, tell me"
+            },
+            {
+              "arabic": "إلا صبتي الوقت، عيط ليا",
+              "romanized": "ila sbti lw9t, 3yyt lia",
+              "english": "If you find time, call me"
+            }
           ],
-          "common_mistakes": ["'ila' is for possible conditions. 'kun' is for unlikely/hypothetical conditions"]
+          "common_mistakes": [
+            "'ila' is for possible conditions. 'kun' is for unlikely/hypothetical conditions"
+          ]
         },
         {
           "rule": "Conversation Fillers",
           "explanation": "Natural fillers: 'y3ni' (I mean), 'wllah' (I swear/really), 'hani' (there I am/well), 'sma3' (listen), 'shuf' (look).",
           "examples": [
-            { "arabic": "يعني، ما عرفتش أشنو ندير", "romanized": "y3ni, ma 3rftsh ashnu ndir", "english": "I mean, I didn't know what to do" },
-            { "arabic": "والله ما كذب عليك", "romanized": "wllah ma kdb 3lik", "english": "I swear I'm not lying to you" }
+            {
+              "arabic": "يعني، ما عرفتش أشنو ندير",
+              "romanized": "y3ni, ma 3rftsh ashnu ndir",
+              "english": "I mean, I didn't know what to do"
+            },
+            {
+              "arabic": "والله ما كذب عليك",
+              "romanized": "wllah ma kdb 3lik",
+              "english": "I swear I'm not lying to you"
+            }
           ],
-          "common_mistakes": ["Overusing fillers makes speech seem uncertain"]
+          "common_mistakes": [
+            "Overusing fillers makes speech seem uncertain"
+          ]
         },
         {
           "rule": "Negation Review: ma...sh",
           "explanation": "Comprehensive negation: 'ma + verb + sh' for verbs, 'mashi' for nouns/adjectives: 'mashi mushkil' (no problem), 'mashi ana' (not me).",
           "examples": [
-            { "arabic": "ما بغيتش / ما فهمتش / ما عرفتش", "romanized": "ma bghitsh / ma fhmtsh / ma 3rftsh", "english": "I don't want / I don't understand / I don't know" },
-            { "arabic": "ماشي هاكا", "romanized": "mashi hakka", "english": "Not like that / that's not right" }
+            {
+              "arabic": "ما بغيتش / ما فهمتش / ما عرفتش",
+              "romanized": "ma bghitsh / ma fhmtsh / ma 3rftsh",
+              "english": "I don't want / I don't understand / I don't know"
+            },
+            {
+              "arabic": "ماشي هاكا",
+              "romanized": "mashi hakka",
+              "english": "Not like that / that's not right"
+            }
           ],
-          "common_mistakes": ["'ma...sh' for verbs, 'mashi' for non-verbs - don't mix them"]
+          "common_mistakes": [
+            "'ma...sh' for verbs, 'mashi' for non-verbs - don't mix them"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "واش فهمتي اللي قلت ليك؟", "romanized": "wash fhmti lli 9lt lik?", "english": "Did you understand what I told you?", "context": "Checking comprehension" },
-        { "arabic": "يعني ماشي مشكيل", "romanized": "y3ni mashi mushkil", "english": "I mean, it's not a problem", "context": "Reassuring someone" },
-        { "arabic": "ما عنديش فكرة", "romanized": "ma 3ndish fikra", "english": "I have no idea", "context": "Expressing uncertainty" },
-        { "arabic": "إلا الله بغا", "romanized": "ila llah bgha", "english": "If God wills it", "context": "Expressing hope for the future" },
-        { "arabic": "ما كاين والو", "romanized": "ma kayn walu", "english": "There's nothing / It's nothing", "context": "Dismissing something" }
+        {
+          "arabic": "واش فهمتي اللي قلت ليك؟",
+          "romanized": "wash fhmti lli 9lt lik?",
+          "english": "Did you understand what I told you?",
+          "context": "Checking comprehension"
+        },
+        {
+          "arabic": "يعني ماشي مشكيل",
+          "romanized": "y3ni mashi mushkil",
+          "english": "I mean, it's not a problem",
+          "context": "Reassuring someone"
+        },
+        {
+          "arabic": "ما عنديش فكرة",
+          "romanized": "ma 3ndish fikra",
+          "english": "I have no idea",
+          "context": "Expressing uncertainty"
+        },
+        {
+          "arabic": "إلا الله بغا",
+          "romanized": "ila llah bgha",
+          "english": "If God wills it",
+          "context": "Expressing hope for the future"
+        },
+        {
+          "arabic": "ما كاين والو",
+          "romanized": "ma kayn walu",
+          "english": "There's nothing / It's nothing",
+          "context": "Dismissing something"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "What does 'walakin' mean?",
           "correct_answer": "But",
-          "distractors": ["Because", "And", "If"],
+          "distractors": [
+            "Because",
+            "And",
+            "If"
+          ],
           "hint": "It contrasts two ideas"
         },
         {
-          "type": "fill_in_blank",
-          "question": "ما مشيتش ___ كنت مريض (I didn't go because I was sick)",
-          "correct_answer": "حيت",
-          "romanized_answer": "7it",
-          "hint": "A conjunction meaning 'because'"
+          "type": "translation",
+          "question": "Translate to Darija: 'A conjunction meaning 'because''",
+          "correct_answer_arabic": "حيت",
+          "correct_answer_romanized": "7it",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the connectors",
-          "pairs": [
-            {"darija": "و", "english": "and"},
-            {"darija": "ولاكن", "english": "but"},
-            {"darija": "حيت", "english": "because"},
-            {"darija": "باش", "english": "in order to"},
-            {"darija": "إلا", "english": "if"}
+          "type": "multiple_choice",
+          "question": "What does 'و' mean?",
+          "correct_answer": "and",
+          "distractors": [
+            "in order to",
+            "because",
+            "but"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ولاكن' mean?",
+          "correct_answer": "but",
+          "distractors": [
+            "in order to",
+            "and",
+            "because"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حيت' mean?",
+          "correct_answer": "because",
+          "distractors": [
+            "if",
+            "but",
+            "and"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'باش' mean?",
+          "correct_answer": "in order to",
+          "distractors": [
+            "and",
+            "because",
+            "but"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إلا' mean?",
+          "correct_answer": "if",
+          "distractors": [
+            "because",
+            "and",
+            "in order to"
           ]
         },
         {
@@ -117,7 +400,11 @@
           "type": "multiple_choice",
           "question": "How do you negate a noun in Darija?",
           "correct_answer": "مشي + noun",
-          "distractors": ["ما + noun + ش", "لا + noun", "بلا + noun"],
+          "distractors": [
+            "ما + noun + ش",
+            "لا + noun",
+            "بلا + noun"
+          ],
           "hint": "'mashi mushkil' = not a problem"
         }
       ],
@@ -131,69 +418,260 @@
       "order": 2,
       "title": "Making Plans & Invitations",
       "vocabulary": [
-        { "arabic": "عيط", "romanized": "3yyt", "english": "to call", "example_sentence": { "arabic": "عيط ليا غدا", "romanized": "3yyt lia ghdda", "english": "Call me tomorrow" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تلاقى", "romanized": "tla9a", "english": "to meet", "example_sentence": { "arabic": "فين غادي نتلاقاو؟", "romanized": "fin ghadi ntla9aw?", "english": "Where shall we meet?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "موعد", "romanized": "maw3id", "english": "appointment/meeting time", "example_sentence": { "arabic": "عندي موعد فالعاشرة", "romanized": "3ndi maw3id fl3ashra", "english": "I have an appointment at ten" }, "category": "noun", "difficulty": 1 },
-        { "arabic": "مشغول", "romanized": "mshghul", "english": "busy", "example_sentence": { "arabic": "أنا مشغول دابا", "romanized": "ana mshghul daba", "english": "I'm busy right now" }, "category": "adjective", "difficulty": 1 },
-        { "arabic": "فارغ", "romanized": "far8", "english": "free/available", "example_sentence": { "arabic": "واش نتا فارغ غدا؟", "romanized": "wash nta far8 ghdda?", "english": "Are you free tomorrow?" }, "category": "adjective", "difficulty": 1 },
-        { "arabic": "تسنى", "romanized": "tsnna", "english": "to wait", "example_sentence": { "arabic": "تسنى شوية!", "romanized": "tsnna chwiya!", "english": "Wait a moment!" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "جا", "romanized": "ja", "english": "to come", "example_sentence": { "arabic": "واش غادي تجي؟", "romanized": "wash ghadi tji?", "english": "Are you going to come?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "فكرة", "romanized": "fikra", "english": "idea", "example_sentence": { "arabic": "عندي واحد الفكرة", "romanized": "3ndi wa7d lfikra", "english": "I have an idea" }, "category": "noun", "difficulty": 1 },
-        { "arabic": "خطة", "romanized": "khtTa", "english": "plan", "example_sentence": { "arabic": "أشنو الخطة؟", "romanized": "ashnu lkhtTa?", "english": "What's the plan?" }, "category": "noun", "difficulty": 2 },
-        { "arabic": "عرض", "romanized": "3rd", "english": "to invite/offer", "example_sentence": { "arabic": "عرضت عليه يجي", "romanized": "3rdt 3lih yji", "english": "I invited him to come" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "قبل", "romanized": "9bl", "english": "to accept", "example_sentence": { "arabic": "قبلت الدعوة", "romanized": "9blt dd3wa", "english": "I accepted the invitation" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "رفض", "romanized": "rfd", "english": "to refuse", "example_sentence": { "arabic": "رفضت بأدب", "romanized": "rfdt b'adab", "english": "I refused politely" }, "category": "verb", "difficulty": 2 }
+        {
+          "arabic": "عيط",
+          "romanized": "3yyt",
+          "english": "to call",
+          "example_sentence": {
+            "arabic": "عيط ليا غدا",
+            "romanized": "3yyt lia ghdda",
+            "english": "Call me tomorrow"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تلاقى",
+          "romanized": "tla9a",
+          "english": "to meet",
+          "example_sentence": {
+            "arabic": "فين غادي نتلاقاو؟",
+            "romanized": "fin ghadi ntla9aw?",
+            "english": "Where shall we meet?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "موعد",
+          "romanized": "maw3id",
+          "english": "appointment/meeting time",
+          "example_sentence": {
+            "arabic": "عندي موعد فالعاشرة",
+            "romanized": "3ndi maw3id fl3ashra",
+            "english": "I have an appointment at ten"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مشغول",
+          "romanized": "mshghul",
+          "english": "busy",
+          "example_sentence": {
+            "arabic": "أنا مشغول دابا",
+            "romanized": "ana mshghul daba",
+            "english": "I'm busy right now"
+          },
+          "category": "adjective",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فارغ",
+          "romanized": "far8",
+          "english": "free/available",
+          "example_sentence": {
+            "arabic": "واش نتا فارغ غدا؟",
+            "romanized": "wash nta far8 ghdda?",
+            "english": "Are you free tomorrow?"
+          },
+          "category": "adjective",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تسنى",
+          "romanized": "tsnna",
+          "english": "to wait",
+          "example_sentence": {
+            "arabic": "تسنى شوية!",
+            "romanized": "tsnna chwiya!",
+            "english": "Wait a moment!"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جا",
+          "romanized": "ja",
+          "english": "to come",
+          "example_sentence": {
+            "arabic": "واش غادي تجي؟",
+            "romanized": "wash ghadi tji?",
+            "english": "Are you going to come?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فكرة",
+          "romanized": "fikra",
+          "english": "idea",
+          "example_sentence": {
+            "arabic": "عندي واحد الفكرة",
+            "romanized": "3ndi wa7d lfikra",
+            "english": "I have an idea"
+          },
+          "category": "noun",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خطة",
+          "romanized": "khtTa",
+          "english": "plan",
+          "example_sentence": {
+            "arabic": "أشنو الخطة؟",
+            "romanized": "ashnu lkhtTa?",
+            "english": "What's the plan?"
+          },
+          "category": "noun",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عرض",
+          "romanized": "3rd",
+          "english": "to invite/offer",
+          "example_sentence": {
+            "arabic": "عرضت عليه يجي",
+            "romanized": "3rdt 3lih yji",
+            "english": "I invited him to come"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "قبل",
+          "romanized": "9bl",
+          "english": "to accept",
+          "example_sentence": {
+            "arabic": "قبلت الدعوة",
+            "romanized": "9blt dd3wa",
+            "english": "I accepted the invitation"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "رفض",
+          "romanized": "rfd",
+          "english": "to refuse",
+          "example_sentence": {
+            "arabic": "رفضت بأدب",
+            "romanized": "rfdt b'adab",
+            "english": "I refused politely"
+          },
+          "category": "verb",
+          "difficulty": 2
+        }
       ],
       "grammar": [
         {
           "rule": "Making Suggestions with 'yallah'",
           "explanation": "'yallah' (let's) + verb: 'yallah nmshiw' (let's go), 'yallah naklu' (let's eat). It's enthusiastic and casual.",
           "examples": [
-            { "arabic": "يالاه نمشيو للقهوة!", "romanized": "yallah nmshiw ll9hwa!", "english": "Let's go to the cafe!" },
-            { "arabic": "يالاه نديرو شي حاجة", "romanized": "yallah ndiru shi 7aja", "english": "Let's do something" }
+            {
+              "arabic": "يالاه نمشيو للقهوة!",
+              "romanized": "yallah nmshiw ll9hwa!",
+              "english": "Let's go to the cafe!"
+            },
+            {
+              "arabic": "يالاه نديرو شي حاجة",
+              "romanized": "yallah ndiru shi 7aja",
+              "english": "Let's do something"
+            }
           ],
-          "common_mistakes": ["'yallah' is casual - use 'wash ymkn...' for more formal suggestions"]
+          "common_mistakes": [
+            "'yallah' is casual - use 'wash ymkn...' for more formal suggestions"
+          ]
         },
         {
           "rule": "Accepting and Declining Invitations",
           "explanation": "Accepting: 'wakha' (okay), 'bikhir' (sure), 'hadshi mzyan' (that's great). Declining: 'smh lia, ma n9drsh' (sorry, I can't), 'mra khra inshallah' (next time God willing).",
           "examples": [
-            { "arabic": "واخا، غادي نجي", "romanized": "wakha, ghadi nji", "english": "Okay, I'll come" },
-            { "arabic": "سمح ليا، ما نقدرش، مرا خرا إن شاء الله", "romanized": "sm7 lia, ma n9drsh, mrra khra inshallah", "english": "Sorry, I can't, next time God willing" }
+            {
+              "arabic": "واخا، غادي نجي",
+              "romanized": "wakha, ghadi nji",
+              "english": "Okay, I'll come"
+            },
+            {
+              "arabic": "سمح ليا، ما نقدرش، مرا خرا إن شاء الله",
+              "romanized": "sm7 lia, ma n9drsh, mrra khra inshallah",
+              "english": "Sorry, I can't, next time God willing"
+            }
           ],
-          "common_mistakes": ["Declining directly without 'sm7 lia' can seem rude"]
+          "common_mistakes": [
+            "Declining directly without 'sm7 lia' can seem rude"
+          ]
         },
         {
           "rule": "Time Arrangements",
           "explanation": "Use 'f' + time for scheduling: 'fssa3a 3shra' (at ten o'clock), 'nhar ssbt' (on Saturday), 'had lwikand' (this weekend).",
           "examples": [
-            { "arabic": "نتلاقاو فالساعة تمنية", "romanized": "ntla9aw fssa3a tmnya", "english": "Let's meet at eight o'clock" },
-            { "arabic": "واش نهار السبت مزيان؟", "romanized": "wash nhar ssbt mzyan?", "english": "Is Saturday good?" }
+            {
+              "arabic": "نتلاقاو فالساعة تمنية",
+              "romanized": "ntla9aw fssa3a tmnya",
+              "english": "Let's meet at eight o'clock"
+            },
+            {
+              "arabic": "واش نهار السبت مزيان؟",
+              "romanized": "wash nhar ssbt mzyan?",
+              "english": "Is Saturday good?"
+            }
           ],
-          "common_mistakes": ["Remember Moroccan flexible timing - suggest a time but be prepared for delays"]
+          "common_mistakes": [
+            "Remember Moroccan flexible timing - suggest a time but be prepared for delays"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "يالاه نتلاقاو غدا", "romanized": "yallah ntla9aw ghdda", "english": "Let's meet tomorrow", "context": "Making plans" },
-        { "arabic": "واش نتا فارغ هاد الويكاند؟", "romanized": "wash nta far8 had lwikand?", "english": "Are you free this weekend?", "context": "Checking availability" },
-        { "arabic": "سمح ليا، ما نقدرش، مشغول", "romanized": "sm7 lia, ma n9drsh, mshghul", "english": "Sorry, I can't, I'm busy", "context": "Declining politely" },
-        { "arabic": "فين نتلاقاو؟", "romanized": "fin ntla9aw?", "english": "Where shall we meet?", "context": "Arranging meeting place" },
-        { "arabic": "عيط ليا قبل ما تجي", "romanized": "3yyt lia 9bl ma tji", "english": "Call me before you come", "context": "Coordinating" }
+        {
+          "arabic": "يالاه نتلاقاو غدا",
+          "romanized": "yallah ntla9aw ghdda",
+          "english": "Let's meet tomorrow",
+          "context": "Making plans"
+        },
+        {
+          "arabic": "واش نتا فارغ هاد الويكاند؟",
+          "romanized": "wash nta far8 had lwikand?",
+          "english": "Are you free this weekend?",
+          "context": "Checking availability"
+        },
+        {
+          "arabic": "سمح ليا، ما نقدرش، مشغول",
+          "romanized": "sm7 lia, ma n9drsh, mshghul",
+          "english": "Sorry, I can't, I'm busy",
+          "context": "Declining politely"
+        },
+        {
+          "arabic": "فين نتلاقاو؟",
+          "romanized": "fin ntla9aw?",
+          "english": "Where shall we meet?",
+          "context": "Arranging meeting place"
+        },
+        {
+          "arabic": "عيط ليا قبل ما تجي",
+          "romanized": "3yyt lia 9bl ma tji",
+          "english": "Call me before you come",
+          "context": "Coordinating"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you say 'Let's go to the cafe' in Darija?",
           "correct_answer": "يالاه نمشيو للقهوة",
-          "distractors": ["بغيت نمشي للقهوة", "خاصني نمشي للقهوة", "غادي نمشي للقهوة"],
+          "distractors": [
+            "بغيت نمشي للقهوة",
+            "خاصني نمشي للقهوة",
+            "غادي نمشي للقهوة"
+          ],
           "hint": "'yallah' means 'let's'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "واش نتا ___ غدا؟ (Are you free tomorrow?)",
-          "correct_answer": "فارغ",
-          "romanized_answer": "far8",
-          "hint": "The opposite of 'mshghul' (busy)"
+          "type": "translation",
+          "question": "Translate to Darija: 'The opposite of 'mshghul' (busy)'",
+          "correct_answer_arabic": "فارغ",
+          "correct_answer_romanized": "far8",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -203,21 +681,64 @@
           "hint": "'ma n9drsh' means 'I can't'"
         },
         {
-          "type": "matching",
-          "question": "Match the planning vocabulary",
-          "pairs": [
-            {"darija": "مشغول", "english": "busy"},
-            {"darija": "فارغ", "english": "free"},
-            {"darija": "تلاقى", "english": "to meet"},
-            {"darija": "عيط", "english": "to call"},
-            {"darija": "تسنى", "english": "to wait"}
+          "type": "multiple_choice",
+          "question": "What does 'مشغول' mean?",
+          "correct_answer": "busy",
+          "distractors": [
+            "to call",
+            "free",
+            "to meet"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فارغ' mean?",
+          "correct_answer": "free",
+          "distractors": [
+            "to meet",
+            "to call",
+            "to wait"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تلاقى' mean?",
+          "correct_answer": "to meet",
+          "distractors": [
+            "to wait",
+            "to call",
+            "busy"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عيط' mean?",
+          "correct_answer": "to call",
+          "distractors": [
+            "busy",
+            "to wait",
+            "to meet"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تسنى' mean?",
+          "correct_answer": "to wait",
+          "distractors": [
+            "busy",
+            "free",
+            "to call"
           ]
         },
         {
           "type": "multiple_choice",
           "question": "How do you politely decline an invitation?",
           "correct_answer": "سمح ليا، ما نقدرش، مرا خرا إن شاء الله",
-          "distractors": ["لا!", "ما بغيتش", "مستحيل"],
+          "distractors": [
+            "لا!",
+            "ما بغيتش",
+            "مستحيل"
+          ],
           "hint": "Include an apology and mention 'next time'"
         }
       ],
@@ -231,70 +752,265 @@
       "order": 3,
       "title": "Dialogue Practice",
       "vocabulary": [
-        { "arabic": "فهم", "romanized": "fhm", "english": "to understand", "example_sentence": { "arabic": "واش فهمتي؟", "romanized": "wash fhmti?", "english": "Did you understand?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "عرف", "romanized": "3rf", "english": "to know", "example_sentence": { "arabic": "كنعرف هاد الراجل", "romanized": "kan3rf had rrajl", "english": "I know this man" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "ظن", "romanized": "dnn", "english": "to think/believe", "example_sentence": { "arabic": "كندن هاد شي صحيح", "romanized": "kandnn had shi s7i7", "english": "I think this is true" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "قال", "romanized": "9al", "english": "to say", "example_sentence": { "arabic": "أشنو قال؟", "romanized": "ashnu 9al?", "english": "What did he say?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "سول", "romanized": "swl", "english": "to ask", "example_sentence": { "arabic": "سولني واحد السؤال", "romanized": "swlni wa7d ssu'al", "english": "He asked me a question" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "جاوب", "romanized": "jawb", "english": "to answer", "example_sentence": { "arabic": "جاوبتو", "romanized": "jawbto", "english": "I answered him" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "عاود", "romanized": "3awd", "english": "to repeat/say again", "example_sentence": { "arabic": "عاود عافاك", "romanized": "3awd 3afak", "english": "Repeat please" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "شرح", "romanized": "shr7", "english": "to explain", "example_sentence": { "arabic": "شرح ليا", "romanized": "shr7 lia", "english": "Explain to me" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "ترجم", "romanized": "trjm", "english": "to translate", "example_sentence": { "arabic": "ترجم ليا هاد الكلمة", "romanized": "trjm lia had lklma", "english": "Translate this word for me" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "بغا", "romanized": "bgha", "english": "to want", "example_sentence": { "arabic": "أشنو بغيتي؟", "romanized": "ashnu bghiti?", "english": "What do you want?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "قدر", "romanized": "9dr", "english": "to be able to", "example_sentence": { "arabic": "ما نقدرش ندير هادشي", "romanized": "ma n9drsh ndir hadshi", "english": "I can't do this" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "خاص", "romanized": "khass", "english": "must/need", "example_sentence": { "arabic": "خاصك تمشي دابا", "romanized": "khask tmshi daba", "english": "You must go now" }, "category": "verb", "difficulty": 1 }
+        {
+          "arabic": "فهم",
+          "romanized": "fhm",
+          "english": "to understand",
+          "example_sentence": {
+            "arabic": "واش فهمتي؟",
+            "romanized": "wash fhmti?",
+            "english": "Did you understand?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عرف",
+          "romanized": "3rf",
+          "english": "to know",
+          "example_sentence": {
+            "arabic": "كنعرف هاد الراجل",
+            "romanized": "kan3rf had rrajl",
+            "english": "I know this man"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ظن",
+          "romanized": "dnn",
+          "english": "to think/believe",
+          "example_sentence": {
+            "arabic": "كندن هاد شي صحيح",
+            "romanized": "kandnn had shi s7i7",
+            "english": "I think this is true"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "قال",
+          "romanized": "9al",
+          "english": "to say",
+          "example_sentence": {
+            "arabic": "أشنو قال؟",
+            "romanized": "ashnu 9al?",
+            "english": "What did he say?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سول",
+          "romanized": "swl",
+          "english": "to ask",
+          "example_sentence": {
+            "arabic": "سولني واحد السؤال",
+            "romanized": "swlni wa7d ssu'al",
+            "english": "He asked me a question"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جاوب",
+          "romanized": "jawb",
+          "english": "to answer",
+          "example_sentence": {
+            "arabic": "جاوبتو",
+            "romanized": "jawbto",
+            "english": "I answered him"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عاود",
+          "romanized": "3awd",
+          "english": "to repeat/say again",
+          "example_sentence": {
+            "arabic": "عاود عافاك",
+            "romanized": "3awd 3afak",
+            "english": "Repeat please"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شرح",
+          "romanized": "shr7",
+          "english": "to explain",
+          "example_sentence": {
+            "arabic": "شرح ليا",
+            "romanized": "shr7 lia",
+            "english": "Explain to me"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ترجم",
+          "romanized": "trjm",
+          "english": "to translate",
+          "example_sentence": {
+            "arabic": "ترجم ليا هاد الكلمة",
+            "romanized": "trjm lia had lklma",
+            "english": "Translate this word for me"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بغا",
+          "romanized": "bgha",
+          "english": "to want",
+          "example_sentence": {
+            "arabic": "أشنو بغيتي؟",
+            "romanized": "ashnu bghiti?",
+            "english": "What do you want?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قدر",
+          "romanized": "9dr",
+          "english": "to be able to",
+          "example_sentence": {
+            "arabic": "ما نقدرش ندير هادشي",
+            "romanized": "ma n9drsh ndir hadshi",
+            "english": "I can't do this"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خاص",
+          "romanized": "khass",
+          "english": "must/need",
+          "example_sentence": {
+            "arabic": "خاصك تمشي دابا",
+            "romanized": "khask tmshi daba",
+            "english": "You must go now"
+          },
+          "category": "verb",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Modal Verbs: 9dr, khass, bgha",
           "explanation": "Three essential modals: '9dr' (can), 'khass' (must/need), 'bgha' (want). Each followed by the bare verb.",
           "examples": [
-            { "arabic": "نقدر نعاونك", "romanized": "n9dr n3awnk", "english": "I can help you" },
-            { "arabic": "خاصني نمشي", "romanized": "khasni nmshi", "english": "I must/need to go" },
-            { "arabic": "بغيت ناكل", "romanized": "bghit nakl", "english": "I want to eat" }
+            {
+              "arabic": "نقدر نعاونك",
+              "romanized": "n9dr n3awnk",
+              "english": "I can help you"
+            },
+            {
+              "arabic": "خاصني نمشي",
+              "romanized": "khasni nmshi",
+              "english": "I must/need to go"
+            },
+            {
+              "arabic": "بغيت ناكل",
+              "romanized": "bghit nakl",
+              "english": "I want to eat"
+            }
           ],
-          "common_mistakes": ["Not conjugating the modal: 'khasni' (I need), 'khask' (you need), 'khaso' (he needs)"]
+          "common_mistakes": [
+            "Not conjugating the modal: 'khasni' (I need), 'khask' (you need), 'khaso' (he needs)"
+          ]
         },
         {
           "rule": "Reported Speech",
           "explanation": "Use '9al + lia + lli/blli' for reported speech: '9al lia blli ghadi yji' (he told me that he'll come).",
           "examples": [
-            { "arabic": "قال ليا بلي غادي يجي", "romanized": "9al lia blli ghadi yji", "english": "He told me he'll come" },
-            { "arabic": "قالت ليا بلي ماشي صحيح", "romanized": "9alt lia blli mashi s7i7", "english": "She told me it's not true" }
+            {
+              "arabic": "قال ليا بلي غادي يجي",
+              "romanized": "9al lia blli ghadi yji",
+              "english": "He told me he'll come"
+            },
+            {
+              "arabic": "قالت ليا بلي ماشي صحيح",
+              "romanized": "9alt lia blli mashi s7i7",
+              "english": "She told me it's not true"
+            }
           ],
-          "common_mistakes": ["Forgetting 'blli' (that) between the reporting and reported speech"]
+          "common_mistakes": [
+            "Forgetting 'blli' (that) between the reporting and reported speech"
+          ]
         },
         {
           "rule": "Asking for Repetition and Clarification",
           "explanation": "'3awd 3afak' (repeat please), 'ashnu bghiti t9ul?' (what do you mean?), 'ma fhmtsh, shr7 lia' (I didn't understand, explain to me).",
           "examples": [
-            { "arabic": "ما فهمتش، عاود عافاك", "romanized": "ma fhmtsh, 3awd 3afak", "english": "I didn't understand, repeat please" },
-            { "arabic": "أشنو بغيتي تقول؟", "romanized": "ashnu bghiti t9ul?", "english": "What do you mean?" }
+            {
+              "arabic": "ما فهمتش، عاود عافاك",
+              "romanized": "ma fhmtsh, 3awd 3afak",
+              "english": "I didn't understand, repeat please"
+            },
+            {
+              "arabic": "أشنو بغيتي تقول؟",
+              "romanized": "ashnu bghiti t9ul?",
+              "english": "What do you mean?"
+            }
           ],
-          "common_mistakes": ["Not asking for clarification when you don't understand - it's always appreciated"]
+          "common_mistakes": [
+            "Not asking for clarification when you don't understand - it's always appreciated"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "ما فهمتش، يمكن تعاود؟", "romanized": "ma fhmtsh, ymkn t3awd?", "english": "I didn't understand, can you repeat?", "context": "Asking for repetition" },
-        { "arabic": "أشنو بغيتي تقول بهاد شي؟", "romanized": "ashnu bghiti t9ul bhad shi?", "english": "What do you mean by this?", "context": "Seeking clarification" },
-        { "arabic": "هضر شوية بشوية عافاك", "romanized": "hdr chwiya bchwiya 3afak", "english": "Speak slowly please", "context": "Asking someone to slow down" },
-        { "arabic": "كيفاش كتقولها بالدارجة؟", "romanized": "kifash kat9ulha bdarija?", "english": "How do you say it in Darija?", "context": "Asking for translation" },
-        { "arabic": "أنا كنتعلم الدارجة", "romanized": "ana kant3llm ddarija", "english": "I'm learning Darija", "context": "Explaining your language level" }
+        {
+          "arabic": "ما فهمتش، يمكن تعاود؟",
+          "romanized": "ma fhmtsh, ymkn t3awd?",
+          "english": "I didn't understand, can you repeat?",
+          "context": "Asking for repetition"
+        },
+        {
+          "arabic": "أشنو بغيتي تقول بهاد شي؟",
+          "romanized": "ashnu bghiti t9ul bhad shi?",
+          "english": "What do you mean by this?",
+          "context": "Seeking clarification"
+        },
+        {
+          "arabic": "هضر شوية بشوية عافاك",
+          "romanized": "hdr chwiya bchwiya 3afak",
+          "english": "Speak slowly please",
+          "context": "Asking someone to slow down"
+        },
+        {
+          "arabic": "كيفاش كتقولها بالدارجة؟",
+          "romanized": "kifash kat9ulha bdarija?",
+          "english": "How do you say it in Darija?",
+          "context": "Asking for translation"
+        },
+        {
+          "arabic": "أنا كنتعلم الدارجة",
+          "romanized": "ana kant3llm ddarija",
+          "english": "I'm learning Darija",
+          "context": "Explaining your language level"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you say 'I can help you' in Darija?",
           "correct_answer": "نقدر نعاونك",
-          "distractors": ["خاصني نعاونك", "بغيت نعاونك", "غادي نعاونك"],
+          "distractors": [
+            "خاصني نعاونك",
+            "بغيت نعاونك",
+            "غادي نعاونك"
+          ],
           "hint": "'n9dr' means 'I can'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "قال ليا ___ غادي يجي (He told me that he'll come)",
-          "correct_answer": "بلي",
-          "romanized_answer": "blli",
-          "hint": "The conjunction 'that' for reported speech"
+          "type": "translation",
+          "question": "Translate to Darija: 'The conjunction 'that' for reported speech'",
+          "correct_answer_arabic": "بلي",
+          "correct_answer_romanized": "blli",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -304,21 +1020,54 @@
           "hint": "'chwiya bchwiya' means 'slowly' (literally: little by little)"
         },
         {
-          "type": "matching",
-          "question": "Match the communication verbs",
-          "pairs": [
-            {"darija": "قال", "english": "to say"},
-            {"darija": "سول", "english": "to ask"},
-            {"darija": "جاوب", "english": "to answer"},
-            {"darija": "عاود", "english": "to repeat"},
-            {"darija": "شرح", "english": "to explain"}
+          "type": "multiple_choice",
+          "question": "What does 'قال' mean?",
+          "correct_answer": "to say",
+          "distractors": [
+            "to explain",
+            "to ask",
+            "to repeat"
           ]
         },
         {
-          "type": "dialogue_completion",
-          "question": "Complete the dialogue: A: 'سلام، لاباس؟' B: '___' A: 'واش فارغ غدا؟' B: '___'",
-          "correct_answer": "لاباس الحمد لله / إيه، علاش؟",
-          "hint": "B responds to the greeting, then to the question about availability"
+          "type": "multiple_choice",
+          "question": "What does 'سول' mean?",
+          "correct_answer": "to ask",
+          "distractors": [
+            "to repeat",
+            "to answer",
+            "to say"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جاوب' mean?",
+          "correct_answer": "to answer",
+          "distractors": [
+            "to repeat",
+            "to say",
+            "to explain"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عاود' mean?",
+          "correct_answer": "to repeat",
+          "distractors": [
+            "to say",
+            "to ask",
+            "to answer"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'شرح' mean?",
+          "correct_answer": "to explain",
+          "distractors": [
+            "to ask",
+            "to say",
+            "to answer"
+          ]
         }
       ],
       "cultural_notes": [
@@ -329,33 +1078,102 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "و", "darija_latin": "w", "english": "and"},
-      {"darija_arabic": "ولاكن", "darija_latin": "walakin", "english": "but"},
-      {"darija_arabic": "حيت", "darija_latin": "7it", "english": "because"},
-      {"darija_arabic": "باش", "darija_latin": "bash", "english": "in order to"},
-      {"darija_arabic": "إلا", "darija_latin": "ila", "english": "if"},
-      {"darija_arabic": "دابا", "darija_latin": "daba", "english": "now"},
-      {"darija_arabic": "واش", "darija_latin": "wash", "english": "question word"},
-      {"darija_arabic": "فهم", "darija_latin": "fhm", "english": "understand"},
-      {"darija_arabic": "عرف", "darija_latin": "3rf", "english": "know"},
-      {"darija_arabic": "مشغول", "darija_latin": "mshghul", "english": "busy"}
+      {
+        "darija_arabic": "و",
+        "darija_latin": "w",
+        "english": "and"
+      },
+      {
+        "darija_arabic": "ولاكن",
+        "darija_latin": "walakin",
+        "english": "but"
+      },
+      {
+        "darija_arabic": "حيت",
+        "darija_latin": "7it",
+        "english": "because"
+      },
+      {
+        "darija_arabic": "باش",
+        "darija_latin": "bash",
+        "english": "in order to"
+      },
+      {
+        "darija_arabic": "إلا",
+        "darija_latin": "ila",
+        "english": "if"
+      },
+      {
+        "darija_arabic": "دابا",
+        "darija_latin": "daba",
+        "english": "now"
+      },
+      {
+        "darija_arabic": "واش",
+        "darija_latin": "wash",
+        "english": "question word"
+      },
+      {
+        "darija_arabic": "فهم",
+        "darija_latin": "fhm",
+        "english": "understand"
+      },
+      {
+        "darija_arabic": "عرف",
+        "darija_latin": "3rf",
+        "english": "know"
+      },
+      {
+        "darija_arabic": "مشغول",
+        "darija_latin": "mshghul",
+        "english": "busy"
+      }
     ],
     "fill_blanks": [
-      { "sentence_arabic": "ما مشيتش ___ كنت مريض", "sentence_latin": "ma mshitsh ___ knt mrid", "answer_arabic": "حيت", "answer_latin": "7it", "hint": "because" },
-      { "sentence_arabic": "___ فهمتي؟", "sentence_latin": "___ fhmti?", "answer_arabic": "واش", "answer_latin": "wash", "hint": "Question marker" },
-      { "sentence_arabic": "يالاه ___ للقهوة!", "sentence_latin": "yallah ___ ll9hwa!", "answer_arabic": "نمشيو", "answer_latin": "nmshiw", "hint": "Let's go" }
+      {
+        "sentence_arabic": "ما مشيتش ___ كنت مريض",
+        "sentence_latin": "ma mshitsh ___ knt mrid",
+        "answer_arabic": "حيت",
+        "answer_latin": "7it",
+        "hint": "because",
+        "english": "I didn't go because I was sick"
+      },
+      {
+        "sentence_arabic": "___ فهمتي؟",
+        "sentence_latin": "___ fhmti?",
+        "answer_arabic": "واش",
+        "answer_latin": "wash",
+        "hint": "Question marker",
+        "english": "Did you understand?"
+      },
+      {
+        "sentence_arabic": "يالاه ___ للقهوة!",
+        "sentence_latin": "yallah ___ ll9hwa!",
+        "answer_arabic": "نمشيو",
+        "answer_latin": "nmshiw",
+        "hint": "Let's go",
+        "english": "Let's go to the cafe!"
+      }
     ],
     "cultural_quiz": [
       {
         "question": "What does 'inshallah' really mean in Moroccan conversation?",
         "correct_answer": "It can mean genuine hope, a soft yes, or even a polite way to avoid committing - context matters",
-        "distractors": ["Always a firm commitment", "Always a refusal", "Only used in religious contexts"],
+        "distractors": [
+          "Always a firm commitment",
+          "Always a refusal",
+          "Only used in religious contexts"
+        ],
         "explanation": "'Inshallah' is deeply embedded in Moroccan conversation. Its meaning ranges from sincere hope to a polite non-commitment depending on context and tone."
       },
       {
         "question": "What should you bring when invited to a Moroccan home?",
         "correct_answer": "Pastries, fruit, or tea as a gift",
-        "distractors": ["Nothing, it's considered insulting", "Only flowers", "Only chocolate"],
+        "distractors": [
+          "Nothing, it's considered insulting",
+          "Only flowers",
+          "Only chocolate"
+        ],
         "explanation": "Bringing pastries (7lwa), fruit, or a box of tea when visiting is a common courtesy in Moroccan culture."
       }
     ]

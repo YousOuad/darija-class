@@ -244,36 +244,60 @@
           "hint": "'ashnu' means 'what'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "كنخدم فال___ (I work in the office)",
-          "correct_answer": "بيرو",
-          "romanized_answer": "biro",
-          "hint": "From the French word 'bureau'"
+          "type": "translation",
+          "question": "Translate to Darija: 'From the French word 'bureau''",
+          "correct_answer_arabic": "بيرو",
+          "correct_answer_romanized": "biro",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match work terms",
-          "pairs": [
-            {
-              "darija": "خدمة",
-              "english": "work"
-            },
-            {
-              "darija": "صالير",
-              "english": "salary"
-            },
-            {
-              "darija": "پاطرون",
-              "english": "boss"
-            },
-            {
-              "darija": "ستاج",
-              "english": "internship"
-            },
-            {
-              "darija": "كونجي",
-              "english": "vacation"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'خدمة' mean?",
+          "correct_answer": "work",
+          "distractors": [
+            "internship",
+            "boss",
+            "vacation"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'صالير' mean?",
+          "correct_answer": "salary",
+          "distractors": [
+            "vacation",
+            "internship",
+            "work"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'پاطرون' mean?",
+          "correct_answer": "boss",
+          "distractors": [
+            "vacation",
+            "work",
+            "salary"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ستاج' mean?",
+          "correct_answer": "internship",
+          "distractors": [
+            "vacation",
+            "salary",
+            "work"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كونجي' mean?",
+          "correct_answer": "vacation",
+          "distractors": [
+            "internship",
+            "salary",
+            "boss"
           ]
         },
         {
@@ -539,11 +563,11 @@
           "hint": "From the French 'baccalaureat'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "الحمد لله ___! (Thank God I passed!)",
-          "correct_answer": "نجحت",
-          "romanized_answer": "nj7t",
-          "hint": "Past tense of 'to succeed'"
+          "type": "translation",
+          "question": "Translate to Darija: 'Past tense of 'to succeed''",
+          "correct_answer_arabic": "نجحت",
+          "correct_answer_romanized": "nj7t",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -553,29 +577,53 @@
           "hint": "Use '9rit f' for 'studied at'"
         },
         {
-          "type": "matching",
-          "question": "Match education terms",
-          "pairs": [
-            {
-              "darija": "جامعة",
-              "english": "university"
-            },
-            {
-              "darija": "إمتحان",
-              "english": "exam"
-            },
-            {
-              "darija": "شهادة",
-              "english": "diploma"
-            },
-            {
-              "darija": "أستاذ",
-              "english": "teacher"
-            },
-            {
-              "darija": "تلميذ",
-              "english": "student"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'جامعة' mean?",
+          "correct_answer": "university",
+          "distractors": [
+            "diploma",
+            "student",
+            "exam"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'إمتحان' mean?",
+          "correct_answer": "exam",
+          "distractors": [
+            "university",
+            "diploma",
+            "student"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'شهادة' mean?",
+          "correct_answer": "diploma",
+          "distractors": [
+            "university",
+            "teacher",
+            "exam"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'أستاذ' mean?",
+          "correct_answer": "teacher",
+          "distractors": [
+            "exam",
+            "student",
+            "university"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تلميذ' mean?",
+          "correct_answer": "student",
+          "distractors": [
+            "university",
+            "exam",
+            "diploma"
           ]
         },
         {
@@ -822,11 +870,11 @@
           "hint": "'nwlli' means 'to become'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "صيفطت ال___ ديالي (I sent my CV)",
-          "correct_answer": "CV",
-          "romanized_answer": "CV",
-          "hint": "Curriculum vitae"
+          "type": "translation",
+          "question": "Translate to Darija: 'Curriculum vitae'",
+          "correct_answer_arabic": "CV",
+          "correct_answer_romanized": "CV",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -836,29 +884,53 @@
           "hint": "Note the feminine form 'Tbiba'"
         },
         {
-          "type": "matching",
-          "question": "Match professions",
-          "pairs": [
-            {
-              "darija": "مهندس",
-              "english": "engineer"
-            },
-            {
-              "darija": "محامي",
-              "english": "lawyer"
-            },
-            {
-              "darija": "تاجر",
-              "english": "merchant"
-            },
-            {
-              "darija": "فلاح",
-              "english": "farmer"
-            },
-            {
-              "darija": "طباخ",
-              "english": "chef"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'مهندس' mean?",
+          "correct_answer": "engineer",
+          "distractors": [
+            "farmer",
+            "lawyer",
+            "merchant"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'محامي' mean?",
+          "correct_answer": "lawyer",
+          "distractors": [
+            "farmer",
+            "merchant",
+            "chef"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تاجر' mean?",
+          "correct_answer": "merchant",
+          "distractors": [
+            "farmer",
+            "lawyer",
+            "chef"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فلاح' mean?",
+          "correct_answer": "farmer",
+          "distractors": [
+            "engineer",
+            "lawyer",
+            "chef"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طباخ' mean?",
+          "correct_answer": "chef",
+          "distractors": [
+            "engineer",
+            "lawyer",
+            "farmer"
           ]
         },
         {
@@ -938,21 +1010,24 @@
         "sentence_latin": "ashnu ___?",
         "answer_arabic": "كتخدم",
         "answer_latin": "katkhdm",
-        "hint": "What do you do for work?"
+        "hint": "What do you do for work?",
+        "english": "What do you do for work?"
       },
       {
         "sentence_arabic": "عندي ___ غدا",
         "sentence_latin": "3ndi ___ ghdda",
         "answer_arabic": "إمتحان",
         "answer_latin": "imti7an",
-        "hint": "exam"
+        "hint": "exam",
+        "english": "I have an exam tomorrow"
       },
       {
         "sentence_arabic": "بغيت ___ مهندس",
         "sentence_latin": "bghit ___ muhandis",
         "answer_arabic": "نولي",
         "answer_latin": "nwlli",
-        "hint": "to become"
+        "hint": "to become",
+        "english": "I want to become an engineer"
       }
     ],
     "cultural_quiz": [

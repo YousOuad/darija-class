@@ -10,99 +10,378 @@
       "order": 1,
       "title": "Morning Routine",
       "vocabulary": [
-        { "arabic": "فاق", "romanized": "fa9", "english": "to wake up", "example_sentence": { "arabic": "كنفيق مع الفجر", "romanized": "kanfi9 m3a lfjer", "english": "I wake up at dawn" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "نعس", "romanized": "n3s", "english": "to sleep", "example_sentence": { "arabic": "كنعس بكري", "romanized": "kan3s bkri", "english": "I sleep early" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تصبن", "romanized": "tsbn", "english": "to shower/wash", "example_sentence": { "arabic": "كنتصبن فالصباح", "romanized": "kantsbn fssba7", "english": "I shower in the morning" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "لبس", "romanized": "lbs", "english": "to get dressed", "example_sentence": { "arabic": "لبست الحوايج ديالي", "romanized": "lbst l7wayj dyali", "english": "I got dressed" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "كلا", "romanized": "kla", "english": "to eat", "example_sentence": { "arabic": "كليت الفطور", "romanized": "klit lftur", "english": "I ate breakfast" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "شرب", "romanized": "shrb", "english": "to drink", "example_sentence": { "arabic": "شربت القهوة", "romanized": "shrbt l9hwa", "english": "I drank coffee" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "خرج", "romanized": "khrj", "english": "to go out/leave", "example_sentence": { "arabic": "خرجت من الدار فالتمنية", "romanized": "khrjt mn ddar fttmnya", "english": "I left the house at eight" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "مشا", "romanized": "msha", "english": "to go", "example_sentence": { "arabic": "مشيت للخدمة", "romanized": "mshit llkhdma", "english": "I went to work" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "رجع", "romanized": "rj3", "english": "to return/come back", "example_sentence": { "arabic": "رجعت للدار فالسبعة", "romanized": "rj3t lddar fssb3a", "english": "I came home at seven" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "خدم", "romanized": "khdm", "english": "to work", "example_sentence": { "arabic": "كنخدم من التمنية حتى الخمسة", "romanized": "kankhdm mn ttmnya 7tta lkhmsa", "english": "I work from eight to five" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "قرا", "romanized": "9ra", "english": "to study/read", "example_sentence": { "arabic": "كنقرا فالليل", "romanized": "kan9ra fllil", "english": "I study at night" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تصلى", "romanized": "tslla", "english": "to pray", "example_sentence": { "arabic": "كنتصلى خمس مرات فالنهار", "romanized": "kantslla khms mrrat fnnhar", "english": "I pray five times a day" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "طيب", "romanized": "tiyb", "english": "to cook", "example_sentence": { "arabic": "كنطيب العشا كل نهار", "romanized": "kantiyb l3sha kl nhar", "english": "I cook dinner every day" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "نقى", "romanized": "n99a", "english": "to clean", "example_sentence": { "arabic": "كنقي الدار نهار السبت", "romanized": "kan99i ddar nhar ssbt", "english": "I clean the house on Saturday" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تفرج", "romanized": "tfrrj", "english": "to watch", "example_sentence": { "arabic": "كنتفرج فالتلفزة", "romanized": "kantfrrj fttilfza", "english": "I watch TV" }, "category": "verb", "difficulty": 1 }
+        {
+          "arabic": "فاق",
+          "romanized": "fa9",
+          "english": "to wake up",
+          "example_sentence": {
+            "arabic": "كنفيق مع الفجر",
+            "romanized": "kanfi9 m3a lfjer",
+            "english": "I wake up at dawn"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نعس",
+          "romanized": "n3s",
+          "english": "to sleep",
+          "example_sentence": {
+            "arabic": "كنعس بكري",
+            "romanized": "kan3s bkri",
+            "english": "I sleep early"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تصبن",
+          "romanized": "tsbn",
+          "english": "to shower/wash",
+          "example_sentence": {
+            "arabic": "كنتصبن فالصباح",
+            "romanized": "kantsbn fssba7",
+            "english": "I shower in the morning"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لبس",
+          "romanized": "lbs",
+          "english": "to get dressed",
+          "example_sentence": {
+            "arabic": "لبست الحوايج ديالي",
+            "romanized": "lbst l7wayj dyali",
+            "english": "I got dressed"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كلا",
+          "romanized": "kla",
+          "english": "to eat",
+          "example_sentence": {
+            "arabic": "كليت الفطور",
+            "romanized": "klit lftur",
+            "english": "I ate breakfast"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "شرب",
+          "romanized": "shrb",
+          "english": "to drink",
+          "example_sentence": {
+            "arabic": "شربت القهوة",
+            "romanized": "shrbt l9hwa",
+            "english": "I drank coffee"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خرج",
+          "romanized": "khrj",
+          "english": "to go out/leave",
+          "example_sentence": {
+            "arabic": "خرجت من الدار فالتمنية",
+            "romanized": "khrjt mn ddar fttmnya",
+            "english": "I left the house at eight"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مشا",
+          "romanized": "msha",
+          "english": "to go",
+          "example_sentence": {
+            "arabic": "مشيت للخدمة",
+            "romanized": "mshit llkhdma",
+            "english": "I went to work"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رجع",
+          "romanized": "rj3",
+          "english": "to return/come back",
+          "example_sentence": {
+            "arabic": "رجعت للدار فالسبعة",
+            "romanized": "rj3t lddar fssb3a",
+            "english": "I came home at seven"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خدم",
+          "romanized": "khdm",
+          "english": "to work",
+          "example_sentence": {
+            "arabic": "كنخدم من التمنية حتى الخمسة",
+            "romanized": "kankhdm mn ttmnya 7tta lkhmsa",
+            "english": "I work from eight to five"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قرا",
+          "romanized": "9ra",
+          "english": "to study/read",
+          "example_sentence": {
+            "arabic": "كنقرا فالليل",
+            "romanized": "kan9ra fllil",
+            "english": "I study at night"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تصلى",
+          "romanized": "tslla",
+          "english": "to pray",
+          "example_sentence": {
+            "arabic": "كنتصلى خمس مرات فالنهار",
+            "romanized": "kantslla khms mrrat fnnhar",
+            "english": "I pray five times a day"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "طيب",
+          "romanized": "tiyb",
+          "english": "to cook",
+          "example_sentence": {
+            "arabic": "كنطيب العشا كل نهار",
+            "romanized": "kantiyb l3sha kl nhar",
+            "english": "I cook dinner every day"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نقى",
+          "romanized": "n99a",
+          "english": "to clean",
+          "example_sentence": {
+            "arabic": "كنقي الدار نهار السبت",
+            "romanized": "kan99i ddar nhar ssbt",
+            "english": "I clean the house on Saturday"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تفرج",
+          "romanized": "tfrrj",
+          "english": "to watch",
+          "example_sentence": {
+            "arabic": "كنتفرج فالتلفزة",
+            "romanized": "kantfrrj fttilfza",
+            "english": "I watch TV"
+          },
+          "category": "verb",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Present Tense Habitual: ka + verb",
           "explanation": "Darija uses 'ka-' (or 'kat-/kay-') prefix for habitual present tense: kan + verb (I do), kat + verb (you/she does), kay + verb (he does), kan + verb + u (we do).",
           "examples": [
-            { "arabic": "كنفيق فالسبعة", "romanized": "kanfi9 fssb3a", "english": "I wake up at seven (habitually)" },
-            { "arabic": "كيخدم فالبنكة", "romanized": "kaykhdem flbanka", "english": "He works at the bank (habitually)" }
+            {
+              "arabic": "كنفيق فالسبعة",
+              "romanized": "kanfi9 fssb3a",
+              "english": "I wake up at seven (habitually)"
+            },
+            {
+              "arabic": "كيخدم فالبنكة",
+              "romanized": "kaykhdem flbanka",
+              "english": "He works at the bank (habitually)"
+            }
           ],
-          "common_mistakes": ["Forgetting the 'ka-' prefix - without it, the verb becomes imperative or subjunctive"]
+          "common_mistakes": [
+            "Forgetting the 'ka-' prefix - without it, the verb becomes imperative or subjunctive"
+          ]
         },
         {
           "rule": "Present Tense Conjugation Pattern",
           "explanation": "Pattern: kan- (I), kat- (you-m/f), kay- (he), kat- (she), kan-...-u (we), kat-...-u (you-pl), kay-...-u (they). Example with 'khdm': kankhdm, katkhdm, kaykhdm, katkhdm, kankhdmu, katkhdmu, kaykhdmu.",
           "examples": [
-            { "arabic": "كنخدم، كتخدم، كيخدم", "romanized": "kankhdm, katkhdm, kaykhdm", "english": "I work, you work, he works" },
-            { "arabic": "كنخدمو، كتخدمو، كيخدمو", "romanized": "kankhdmu, katkhdmu, kaykhdmu", "english": "We work, you-pl work, they work" }
+            {
+              "arabic": "كنخدم، كتخدم، كيخدم",
+              "romanized": "kankhdm, katkhdm, kaykhdm",
+              "english": "I work, you work, he works"
+            },
+            {
+              "arabic": "كنخدمو، كتخدمو، كيخدمو",
+              "romanized": "kankhdmu, katkhdmu, kaykhdmu",
+              "english": "We work, you-pl work, they work"
+            }
           ],
-          "common_mistakes": ["Confusing 'kat-' (you/she) with 'kay-' (he) - they're different!"]
+          "common_mistakes": [
+            "Confusing 'kat-' (you/she) with 'kay-' (he) - they're different!"
+          ]
         },
         {
           "rule": "Past Tense Basic Pattern",
           "explanation": "Past tense adds suffixes: -t (I), -ti (you), nothing (he), -at (she), -na (we), -tu (you-pl), -u (they). Example: khdm: khdmt (I worked), khdmti (you worked), khdm (he worked).",
           "examples": [
-            { "arabic": "خدمت، خدمتي، خدم، خدمات، خدمنا", "romanized": "khdmt, khdmti, khdm, khdmat, khdmna", "english": "I worked, you worked, he worked, she worked, we worked" }
+            {
+              "arabic": "خدمت، خدمتي، خدم، خدمات، خدمنا",
+              "romanized": "khdmt, khdmti, khdm, khdmat, khdmna",
+              "english": "I worked, you worked, he worked, she worked, we worked"
+            }
           ],
-          "common_mistakes": ["Irregular verbs don't always follow this pattern (msha -> mshit, kla -> klit)"]
+          "common_mistakes": [
+            "Irregular verbs don't always follow this pattern (msha -> mshit, kla -> klit)"
+          ]
         },
         {
           "rule": "Time Expressions for Routines",
           "explanation": "kl nhar (every day), kl sba7 (every morning), kl lila (every night), kl jm3a (every week), mrra f- (once a), mrrtyn f- (twice a).",
           "examples": [
-            { "arabic": "كل نهار كنمشي للخدمة", "romanized": "kl nhar kanmshi llkhdma", "english": "Every day I go to work" },
-            { "arabic": "مرة فالسيمانة كنمشي للحمام", "romanized": "mrra fssimana kanmshi ll7mmam", "english": "Once a week I go to the hammam" }
+            {
+              "arabic": "كل نهار كنمشي للخدمة",
+              "romanized": "kl nhar kanmshi llkhdma",
+              "english": "Every day I go to work"
+            },
+            {
+              "arabic": "مرة فالسيمانة كنمشي للحمام",
+              "romanized": "mrra fssimana kanmshi ll7mmam",
+              "english": "Once a week I go to the hammam"
+            }
           ],
-          "common_mistakes": ["Using 'kulla yawm' (MSA) instead of 'kl nhar' (Darija)"]
+          "common_mistakes": [
+            "Using 'kulla yawm' (MSA) instead of 'kl nhar' (Darija)"
+          ]
         },
         {
           "rule": "Sequencing with 'mn b3d' and 'qbl'",
           "explanation": "'mn b3d' (after/then), 'qbl' (before), 'l-awwl' (first): useful for describing routine sequences.",
           "examples": [
-            { "arabic": "لأول كنفيق، من بعد كنتصبن", "romanized": "l-awwl kanfi9, mn b3d kantsbn", "english": "First I wake up, then I shower" },
-            { "arabic": "قبل ما نخرج كناكل الفطور", "romanized": "9bl ma nkhrj kanakl lftur", "english": "Before I leave, I eat breakfast" }
+            {
+              "arabic": "لأول كنفيق، من بعد كنتصبن",
+              "romanized": "l-awwl kanfi9, mn b3d kantsbn",
+              "english": "First I wake up, then I shower"
+            },
+            {
+              "arabic": "قبل ما نخرج كناكل الفطور",
+              "romanized": "9bl ma nkhrj kanakl lftur",
+              "english": "Before I leave, I eat breakfast"
+            }
           ],
-          "common_mistakes": ["'mn b3d' can mean both 'after' and 'later' depending on context"]
+          "common_mistakes": [
+            "'mn b3d' can mean both 'after' and 'later' depending on context"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "كنفيق مع الفجر كل نهار", "romanized": "kanfi9 m3a lfjer kl nhar", "english": "I wake up at dawn every day", "context": "Describing morning routine" },
-        { "arabic": "من بعد الخدمة كنرجع للدار", "romanized": "mn b3d lkhdma kanrj3 lddar", "english": "After work I come home", "context": "After-work routine" },
-        { "arabic": "فالويكاند كنتنزه", "romanized": "flwikand kantnnzh", "english": "On weekends I go for walks", "context": "Weekend activities" },
-        { "arabic": "كنعس بكري حيت كنفيق بكري", "romanized": "kan3s bkri 7it kanfi9 bkri", "english": "I sleep early because I wake up early", "context": "Explaining schedule" },
-        { "arabic": "كل نهار نفس الروتين", "romanized": "kl nhar nfs rrutin", "english": "Every day the same routine", "context": "Describing repetition" }
+        {
+          "arabic": "كنفيق مع الفجر كل نهار",
+          "romanized": "kanfi9 m3a lfjer kl nhar",
+          "english": "I wake up at dawn every day",
+          "context": "Describing morning routine"
+        },
+        {
+          "arabic": "من بعد الخدمة كنرجع للدار",
+          "romanized": "mn b3d lkhdma kanrj3 lddar",
+          "english": "After work I come home",
+          "context": "After-work routine"
+        },
+        {
+          "arabic": "فالويكاند كنتنزه",
+          "romanized": "flwikand kantnnzh",
+          "english": "On weekends I go for walks",
+          "context": "Weekend activities"
+        },
+        {
+          "arabic": "كنعس بكري حيت كنفيق بكري",
+          "romanized": "kan3s bkri 7it kanfi9 bkri",
+          "english": "I sleep early because I wake up early",
+          "context": "Explaining schedule"
+        },
+        {
+          "arabic": "كل نهار نفس الروتين",
+          "romanized": "kl nhar nfs rrutin",
+          "english": "Every day the same routine",
+          "context": "Describing repetition"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "What does 'kanfi9' mean?",
           "correct_answer": "I wake up (habitually)",
-          "distractors": ["I sleep", "I work", "I eat"],
+          "distractors": [
+            "I sleep",
+            "I work",
+            "I eat"
+          ],
           "hint": "The 'kan-' prefix indicates habitual present tense for 'I'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "كل نهار ___ للخدمة (Every day I go to work)",
-          "correct_answer": "كنمشي",
-          "romanized_answer": "kanmshi",
-          "hint": "Present habitual of 'msha' (to go)"
+          "type": "translation",
+          "question": "Translate to Darija: 'Present habitual of 'msha' (to go)'",
+          "correct_answer_arabic": "كنمشي",
+          "correct_answer_romanized": "kanmshi",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the daily activities",
-          "pairs": [
-            {"darija": "فاق", "english": "wake up"},
-            {"darija": "نعس", "english": "sleep"},
-            {"darija": "خدم", "english": "work"},
-            {"darija": "كلا", "english": "eat"},
-            {"darija": "رجع", "english": "return"}
+          "type": "multiple_choice",
+          "question": "What does 'فاق' mean?",
+          "correct_answer": "wake up",
+          "distractors": [
+            "work",
+            "eat",
+            "sleep"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نعس' mean?",
+          "correct_answer": "sleep",
+          "distractors": [
+            "wake up",
+            "work",
+            "eat"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خدم' mean?",
+          "correct_answer": "work",
+          "distractors": [
+            "eat",
+            "wake up",
+            "sleep"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كلا' mean?",
+          "correct_answer": "eat",
+          "distractors": [
+            "sleep",
+            "return",
+            "work"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'رجع' mean?",
+          "correct_answer": "return",
+          "distractors": [
+            "sleep",
+            "work",
+            "eat"
           ]
         },
         {
@@ -111,11 +390,6 @@
           "correct_answer_arabic": "كنخدم من التمنية حتى الخمسة",
           "correct_answer_romanized": "kankhdm mn ttmnya 7tta lkhmsa",
           "hint": "Use 'kan-' prefix and 'mn...7tta' for from...to"
-        },
-        {
-          "type": "ordering",
-          "question": "Put this morning routine in order",
-          "correct_order": ["كنفيق", "كنتصبن", "كنلبس", "كناكل الفطور", "كنخرج"]
         }
       ],
       "cultural_notes": [
@@ -128,68 +402,255 @@
       "order": 2,
       "title": "Hobbies & Free Time",
       "vocabulary": [
-        { "arabic": "لعب", "romanized": "l3b", "english": "to play", "example_sentence": { "arabic": "كنلعب الكورة", "romanized": "kanl3b lkura", "english": "I play football" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "كورة", "romanized": "kura", "english": "football/ball", "example_sentence": { "arabic": "كنتفرج فالكورة", "romanized": "kantfrrj flkura", "english": "I watch football" }, "category": "hobby", "difficulty": 1 },
-        { "arabic": "تنزه", "romanized": "tnnzh", "english": "to walk/stroll", "example_sentence": { "arabic": "كنتنزه فالكورنيش", "romanized": "kantnnzh flkurnish", "english": "I walk on the corniche" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "سمع", "romanized": "sm3", "english": "to listen", "example_sentence": { "arabic": "كنسمع الموسيقى", "romanized": "kansm3 lmusi9a", "english": "I listen to music" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "موسيقى", "romanized": "musi9a", "english": "music", "example_sentence": { "arabic": "كنحب الموسيقى المغربية", "romanized": "kan7b lmusi9a lmghribiya", "english": "I love Moroccan music" }, "category": "hobby", "difficulty": 1 },
-        { "arabic": "قرا", "romanized": "9ra", "english": "to read", "example_sentence": { "arabic": "كنقرا الكتوبا", "romanized": "kan9ra lktuba", "english": "I read books" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "سافر", "romanized": "safr", "english": "to travel", "example_sentence": { "arabic": "كنحب نسافر", "romanized": "kan7b nsafr", "english": "I love to travel" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "صور", "romanized": "swwr", "english": "to take photos", "example_sentence": { "arabic": "كنصور بالتيليفون", "romanized": "kanswwr bttilifon", "english": "I take photos with my phone" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "جلس", "romanized": "jls", "english": "to sit/hang out", "example_sentence": { "arabic": "كنجلسو فالقهوة", "romanized": "kanjlsu fl9hwa", "english": "We hang out at the cafe" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "وقت الفراغ", "romanized": "w9t lfra8", "english": "free time", "example_sentence": { "arabic": "فالوقت ديال الفراغ كنقرا", "romanized": "flw9t dyal lfra8 kan9ra", "english": "In my free time I read" }, "category": "time", "difficulty": 1 },
-        { "arabic": "هواية", "romanized": "hiwaya", "english": "hobby", "example_sentence": { "arabic": "الهواية ديالي هي الطبخ", "romanized": "lhiwaya dyali hiya ttbkh", "english": "My hobby is cooking" }, "category": "hobby", "difficulty": 1 },
-        { "arabic": "حب", "romanized": "7b", "english": "to love/like", "example_sentence": { "arabic": "كنحب الكورة", "romanized": "kan7b lkura", "english": "I love football" }, "category": "verb", "difficulty": 1 }
+        {
+          "arabic": "لعب",
+          "romanized": "l3b",
+          "english": "to play",
+          "example_sentence": {
+            "arabic": "كنلعب الكورة",
+            "romanized": "kanl3b lkura",
+            "english": "I play football"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "كورة",
+          "romanized": "kura",
+          "english": "football/ball",
+          "example_sentence": {
+            "arabic": "كنتفرج فالكورة",
+            "romanized": "kantfrrj flkura",
+            "english": "I watch football"
+          },
+          "category": "hobby",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تنزه",
+          "romanized": "tnnzh",
+          "english": "to walk/stroll",
+          "example_sentence": {
+            "arabic": "كنتنزه فالكورنيش",
+            "romanized": "kantnnzh flkurnish",
+            "english": "I walk on the corniche"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سمع",
+          "romanized": "sm3",
+          "english": "to listen",
+          "example_sentence": {
+            "arabic": "كنسمع الموسيقى",
+            "romanized": "kansm3 lmusi9a",
+            "english": "I listen to music"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "موسيقى",
+          "romanized": "musi9a",
+          "english": "music",
+          "example_sentence": {
+            "arabic": "كنحب الموسيقى المغربية",
+            "romanized": "kan7b lmusi9a lmghribiya",
+            "english": "I love Moroccan music"
+          },
+          "category": "hobby",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قرا",
+          "romanized": "9ra",
+          "english": "to read",
+          "example_sentence": {
+            "arabic": "كنقرا الكتوبا",
+            "romanized": "kan9ra lktuba",
+            "english": "I read books"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "سافر",
+          "romanized": "safr",
+          "english": "to travel",
+          "example_sentence": {
+            "arabic": "كنحب نسافر",
+            "romanized": "kan7b nsafr",
+            "english": "I love to travel"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صور",
+          "romanized": "swwr",
+          "english": "to take photos",
+          "example_sentence": {
+            "arabic": "كنصور بالتيليفون",
+            "romanized": "kanswwr bttilifon",
+            "english": "I take photos with my phone"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "جلس",
+          "romanized": "jls",
+          "english": "to sit/hang out",
+          "example_sentence": {
+            "arabic": "كنجلسو فالقهوة",
+            "romanized": "kanjlsu fl9hwa",
+            "english": "We hang out at the cafe"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "وقت الفراغ",
+          "romanized": "w9t lfra8",
+          "english": "free time",
+          "example_sentence": {
+            "arabic": "فالوقت ديال الفراغ كنقرا",
+            "romanized": "flw9t dyal lfra8 kan9ra",
+            "english": "In my free time I read"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هواية",
+          "romanized": "hiwaya",
+          "english": "hobby",
+          "example_sentence": {
+            "arabic": "الهواية ديالي هي الطبخ",
+            "romanized": "lhiwaya dyali hiya ttbkh",
+            "english": "My hobby is cooking"
+          },
+          "category": "hobby",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حب",
+          "romanized": "7b",
+          "english": "to love/like",
+          "example_sentence": {
+            "arabic": "كنحب الكورة",
+            "romanized": "kan7b lkura",
+            "english": "I love football"
+          },
+          "category": "verb",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Expressing Likes with 'kan7b'",
           "explanation": "'kan7b' (I love/like) is more casual and common than 'ka y3jbni'. Use 'kan7b + noun' or 'kan7b + verb'.",
           "examples": [
-            { "arabic": "كنحب الكورة", "romanized": "kan7b lkura", "english": "I love football" },
-            { "arabic": "كنحب نسافر", "romanized": "kan7b nsafr", "english": "I love to travel" }
+            {
+              "arabic": "كنحب الكورة",
+              "romanized": "kan7b lkura",
+              "english": "I love football"
+            },
+            {
+              "arabic": "كنحب نسافر",
+              "romanized": "kan7b nsafr",
+              "english": "I love to travel"
+            }
           ],
-          "common_mistakes": ["'kan7b' for 'I like/love', 'ma kan7bsh' for 'I don't like'"]
+          "common_mistakes": [
+            "'kan7b' for 'I like/love', 'ma kan7bsh' for 'I don't like'"
+          ]
         },
         {
           "rule": "Frequency Adverbs",
           "explanation": "dima (always), 8alban (often), sa3at (sometimes), nadrn (rarely), 3mmr + ma...sh (never).",
           "examples": [
-            { "arabic": "ديما كنتفرج فالكورة", "romanized": "dima kantfrrj flkura", "english": "I always watch football" },
-            { "arabic": "عمري ما سافرتش لأوروبا", "romanized": "3mmri ma safrtshluruba", "english": "I've never traveled to Europe" }
+            {
+              "arabic": "ديما كنتفرج فالكورة",
+              "romanized": "dima kantfrrj flkura",
+              "english": "I always watch football"
+            },
+            {
+              "arabic": "عمري ما سافرتش لأوروبا",
+              "romanized": "3mmri ma safrtshluruba",
+              "english": "I've never traveled to Europe"
+            }
           ],
-          "common_mistakes": ["'3mmr' requires 'ma...sh' negation around the verb"]
+          "common_mistakes": [
+            "'3mmr' requires 'ma...sh' negation around the verb"
+          ]
         },
         {
           "rule": "Verb + Noun for Activities",
           "explanation": "Many hobbies use verb + noun: l3b lkura (play football), sm3 lmusi9a (listen to music), 9ra ktub (read books).",
           "examples": [
-            { "arabic": "كنلعب الكورة مع صحابي", "romanized": "kanl3b lkura m3a s7abi", "english": "I play football with my friends" }
+            {
+              "arabic": "كنلعب الكورة مع صحابي",
+              "romanized": "kanl3b lkura m3a s7abi",
+              "english": "I play football with my friends"
+            }
           ],
-          "common_mistakes": ["Forgetting the article 'l-' before the noun"]
+          "common_mistakes": [
+            "Forgetting the article 'l-' before the noun"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "أشنو كتدير فالوقت ديال الفراغ؟", "romanized": "ashnu katdir flw9t dyal lfra8?", "english": "What do you do in your free time?", "context": "Asking about hobbies" },
-        { "arabic": "كنحب نجلس فالقهوة مع صحابي", "romanized": "kan7b njls fl9hwa m3a s7abi", "english": "I like to hang out at the cafe with my friends", "context": "Describing social activities" },
-        { "arabic": "ديما كنتفرج فالأفلام", "romanized": "dima kantfrrj flaflam", "english": "I always watch movies", "context": "Describing habits" },
-        { "arabic": "كنحب الطبخ بزاف", "romanized": "kan7b ttbkh bzzaf", "english": "I love cooking a lot", "context": "Sharing hobbies" },
-        { "arabic": "فالويكاند كنمشي للبحر", "romanized": "flwikand kanmshi lb7r", "english": "On weekends I go to the beach", "context": "Weekend plans" }
+        {
+          "arabic": "أشنو كتدير فالوقت ديال الفراغ؟",
+          "romanized": "ashnu katdir flw9t dyal lfra8?",
+          "english": "What do you do in your free time?",
+          "context": "Asking about hobbies"
+        },
+        {
+          "arabic": "كنحب نجلس فالقهوة مع صحابي",
+          "romanized": "kan7b njls fl9hwa m3a s7abi",
+          "english": "I like to hang out at the cafe with my friends",
+          "context": "Describing social activities"
+        },
+        {
+          "arabic": "ديما كنتفرج فالأفلام",
+          "romanized": "dima kantfrrj flaflam",
+          "english": "I always watch movies",
+          "context": "Describing habits"
+        },
+        {
+          "arabic": "كنحب الطبخ بزاف",
+          "romanized": "kan7b ttbkh bzzaf",
+          "english": "I love cooking a lot",
+          "context": "Sharing hobbies"
+        },
+        {
+          "arabic": "فالويكاند كنمشي للبحر",
+          "romanized": "flwikand kanmshi lb7r",
+          "english": "On weekends I go to the beach",
+          "context": "Weekend plans"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you say 'I love to travel' in Darija?",
           "correct_answer": "كنحب نسافر",
-          "distractors": ["كنبغي نسافر", "كيعجبني نسافر", "خاصني نسافر"],
+          "distractors": [
+            "كنبغي نسافر",
+            "كيعجبني نسافر",
+            "خاصني نسافر"
+          ],
           "hint": "Use 'kan7b' + verb"
         },
         {
-          "type": "fill_in_blank",
-          "question": "كن___ الموسيقى (I listen to music)",
-          "correct_answer": "سمع",
-          "romanized_answer": "sm3",
-          "hint": "The verb 'to listen'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The verb 'to listen''",
+          "correct_answer_arabic": "سمع",
+          "correct_answer_romanized": "sm3",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -199,21 +660,64 @@
           "hint": "'w9t lfra8' means free time"
         },
         {
-          "type": "matching",
-          "question": "Match the frequency words",
-          "pairs": [
-            {"darija": "ديما", "english": "always"},
-            {"darija": "غالبا", "english": "often"},
-            {"darija": "ساعات", "english": "sometimes"},
-            {"darija": "نادرا", "english": "rarely"},
-            {"darija": "عمر + ما...ش", "english": "never"}
+          "type": "multiple_choice",
+          "question": "What does 'ديما' mean?",
+          "correct_answer": "always",
+          "distractors": [
+            "never",
+            "sometimes",
+            "often"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'غالبا' mean?",
+          "correct_answer": "often",
+          "distractors": [
+            "always",
+            "sometimes",
+            "never"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ساعات' mean?",
+          "correct_answer": "sometimes",
+          "distractors": [
+            "always",
+            "rarely",
+            "never"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نادرا' mean?",
+          "correct_answer": "rarely",
+          "distractors": [
+            "sometimes",
+            "always",
+            "often"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عمر + ما...ش' mean?",
+          "correct_answer": "never",
+          "distractors": [
+            "always",
+            "rarely",
+            "often"
           ]
         },
         {
           "type": "multiple_choice",
           "question": "What is the most popular sport in Morocco?",
           "correct_answer": "Football (kura)",
-          "distractors": ["Tennis", "Basketball", "Cricket"],
+          "distractors": [
+            "Tennis",
+            "Basketball",
+            "Cricket"
+          ],
           "hint": "It's the same as the most popular sport in most of Africa and Europe"
         }
       ],
@@ -227,67 +731,250 @@
       "order": 3,
       "title": "Evening & Weekend Activities",
       "vocabulary": [
-        { "arabic": "عشا", "romanized": "3sha", "english": "dinner", "example_sentence": { "arabic": "تعشينا مع العائلة", "romanized": "t3shina m3a l3a'ila", "english": "We had dinner with the family" }, "category": "meal", "difficulty": 1 },
-        { "arabic": "تلفزة", "romanized": "tilfza", "english": "television", "example_sentence": { "arabic": "كنتفرج فالتلفزة", "romanized": "kantfrrj fttilfza", "english": "I watch TV" }, "category": "entertainment", "difficulty": 1 },
-        { "arabic": "تيليفون", "romanized": "tilifon", "english": "phone", "example_sentence": { "arabic": "كنهضر فالتيليفون", "romanized": "kanhdr fttilifon", "english": "I talk on the phone" }, "category": "technology", "difficulty": 1 },
-        { "arabic": "هضر", "romanized": "hdr", "english": "to talk/speak", "example_sentence": { "arabic": "كنهضر مع صحابي", "romanized": "kanhdr m3a s7abi", "english": "I talk with my friends" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "خرج", "romanized": "khrj", "english": "to go out", "example_sentence": { "arabic": "كنخرج فالليل", "romanized": "kankhrj fllil", "english": "I go out at night" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "رتاح", "romanized": "rta7", "english": "to rest/relax", "example_sentence": { "arabic": "كنرتاح فالويكاند", "romanized": "kanrta7 flwikand", "english": "I rest on weekends" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "زار", "romanized": "zar", "english": "to visit", "example_sentence": { "arabic": "كنزور العائلة نهار الأحد", "romanized": "kanzur l3a'ila nhar l7dd", "english": "I visit family on Sunday" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "دار", "romanized": "dar", "english": "to do/make", "example_sentence": { "arabic": "أشنو درتي البارح؟", "romanized": "ashnu drti lbar7?", "english": "What did you do yesterday?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "ويكاند", "romanized": "wikand", "english": "weekend", "example_sentence": { "arabic": "الويكاند الجاي غادي نسافر", "romanized": "lwikand jjay ghadi nsafr", "english": "Next weekend I'll travel" }, "category": "time", "difficulty": 1 },
-        { "arabic": "عطلة", "romanized": "3tla", "english": "vacation/holiday", "example_sentence": { "arabic": "فالعطلة مشيت لأكادير", "romanized": "fl3tla mshit l agadir", "english": "On vacation I went to Agadir" }, "category": "time", "difficulty": 1 },
-        { "arabic": "تمشى", "romanized": "tmsha", "english": "to take a walk", "example_sentence": { "arabic": "كنتمشى فالحديقة", "romanized": "kantmsha fl7di9a", "english": "I take walks in the park" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "حديقة", "romanized": "7di9a", "english": "park/garden", "example_sentence": { "arabic": "الحديقة زوينة", "romanized": "l7di9a zwina", "english": "The park is beautiful" }, "category": "place", "difficulty": 1 }
+        {
+          "arabic": "عشا",
+          "romanized": "3sha",
+          "english": "dinner",
+          "example_sentence": {
+            "arabic": "تعشينا مع العائلة",
+            "romanized": "t3shina m3a l3a'ila",
+            "english": "We had dinner with the family"
+          },
+          "category": "meal",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تلفزة",
+          "romanized": "tilfza",
+          "english": "television",
+          "example_sentence": {
+            "arabic": "كنتفرج فالتلفزة",
+            "romanized": "kantfrrj fttilfza",
+            "english": "I watch TV"
+          },
+          "category": "entertainment",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تيليفون",
+          "romanized": "tilifon",
+          "english": "phone",
+          "example_sentence": {
+            "arabic": "كنهضر فالتيليفون",
+            "romanized": "kanhdr fttilifon",
+            "english": "I talk on the phone"
+          },
+          "category": "technology",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هضر",
+          "romanized": "hdr",
+          "english": "to talk/speak",
+          "example_sentence": {
+            "arabic": "كنهضر مع صحابي",
+            "romanized": "kanhdr m3a s7abi",
+            "english": "I talk with my friends"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خرج",
+          "romanized": "khrj",
+          "english": "to go out",
+          "example_sentence": {
+            "arabic": "كنخرج فالليل",
+            "romanized": "kankhrj fllil",
+            "english": "I go out at night"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "رتاح",
+          "romanized": "rta7",
+          "english": "to rest/relax",
+          "example_sentence": {
+            "arabic": "كنرتاح فالويكاند",
+            "romanized": "kanrta7 flwikand",
+            "english": "I rest on weekends"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "زار",
+          "romanized": "zar",
+          "english": "to visit",
+          "example_sentence": {
+            "arabic": "كنزور العائلة نهار الأحد",
+            "romanized": "kanzur l3a'ila nhar l7dd",
+            "english": "I visit family on Sunday"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "دار",
+          "romanized": "dar",
+          "english": "to do/make",
+          "example_sentence": {
+            "arabic": "أشنو درتي البارح؟",
+            "romanized": "ashnu drti lbar7?",
+            "english": "What did you do yesterday?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "ويكاند",
+          "romanized": "wikand",
+          "english": "weekend",
+          "example_sentence": {
+            "arabic": "الويكاند الجاي غادي نسافر",
+            "romanized": "lwikand jjay ghadi nsafr",
+            "english": "Next weekend I'll travel"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "عطلة",
+          "romanized": "3tla",
+          "english": "vacation/holiday",
+          "example_sentence": {
+            "arabic": "فالعطلة مشيت لأكادير",
+            "romanized": "fl3tla mshit l agadir",
+            "english": "On vacation I went to Agadir"
+          },
+          "category": "time",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تمشى",
+          "romanized": "tmsha",
+          "english": "to take a walk",
+          "example_sentence": {
+            "arabic": "كنتمشى فالحديقة",
+            "romanized": "kantmsha fl7di9a",
+            "english": "I take walks in the park"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حديقة",
+          "romanized": "7di9a",
+          "english": "park/garden",
+          "example_sentence": {
+            "arabic": "الحديقة زوينة",
+            "romanized": "l7di9a zwina",
+            "english": "The park is beautiful"
+          },
+          "category": "place",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Past Tense Questions",
           "explanation": "To ask about past activities: 'ashnu drti?' (what did you do?), 'fin mshiti?' (where did you go?), 'fu9ash rj3ti?' (when did you return?).",
           "examples": [
-            { "arabic": "أشنو درتي البارح؟", "romanized": "ashnu drti lbar7?", "english": "What did you do yesterday?" },
-            { "arabic": "فين مشيتي فالويكاند؟", "romanized": "fin mshiti flwikand?", "english": "Where did you go on the weekend?" }
+            {
+              "arabic": "أشنو درتي البارح؟",
+              "romanized": "ashnu drti lbar7?",
+              "english": "What did you do yesterday?"
+            },
+            {
+              "arabic": "فين مشيتي فالويكاند؟",
+              "romanized": "fin mshiti flwikand?",
+              "english": "Where did you go on the weekend?"
+            }
           ],
-          "common_mistakes": ["Using present tense when asking about past events"]
+          "common_mistakes": [
+            "Using present tense when asking about past events"
+          ]
         },
         {
           "rule": "Connecting Daily Activities",
           "explanation": "Use 'w' (and), 'mn b3d' (then/after), '9bl' (before), 'f l-akhr' (finally) to connect activities.",
           "examples": [
-            { "arabic": "رجعت للدار، كليت العشا، و من بعد تفرجت فالتلفزة", "romanized": "rj3t lddar, klit l3sha, w mn b3d tfrrjt fttilfza", "english": "I came home, ate dinner, then watched TV" }
+            {
+              "arabic": "رجعت للدار، كليت العشا، و من بعد تفرجت فالتلفزة",
+              "romanized": "rj3t lddar, klit l3sha, w mn b3d tfrrjt fttilfza",
+              "english": "I came home, ate dinner, then watched TV"
+            }
           ],
-          "common_mistakes": ["Not using connectors makes speech sound choppy"]
+          "common_mistakes": [
+            "Not using connectors makes speech sound choppy"
+          ]
         },
         {
           "rule": "Weekend Plans with 'ghadi'",
           "explanation": "Future plans: 'ghadi + verb'. Common for discussing weekend plans: 'ghadi nmshi' (I'll go), 'ghadi nzur' (I'll visit).",
           "examples": [
-            { "arabic": "هاد الويكاند غادي نزور العائلة", "romanized": "had lwikand ghadi nzur l3a'ila", "english": "This weekend I'll visit family" }
+            {
+              "arabic": "هاد الويكاند غادي نزور العائلة",
+              "romanized": "had lwikand ghadi nzur l3a'ila",
+              "english": "This weekend I'll visit family"
+            }
           ],
-          "common_mistakes": ["Forgetting to add 'ghadi' before the verb for future plans"]
+          "common_mistakes": [
+            "Forgetting to add 'ghadi' before the verb for future plans"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "أشنو درتي البارح؟", "romanized": "ashnu drti lbar7?", "english": "What did you do yesterday?", "context": "Asking about past activities" },
-        { "arabic": "رتاحت شوية فالدار", "romanized": "rta7t chwiya fddar", "english": "I rested a bit at home", "context": "Describing relaxation" },
-        { "arabic": "مشيت نزور صحابي", "romanized": "mshit nzur s7abi", "english": "I went to visit my friends", "context": "Social activities" },
-        { "arabic": "هاد الويكاند غادي نرتاح", "romanized": "had lwikand ghadi nrta7", "english": "This weekend I'll relax", "context": "Weekend plans" },
-        { "arabic": "فالعشية كنتصلى و من بعد كنتعشى", "romanized": "fl3shiya kantslla w mn b3d kant3sha", "english": "In the evening I pray and then have dinner", "context": "Evening routine" }
+        {
+          "arabic": "أشنو درتي البارح؟",
+          "romanized": "ashnu drti lbar7?",
+          "english": "What did you do yesterday?",
+          "context": "Asking about past activities"
+        },
+        {
+          "arabic": "رتاحت شوية فالدار",
+          "romanized": "rta7t chwiya fddar",
+          "english": "I rested a bit at home",
+          "context": "Describing relaxation"
+        },
+        {
+          "arabic": "مشيت نزور صحابي",
+          "romanized": "mshit nzur s7abi",
+          "english": "I went to visit my friends",
+          "context": "Social activities"
+        },
+        {
+          "arabic": "هاد الويكاند غادي نرتاح",
+          "romanized": "had lwikand ghadi nrta7",
+          "english": "This weekend I'll relax",
+          "context": "Weekend plans"
+        },
+        {
+          "arabic": "فالعشية كنتصلى و من بعد كنتعشى",
+          "romanized": "fl3shiya kantslla w mn b3d kant3sha",
+          "english": "In the evening I pray and then have dinner",
+          "context": "Evening routine"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you ask 'What did you do yesterday?'",
           "correct_answer": "أشنو درتي البارح؟",
-          "distractors": ["أشنو كتدير البارح؟", "فين مشيتي البارح؟", "كيفاش البارح؟"],
+          "distractors": [
+            "أشنو كتدير البارح؟",
+            "فين مشيتي البارح؟",
+            "كيفاش البارح؟"
+          ],
           "hint": "'drti' is past tense of 'dar' (to do)"
         },
         {
-          "type": "fill_in_blank",
-          "question": "كن___ فالتلفزة فالليل (I watch TV at night)",
-          "correct_answer": "تفرج",
-          "romanized_answer": "tfrrj",
-          "hint": "The verb 'to watch'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The verb 'to watch''",
+          "correct_answer_arabic": "تفرج",
+          "correct_answer_romanized": "tfrrj",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -297,20 +984,54 @@
           "hint": "Use 'ghadi' for future"
         },
         {
-          "type": "matching",
-          "question": "Match the evening activities",
-          "pairs": [
-            {"darija": "تفرج", "english": "watch"},
-            {"darija": "رتاح", "english": "rest"},
-            {"darija": "زار", "english": "visit"},
-            {"darija": "هضر", "english": "talk"},
-            {"darija": "نعس", "english": "sleep"}
+          "type": "multiple_choice",
+          "question": "What does 'تفرج' mean?",
+          "correct_answer": "watch",
+          "distractors": [
+            "talk",
+            "rest",
+            "visit"
           ]
         },
         {
-          "type": "ordering",
-          "question": "Put the evening routine in order",
-          "correct_order": ["رجعت للدار", "كليت العشا", "تفرجت فالتلفزة", "هضرت مع العائلة", "نعست"]
+          "type": "multiple_choice",
+          "question": "What does 'رتاح' mean?",
+          "correct_answer": "rest",
+          "distractors": [
+            "talk",
+            "sleep",
+            "watch"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'زار' mean?",
+          "correct_answer": "visit",
+          "distractors": [
+            "talk",
+            "sleep",
+            "watch"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هضر' mean?",
+          "correct_answer": "talk",
+          "distractors": [
+            "rest",
+            "sleep",
+            "watch"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نعس' mean?",
+          "correct_answer": "sleep",
+          "distractors": [
+            "watch",
+            "visit",
+            "talk"
+          ]
         }
       ],
       "cultural_notes": [
@@ -321,33 +1042,102 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "فاق", "darija_latin": "fa9", "english": "wake up"},
-      {"darija_arabic": "نعس", "darija_latin": "n3s", "english": "sleep"},
-      {"darija_arabic": "خدم", "darija_latin": "khdm", "english": "work"},
-      {"darija_arabic": "قرا", "darija_latin": "9ra", "english": "study/read"},
-      {"darija_arabic": "لعب", "darija_latin": "l3b", "english": "play"},
-      {"darija_arabic": "رتاح", "darija_latin": "rta7", "english": "rest"},
-      {"darija_arabic": "زار", "darija_latin": "zar", "english": "visit"},
-      {"darija_arabic": "هضر", "darija_latin": "hdr", "english": "talk"},
-      {"darija_arabic": "تفرج", "darija_latin": "tfrrj", "english": "watch"},
-      {"darija_arabic": "ديما", "darija_latin": "dima", "english": "always"}
+      {
+        "darija_arabic": "فاق",
+        "darija_latin": "fa9",
+        "english": "wake up"
+      },
+      {
+        "darija_arabic": "نعس",
+        "darija_latin": "n3s",
+        "english": "sleep"
+      },
+      {
+        "darija_arabic": "خدم",
+        "darija_latin": "khdm",
+        "english": "work"
+      },
+      {
+        "darija_arabic": "قرا",
+        "darija_latin": "9ra",
+        "english": "study/read"
+      },
+      {
+        "darija_arabic": "لعب",
+        "darija_latin": "l3b",
+        "english": "play"
+      },
+      {
+        "darija_arabic": "رتاح",
+        "darija_latin": "rta7",
+        "english": "rest"
+      },
+      {
+        "darija_arabic": "زار",
+        "darija_latin": "zar",
+        "english": "visit"
+      },
+      {
+        "darija_arabic": "هضر",
+        "darija_latin": "hdr",
+        "english": "talk"
+      },
+      {
+        "darija_arabic": "تفرج",
+        "darija_latin": "tfrrj",
+        "english": "watch"
+      },
+      {
+        "darija_arabic": "ديما",
+        "darija_latin": "dima",
+        "english": "always"
+      }
     ],
     "fill_blanks": [
-      { "sentence_arabic": "كل نهار ___ فالسبعة", "sentence_latin": "kl nhar ___ fssb3a", "answer_arabic": "كنفيق", "answer_latin": "kanfi9", "hint": "I wake up" },
-      { "sentence_arabic": "من بعد الخدمة ___ للدار", "sentence_latin": "mn b3d lkhdma ___ lddar", "answer_arabic": "كنرجع", "answer_latin": "kanrj3", "hint": "I return" },
-      { "sentence_arabic": "أشنو ___ البارح؟", "sentence_latin": "ashnu ___ lbar7?", "answer_arabic": "درتي", "answer_latin": "drti", "hint": "did you do" }
+      {
+        "sentence_arabic": "كل نهار ___ فالسبعة",
+        "sentence_latin": "kl nhar ___ fssb3a",
+        "answer_arabic": "كنفيق",
+        "answer_latin": "kanfi9",
+        "hint": "I wake up",
+        "english": "Every day I wake up at seven"
+      },
+      {
+        "sentence_arabic": "من بعد الخدمة ___ للدار",
+        "sentence_latin": "mn b3d lkhdma ___ lddar",
+        "answer_arabic": "كنرجع",
+        "answer_latin": "kanrj3",
+        "hint": "I return",
+        "english": "After work I go back home"
+      },
+      {
+        "sentence_arabic": "أشنو ___ البارح؟",
+        "sentence_latin": "ashnu ___ lbar7?",
+        "answer_arabic": "درتي",
+        "answer_latin": "drti",
+        "hint": "did you do",
+        "english": "What did you do yesterday?"
+      }
     ],
     "cultural_quiz": [
       {
         "question": "How do many Moroccans structure their daily schedule?",
         "correct_answer": "Around the five daily prayer times",
-        "distractors": ["Around meal times only", "By the sun position", "They don't follow schedules"],
+        "distractors": [
+          "Around meal times only",
+          "By the sun position",
+          "They don't follow schedules"
+        ],
         "explanation": "The five daily prayers (fajr, dhuhr, asr, maghrib, isha) serve as natural time markers for many Moroccans' daily routines."
       },
       {
         "question": "What is a popular weekly ritual for Moroccans?",
         "correct_answer": "Going to the hammam (public bath)",
-        "distractors": ["Going to the gym", "Going to the movies", "Going to the library"],
+        "distractors": [
+          "Going to the gym",
+          "Going to the movies",
+          "Going to the library"
+        ],
         "explanation": "The hammam is deeply rooted in Moroccan culture. Many families visit weekly for bathing, socializing, and relaxation."
       }
     ]

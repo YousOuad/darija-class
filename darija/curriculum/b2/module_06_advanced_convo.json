@@ -323,36 +323,60 @@
           "hint": "'ya rit' expresses impossible wishes"
         },
         {
-          "type": "fill_in_blank",
-          "question": "خلينا ___ قبل ما نتخاصمو (Let's understand each other before we argue)",
-          "correct_answer": "نتفاهمو",
-          "romanized_answer": "ntfahmu",
-          "hint": "The verb 'to understand each other'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The verb 'to understand each other''",
+          "correct_answer_arabic": "نتفاهمو",
+          "correct_answer_romanized": "ntfahmu",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the nuance words",
-          "pairs": [
-            {
-              "darija": "واقيلا",
-              "english": "maybe"
-            },
-            {
-              "darija": "صراحة",
-              "english": "frankly"
-            },
-            {
-              "darija": "بالضبط",
-              "english": "exactly"
-            },
-            {
-              "darija": "تقريبا",
-              "english": "approximately"
-            },
-            {
-              "darija": "على كل حال",
-              "english": "in any case"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'واقيلا' mean?",
+          "correct_answer": "maybe",
+          "distractors": [
+            "approximately",
+            "in any case",
+            "exactly"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'صراحة' mean?",
+          "correct_answer": "frankly",
+          "distractors": [
+            "maybe",
+            "exactly",
+            "approximately"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بالضبط' mean?",
+          "correct_answer": "exactly",
+          "distractors": [
+            "approximately",
+            "in any case",
+            "frankly"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'تقريبا' mean?",
+          "correct_answer": "approximately",
+          "distractors": [
+            "maybe",
+            "exactly",
+            "in any case"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'على كل حال' mean?",
+          "correct_answer": "in any case",
+          "distractors": [
+            "frankly",
+            "exactly",
+            "approximately"
           ]
         },
         {
@@ -646,36 +670,60 @@
           "hint": "A real apology acknowledges fault"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ الله على اللي فات (May God forgive what's past)",
-          "correct_answer": "عفا",
-          "romanized_answer": "3fa",
-          "hint": "The verb 'to forgive/pardon'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The verb 'to forgive/pardon''",
+          "correct_answer_arabic": "عفا",
+          "correct_answer_romanized": "3fa",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match conflict resolution terms",
-          "pairs": [
-            {
-              "darija": "تصالح",
-              "english": "reconcile"
-            },
-            {
-              "darija": "سمح ليا",
-              "english": "forgive me"
-            },
-            {
-              "darija": "خصام",
-              "english": "argument"
-            },
-            {
-              "darija": "وسيط",
-              "english": "mediator"
-            },
-            {
-              "darija": "ظلم",
-              "english": "injustice"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'تصالح' mean?",
+          "correct_answer": "reconcile",
+          "distractors": [
+            "argument",
+            "mediator",
+            "forgive me"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سمح ليا' mean?",
+          "correct_answer": "forgive me",
+          "distractors": [
+            "injustice",
+            "reconcile",
+            "mediator"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خصام' mean?",
+          "correct_answer": "argument",
+          "distractors": [
+            "injustice",
+            "reconcile",
+            "forgive me"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'وسيط' mean?",
+          "correct_answer": "mediator",
+          "distractors": [
+            "reconcile",
+            "injustice",
+            "forgive me"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ظلم' mean?",
+          "correct_answer": "injustice",
+          "distractors": [
+            "reconcile",
+            "forgive me",
+            "argument"
           ]
         },
         {
@@ -969,36 +1017,60 @@
           "hint": "Think about logical structure: position -> evidence -> example -> conclusion"
         },
         {
-          "type": "fill_in_blank",
-          "question": "تيق ___، ما غادي نخيبش الظن ديالك (Trust me, I won't disappoint you)",
-          "correct_answer": "فيا",
-          "romanized_answer": "fia",
-          "hint": "'in me'"
+          "type": "translation",
+          "question": "Translate to Darija: ''in me''",
+          "correct_answer_arabic": "فيا",
+          "correct_answer_romanized": "fia",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match persuasion vocabulary",
-          "pairs": [
-            {
-              "darija": "قنع",
-              "english": "convince"
-            },
-            {
-              "darija": "حجة",
-              "english": "argument/evidence"
-            },
-            {
-              "darija": "دليل",
-              "english": "proof"
-            },
-            {
-              "darija": "ثقة",
-              "english": "trust"
-            },
-            {
-              "darija": "فرصة",
-              "english": "opportunity"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'قنع' mean?",
+          "correct_answer": "convince",
+          "distractors": [
+            "trust",
+            "proof",
+            "argument/evidence"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حجة' mean?",
+          "correct_answer": "argument/evidence",
+          "distractors": [
+            "proof",
+            "trust",
+            "opportunity"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دليل' mean?",
+          "correct_answer": "proof",
+          "distractors": [
+            "argument/evidence",
+            "convince",
+            "trust"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ثقة' mean?",
+          "correct_answer": "trust",
+          "distractors": [
+            "convince",
+            "proof",
+            "argument/evidence"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فرصة' mean?",
+          "correct_answer": "opportunity",
+          "distractors": [
+            "argument/evidence",
+            "trust",
+            "convince"
           ]
         },
         {
@@ -1085,21 +1157,24 @@
         "sentence_latin": "___ knt 3arf mn 9bl!",
         "answer_arabic": "يا ريت",
         "answer_latin": "ya rit",
-        "hint": "I wish"
+        "hint": "I wish",
+        "english": "I wish I had known before!"
       },
       {
         "sentence_arabic": "___ ليا، أنا اللي غلط",
         "sentence_latin": "___ lia, ana lli ghlt",
         "answer_arabic": "سمح",
         "answer_latin": "sm7",
-        "hint": "forgive"
+        "hint": "forgive",
+        "english": "Forgive me, I'm the one who was wrong"
       },
       {
         "sentence_arabic": "تيق ___، ما غادي نخيبش الظن ديالك",
         "sentence_latin": "ti9 ___, ma ghadi nkhybsh DDn dyalk",
         "answer_arabic": "فيا",
         "answer_latin": "fia",
-        "hint": "in me"
+        "hint": "in me",
+        "english": "Trust me, I won't let you down"
       }
     ],
     "cultural_quiz": [

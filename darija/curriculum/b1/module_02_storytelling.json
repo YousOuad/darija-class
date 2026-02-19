@@ -10,91 +10,314 @@
       "order": 1,
       "title": "Story Openers & Narrative Words",
       "vocabulary": [
-        { "arabic": "كان يا ما كان", "romanized": "kan ya ma kan", "english": "once upon a time", "example_sentence": { "arabic": "كان يا ما كان، فواحد الزمان...", "romanized": "kan ya ma kan, f wa7d zzman...", "english": "Once upon a time, in a certain era..." }, "category": "narrative", "difficulty": 2 },
-        { "arabic": "فواحد النهار", "romanized": "f wa7d nnhar", "english": "one day", "example_sentence": { "arabic": "فواحد النهار، مشيت للسوق", "romanized": "f wa7d nnhar, mshit lssu9", "english": "One day, I went to the market" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "من بعد", "romanized": "mn b3d", "english": "then / after that", "example_sentence": { "arabic": "من بعد، قررت نمشي", "romanized": "mn b3d, 9rrrt nmshi", "english": "Then, I decided to go" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "فالأخير", "romanized": "fl-akhir", "english": "in the end / finally", "example_sentence": { "arabic": "فالأخير، كلشي مشا مزيان", "romanized": "fl-akhir, kulshi msha mzyan", "english": "In the end, everything went well" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "بحال", "romanized": "b7al", "english": "like / as if", "example_sentence": { "arabic": "كان بحال الحلم", "romanized": "kan b7al l7lm", "english": "It was like a dream" }, "category": "comparison", "difficulty": 1 },
-        { "arabic": "فجأة", "romanized": "faj'a", "english": "suddenly", "example_sentence": { "arabic": "فجأة، سمعت شي صوت", "romanized": "faj'a, sm3t shi swt", "english": "Suddenly, I heard a sound" }, "category": "narrative", "difficulty": 2 },
-        { "arabic": "ديما", "romanized": "dima", "english": "always / used to", "example_sentence": { "arabic": "ديما كنت كنمشي للبحر", "romanized": "dima knt kanmshi lb7r", "english": "I used to always go to the beach" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "هاد المرة", "romanized": "had lmrra", "english": "this time", "example_sentence": { "arabic": "هاد المرة كانت مختالفة", "romanized": "had lmrra kant mkhtalf", "english": "This time was different" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "بغتة", "romanized": "b8ta", "english": "unexpectedly", "example_sentence": { "arabic": "جا بغتة", "romanized": "ja b8ta", "english": "He came unexpectedly" }, "category": "narrative", "difficulty": 2 },
-        { "arabic": "قصة", "romanized": "9ssa", "english": "story", "example_sentence": { "arabic": "غادي نحكي ليك واحد القصة", "romanized": "ghadi n7ki lik wa7d l9ssa", "english": "I'll tell you a story" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "حكى", "romanized": "7ka", "english": "to tell (a story)", "example_sentence": { "arabic": "حكا ليا الجد القصة", "romanized": "7ka lia ljdd l9ssa", "english": "Grandfather told me the story" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "وقع", "romanized": "w93", "english": "happened / occurred", "example_sentence": { "arabic": "أشنو وقع؟", "romanized": "ashnu w93?", "english": "What happened?" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "صدق", "romanized": "sd9", "english": "to believe", "example_sentence": { "arabic": "ما صدقتش!", "romanized": "ma sd9tsh!", "english": "I couldn't believe it!" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تفاجأ", "romanized": "tfaj'a", "english": "was surprised", "example_sentence": { "arabic": "تفاجأت بزاف", "romanized": "tfaj'at bzzaf", "english": "I was very surprised" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "هاكا", "romanized": "hakka", "english": "like that / thus", "example_sentence": { "arabic": "و هاكا سالات القصة", "romanized": "w hakka salat l9ssa", "english": "And thus the story ended" }, "category": "narrative", "difficulty": 1 }
+        {
+          "arabic": "كان يا ما كان",
+          "romanized": "kan ya ma kan",
+          "english": "once upon a time",
+          "example_sentence": {
+            "arabic": "كان يا ما كان، فواحد الزمان...",
+            "romanized": "kan ya ma kan, f wa7d zzman...",
+            "english": "Once upon a time, in a certain era..."
+          },
+          "category": "narrative",
+          "difficulty": 2
+        },
+        {
+          "arabic": "فواحد النهار",
+          "romanized": "f wa7d nnhar",
+          "english": "one day",
+          "example_sentence": {
+            "arabic": "فواحد النهار، مشيت للسوق",
+            "romanized": "f wa7d nnhar, mshit lssu9",
+            "english": "One day, I went to the market"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "من بعد",
+          "romanized": "mn b3d",
+          "english": "then / after that",
+          "example_sentence": {
+            "arabic": "من بعد، قررت نمشي",
+            "romanized": "mn b3d, 9rrrt nmshi",
+            "english": "Then, I decided to go"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فالأخير",
+          "romanized": "fl-akhir",
+          "english": "in the end / finally",
+          "example_sentence": {
+            "arabic": "فالأخير، كلشي مشا مزيان",
+            "romanized": "fl-akhir, kulshi msha mzyan",
+            "english": "In the end, everything went well"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بحال",
+          "romanized": "b7al",
+          "english": "like / as if",
+          "example_sentence": {
+            "arabic": "كان بحال الحلم",
+            "romanized": "kan b7al l7lm",
+            "english": "It was like a dream"
+          },
+          "category": "comparison",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فجأة",
+          "romanized": "faj'a",
+          "english": "suddenly",
+          "example_sentence": {
+            "arabic": "فجأة، سمعت شي صوت",
+            "romanized": "faj'a, sm3t shi swt",
+            "english": "Suddenly, I heard a sound"
+          },
+          "category": "narrative",
+          "difficulty": 2
+        },
+        {
+          "arabic": "ديما",
+          "romanized": "dima",
+          "english": "always / used to",
+          "example_sentence": {
+            "arabic": "ديما كنت كنمشي للبحر",
+            "romanized": "dima knt kanmshi lb7r",
+            "english": "I used to always go to the beach"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "هاد المرة",
+          "romanized": "had lmrra",
+          "english": "this time",
+          "example_sentence": {
+            "arabic": "هاد المرة كانت مختالفة",
+            "romanized": "had lmrra kant mkhtalf",
+            "english": "This time was different"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "بغتة",
+          "romanized": "b8ta",
+          "english": "unexpectedly",
+          "example_sentence": {
+            "arabic": "جا بغتة",
+            "romanized": "ja b8ta",
+            "english": "He came unexpectedly"
+          },
+          "category": "narrative",
+          "difficulty": 2
+        },
+        {
+          "arabic": "قصة",
+          "romanized": "9ssa",
+          "english": "story",
+          "example_sentence": {
+            "arabic": "غادي نحكي ليك واحد القصة",
+            "romanized": "ghadi n7ki lik wa7d l9ssa",
+            "english": "I'll tell you a story"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حكى",
+          "romanized": "7ka",
+          "english": "to tell (a story)",
+          "example_sentence": {
+            "arabic": "حكا ليا الجد القصة",
+            "romanized": "7ka lia ljdd l9ssa",
+            "english": "Grandfather told me the story"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "وقع",
+          "romanized": "w93",
+          "english": "happened / occurred",
+          "example_sentence": {
+            "arabic": "أشنو وقع؟",
+            "romanized": "ashnu w93?",
+            "english": "What happened?"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "صدق",
+          "romanized": "sd9",
+          "english": "to believe",
+          "example_sentence": {
+            "arabic": "ما صدقتش!",
+            "romanized": "ma sd9tsh!",
+            "english": "I couldn't believe it!"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تفاجأ",
+          "romanized": "tfaj'a",
+          "english": "was surprised",
+          "example_sentence": {
+            "arabic": "تفاجأت بزاف",
+            "romanized": "tfaj'at bzzaf",
+            "english": "I was very surprised"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "هاكا",
+          "romanized": "hakka",
+          "english": "like that / thus",
+          "example_sentence": {
+            "arabic": "و هاكا سالات القصة",
+            "romanized": "w hakka salat l9ssa",
+            "english": "And thus the story ended"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Past Continuous: 'kant + ka-verb'",
           "explanation": "For ongoing past actions, use 'kant/knt' + present habitual: 'knt kankhdm' (I was working), 'kant katlb' (she was playing).",
           "examples": [
-            { "arabic": "كنت كنقرا ملي جا", "romanized": "knt kan9ra mlli ja", "english": "I was studying when he came" },
-            { "arabic": "كانو كياكلو ملي عيطت ليهم", "romanized": "kanu kayaklu mlli 3yyt lihm", "english": "They were eating when I called them" }
+            {
+              "arabic": "كنت كنقرا ملي جا",
+              "romanized": "knt kan9ra mlli ja",
+              "english": "I was studying when he came"
+            },
+            {
+              "arabic": "كانو كياكلو ملي عيطت ليهم",
+              "romanized": "kanu kayaklu mlli 3yyt lihm",
+              "english": "They were eating when I called them"
+            }
           ],
-          "common_mistakes": ["Forgetting the 'ka-' prefix for the ongoing action"]
+          "common_mistakes": [
+            "Forgetting the 'ka-' prefix for the ongoing action"
+          ]
         },
         {
           "rule": "Sequencing Events",
           "explanation": "Order words: lawwl/f l-bdaya (first/in the beginning), mn b3d/mn b3d hakka (then/after that), f l-akhir (in the end), w hakka (and thus).",
           "examples": [
-            { "arabic": "لأول مشيت للسوق، من بعد رجعت للدار، فالأخير طيبت العشا", "romanized": "lawwl mshit lssu9, mn b3d rj3t lddar, fl-akhir tiybt l3sha", "english": "First I went to the market, then came home, finally I cooked dinner" }
+            {
+              "arabic": "لأول مشيت للسوق، من بعد رجعت للدار، فالأخير طيبت العشا",
+              "romanized": "lawwl mshit lssu9, mn b3d rj3t lddar, fl-akhir tiybt l3sha",
+              "english": "First I went to the market, then came home, finally I cooked dinner"
+            }
           ],
-          "common_mistakes": ["Not using enough transition words makes stories choppy"]
+          "common_mistakes": [
+            "Not using enough transition words makes stories choppy"
+          ]
         },
         {
           "rule": "Reported Speech in Stories",
           "explanation": "Use '9al/9alt + lia + blli' for reported speech: '9al lia blli bgha ymshi' (he told me he wanted to go).",
           "examples": [
-            { "arabic": "قالت ليا بلي ما تقدرش تجي", "romanized": "9alt lia blli ma t9drsh tji", "english": "She told me she couldn't come" }
+            {
+              "arabic": "قالت ليا بلي ما تقدرش تجي",
+              "romanized": "9alt lia blli ma t9drsh tji",
+              "english": "She told me she couldn't come"
+            }
           ],
-          "common_mistakes": ["Forgetting 'blli' (that) in reported speech"]
+          "common_mistakes": [
+            "Forgetting 'blli' (that) in reported speech"
+          ]
         },
         {
           "rule": "Describing Past States with 'kan'",
           "explanation": "'kan' (was) for past descriptions: 'kan kbir' (he was big), 'kanat zwina' (she was beautiful), 'kan lw9t mzyan' (the weather was nice).",
           "examples": [
-            { "arabic": "كان الجو زوين و الناس فرحانين", "romanized": "kan ljjaw zwin w nnas fr7anin", "english": "The weather was beautiful and people were happy" }
+            {
+              "arabic": "كان الجو زوين و الناس فرحانين",
+              "romanized": "kan ljjaw zwin w nnas fr7anin",
+              "english": "The weather was beautiful and people were happy"
+            }
           ],
-          "common_mistakes": ["Confusing 'kan' (he was) with 'kanat' (she was) and 'kanu' (they were)"]
+          "common_mistakes": [
+            "Confusing 'kan' (he was) with 'kanat' (she was) and 'kanu' (they were)"
+          ]
         },
         {
           "rule": "Story Closing Formulas",
           "explanation": "Traditional endings: 'w hakka salat l9ssa' (and thus the story ended), 'w 3ashu f s3ada w hniya' (and they lived in happiness and peace).",
           "examples": [
-            { "arabic": "و هاكا سالات القصة، و عاشو فالسعادة و الهنية", "romanized": "w hakka salat l9ssa, w 3ashu fss3ada w lhniya", "english": "And thus the story ended, and they lived in happiness and peace" }
+            {
+              "arabic": "و هاكا سالات القصة، و عاشو فالسعادة و الهنية",
+              "romanized": "w hakka salat l9ssa, w 3ashu fss3ada w lhniya",
+              "english": "And thus the story ended, and they lived in happiness and peace"
+            }
           ],
-          "common_mistakes": ["Modern stories don't need traditional endings - they're for folk tales"]
+          "common_mistakes": [
+            "Modern stories don't need traditional endings - they're for folk tales"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "غادي نحكي ليك أشنو وقع", "romanized": "ghadi n7ki lik ashnu w93", "english": "I'll tell you what happened", "context": "Starting a story" },
-        { "arabic": "ما غادي تصدق أشنو صرا", "romanized": "ma ghadi tsd9 ashnu sra", "english": "You won't believe what happened", "context": "Building suspense" },
-        { "arabic": "و فجأة...", "romanized": "w faj'a...", "english": "And suddenly...", "context": "Creating a twist" },
-        { "arabic": "و من داكشي اللي وقع...", "romanized": "w mn dakshi lli w93...", "english": "And from what happened...", "context": "Connecting events" },
-        { "arabic": "هاد شي وقع ليا البارح", "romanized": "had shi w93 lia lbar7", "english": "This happened to me yesterday", "context": "Personal anecdote" }
+        {
+          "arabic": "غادي نحكي ليك أشنو وقع",
+          "romanized": "ghadi n7ki lik ashnu w93",
+          "english": "I'll tell you what happened",
+          "context": "Starting a story"
+        },
+        {
+          "arabic": "ما غادي تصدق أشنو صرا",
+          "romanized": "ma ghadi tsd9 ashnu sra",
+          "english": "You won't believe what happened",
+          "context": "Building suspense"
+        },
+        {
+          "arabic": "و فجأة...",
+          "romanized": "w faj'a...",
+          "english": "And suddenly...",
+          "context": "Creating a twist"
+        },
+        {
+          "arabic": "و من داكشي اللي وقع...",
+          "romanized": "w mn dakshi lli w93...",
+          "english": "And from what happened...",
+          "context": "Connecting events"
+        },
+        {
+          "arabic": "هاد شي وقع ليا البارح",
+          "romanized": "had shi w93 lia lbar7",
+          "english": "This happened to me yesterday",
+          "context": "Personal anecdote"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "What does 'kan ya ma kan' mean?",
           "correct_answer": "Once upon a time",
-          "distractors": ["The end", "A long time ago", "Listen to me"],
+          "distractors": [
+            "The end",
+            "A long time ago",
+            "Listen to me"
+          ],
           "hint": "It's how Moroccan folk tales begin"
         },
         {
-          "type": "fill_in_blank",
-          "question": "فواحد النهار ___ شي حاجة غريبة (One day something strange happened)",
-          "correct_answer": "وقعات",
-          "romanized_answer": "w93at",
-          "hint": "Past tense of 'to happen' (feminine)"
-        },
-        {
-          "type": "ordering",
-          "question": "Put these narrative words in chronological order",
-          "correct_order": ["كان يا ما كان", "فواحد النهار", "فجأة", "من بعد", "فالأخير"]
+          "type": "translation",
+          "question": "Translate to Darija: 'Past tense of 'to happen' (feminine)'",
+          "correct_answer_arabic": "وقعات",
+          "correct_answer_romanized": "w93at",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -104,14 +327,53 @@
           "hint": "Use 'knt + ka-verb' for past continuous"
         },
         {
-          "type": "matching",
-          "question": "Match the narrative terms",
-          "pairs": [
-            {"darija": "كان يا ما كان", "english": "once upon a time"},
-            {"darija": "فجأة", "english": "suddenly"},
-            {"darija": "من بعد", "english": "then"},
-            {"darija": "فالأخير", "english": "in the end"},
-            {"darija": "وقع", "english": "happened"}
+          "type": "multiple_choice",
+          "question": "What does 'كان يا ما كان' mean?",
+          "correct_answer": "once upon a time",
+          "distractors": [
+            "happened",
+            "in the end",
+            "suddenly"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فجأة' mean?",
+          "correct_answer": "suddenly",
+          "distractors": [
+            "happened",
+            "in the end",
+            "once upon a time"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'من بعد' mean?",
+          "correct_answer": "then",
+          "distractors": [
+            "in the end",
+            "once upon a time",
+            "suddenly"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فالأخير' mean?",
+          "correct_answer": "in the end",
+          "distractors": [
+            "once upon a time",
+            "then",
+            "happened"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'وقع' mean?",
+          "correct_answer": "happened",
+          "distractors": [
+            "then",
+            "suddenly",
+            "once upon a time"
           ]
         }
       ],
@@ -125,66 +387,245 @@
       "order": 2,
       "title": "Personal Anecdotes",
       "vocabulary": [
-        { "arabic": "تفكر", "romanized": "tfkkr", "english": "to remember", "example_sentence": { "arabic": "كنتفكر فواحد النهار...", "romanized": "kantfkkr f wa7d nnhar...", "english": "I remember one day..." }, "category": "verb", "difficulty": 1 },
-        { "arabic": "نسا", "romanized": "nsa", "english": "to forget", "example_sentence": { "arabic": "نسيت أشنو قال ليا", "romanized": "nsit ashnu 9al lia", "english": "I forgot what he told me" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "حس", "romanized": "7ss", "english": "to feel", "example_sentence": { "arabic": "حسيت بالخوف", "romanized": "7ssit blkhuf", "english": "I felt fear" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "حاول", "romanized": "7awl", "english": "to try", "example_sentence": { "arabic": "حاولت نصلح المشكل", "romanized": "7awlt nsl7 lmushkl", "english": "I tried to fix the problem" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "نجح", "romanized": "nj7", "english": "to succeed", "example_sentence": { "arabic": "نجحت فالأخير!", "romanized": "nj7t fl-akhir!", "english": "I succeeded in the end!" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "فشل", "romanized": "fshl", "english": "to fail", "example_sentence": { "arabic": "فشلت المرة الأولى", "romanized": "fshlt lmrra l-ula", "english": "I failed the first time" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "تعلم", "romanized": "t3llm", "english": "to learn (a lesson)", "example_sentence": { "arabic": "تعلمت درس كبير", "romanized": "t3llmt drs kbir", "english": "I learned a big lesson" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "لقا", "romanized": "l9a", "english": "to find", "example_sentence": { "arabic": "لقيت واحد الحل مزيان", "romanized": "l9it wa7d l7ll mzyan", "english": "I found a good solution" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "خسر", "romanized": "khsr", "english": "to lose", "example_sentence": { "arabic": "خسرت البورطابل ديالي", "romanized": "khsrt lportabl dyali", "english": "I lost my phone" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "قرر", "romanized": "9rrr", "english": "to decide", "example_sentence": { "arabic": "قررت نبدل الخدمة", "romanized": "9rrrt nbddl lkhdma", "english": "I decided to change my job" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "واجه", "romanized": "wajh", "english": "to face/confront", "example_sentence": { "arabic": "واجهت واحد المشكل كبير", "romanized": "wajht wa7d lmushkl kbir", "english": "I faced a big problem" }, "category": "verb", "difficulty": 2 },
-        { "arabic": "عقل", "romanized": "39l", "english": "to remember/recall", "example_sentence": { "arabic": "عقلت على داكشي", "romanized": "39lt 3la dakshi", "english": "I recalled that thing" }, "category": "verb", "difficulty": 1 }
+        {
+          "arabic": "تفكر",
+          "romanized": "tfkkr",
+          "english": "to remember",
+          "example_sentence": {
+            "arabic": "كنتفكر فواحد النهار...",
+            "romanized": "kantfkkr f wa7d nnhar...",
+            "english": "I remember one day..."
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نسا",
+          "romanized": "nsa",
+          "english": "to forget",
+          "example_sentence": {
+            "arabic": "نسيت أشنو قال ليا",
+            "romanized": "nsit ashnu 9al lia",
+            "english": "I forgot what he told me"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حس",
+          "romanized": "7ss",
+          "english": "to feel",
+          "example_sentence": {
+            "arabic": "حسيت بالخوف",
+            "romanized": "7ssit blkhuf",
+            "english": "I felt fear"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حاول",
+          "romanized": "7awl",
+          "english": "to try",
+          "example_sentence": {
+            "arabic": "حاولت نصلح المشكل",
+            "romanized": "7awlt nsl7 lmushkl",
+            "english": "I tried to fix the problem"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نجح",
+          "romanized": "nj7",
+          "english": "to succeed",
+          "example_sentence": {
+            "arabic": "نجحت فالأخير!",
+            "romanized": "nj7t fl-akhir!",
+            "english": "I succeeded in the end!"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "فشل",
+          "romanized": "fshl",
+          "english": "to fail",
+          "example_sentence": {
+            "arabic": "فشلت المرة الأولى",
+            "romanized": "fshlt lmrra l-ula",
+            "english": "I failed the first time"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "تعلم",
+          "romanized": "t3llm",
+          "english": "to learn (a lesson)",
+          "example_sentence": {
+            "arabic": "تعلمت درس كبير",
+            "romanized": "t3llmt drs kbir",
+            "english": "I learned a big lesson"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "لقا",
+          "romanized": "l9a",
+          "english": "to find",
+          "example_sentence": {
+            "arabic": "لقيت واحد الحل مزيان",
+            "romanized": "l9it wa7d l7ll mzyan",
+            "english": "I found a good solution"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "خسر",
+          "romanized": "khsr",
+          "english": "to lose",
+          "example_sentence": {
+            "arabic": "خسرت البورطابل ديالي",
+            "romanized": "khsrt lportabl dyali",
+            "english": "I lost my phone"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "قرر",
+          "romanized": "9rrr",
+          "english": "to decide",
+          "example_sentence": {
+            "arabic": "قررت نبدل الخدمة",
+            "romanized": "9rrrt nbddl lkhdma",
+            "english": "I decided to change my job"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "واجه",
+          "romanized": "wajh",
+          "english": "to face/confront",
+          "example_sentence": {
+            "arabic": "واجهت واحد المشكل كبير",
+            "romanized": "wajht wa7d lmushkl kbir",
+            "english": "I faced a big problem"
+          },
+          "category": "verb",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عقل",
+          "romanized": "39l",
+          "english": "to remember/recall",
+          "example_sentence": {
+            "arabic": "عقلت على داكشي",
+            "romanized": "39lt 3la dakshi",
+            "english": "I recalled that thing"
+          },
+          "category": "verb",
+          "difficulty": 1
+        }
       ],
       "grammar": [
         {
           "rule": "Narrating Personal Experiences",
           "explanation": "Pattern: time marker + past tense + connectors. Use 'w93 lia' (it happened to me), 'knt f' (I was at), 'mlli' (when).",
           "examples": [
-            { "arabic": "فواحد النهار، كنت فالسوق، ملي شفت واحد الراجل...", "romanized": "f wa7d nnhar, knt fssu9, mlli shft wa7d rrajl...", "english": "One day, I was at the market, when I saw a man..." }
+            {
+              "arabic": "فواحد النهار، كنت فالسوق، ملي شفت واحد الراجل...",
+              "romanized": "f wa7d nnhar, knt fssu9, mlli shft wa7d rrajl...",
+              "english": "One day, I was at the market, when I saw a man..."
+            }
           ],
-          "common_mistakes": ["Not setting the scene before the action - always establish time and place first"]
+          "common_mistakes": [
+            "Not setting the scene before the action - always establish time and place first"
+          ]
         },
         {
           "rule": "Adding Dialogue to Stories",
           "explanation": "Quote directly: '9lt lio: ...', or indirectly: '9lt lio blli...'. Direct quotes make stories more vivid.",
           "examples": [
-            { "arabic": "قلت ليه: فين غادي؟ قال ليا: غادي للدار", "romanized": "9lt lih: fin ghadi? 9al lia: ghadi lddar", "english": "I said to him: where are you going? He said: I'm going home" }
+            {
+              "arabic": "قلت ليه: فين غادي؟ قال ليا: غادي للدار",
+              "romanized": "9lt lih: fin ghadi? 9al lia: ghadi lddar",
+              "english": "I said to him: where are you going? He said: I'm going home"
+            }
           ],
-          "common_mistakes": ["Mixing up 'lio/lih' (to him) with 'lia' (to me)"]
+          "common_mistakes": [
+            "Mixing up 'lio/lih' (to him) with 'lia' (to me)"
+          ]
         },
         {
           "rule": "Expressing Cause and Result in Narrative",
           "explanation": "Use 'w bsbab dakshi' (and because of that), '7it' (because), 'had shi 3lash' (that's why) to show cause-effect.",
           "examples": [
-            { "arabic": "ما كنتش عارف الطريق، هاد شي علاش توضرت", "romanized": "ma kntsh 3arf ttri9, had shi 3lash twddrt", "english": "I didn't know the way, that's why I got lost" }
+            {
+              "arabic": "ما كنتش عارف الطريق، هاد شي علاش توضرت",
+              "romanized": "ma kntsh 3arf ttri9, had shi 3lash twddrt",
+              "english": "I didn't know the way, that's why I got lost"
+            }
           ],
-          "common_mistakes": ["Not explaining motivations makes stories hard to follow"]
+          "common_mistakes": [
+            "Not explaining motivations makes stories hard to follow"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "غادي نحكي ليكم أشنو وقع ليا", "romanized": "ghadi n7ki likum ashnu w93 lia", "english": "I'll tell you what happened to me", "context": "Starting a personal story" },
-        { "arabic": "ما صدقت عيني!", "romanized": "ma sd9t 3ini!", "english": "I couldn't believe my eyes!", "context": "Expressing disbelief" },
-        { "arabic": "و هاكا تعلمت الدرس", "romanized": "w hakka t3llmt ddrs", "english": "And that's how I learned the lesson", "context": "Moral of the story" },
-        { "arabic": "الحمد لله على السلامة", "romanized": "l7mdullah 3la sslama", "english": "Thank God for safety", "context": "After telling about a dangerous experience" },
-        { "arabic": "مات بالضحك!", "romanized": "mat bdd7k!", "english": "He died laughing! (figurative)", "context": "Describing a funny reaction" }
+        {
+          "arabic": "غادي نحكي ليكم أشنو وقع ليا",
+          "romanized": "ghadi n7ki likum ashnu w93 lia",
+          "english": "I'll tell you what happened to me",
+          "context": "Starting a personal story"
+        },
+        {
+          "arabic": "ما صدقت عيني!",
+          "romanized": "ma sd9t 3ini!",
+          "english": "I couldn't believe my eyes!",
+          "context": "Expressing disbelief"
+        },
+        {
+          "arabic": "و هاكا تعلمت الدرس",
+          "romanized": "w hakka t3llmt ddrs",
+          "english": "And that's how I learned the lesson",
+          "context": "Moral of the story"
+        },
+        {
+          "arabic": "الحمد لله على السلامة",
+          "romanized": "l7mdullah 3la sslama",
+          "english": "Thank God for safety",
+          "context": "After telling about a dangerous experience"
+        },
+        {
+          "arabic": "مات بالضحك!",
+          "romanized": "mat bdd7k!",
+          "english": "He died laughing! (figurative)",
+          "context": "Describing a funny reaction"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "How do you start a personal anecdote?",
           "correct_answer": "فواحد النهار...",
-          "distractors": ["كان يا ما كان...", "والأخير...", "هاكا..."],
+          "distractors": [
+            "كان يا ما كان...",
+            "والأخير...",
+            "هاكا..."
+          ],
           "hint": "'kan ya ma kan' is for folk tales, personal stories use 'f wa7d nnhar'"
         },
         {
-          "type": "fill_in_blank",
-          "question": "كنت كنقرا ___ سمعت شي صوت (I was studying when I heard a sound)",
-          "correct_answer": "ملي",
-          "romanized_answer": "mlli",
-          "hint": "A conjunction meaning 'when'"
+          "type": "translation",
+          "question": "Translate to Darija: 'A conjunction meaning 'when''",
+          "correct_answer_arabic": "ملي",
+          "correct_answer_romanized": "mlli",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -194,20 +635,54 @@
           "hint": "'9rrr' means to decide"
         },
         {
-          "type": "matching",
-          "question": "Match the story verbs",
-          "pairs": [
-            {"darija": "تفكر", "english": "remember"},
-            {"darija": "نسا", "english": "forget"},
-            {"darija": "حاول", "english": "try"},
-            {"darija": "نجح", "english": "succeed"},
-            {"darija": "فشل", "english": "fail"}
+          "type": "multiple_choice",
+          "question": "What does 'تفكر' mean?",
+          "correct_answer": "remember",
+          "distractors": [
+            "succeed",
+            "fail",
+            "try"
           ]
         },
         {
-          "type": "ordering",
-          "question": "Put this story in order",
-          "correct_order": ["فواحد النهار مشيت للسوق", "شفت واحد الراجل", "سولتو علاش كيبكي", "حكا ليا المشكل ديالو", "حاولت نعاونو"]
+          "type": "multiple_choice",
+          "question": "What does 'نسا' mean?",
+          "correct_answer": "forget",
+          "distractors": [
+            "remember",
+            "succeed",
+            "try"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حاول' mean?",
+          "correct_answer": "try",
+          "distractors": [
+            "succeed",
+            "fail",
+            "forget"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نجح' mean?",
+          "correct_answer": "succeed",
+          "distractors": [
+            "try",
+            "forget",
+            "fail"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فشل' mean?",
+          "correct_answer": "fail",
+          "distractors": [
+            "forget",
+            "remember",
+            "succeed"
+          ]
         }
       ],
       "cultural_notes": [
@@ -220,66 +695,245 @@
       "order": 3,
       "title": "Folk Tales & Proverbs in Stories",
       "vocabulary": [
-        { "arabic": "حكاية", "romanized": "7kaya", "english": "tale/fable", "example_sentence": { "arabic": "الجدة حكات لينا واحد الحكاية", "romanized": "ljdda 7kat lina wa7d l7kaya", "english": "Grandmother told us a tale" }, "category": "narrative", "difficulty": 1 },
-        { "arabic": "مثل", "romanized": "mathal", "english": "proverb/saying", "example_sentence": { "arabic": "كاين واحد المثل كيقول...", "romanized": "kayn wa7d lmathal kay9ul...", "english": "There's a proverb that says..." }, "category": "narrative", "difficulty": 2 },
-        { "arabic": "عبرة", "romanized": "3ibra", "english": "moral/lesson", "example_sentence": { "arabic": "العبرة من القصة هي...", "romanized": "l3ibra mn l9ssa hiya...", "english": "The moral of the story is..." }, "category": "narrative", "difficulty": 2 },
-        { "arabic": "حلقة", "romanized": "7l9a", "english": "halqa (storytelling circle)", "example_sentence": { "arabic": "كانت الحلقة فجامع الفنا", "romanized": "kant l7l9a f jam3 lfna", "english": "The storytelling circle was in Jemaa el-Fnaa" }, "category": "culture", "difficulty": 2 },
-        { "arabic": "حكيم", "romanized": "7kim", "english": "wise man", "example_sentence": { "arabic": "قال الحكيم...", "romanized": "9al l7kim...", "english": "The wise man said..." }, "category": "character", "difficulty": 2 },
-        { "arabic": "جحا", "romanized": "j7a", "english": "Juha (folk trickster)", "example_sentence": { "arabic": "جحا قال لحمارو...", "romanized": "j7a 9al l7maro...", "english": "Juha said to his donkey..." }, "category": "character", "difficulty": 2 },
-        { "arabic": "سحر", "romanized": "s7r", "english": "magic", "example_sentence": { "arabic": "كان عندها سحر", "romanized": "kan 3ndha s7r", "english": "She had magic" }, "category": "folk_tale", "difficulty": 2 },
-        { "arabic": "غول", "romanized": "8ul", "english": "ogre/monster", "example_sentence": { "arabic": "الغول كان كبير", "romanized": "l8ul kan kbir", "english": "The ogre was big" }, "category": "folk_tale", "difficulty": 2 },
-        { "arabic": "بطل", "romanized": "bTl", "english": "hero", "example_sentence": { "arabic": "البطل غلب الغول", "romanized": "lbTl 8lb l8ul", "english": "The hero defeated the ogre" }, "category": "folk_tale", "difficulty": 1 },
-        { "arabic": "حمار", "romanized": "7mar", "english": "donkey", "example_sentence": { "arabic": "جحا و حمارو", "romanized": "j7a w 7maro", "english": "Juha and his donkey" }, "category": "folk_tale", "difficulty": 1 },
-        { "arabic": "غلب", "romanized": "8lb", "english": "to defeat/win", "example_sentence": { "arabic": "غلب العدو", "romanized": "8lb l3du", "english": "He defeated the enemy" }, "category": "verb", "difficulty": 1 },
-        { "arabic": "نجا", "romanized": "nja", "english": "to escape/survive", "example_sentence": { "arabic": "نجا من الخطر", "romanized": "nja mn lkhtr", "english": "He escaped from danger" }, "category": "verb", "difficulty": 2 }
+        {
+          "arabic": "حكاية",
+          "romanized": "7kaya",
+          "english": "tale/fable",
+          "example_sentence": {
+            "arabic": "الجدة حكات لينا واحد الحكاية",
+            "romanized": "ljdda 7kat lina wa7d l7kaya",
+            "english": "Grandmother told us a tale"
+          },
+          "category": "narrative",
+          "difficulty": 1
+        },
+        {
+          "arabic": "مثل",
+          "romanized": "mathal",
+          "english": "proverb/saying",
+          "example_sentence": {
+            "arabic": "كاين واحد المثل كيقول...",
+            "romanized": "kayn wa7d lmathal kay9ul...",
+            "english": "There's a proverb that says..."
+          },
+          "category": "narrative",
+          "difficulty": 2
+        },
+        {
+          "arabic": "عبرة",
+          "romanized": "3ibra",
+          "english": "moral/lesson",
+          "example_sentence": {
+            "arabic": "العبرة من القصة هي...",
+            "romanized": "l3ibra mn l9ssa hiya...",
+            "english": "The moral of the story is..."
+          },
+          "category": "narrative",
+          "difficulty": 2
+        },
+        {
+          "arabic": "حلقة",
+          "romanized": "7l9a",
+          "english": "halqa (storytelling circle)",
+          "example_sentence": {
+            "arabic": "كانت الحلقة فجامع الفنا",
+            "romanized": "kant l7l9a f jam3 lfna",
+            "english": "The storytelling circle was in Jemaa el-Fnaa"
+          },
+          "category": "culture",
+          "difficulty": 2
+        },
+        {
+          "arabic": "حكيم",
+          "romanized": "7kim",
+          "english": "wise man",
+          "example_sentence": {
+            "arabic": "قال الحكيم...",
+            "romanized": "9al l7kim...",
+            "english": "The wise man said..."
+          },
+          "category": "character",
+          "difficulty": 2
+        },
+        {
+          "arabic": "جحا",
+          "romanized": "j7a",
+          "english": "Juha (folk trickster)",
+          "example_sentence": {
+            "arabic": "جحا قال لحمارو...",
+            "romanized": "j7a 9al l7maro...",
+            "english": "Juha said to his donkey..."
+          },
+          "category": "character",
+          "difficulty": 2
+        },
+        {
+          "arabic": "سحر",
+          "romanized": "s7r",
+          "english": "magic",
+          "example_sentence": {
+            "arabic": "كان عندها سحر",
+            "romanized": "kan 3ndha s7r",
+            "english": "She had magic"
+          },
+          "category": "folk_tale",
+          "difficulty": 2
+        },
+        {
+          "arabic": "غول",
+          "romanized": "8ul",
+          "english": "ogre/monster",
+          "example_sentence": {
+            "arabic": "الغول كان كبير",
+            "romanized": "l8ul kan kbir",
+            "english": "The ogre was big"
+          },
+          "category": "folk_tale",
+          "difficulty": 2
+        },
+        {
+          "arabic": "بطل",
+          "romanized": "bTl",
+          "english": "hero",
+          "example_sentence": {
+            "arabic": "البطل غلب الغول",
+            "romanized": "lbTl 8lb l8ul",
+            "english": "The hero defeated the ogre"
+          },
+          "category": "folk_tale",
+          "difficulty": 1
+        },
+        {
+          "arabic": "حمار",
+          "romanized": "7mar",
+          "english": "donkey",
+          "example_sentence": {
+            "arabic": "جحا و حمارو",
+            "romanized": "j7a w 7maro",
+            "english": "Juha and his donkey"
+          },
+          "category": "folk_tale",
+          "difficulty": 1
+        },
+        {
+          "arabic": "غلب",
+          "romanized": "8lb",
+          "english": "to defeat/win",
+          "example_sentence": {
+            "arabic": "غلب العدو",
+            "romanized": "8lb l3du",
+            "english": "He defeated the enemy"
+          },
+          "category": "verb",
+          "difficulty": 1
+        },
+        {
+          "arabic": "نجا",
+          "romanized": "nja",
+          "english": "to escape/survive",
+          "example_sentence": {
+            "arabic": "نجا من الخطر",
+            "romanized": "nja mn lkhtr",
+            "english": "He escaped from danger"
+          },
+          "category": "verb",
+          "difficulty": 2
+        }
       ],
       "grammar": [
         {
           "rule": "Narrating in Past Tense Consistently",
           "explanation": "Folk tales use past tense throughout: 'kan' (was), 'msha' (went), '9al' (said). Switch to past continuous 'kan + ka-' for background actions.",
           "examples": [
-            { "arabic": "كان واحد الراجل، كان كيعيش فواحد الغابة. فواحد النهار مشا للسوق...", "romanized": "kan wa7d rrajl, kan kay3ish f wa7d l8aba. f wa7d nnhar msha lssu9...", "english": "There was a man, he lived in a forest. One day he went to the market..." }
+            {
+              "arabic": "كان واحد الراجل، كان كيعيش فواحد الغابة. فواحد النهار مشا للسوق...",
+              "romanized": "kan wa7d rrajl, kan kay3ish f wa7d l8aba. f wa7d nnhar msha lssu9...",
+              "english": "There was a man, he lived in a forest. One day he went to the market..."
+            }
           ],
-          "common_mistakes": ["Switching between past and present tense mid-story"]
+          "common_mistakes": [
+            "Switching between past and present tense mid-story"
+          ]
         },
         {
           "rule": "Quoting Proverbs",
           "explanation": "Introduce proverbs with: 'kayn wa7d lmathal kay9ul' (there's a proverb that says), 'lkbar kay9ulu' (the elders say), 'b7al ma 9alu nnas' (as people say).",
           "examples": [
-            { "arabic": "بحال ما قالو الناس: اللي بغا العسل يصبر لقرص النحل", "romanized": "b7al ma 9alu nnas: lli bgha l3sl ysbr l9rss nn7l", "english": "As people say: whoever wants honey must endure bee stings" }
+            {
+              "arabic": "بحال ما قالو الناس: اللي بغا العسل يصبر لقرص النحل",
+              "romanized": "b7al ma 9alu nnas: lli bgha l3sl ysbr l9rss nn7l",
+              "english": "As people say: whoever wants honey must endure bee stings"
+            }
           ],
-          "common_mistakes": ["Dropping the introduction to a proverb can make it seem out of context"]
+          "common_mistakes": [
+            "Dropping the introduction to a proverb can make it seem out of context"
+          ]
         },
         {
           "rule": "Drawing Morals from Stories",
           "explanation": "End with: 'l3ibra mn had l9ssa' (the moral of this story), 'had shi 3llmni' (this taught me), 'mn had nnhar w ana...' (from that day I...).",
           "examples": [
-            { "arabic": "العبرة من هاد القصة هي أن الصبر مفتاح النجاح", "romanized": "l3ibra mn had l9ssa hiya ann ssbr mfta7 nnja7", "english": "The moral of this story is that patience is the key to success" }
+            {
+              "arabic": "العبرة من هاد القصة هي أن الصبر مفتاح النجاح",
+              "romanized": "l3ibra mn had l9ssa hiya ann ssbr mfta7 nnja7",
+              "english": "The moral of this story is that patience is the key to success"
+            }
           ],
-          "common_mistakes": ["Not all stories need explicit morals - sometimes the lesson is implicit"]
+          "common_mistakes": [
+            "Not all stories need explicit morals - sometimes the lesson is implicit"
+          ]
         }
       ],
       "phrases": [
-        { "arabic": "كان يا ما كان فواحد الزمان", "romanized": "kan ya ma kan f wa7d zzman", "english": "Once upon a time", "context": "Traditional story opening" },
-        { "arabic": "و عاشو فالسعادة و الهنية", "romanized": "w 3ashu fss3ada w lhniya", "english": "And they lived happily", "context": "Traditional story closing" },
-        { "arabic": "بحال ما قالو الكبار...", "romanized": "b7al ma 9alu lkbar...", "english": "As the elders say...", "context": "Introducing wisdom" },
-        { "arabic": "هاد شي علمني بزاف", "romanized": "had shi 3llmni bzzaf", "english": "This taught me a lot", "context": "Reflecting on a story" },
-        { "arabic": "ما غادي ننسى هاد القصة عمري", "romanized": "ma ghadi nnsa had l9ssa 3mri", "english": "I'll never forget this story", "context": "Emphasizing impact" }
+        {
+          "arabic": "كان يا ما كان فواحد الزمان",
+          "romanized": "kan ya ma kan f wa7d zzman",
+          "english": "Once upon a time",
+          "context": "Traditional story opening"
+        },
+        {
+          "arabic": "و عاشو فالسعادة و الهنية",
+          "romanized": "w 3ashu fss3ada w lhniya",
+          "english": "And they lived happily",
+          "context": "Traditional story closing"
+        },
+        {
+          "arabic": "بحال ما قالو الكبار...",
+          "romanized": "b7al ma 9alu lkbar...",
+          "english": "As the elders say...",
+          "context": "Introducing wisdom"
+        },
+        {
+          "arabic": "هاد شي علمني بزاف",
+          "romanized": "had shi 3llmni bzzaf",
+          "english": "This taught me a lot",
+          "context": "Reflecting on a story"
+        },
+        {
+          "arabic": "ما غادي ننسى هاد القصة عمري",
+          "romanized": "ma ghadi nnsa had l9ssa 3mri",
+          "english": "I'll never forget this story",
+          "context": "Emphasizing impact"
+        }
       ],
       "exercises": [
         {
           "type": "multiple_choice",
           "question": "Who is 'J7a' in Moroccan folklore?",
           "correct_answer": "A folk trickster character known for his humor and wisdom",
-          "distractors": ["A king", "A warrior", "A religious scholar"],
+          "distractors": [
+            "A king",
+            "A warrior",
+            "A religious scholar"
+          ],
           "hint": "He often appears with his donkey"
         },
         {
-          "type": "fill_in_blank",
-          "question": "ال___ من القصة هي... (The moral of the story is...)",
-          "correct_answer": "عبرة",
-          "romanized_answer": "3ibra",
-          "hint": "A word meaning 'lesson' or 'moral'"
+          "type": "translation",
+          "question": "Translate to Darija: 'A word meaning 'lesson' or 'moral''",
+          "correct_answer_arabic": "عبرة",
+          "correct_answer_romanized": "3ibra",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -289,21 +943,64 @@
           "hint": "Use 'b7al ma 9alu lkbar' to introduce the proverb"
         },
         {
-          "type": "matching",
-          "question": "Match the folk tale elements",
-          "pairs": [
-            {"darija": "حكاية", "english": "tale"},
-            {"darija": "مثل", "english": "proverb"},
-            {"darija": "بطل", "english": "hero"},
-            {"darija": "غول", "english": "ogre"},
-            {"darija": "عبرة", "english": "moral"}
+          "type": "multiple_choice",
+          "question": "What does 'حكاية' mean?",
+          "correct_answer": "tale",
+          "distractors": [
+            "moral",
+            "ogre",
+            "proverb"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مثل' mean?",
+          "correct_answer": "proverb",
+          "distractors": [
+            "ogre",
+            "hero",
+            "tale"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بطل' mean?",
+          "correct_answer": "hero",
+          "distractors": [
+            "ogre",
+            "proverb",
+            "tale"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'غول' mean?",
+          "correct_answer": "ogre",
+          "distractors": [
+            "moral",
+            "hero",
+            "proverb"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عبرة' mean?",
+          "correct_answer": "moral",
+          "distractors": [
+            "ogre",
+            "proverb",
+            "hero"
           ]
         },
         {
           "type": "multiple_choice",
           "question": "What is a 'Halqa' (حلقة)?",
           "correct_answer": "A traditional storytelling circle in a public square",
-          "distractors": ["A type of food", "A prayer circle", "A dance"],
+          "distractors": [
+            "A type of food",
+            "A prayer circle",
+            "A dance"
+          ],
           "hint": "Famous ones happen in Jemaa el-Fnaa, Marrakech"
         }
       ],
@@ -315,33 +1012,102 @@
   ],
   "game_content": {
     "word_match": [
-      {"darija_arabic": "كان يا ما كان", "darija_latin": "kan ya ma kan", "english": "once upon a time"},
-      {"darija_arabic": "فجأة", "darija_latin": "faj'a", "english": "suddenly"},
-      {"darija_arabic": "قصة", "darija_latin": "9ssa", "english": "story"},
-      {"darija_arabic": "وقع", "darija_latin": "w93", "english": "happened"},
-      {"darija_arabic": "حكى", "darija_latin": "7ka", "english": "told"},
-      {"darija_arabic": "تفكر", "darija_latin": "tfkkr", "english": "remember"},
-      {"darija_arabic": "حاول", "darija_latin": "7awl", "english": "tried"},
-      {"darija_arabic": "نجح", "darija_latin": "nj7", "english": "succeeded"},
-      {"darija_arabic": "مثل", "darija_latin": "mathal", "english": "proverb"},
-      {"darija_arabic": "عبرة", "darija_latin": "3ibra", "english": "moral/lesson"}
+      {
+        "darija_arabic": "كان يا ما كان",
+        "darija_latin": "kan ya ma kan",
+        "english": "once upon a time"
+      },
+      {
+        "darija_arabic": "فجأة",
+        "darija_latin": "faj'a",
+        "english": "suddenly"
+      },
+      {
+        "darija_arabic": "قصة",
+        "darija_latin": "9ssa",
+        "english": "story"
+      },
+      {
+        "darija_arabic": "وقع",
+        "darija_latin": "w93",
+        "english": "happened"
+      },
+      {
+        "darija_arabic": "حكى",
+        "darija_latin": "7ka",
+        "english": "told"
+      },
+      {
+        "darija_arabic": "تفكر",
+        "darija_latin": "tfkkr",
+        "english": "remember"
+      },
+      {
+        "darija_arabic": "حاول",
+        "darija_latin": "7awl",
+        "english": "tried"
+      },
+      {
+        "darija_arabic": "نجح",
+        "darija_latin": "nj7",
+        "english": "succeeded"
+      },
+      {
+        "darija_arabic": "مثل",
+        "darija_latin": "mathal",
+        "english": "proverb"
+      },
+      {
+        "darija_arabic": "عبرة",
+        "darija_latin": "3ibra",
+        "english": "moral/lesson"
+      }
     ],
     "fill_blanks": [
-      { "sentence_arabic": "___ يا ما كان فواحد الزمان", "sentence_latin": "___ ya ma kan f wa7d zzman", "answer_arabic": "كان", "answer_latin": "kan", "hint": "Once upon a time" },
-      { "sentence_arabic": "أشنو ___ ؟", "sentence_latin": "ashnu ___?", "answer_arabic": "وقع", "answer_latin": "w93", "hint": "What happened?" },
-      { "sentence_arabic": "ال___ من القصة", "sentence_latin": "l___ mn l9ssa", "answer_arabic": "عبرة", "answer_latin": "3ibra", "hint": "The moral of the story" }
+      {
+        "sentence_arabic": "___ يا ما كان فواحد الزمان",
+        "sentence_latin": "___ ya ma kan f wa7d zzman",
+        "answer_arabic": "كان",
+        "answer_latin": "kan",
+        "hint": "Once upon a time",
+        "english": "Once upon a time"
+      },
+      {
+        "sentence_arabic": "أشنو ___ ؟",
+        "sentence_latin": "ashnu ___?",
+        "answer_arabic": "وقع",
+        "answer_latin": "w93",
+        "hint": "What happened?",
+        "english": "What happened?"
+      },
+      {
+        "sentence_arabic": "ال___ من القصة",
+        "sentence_latin": "l___ mn l9ssa",
+        "answer_arabic": "عبرة",
+        "answer_latin": "3ibra",
+        "hint": "The moral of the story",
+        "english": "The moral of the story"
+      }
     ],
     "cultural_quiz": [
       {
         "question": "What is the Halqa tradition?",
         "correct_answer": "A circle of spectators gathering around a storyteller in a public square, especially in Jemaa el-Fnaa",
-        "distractors": ["A cooking competition", "A religious ceremony", "A wedding dance"],
+        "distractors": [
+          "A cooking competition",
+          "A religious ceremony",
+          "A wedding dance"
+        ],
         "explanation": "The Halqa is an ancient Moroccan performance tradition where storytellers, musicians, and entertainers gather audiences in public squares."
       },
       {
         "question": "Who is Juha (J7a) in Moroccan folklore?",
         "correct_answer": "A clever trickster character who uses humor and wit, often appearing with his donkey",
-        "distractors": ["A historical king", "A famous warrior", "A religious saint"],
+        "distractors": [
+          "A historical king",
+          "A famous warrior",
+          "A religious saint"
+        ],
         "explanation": "Juha is a pan-Middle Eastern folk character who is especially beloved in Moroccan culture. His stories teach lessons through humor and irony."
       }
     ]

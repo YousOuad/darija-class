@@ -308,36 +308,60 @@
           "hint": "It's originally 'rough' but used positively in slang"
         },
         {
-          "type": "fill_in_blank",
-          "question": "مات بال___! (He died laughing!)",
-          "correct_answer": "ضحك",
-          "romanized_answer": "d7k",
-          "hint": "The word for 'laughter'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'laughter''",
+          "correct_answer_arabic": "ضحك",
+          "correct_answer_romanized": "d7k",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the slang",
-          "pairs": [
-            {
-              "darija": "واعر",
-              "english": "amazing"
-            },
-            {
-              "darija": "مسطي",
-              "english": "crazy/cool"
-            },
-            {
-              "darija": "هايل",
-              "english": "awesome"
-            },
-            {
-              "darija": "طوب",
-              "english": "top/great"
-            },
-            {
-              "darija": "فالمية",
-              "english": "100%"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'واعر' mean?",
+          "correct_answer": "amazing",
+          "distractors": [
+            "100%",
+            "awesome",
+            "crazy/cool"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مسطي' mean?",
+          "correct_answer": "crazy/cool",
+          "distractors": [
+            "awesome",
+            "top/great",
+            "100%"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'هايل' mean?",
+          "correct_answer": "awesome",
+          "distractors": [
+            "100%",
+            "top/great",
+            "crazy/cool"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طوب' mean?",
+          "correct_answer": "top/great",
+          "distractors": [
+            "amazing",
+            "100%",
+            "crazy/cool"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فالمية' mean?",
+          "correct_answer": "100%",
+          "distractors": [
+            "crazy/cool",
+            "top/great",
+            "awesome"
           ]
         },
         {
@@ -631,36 +655,60 @@
           "hint": "Related to making fun of someone"
         },
         {
-          "type": "fill_in_blank",
-          "question": "طاح ليه ال___! (He was embarrassed!)",
-          "correct_answer": "شكل",
-          "romanized_answer": "shkl",
-          "hint": "The word for 'face/appearance'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'face/appearance''",
+          "correct_answer_arabic": "شكل",
+          "correct_answer_romanized": "shkl",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the humorous expressions",
-          "pairs": [
-            {
-              "darija": "ضرب الطبل",
-              "english": "to show off"
-            },
-            {
-              "darija": "طاح ليه الشكل",
-              "english": "was embarrassed"
-            },
-            {
-              "darija": "قلب عليه الطابلة",
-              "english": "turned the tables"
-            },
-            {
-              "darija": "كلام معسل",
-              "english": "sweet talk"
-            },
-            {
-              "darija": "خرج ليه",
-              "english": "lost it / snapped"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'ضرب الطبل' mean?",
+          "correct_answer": "to show off",
+          "distractors": [
+            "lost it / snapped",
+            "was embarrassed",
+            "sweet talk"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طاح ليه الشكل' mean?",
+          "correct_answer": "was embarrassed",
+          "distractors": [
+            "turned the tables",
+            "sweet talk",
+            "to show off"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'قلب عليه الطابلة' mean?",
+          "correct_answer": "turned the tables",
+          "distractors": [
+            "sweet talk",
+            "lost it / snapped",
+            "to show off"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كلام معسل' mean?",
+          "correct_answer": "sweet talk",
+          "distractors": [
+            "lost it / snapped",
+            "to show off",
+            "turned the tables"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خرج ليه' mean?",
+          "correct_answer": "lost it / snapped",
+          "distractors": [
+            "to show off",
+            "was embarrassed",
+            "sweet talk"
           ]
         },
         {
@@ -954,36 +1002,60 @@
           "hint": "It literally means 'washing' but is used as slang for something embarrassing"
         },
         {
-          "type": "fill_in_blank",
-          "question": "هاد الأغنية دارت ___ كبير! (This song created a big buzz!)",
-          "correct_answer": "بوز",
-          "romanized_answer": "buz",
-          "hint": "An English loanword for hype/excitement"
+          "type": "translation",
+          "question": "Translate to Darija: 'An English loanword for hype/excitement'",
+          "correct_answer_arabic": "بوز",
+          "correct_answer_romanized": "buz",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the internet slang",
-          "pairs": [
-            {
-              "darija": "فليكسي",
-              "english": "showing off"
-            },
-            {
-              "darija": "سكيب",
-              "english": "skip/pass"
-            },
-            {
-              "darija": "غاسل",
-              "english": "cringe"
-            },
-            {
-              "darija": "بوز",
-              "english": "buzz/hype"
-            },
-            {
-              "darija": "فايب",
-              "english": "vibe"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'فليكسي' mean?",
+          "correct_answer": "showing off",
+          "distractors": [
+            "cringe",
+            "vibe",
+            "buzz/hype"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'سكيب' mean?",
+          "correct_answer": "skip/pass",
+          "distractors": [
+            "buzz/hype",
+            "cringe",
+            "vibe"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'غاسل' mean?",
+          "correct_answer": "cringe",
+          "distractors": [
+            "vibe",
+            "showing off",
+            "skip/pass"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بوز' mean?",
+          "correct_answer": "buzz/hype",
+          "distractors": [
+            "skip/pass",
+            "vibe",
+            "showing off"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فايب' mean?",
+          "correct_answer": "vibe",
+          "distractors": [
+            "skip/pass",
+            "showing off",
+            "buzz/hype"
           ]
         },
         {
@@ -1070,21 +1142,24 @@
         "sentence_latin": "had shshay ___ dyal ss7!",
         "answer_arabic": "واعر",
         "answer_latin": "wa3r",
-        "hint": "amazing"
+        "hint": "amazing",
+        "english": "This thing is amazing, for real!"
       },
       {
         "sentence_arabic": "طاح ليه ال___!",
         "sentence_latin": "Ta7 lih shshkl!",
         "answer_arabic": "شكل",
         "answer_latin": "shkl",
-        "hint": "face/appearance (embarrassed)"
+        "hint": "face/appearance (embarrassed)",
+        "english": "He was so embarrassed!"
       },
       {
         "sentence_arabic": "هاد الأغنية دارت ___ كبير!",
         "sentence_latin": "had lughniya dart ___ kbir!",
         "answer_arabic": "بوز",
         "answer_latin": "buz",
-        "hint": "buzz/hype"
+        "hint": "buzz/hype",
+        "english": "This song created a big buzz!"
       }
     ],
     "cultural_quiz": [

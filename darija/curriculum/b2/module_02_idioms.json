@@ -308,36 +308,60 @@
           "hint": "It's about how parents see their children"
         },
         {
-          "type": "fill_in_blank",
-          "question": "اللي ___ مات (What's past is dead)",
-          "correct_answer": "فات",
-          "romanized_answer": "fat",
-          "hint": "Past tense of 'to pass'"
+          "type": "translation",
+          "question": "Translate to Darija: 'Past tense of 'to pass''",
+          "correct_answer_arabic": "فات",
+          "correct_answer_romanized": "fat",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match the proverbs to their meanings",
-          "pairs": [
-            {
-              "darija": "اللي فات مات",
-              "english": "Let bygones be bygones"
-            },
-            {
-              "darija": "يد واحدة ما كتصفقش",
-              "english": "Cooperation is needed"
-            },
-            {
-              "darija": "كلمة حلوة كتفتح باب الحديد",
-              "english": "Kindness opens doors"
-            },
-            {
-              "darija": "طلع ليا فالراس",
-              "english": "Got on my nerves"
-            },
-            {
-              "darija": "عندو زهر",
-              "english": "He's lucky"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'اللي فات مات' mean?",
+          "correct_answer": "Let bygones be bygones",
+          "distractors": [
+            "Got on my nerves",
+            "He's lucky",
+            "Cooperation is needed"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'يد واحدة ما كتصفقش' mean?",
+          "correct_answer": "Cooperation is needed",
+          "distractors": [
+            "Kindness opens doors",
+            "Let bygones be bygones",
+            "Got on my nerves"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'كلمة حلوة كتفتح باب الحديد' mean?",
+          "correct_answer": "Kindness opens doors",
+          "distractors": [
+            "Let bygones be bygones",
+            "He's lucky",
+            "Got on my nerves"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طلع ليا فالراس' mean?",
+          "correct_answer": "Got on my nerves",
+          "distractors": [
+            "He's lucky",
+            "Cooperation is needed",
+            "Kindness opens doors"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'عندو زهر' mean?",
+          "correct_answer": "He's lucky",
+          "distractors": [
+            "Kindness opens doors",
+            "Let bygones be bygones",
+            "Got on my nerves"
           ]
         },
         {
@@ -591,36 +615,60 @@
           "hint": "About someone who won't change their mind"
         },
         {
-          "type": "fill_in_blank",
-          "question": "عندها ___ طويل (She gossips)",
-          "correct_answer": "لسان",
-          "romanized_answer": "lsan",
-          "hint": "A body part used for talking"
+          "type": "translation",
+          "question": "Translate to Darija: 'A body part used for talking'",
+          "correct_answer_arabic": "لسان",
+          "correct_answer_romanized": "lsan",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match animal metaphors",
-          "pairs": [
-            {
-              "darija": "حمار",
-              "english": "foolish"
-            },
-            {
-              "darija": "ديب",
-              "english": "cunning"
-            },
-            {
-              "darija": "نملة",
-              "english": "hardworking"
-            },
-            {
-              "darija": "بغل",
-              "english": "stubborn"
-            },
-            {
-              "darija": "دجاجة",
-              "english": "cowardly"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'حمار' mean?",
+          "correct_answer": "foolish",
+          "distractors": [
+            "stubborn",
+            "cowardly",
+            "hardworking"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ديب' mean?",
+          "correct_answer": "cunning",
+          "distractors": [
+            "cowardly",
+            "foolish",
+            "stubborn"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'نملة' mean?",
+          "correct_answer": "hardworking",
+          "distractors": [
+            "stubborn",
+            "cowardly",
+            "foolish"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بغل' mean?",
+          "correct_answer": "stubborn",
+          "distractors": [
+            "cowardly",
+            "foolish",
+            "hardworking"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دجاجة' mean?",
+          "correct_answer": "cowardly",
+          "distractors": [
+            "cunning",
+            "stubborn",
+            "foolish"
           ]
         },
         {
@@ -862,36 +910,60 @@
           "hint": "A proverb about endurance"
         },
         {
-          "type": "fill_in_blank",
-          "question": "دير ___ و نساه (Do good and forget about it)",
-          "correct_answer": "الخير",
-          "romanized_answer": "lkhir",
-          "hint": "The word for 'good/goodness'"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'good/goodness''",
+          "correct_answer_arabic": "الخير",
+          "correct_answer_romanized": "lkhir",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match proverbs to meanings",
-          "pairs": [
-            {
-              "darija": "الصبر مفتاح الفرج",
-              "english": "patience is key"
-            },
-            {
-              "darija": "الأيام دول",
-              "english": "fortunes change"
-            },
-            {
-              "darija": "اللي بكري يطحن",
-              "english": "early bird"
-            },
-            {
-              "darija": "دير الخير و نساه",
-              "english": "do good selflessly"
-            },
-            {
-              "darija": "مول الدار أدرى",
-              "english": "don't judge others"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'الصبر مفتاح الفرج' mean?",
+          "correct_answer": "patience is key",
+          "distractors": [
+            "fortunes change",
+            "don't judge others",
+            "do good selflessly"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'الأيام دول' mean?",
+          "correct_answer": "fortunes change",
+          "distractors": [
+            "do good selflessly",
+            "don't judge others",
+            "early bird"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'اللي بكري يطحن' mean?",
+          "correct_answer": "early bird",
+          "distractors": [
+            "don't judge others",
+            "patience is key",
+            "fortunes change"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'دير الخير و نساه' mean?",
+          "correct_answer": "do good selflessly",
+          "distractors": [
+            "early bird",
+            "don't judge others",
+            "fortunes change"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مول الدار أدرى' mean?",
+          "correct_answer": "don't judge others",
+          "distractors": [
+            "early bird",
+            "do good selflessly",
+            "fortunes change"
           ]
         },
         {
@@ -978,21 +1050,24 @@
         "sentence_latin": "lli bgha ___ ysbr l9rss nn7l",
         "answer_arabic": "العسل",
         "answer_latin": "l3sl",
-        "hint": "honey"
+        "hint": "honey",
+        "english": "He who wants honey must endure the bee stings"
       },
       {
         "sentence_arabic": "دير ___ و نساه",
         "sentence_latin": "dir ___ w nsah",
         "answer_arabic": "الخير",
         "answer_latin": "lkhir",
-        "hint": "good/goodness"
+        "hint": "good/goodness",
+        "english": "Do good and forget about it"
       },
       {
         "sentence_arabic": "الصبر ___ الفرج",
         "sentence_latin": "ssbr ___ lfrj",
         "answer_arabic": "مفتاح",
         "answer_latin": "mfta7",
-        "hint": "key"
+        "hint": "key",
+        "english": "Education is the key to progress"
       }
     ],
     "cultural_quiz": [

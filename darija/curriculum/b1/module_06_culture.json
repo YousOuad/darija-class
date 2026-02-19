@@ -232,36 +232,60 @@
           "hint": "The 'big' holiday when families sacrifice a sheep"
         },
         {
-          "type": "fill_in_blank",
-          "question": "___ كريم (Generous Ramadan)",
-          "correct_answer": "رمضان",
-          "romanized_answer": "rmdan",
-          "hint": "The holy month of fasting"
+          "type": "translation",
+          "question": "Translate to Darija: 'The holy month of fasting'",
+          "correct_answer_arabic": "رمضان",
+          "correct_answer_romanized": "rmdan",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match cultural terms",
-          "pairs": [
-            {
-              "darija": "عرس",
-              "english": "wedding"
-            },
-            {
-              "darija": "حنة",
-              "english": "henna"
-            },
-            {
-              "darija": "ڭناوة",
-              "english": "Gnawa music"
-            },
-            {
-              "darija": "قفطان",
-              "english": "caftan"
-            },
-            {
-              "darija": "موسم",
-              "english": "festival"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'عرس' mean?",
+          "correct_answer": "wedding",
+          "distractors": [
+            "henna",
+            "caftan",
+            "festival"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حنة' mean?",
+          "correct_answer": "henna",
+          "distractors": [
+            "wedding",
+            "festival",
+            "caftan"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'ڭناوة' mean?",
+          "correct_answer": "Gnawa music",
+          "distractors": [
+            "wedding",
+            "caftan",
+            "festival"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'قفطان' mean?",
+          "correct_answer": "caftan",
+          "distractors": [
+            "henna",
+            "wedding",
+            "festival"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'موسم' mean?",
+          "correct_answer": "festival",
+          "distractors": [
+            "wedding",
+            "Gnawa music",
+            "caftan"
           ]
         },
         {
@@ -515,36 +539,60 @@
           "hint": "The cultural capital of Morocco"
         },
         {
-          "type": "fill_in_blank",
-          "question": "الصناعة ___ مشهورة فالمغرب (Traditional crafts are famous in Morocco)",
-          "correct_answer": "التقليدية",
-          "romanized_answer": "tt9lidiya",
-          "hint": "The word for 'traditional' (feminine)"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for 'traditional' (feminine)'",
+          "correct_answer_arabic": "التقليدية",
+          "correct_answer_romanized": "tt9lidiya",
+          "hint": ""
         },
         {
-          "type": "matching",
-          "question": "Match crafts to cities",
-          "pairs": [
-            {
-              "darija": "زليج",
-              "english": "Fes"
-            },
-            {
-              "darija": "فخار",
-              "english": "Safi"
-            },
-            {
-              "darija": "جلد",
-              "english": "Marrakech"
-            },
-            {
-              "darija": "خشب",
-              "english": "Essaouira"
-            },
-            {
-              "darija": "زربية",
-              "english": "Atlas Mountains"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'زليج' mean?",
+          "correct_answer": "Fes",
+          "distractors": [
+            "Atlas Mountains",
+            "Essaouira",
+            "Marrakech"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'فخار' mean?",
+          "correct_answer": "Safi",
+          "distractors": [
+            "Essaouira",
+            "Fes",
+            "Atlas Mountains"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'جلد' mean?",
+          "correct_answer": "Marrakech",
+          "distractors": [
+            "Safi",
+            "Atlas Mountains",
+            "Fes"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'خشب' mean?",
+          "correct_answer": "Essaouira",
+          "distractors": [
+            "Fes",
+            "Safi",
+            "Marrakech"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'زربية' mean?",
+          "correct_answer": "Atlas Mountains",
+          "distractors": [
+            "Essaouira",
+            "Marrakech",
+            "Fes"
           ]
         },
         {
@@ -786,11 +834,11 @@
           "hint": "The most sacred day of the week"
         },
         {
-          "type": "fill_in_blank",
-          "question": "يديك ___! (Health to your hands!)",
-          "correct_answer": "الصحة",
-          "romanized_answer": "ss77a",
-          "hint": "The word for health"
+          "type": "translation",
+          "question": "Translate to Darija: 'The word for health'",
+          "correct_answer_arabic": "الصحة",
+          "correct_answer_romanized": "ss77a",
+          "hint": ""
         },
         {
           "type": "translation",
@@ -800,29 +848,53 @@
           "hint": "A classic Moroccan hospitality phrase"
         },
         {
-          "type": "matching",
-          "question": "Match Moroccan dishes",
-          "pairs": [
-            {
-              "darija": "كسكس",
-              "english": "couscous"
-            },
-            {
-              "darija": "طاجين",
-              "english": "tagine"
-            },
-            {
-              "darija": "حريرة",
-              "english": "harira soup"
-            },
-            {
-              "darija": "بسطيلة",
-              "english": "pastilla"
-            },
-            {
-              "darija": "مسمن",
-              "english": "msemen pancake"
-            }
+          "type": "multiple_choice",
+          "question": "What does 'كسكس' mean?",
+          "correct_answer": "couscous",
+          "distractors": [
+            "tagine",
+            "pastilla",
+            "msemen pancake"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'طاجين' mean?",
+          "correct_answer": "tagine",
+          "distractors": [
+            "couscous",
+            "pastilla",
+            "harira soup"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'حريرة' mean?",
+          "correct_answer": "harira soup",
+          "distractors": [
+            "couscous",
+            "pastilla",
+            "msemen pancake"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'بسطيلة' mean?",
+          "correct_answer": "pastilla",
+          "distractors": [
+            "harira soup",
+            "msemen pancake",
+            "tagine"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does 'مسمن' mean?",
+          "correct_answer": "msemen pancake",
+          "distractors": [
+            "harira soup",
+            "couscous",
+            "tagine"
           ]
         },
         {
@@ -902,21 +974,24 @@
         "sentence_latin": "3id ___ s3id",
         "answer_arabic": "مبارك",
         "answer_latin": "mubark",
-        "hint": "blessed"
+        "hint": "blessed",
+        "english": "Happy blessed holiday"
       },
       {
         "sentence_arabic": "تفضل، الدار ___",
         "sentence_latin": "tfdddl, ddar ___",
         "answer_arabic": "دارك",
         "answer_latin": "dark",
-        "hint": "your house"
+        "hint": "your house",
+        "english": "Welcome, make yourself at home"
       },
       {
         "sentence_arabic": "يديك ___!",
         "sentence_latin": "ydik ___!",
         "answer_arabic": "الصحة",
         "answer_latin": "ss77a",
-        "hint": "health"
+        "hint": "health",
+        "english": "Bless your hands!"
       }
     ],
     "cultural_quiz": [
