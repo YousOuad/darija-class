@@ -8,7 +8,7 @@ from botocore.exceptions import ClientError
 
 from app.core.config import settings
 
-MODEL_ID = "anthropic.claude-3-haiku-20240307-v1:0"
+MODEL_ID = "arn:aws:bedrock:eu-west-3:557720455286:inference-profile/eu.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 BASE_SYSTEM_PROMPT = """\
 You are a friendly Darija (Moroccan Arabic) conversation partner helping a language learner practice.

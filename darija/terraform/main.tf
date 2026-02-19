@@ -178,7 +178,7 @@ resource "aws_iam_role_policy" "lambda_bedrock" {
     Statement = [{
       Effect   = "Allow"
       Action   = "bedrock:InvokeModel"
-      Resource = "arn:aws:bedrock:${var.aws_region}::foundation-model/anthropic.claude-3-haiku-20240307-v1:0"
+      Resource = "arn:aws:bedrock:${var.aws_region}:557720455286:inference-profile/eu.anthropic.claude-haiku-4-5-20251001-v1:0"
     }]
   })
 }
