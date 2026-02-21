@@ -1,5 +1,6 @@
-"""Flashcard routes: personal deck CRUD, explore, and copy."""
+"""Flashcard routes: personal deck CRUD, explore, copy, and spaced repetition."""
 
+from datetime import datetime, timedelta, timezone
 from typing import List
 from uuid import UUID
 
@@ -11,9 +12,24 @@ from app.core.database import get_db
 from app.core.security import get_current_user
 from app.models.flashcard import Flashcard
 from app.models.user import User
-from app.schemas.flashcard import DeckResponse, FlashcardCreate, FlashcardResponse
+from app.schemas.flashcard import (
+    DeckResponse,
+    FlashcardCreate,
+    FlashcardResponse,
+    ReviewSubmission,
+)
 
 router = APIRouter(prefix="/flashcards", tags=["flashcards"])
+
+
+_BOX_INTERVALS = {1: timedelta(0), 2: timedelta(days=1), 3: timedelta(days=3)}
+
+
+def _calculate_next_review(current_box: int, known: bool) -> tuple[int, datetime]:
+    """Return (new_box, next_review) based on Leitner 3-box system."""
+    now = datetime.now(timezone.utc)
+    new_box = min(current_box + 1, 3) if known else 1
+    return new_box, now + _BOX_INTERVALS[new_box]
 
 
 def _card_to_response(card: Flashcard, owner_name: str = "") -> FlashcardResponse:
@@ -25,6 +41,10 @@ def _card_to_response(card: Flashcard, owner_name: str = "") -> FlashcardRespons
         is_public=card.is_public,
         created_at=card.created_at,
         owner_name=owner_name,
+        box=getattr(card, "box", 1),
+        next_review=getattr(card, "next_review", None),
+        review_count=getattr(card, "review_count", 0),
+        last_reviewed=getattr(card, "last_reviewed", None),
     )
 
 
@@ -40,6 +60,52 @@ async def get_my_deck(
     )
     cards = result.scalars().all()
     return [_card_to_response(c, current_user.display_name) for c in cards]
+
+
+@router.get("/due", response_model=List[FlashcardResponse])
+async def get_due_cards(
+    db: AsyncSession = Depends(get_db), current_user: User = Depends(get_current_user)
+):
+    """Get flashcards due for review, prioritising Box 1 (learning) cards."""
+    now = datetime.now(timezone.utc)
+    result = await db.execute(
+        select(Flashcard)
+        .where(Flashcard.user_id == current_user.id, Flashcard.next_review <= now)
+        .order_by(Flashcard.box.asc(), Flashcard.next_review.asc())
+    )
+    cards = result.scalars().all()
+    return [_card_to_response(c, current_user.display_name) for c in cards]
+
+
+@router.post("/review")
+async def submit_review(
+    submission: ReviewSubmission,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """Submit review results and update spaced repetition schedule."""
+    now = datetime.now(timezone.utc)
+    updated = 0
+
+    for item in submission.results:
+        result = await db.execute(
+            select(Flashcard).where(
+                Flashcard.id == item.card_id, Flashcard.user_id == current_user.id
+            )
+        )
+        card = result.scalar_one_or_none()
+        if not card:
+            continue
+
+        new_box, next_review = _calculate_next_review(card.box, item.known)
+        card.box = new_box
+        card.next_review = next_review
+        card.review_count += 1
+        card.last_reviewed = now
+        updated += 1
+
+    await db.flush()
+    return {"updated": updated}
 
 
 @router.post("", response_model=FlashcardResponse, status_code=status.HTTP_201_CREATED)

@@ -97,6 +97,8 @@ export const flashcardsAPI = {
   getSuggestions: () => api.get('/flashcards/suggestions'),
   explore: () => api.get('/flashcards/explore'),
   copy: (id) => api.post(`/flashcards/${id}/copy`),
+  getDueCards: () => api.get('/flashcards/due'),
+  submitReview: (results) => api.post('/flashcards/review', { results }),
 };
 
 // Curriculum editor endpoints (teacher/admin only)

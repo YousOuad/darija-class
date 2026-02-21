@@ -20,8 +20,22 @@ class FlashcardResponse(BaseModel):
     is_public: bool
     created_at: datetime
     owner_name: str = ""
+    # SRS fields
+    box: int = 1
+    next_review: Optional[datetime] = None
+    review_count: int = 0
+    last_reviewed: Optional[datetime] = None
 
     model_config = {"from_attributes": True}
+
+
+class CardReviewResult(BaseModel):
+    card_id: UUID
+    known: bool
+
+
+class ReviewSubmission(BaseModel):
+    results: List[CardReviewResult]
 
 
 class DeckResponse(BaseModel):

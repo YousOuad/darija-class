@@ -164,7 +164,7 @@ export default function Flashcards() {
           />
         )}
         {activeTab === 'review' && (
-          <ReviewTab cards={cards} isLoading={isLoading} />
+          <ReviewTab cards={cards} isLoading={isLoading} onReviewComplete={loadMyDeck} />
         )}
         {activeTab === 'explore' && (
           <ExploreTab
@@ -295,52 +295,75 @@ function DeckTab({ cards, showForm, setShowForm, formData, setFormData, isCreati
 }
 
 
-/* ── Review Tab ─────────────────────────────────────────────── */
+/* ── Review Tab (Spaced Repetition) ────────────────────────── */
 
-function ReviewTab({ cards, isLoading }) {
+const BOX_COLORS = {
+  1: 'bg-terracotta-100 text-terracotta-700',
+  2: 'bg-gold-300/30 text-gold-600',
+  3: 'bg-green-100 text-green-700',
+};
+const BOX_LABELS = { 1: 'Learning', 2: 'Reviewing', 3: 'Mastered' };
+
+function ReviewTab({ cards, isLoading, onReviewComplete }) {
+  const [dueCards, setDueCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [known, setKnown] = useState(0);
-  const [studyAgain, setStudyAgain] = useState(0);
+  const [sessionResults, setSessionResults] = useState([]);
   const [reviewComplete, setReviewComplete] = useState(false);
-  const [shuffledCards, setShuffledCards] = useState([]);
+  const [isLoadingDue, setIsLoadingDue] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const startReview = useCallback(() => {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    setShuffledCards(shuffled);
-    setCurrentIndex(0);
-    setFlipped(false);
-    setKnown(0);
-    setStudyAgain(0);
-    setReviewComplete(false);
-  }, [cards]);
+  const loadDueCards = useCallback(async () => {
+    setIsLoadingDue(true);
+    try {
+      const res = await flashcardsAPI.getDueCards();
+      setDueCards(res.data);
+      setCurrentIndex(0);
+      setFlipped(false);
+      setSessionResults([]);
+      setReviewComplete(false);
+    } catch (err) {
+      console.error('Failed to load due cards:', err);
+    } finally {
+      setIsLoadingDue(false);
+    }
+  }, []);
 
   useEffect(() => {
-    if (cards.length > 0 && shuffledCards.length === 0) {
-      startReview();
-    }
-  }, [cards, shuffledCards.length, startReview]);
+    loadDueCards();
+  }, [loadDueCards]);
 
-  const advance = useCallback(() => {
-    if (currentIndex < shuffledCards.length - 1) {
+  const finishSession = useCallback(async (results) => {
+    if (results.length === 0) {
+      setReviewComplete(true);
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      await flashcardsAPI.submitReview(results);
+      if (onReviewComplete) onReviewComplete();
+    } catch (err) {
+      console.error('Failed to submit review:', err);
+    } finally {
+      setIsSubmitting(false);
+      setReviewComplete(true);
+    }
+  }, [onReviewComplete]);
+
+  const handleAnswer = useCallback((known) => {
+    const card = dueCards[currentIndex];
+    const updated = [...sessionResults, { card_id: card.id, known }];
+    setSessionResults(updated);
+
+    if (currentIndex < dueCards.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       setFlipped(false);
     } else {
-      setReviewComplete(true);
+      finishSession(updated);
     }
-  }, [currentIndex, shuffledCards.length]);
+  }, [currentIndex, dueCards, sessionResults, finishSession]);
 
-  const handleKnow = () => {
-    setKnown((prev) => prev + 1);
-    advance();
-  };
-
-  const handleStudyAgain = () => {
-    setStudyAgain((prev) => prev + 1);
-    advance();
-  };
-
-  if (isLoading) return <LoadingSpinner text="Loading cards..." />;
+  if (isLoading || isLoadingDue) return <LoadingSpinner text="Loading cards..." />;
 
   if (cards.length === 0) {
     return (
@@ -352,45 +375,74 @@ function ReviewTab({ cards, isLoading }) {
     );
   }
 
+  if (dueCards.length === 0 && !reviewComplete) {
+    return (
+      <div className="text-center py-16">
+        <div className="bg-white rounded-2xl shadow-lg border border-sand-100 p-8 max-w-sm mx-auto">
+          <div className="text-5xl mb-4">&#10003;</div>
+          <h3 className="text-lg font-bold text-dark mb-2">All caught up!</h3>
+          <p className="text-dark-400 text-sm mb-4">
+            No cards are due for review right now. Check back later!
+          </p>
+          <p className="text-xs text-dark-300">
+            {cards.length} card{cards.length !== 1 ? 's' : ''} in your deck
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   if (reviewComplete) {
+    const knownCount = sessionResults.filter((r) => r.known).length;
+    const studyAgainCount = sessionResults.filter((r) => !r.known).length;
+    const total = sessionResults.length;
+
     return (
       <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-8">
         <div className="bg-white rounded-2xl shadow-lg border border-sand-100 p-8 max-w-sm mx-auto">
           <div className="text-5xl mb-4">
-            {known >= shuffledCards.length * 0.8 ? '🎉' : known >= shuffledCards.length * 0.5 ? '👍' : '📚'}
+            {total > 0 && knownCount >= total * 0.8 ? '&#127881;' : total > 0 && knownCount >= total * 0.5 ? '&#128077;' : '&#128218;'}
           </div>
           <h3 className="text-xl font-bold text-dark mb-4">Review Complete!</h3>
           <div className="flex items-center justify-center gap-8 mb-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-green-500">{known}</p>
+              <p className="text-3xl font-bold text-green-500">{knownCount}</p>
               <p className="text-sm text-dark-300">Known</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-terracotta-500">{studyAgain}</p>
+              <p className="text-3xl font-bold text-terracotta-500">{studyAgainCount}</p>
               <p className="text-sm text-dark-300">Study Again</p>
             </div>
           </div>
-          <Button variant="primary" onClick={startReview} fullWidth>
+          <p className="text-xs text-dark-300 mb-4">
+            Cards you knew will be reviewed less often. Cards to study again will appear next session.
+          </p>
+          <Button variant="primary" onClick={loadDueCards} fullWidth disabled={isSubmitting}>
             <RotateCcw size={16} className="mr-2" />
-            Review Again
+            {isSubmitting ? 'Saving...' : 'Check for More'}
           </Button>
         </div>
       </motion.div>
     );
   }
 
-  const card = shuffledCards[currentIndex];
+  const card = dueCards[currentIndex];
   if (!card) return null;
 
   return (
     <div>
       {/* Progress */}
       <div className="text-center mb-4">
-        <p className="text-sm text-dark-300">
-          Card {currentIndex + 1} of {shuffledCards.length}
-        </p>
-        <div className="flex gap-1 mt-2 max-w-xs mx-auto">
-          {shuffledCards.map((_, i) => (
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <p className="text-sm text-dark-300">
+            Card {currentIndex + 1} of {dueCards.length}
+          </p>
+          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${BOX_COLORS[card.box] || BOX_COLORS[1]}`}>
+            {BOX_LABELS[card.box] || BOX_LABELS[1]}
+          </span>
+        </div>
+        <div className="flex gap-1 mt-1 max-w-xs mx-auto">
+          {dueCards.map((_, i) => (
             <div
               key={i}
               className={`h-1.5 flex-1 rounded-full transition-all ${
@@ -448,7 +500,7 @@ function ReviewTab({ cards, isLoading }) {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={handleStudyAgain}
+          onClick={() => handleAnswer(false)}
           className="flex flex-col items-center gap-1 p-4 rounded-2xl bg-terracotta-50 hover:bg-terracotta-100 transition-colors"
         >
           <ThumbsDown size={28} className="text-terracotta-500" />
@@ -468,7 +520,7 @@ function ReviewTab({ cards, isLoading }) {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={handleKnow}
+          onClick={() => handleAnswer(true)}
           className="flex flex-col items-center gap-1 p-4 rounded-2xl bg-green-50 hover:bg-green-100 transition-colors"
         >
           <ThumbsUp size={28} className="text-green-500" />
