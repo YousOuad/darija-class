@@ -78,10 +78,19 @@ function normalizeExercises(exercises, content) {
     const clean = arabic.replace(/[؟?!.،,]/g, '').trim();
     r = romanizedLookup[clean];
     if (r) return r;
-    // 3. Word-by-word for multi-word phrases
+    // 3. Word-by-word with Arabic definite article (ال) stripping
     const words = clean.split(/\s+/);
-    if (words.length > 1) {
-      const parts = words.map((w) => romanizedLookup[w] || '');
+    if (words.length >= 1) {
+      const parts = words.map((w) => {
+        let found = romanizedLookup[w];
+        if (found) return found;
+        // Try stripping ال prefix
+        if (w.startsWith('\u0627\u0644') && w.length > 2) {
+          const base = romanizedLookup[w.slice(2)];
+          if (base) return 'l' + base;
+        }
+        return '';
+      });
       if (parts.every(Boolean)) return parts.join(' ');
     }
     return '';
