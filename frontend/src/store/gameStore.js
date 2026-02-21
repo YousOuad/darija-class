@@ -7,6 +7,10 @@ const BACKEND_TYPE_MAP = {
   conversation: 'conversation_sim',
   listening: 'multiple_choice',
   translation: 'fill_in_blank',
+  cultural_quiz: 'cultural_quiz',
+  memory_match: 'memory_match',
+  word_scramble: 'word_scramble',
+  flashcard_sprint: 'flashcard_sprint',
 };
 
 const LEVEL_COLORS = {

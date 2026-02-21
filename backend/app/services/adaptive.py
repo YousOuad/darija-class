@@ -89,7 +89,8 @@ async def get_weaknesses(db: AsyncSession, user_id: UUID) -> List[UserWeakness]:
 # Generate a prioritised game session
 # ---------------------------------------------------------------------------
 
-# Default game types available in the platform
+# All game types available in the platform.
+# Sessions pick a random subset from this pool each time.
 GAME_TYPES = [
     {
         "game_type": "word_match",
@@ -103,20 +104,46 @@ GAME_TYPES = [
     },
     {
         "game_type": "listening",
-        "title": "Listening Challenge",
-        "description": "Listen and choose the correct transliteration",
+        "title": "Quick Quiz",
+        "description": "Choose the correct meaning of a Darija word",
     },
     {
         "game_type": "translation",
         "title": "Translation",
-        "description": "Translate sentences between Darija and English",
+        "description": "Translate words between Darija and English",
     },
     {
         "game_type": "conversation",
         "title": "Conversation Practice",
         "description": "Practice conversation with an AI partner in Darija",
     },
+    {
+        "game_type": "cultural_quiz",
+        "title": "Cultural Quiz",
+        "description": "Test your knowledge of Moroccan culture",
+    },
+    {
+        "game_type": "memory_match",
+        "title": "Memory Match",
+        "description": "Find matching Darija-English word pairs",
+    },
+    {
+        "game_type": "word_scramble",
+        "title": "Word Scramble",
+        "description": "Unscramble the letters to form Darija words",
+    },
+    {
+        "game_type": "flashcard_sprint",
+        "title": "Flashcard Sprint",
+        "description": "Quick-fire flashcard review of vocabulary",
+    },
 ]
+
+# Games that always appear in a session
+CORE_GAME_TYPES = {"word_match", "conversation"}
+
+# Maximum number of games per session
+SESSION_SIZE = 5
 
 
 # ---------------------------------------------------------------------------
@@ -667,6 +694,165 @@ def _build_cultural_quiz_config(items: list, count: int = 3) -> dict:
     return {"questions": questions}
 
 
+def _build_listening_config(vocab: list, count: int = 4) -> dict:
+    """Build a Multiple-Choice quiz from vocabulary.
+
+    Shows a Darija word and asks the user to pick the correct English meaning.
+    Requires at least 4 vocabulary items to generate meaningful distractors.
+    """
+    if len(vocab) < 4:
+        return {}
+
+    sample = random.sample(vocab, min(count, len(vocab)))
+    questions = []
+
+    for item in sample:
+        correct_english = item["english"]
+
+        # Build distractors from other vocab English meanings
+        distractors = list(
+            {v["english"] for v in vocab if v["english"] != correct_english}
+        )
+        distractor_sample = random.sample(distractors, min(3, len(distractors)))
+
+        options: list[dict] = [
+            {"arabic": "", "latin": correct_english, "correct": True}
+        ]
+        for d in distractor_sample:
+            options.append({"arabic": "", "latin": d, "correct": False})
+        random.shuffle(options)
+        for j, opt in enumerate(options):
+            opt["id"] = chr(97 + j)
+
+        questions.append(
+            {
+                "english": "What does this word mean?",
+                "question": {
+                    "arabic": item.get("darija_arabic", ""),
+                    "latin": item.get("darija_latin", ""),
+                },
+                "options": options,
+            }
+        )
+
+    return {"questions": questions}
+
+
+def _build_translation_config(vocab: list, count: int = 3) -> dict:
+    """Build a Fill-In-Blank style translation quiz from vocabulary.
+
+    Shows an English word and asks the user to pick the correct Darija
+    translation from multiple choice options.
+    """
+    if len(vocab) < 4:
+        return {}
+
+    sample = random.sample(vocab, min(count, len(vocab)))
+    questions = []
+
+    for item in sample:
+        correct = {
+            "arabic": item.get("darija_arabic", ""),
+            "latin": item.get("darija_latin", ""),
+        }
+
+        # Build distractors from other vocab Darija words
+        distractors = [
+            {"arabic": v.get("darija_arabic", ""), "latin": v.get("darija_latin", "")}
+            for v in vocab
+            if v.get("darija_arabic", "") != correct["arabic"]
+        ]
+        distractor_sample = random.sample(distractors, min(3, len(distractors)))
+
+        options: list[dict] = [
+            {"arabic": correct["arabic"], "latin": correct["latin"], "correct": True}
+        ]
+        for d in distractor_sample:
+            options.append(
+                {"arabic": d["arabic"], "latin": d["latin"], "correct": False}
+            )
+        random.shuffle(options)
+        for j, opt in enumerate(options):
+            opt["id"] = chr(97 + j)
+
+        questions.append(
+            {
+                "sentence_arabic": "___",
+                "sentence_latin": "___",
+                "english": f"How do you say '{item['english']}' in Darija?",
+                "answer": correct,
+                "hint": item["english"],
+                "options": options,
+            }
+        )
+
+    return {"questions": questions}
+
+
+def _build_memory_match_config(vocab: list, count: int = 5) -> dict:
+    """Build MemoryMatch game data from vocabulary.
+
+    Creates pairs of Darija/English words for the memory card game.
+    """
+    if len(vocab) < 3:
+        return {}
+
+    sample = random.sample(vocab, min(count, len(vocab)))
+    pairs = []
+    for i, item in enumerate(sample):
+        darija_text = item.get("darija_latin", "") or item.get("darija_arabic", "")
+        pairs.append(
+            {"id": i, "darija": darija_text, "english": item.get("english", "")}
+        )
+    return {"pairs": pairs}
+
+
+def _build_word_scramble_config(vocab: list, count: int = 4) -> dict:
+    """Build WordScramble game data from vocabulary.
+
+    Selects words with Latin transliterations for the user to unscramble.
+    Only picks words with at least 3 characters.
+    """
+    eligible = [
+        v for v in vocab if v.get("darija_latin", "") and len(v["darija_latin"]) >= 3
+    ]
+    if len(eligible) < 2:
+        return {}
+
+    sample = random.sample(eligible, min(count, len(eligible)))
+    words = []
+    for item in sample:
+        words.append(
+            {
+                "word": item["darija_latin"],
+                "meaning": item.get("english", ""),
+                "arabic": item.get("darija_arabic", ""),
+            }
+        )
+    return {"words": words}
+
+
+def _build_flashcard_sprint_config(vocab: list, count: int = 8) -> dict:
+    """Build FlashcardSprint game data from vocabulary.
+
+    Creates flashcards with Darija front and English back for timed review.
+    """
+    if len(vocab) < 3:
+        return {}
+
+    sample = random.sample(vocab, min(count, len(vocab)))
+    cards = []
+    for item in sample:
+        cards.append(
+            {
+                "front_arabic": item.get("darija_arabic", ""),
+                "front_latin": item.get("darija_latin", ""),
+                "back": item.get("english", ""),
+            }
+        )
+    return {"cards": cards}
+
+
 async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[dict]:
     """Generate a daily game session prioritising the user's weak areas.
 
@@ -674,6 +860,10 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
     modules/lessons the user has already completed, so vocabulary always
     reinforces prior learning.  Difficulty (number of items per game)
     scales with the CEFR level.
+
+    A session contains SESSION_SIZE games chosen from a larger pool:
+    core games (word_match, conversation) always appear, and the
+    remaining slots are filled with weakness-targeted or random games.
     """
     weaknesses = await get_weaknesses(db, user_id)
 
@@ -698,6 +888,9 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
                 content["word_match"].append(v)
                 existing.add(key)
 
+    # Combine all vocabulary sources for vocab-based games
+    all_vocab = list(content["word_match"])  # already merged with lesson_vocab
+
     difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
 
     # Build a list of games; put weakness-related ones first
@@ -712,23 +905,42 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
         "conversation": "conversation",
     }
 
-    for w in weaknesses[:3]:
+    # 1. Add core games that always appear
+    for g in GAME_TYPES:
+        if g["game_type"] in CORE_GAME_TYPES:
+            config = _build_game_config(
+                g["game_type"], content, level, difficulty, all_vocab
+            )
+            session_games.append({**g, "config": config})
+            used_types.add(g["game_type"])
+
+    # 2. Add weakness-targeted games
+    for w in weaknesses[:2]:
+        if len(session_games) >= SESSION_SIZE:
+            break
         game_type = skill_to_game.get(w.skill_area)
         if game_type and game_type not in used_types:
             game_def = next(
                 (g for g in GAME_TYPES if g["game_type"] == game_type), None
             )
             if game_def:
-                config = _build_game_config(game_type, content, level, difficulty)
+                config = _build_game_config(
+                    game_type, content, level, difficulty, all_vocab
+                )
                 session_games.append({**game_def, "config": config})
                 used_types.add(game_type)
 
-    # Fill remaining slots with games not yet included
-    for g in GAME_TYPES:
-        if g["game_type"] not in used_types:
-            config = _build_game_config(g["game_type"], content, level, difficulty)
-            session_games.append({**g, "config": config})
-            used_types.add(g["game_type"])
+    # 3. Fill remaining slots randomly from unused game types
+    remaining = [g for g in GAME_TYPES if g["game_type"] not in used_types]
+    random.shuffle(remaining)
+    for g in remaining:
+        if len(session_games) >= SESSION_SIZE:
+            break
+        config = _build_game_config(
+            g["game_type"], content, level, difficulty, all_vocab
+        )
+        session_games.append({**g, "config": config})
+        used_types.add(g["game_type"])
 
     return session_games
 
@@ -761,15 +973,23 @@ def _build_conversation_config(level: str) -> dict:
 
 
 def _build_game_config(
-    game_type: str, content: dict, level: str, difficulty: dict | None = None
+    game_type: str,
+    content: dict,
+    level: str,
+    difficulty: dict | None = None,
+    vocab: list | None = None,
 ) -> dict:
     """Build the config dict for a specific game type with real content.
 
     The *difficulty* dict controls how many items each game contains,
-    scaling with the user's CEFR level.
+    scaling with the user's CEFR level.  *vocab* is a flat list of
+    vocabulary dicts used by vocab-based game types (listening,
+    translation, memory_match, word_scramble, flashcard_sprint).
     """
     if difficulty is None:
         difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
+    if vocab is None:
+        vocab = []
 
     base = {"level": level}
 
@@ -791,6 +1011,20 @@ def _build_game_config(
                 content["cultural_quiz"], count=difficulty["cultural_quiz_count"]
             )
         )
+    elif game_type == "listening" and vocab:
+        base.update(
+            _build_listening_config(vocab, count=difficulty["word_match_count"])
+        )
+    elif game_type == "translation" and vocab:
+        base.update(
+            _build_translation_config(vocab, count=difficulty["fill_blank_count"])
+        )
+    elif game_type == "memory_match" and vocab:
+        base.update(_build_memory_match_config(vocab, count=5))
+    elif game_type == "word_scramble" and vocab:
+        base.update(_build_word_scramble_config(vocab, count=4))
+    elif game_type == "flashcard_sprint" and vocab:
+        base.update(_build_flashcard_sprint_config(vocab, count=8))
     elif game_type == "conversation":
         base.update(_build_conversation_config(level))
 

@@ -53,7 +53,7 @@ async def load_curriculum(request: Request, db: AsyncSession = Depends(get_db)):
         existing_lesson = existing.scalar_one_or_none()
         if existing_lesson is not None:
             existing_lesson.content_json = lesson_data
-            skipped += 1
+            created += 1  # counts as updated
             continue
 
         lesson = Lesson(
@@ -76,7 +76,8 @@ async def load_curriculum(request: Request, db: AsyncSession = Depends(get_db)):
                 Lesson.title == game_title,
             )
         )
-        if existing_game.scalar_one_or_none() is None:
+        existing_game_lesson = existing_game.scalar_one_or_none()
+        if existing_game_lesson is None:
             game_lesson = Lesson(
                 level=level,
                 module=module_id,
@@ -85,9 +86,12 @@ async def load_curriculum(request: Request, db: AsyncSession = Depends(get_db)):
                 content_json={"game_content": game_content, "type": "game_content"},
             )
             db.add(game_lesson)
-            created += 1
         else:
-            skipped += 1
+            existing_game_lesson.content_json = {
+                "game_content": game_content,
+                "type": "game_content",
+            }
+        created += 1
 
     await db.flush()
 

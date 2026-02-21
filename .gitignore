@@ -53,3 +53,6 @@ playwright-report/
 
 # Alembic
 backend/alembic/versions/__pycache__/
+
+# Classes
+curriculum/

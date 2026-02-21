@@ -18,7 +18,7 @@ aws ecr get-login-password --region "$AWS_REGION" | \
   docker login --username AWS --password-stdin "${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
 
 echo "==> Building Lambda container image..."
-docker build --platform linux/amd64 -t "${PROJECT_NAME}-backend" \
+docker build --platform linux/amd64 --provenance=false -t "${PROJECT_NAME}-backend" \
   -f "${PROJECT_ROOT}/backend/Dockerfile.lambda" \
   "${PROJECT_ROOT}/backend"
 

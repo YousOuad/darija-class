@@ -48,6 +48,10 @@ async def submit_game(
         "listening",
         "translation",
         "conversation",
+        "cultural_quiz",
+        "memory_match",
+        "word_scramble",
+        "flashcard_sprint",
     }
     if game_type not in valid_types:
         raise HTTPException(
@@ -62,6 +66,10 @@ async def submit_game(
         "listening": "listening",
         "translation": "translation",
         "conversation": "conversation",
+        "cultural_quiz": "vocabulary",
+        "memory_match": "vocabulary",
+        "word_scramble": "vocabulary",
+        "flashcard_sprint": "vocabulary",
     }
     skill_area = skill_map.get(game_type, game_type)
 

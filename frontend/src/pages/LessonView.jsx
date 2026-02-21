@@ -25,20 +25,42 @@ function hasArabic(str) {
   return /[\u0600-\u06FF]/.test(str || '');
 }
 
-// Build a lookup map from arabic text to romanized from vocabulary
-function buildRomanizedLookup(vocabulary) {
+// Build a comprehensive lookup map from arabic text to romanized.
+// Sources: vocabulary, grammar examples, phrases, and example sentences.
+function buildRomanizedLookup(content) {
   const lookup = {};
-  for (const v of vocabulary || []) {
-    if (v.arabic && (v.romanized || v.latin)) {
-      lookup[v.arabic] = v.romanized || v.latin;
-      lookup[v.arabic.replace(/؟$/, '')] = v.romanized || v.latin;
+
+  function add(arabic, romanized) {
+    if (!arabic || !romanized) return;
+    lookup[arabic] = romanized;
+    // Also store without trailing/leading punctuation
+    const clean = arabic.replace(/[؟?!.،,]/g, '').trim();
+    if (clean && !lookup[clean]) {
+      lookup[clean] = romanized.replace(/[?!.,]/g, '').trim();
     }
   }
+
+  for (const v of content.vocabulary || []) {
+    add(v.arabic, v.romanized || v.latin);
+    const es = v.example_sentence || {};
+    add(es.arabic, es.romanized);
+  }
+
+  for (const g of content.grammar || []) {
+    for (const ex of g.examples || []) {
+      add(ex.arabic, ex.romanized || ex.latin);
+    }
+  }
+
+  for (const p of content.phrases || []) {
+    add(p.arabic, p.romanized || p.latin);
+  }
+
   return lookup;
 }
 
-function normalizeExercises(exercises, vocabulary) {
-  const romanizedLookup = buildRomanizedLookup(vocabulary);
+function normalizeExercises(exercises, content) {
+  const romanizedLookup = buildRomanizedLookup(content);
 
   // Collect romanized answers from translation exercises for use as distractors
   const translationAnswers = exercises
@@ -46,10 +68,30 @@ function normalizeExercises(exercises, vocabulary) {
     .map((ex) => ex.correct_answer_romanized || '')
     .filter(Boolean);
 
-  // Turn an option string into {text, arabic, romanized} for ScriptText display
-  function enrichOption(option) {
+  // Resolve romanized text for an Arabic string using multiple strategies
+  function resolveRomanized(arabic) {
+    if (!arabic) return '';
+    // 1. Exact match
+    let r = romanizedLookup[arabic];
+    if (r) return r;
+    // 2. Strip punctuation
+    const clean = arabic.replace(/[؟?!.،,]/g, '').trim();
+    r = romanizedLookup[clean];
+    if (r) return r;
+    // 3. Word-by-word for multi-word phrases
+    const words = clean.split(/\s+/);
+    if (words.length > 1) {
+      const parts = words.map((w) => romanizedLookup[w] || '');
+      if (parts.every(Boolean)) return parts.join(' ');
+    }
+    return '';
+  }
+
+  // Turn an option string into {text, arabic, romanized} for ScriptText display.
+  // Accepts an optional pre-resolved romanized hint (from curriculum data).
+  function enrichOption(option, romanizedHint) {
     if (hasArabic(option)) {
-      const romanized = romanizedLookup[option] || romanizedLookup[option.replace(/؟$/, '')] || '';
+      const romanized = romanizedHint || resolveRomanized(option);
       return { text: option, arabic: option, romanized };
     }
     return { text: option, arabic: '', romanized: '' };
@@ -76,13 +118,21 @@ function normalizeExercises(exercises, vocabulary) {
       };
     }
 
-    // Standard multiple choice
+    // Standard multiple choice - use pre-stored romanized data when available
     if (ex.type === 'multiple_choice' && ex.correct_answer && !ex.options) {
-      const allOptions = [ex.correct_answer, ...(ex.distractors || [])];
-      const shuffled = shuffleArray(allOptions);
+      const distractors = ex.distractors || [];
+      const distractorsRom = ex.distractors_romanized || [];
+      const correctRom = ex.correct_answer_romanized || '';
+
+      const allOptions = [ex.correct_answer, ...distractors];
+      const allRom = [correctRom, ...distractorsRom];
+      const shuffledIndices = shuffleArray(allOptions.map((_, i) => i));
+      const shuffled = shuffledIndices.map((i) => allOptions[i]);
+      const shuffledRom = shuffledIndices.map((i) => allRom[i] || '');
+
       return {
         ...ex,
-        options: shuffled.map((o) => enrichOption(o)),
+        options: shuffled.map((o, i) => enrichOption(o, shuffledRom[i])),
         correctIndex: shuffled.indexOf(ex.correct_answer),
       };
     }
@@ -105,6 +155,7 @@ export default function LessonView() {
   const [exerciseAnswers, setExerciseAnswers] = useState({});
   const [exerciseChecked, setExerciseChecked] = useState({});
   const [lesson, setLesson] = useState(null);
+  const [rawContent, setRawContent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isCompleting, setIsCompleting] = useState(false);
@@ -119,6 +170,7 @@ export default function LessonView() {
         const data = response.data;
         // Extract content from content_json and map field names
         const content = data.content_json || {};
+        setRawContent(content);
         const rawVocabulary = content.vocabulary || [];
         const rawExercises = (content.exercises || []).filter(
           (ex) => ex.type === 'multiple_choice' || ex.type === 'translation'
@@ -129,7 +181,7 @@ export default function LessonView() {
           vocabulary: mapVocab(rawVocabulary),
           grammar: mapGrammar(content.grammar || []),
           phrases: mapPhrases(content.phrases || []),
-          exercises: normalizeExercises(rawExercises, rawVocabulary),
+          exercises: normalizeExercises(rawExercises, content),
         });
       } catch {
         setError('Lesson not found or failed to load.');
@@ -207,7 +259,7 @@ export default function LessonView() {
           const { options, correctIndex, ...rest } = ex;
           return rest;
         }),
-        prev.vocabulary
+        rawContent || {}
       ),
     }));
   };
