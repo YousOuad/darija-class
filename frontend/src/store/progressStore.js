@@ -32,6 +32,7 @@ const useProgressStore = create((set) => ({
         gamesPlayed: d.total_games_played || 0,
         badges: d.badges || [],
         xpHistory: d.xp_history || [],
+        skills: d.skills || { vocabulary: 0, grammar: 0, phrases: 0, culture: 0, conversation: 0 },
         isLoading: false,
       });
     } catch (error) {

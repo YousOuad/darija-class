@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, BookOpen, MessageSquare, PenTool, Dumbbell, Check, AlertCircle } from 'lucide-react';
+import { ArrowLeft, BookOpen, MessageSquare, PenTool, Dumbbell, Table2, Check, AlertCircle } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
@@ -150,9 +150,28 @@ function normalizeExercises(exercises, content) {
   });
 }
 
+const PRONOUN_ORDER = ['ana', 'nta', 'nti', 'huwa', 'hiya', 'hna', 'ntuma', 'huma'];
+const PRONOUN_LABELS = {
+  ana: { latin: 'ana', arabic: 'أنا', english: 'I' },
+  nta: { latin: 'nta', arabic: 'أنتَ', english: 'you (m)' },
+  nti: { latin: 'nti', arabic: 'أنتِ', english: 'you (f)' },
+  huwa: { latin: 'huwa', arabic: 'هو', english: 'he' },
+  hiya: { latin: 'hiya', arabic: 'هي', english: 'she' },
+  hna: { latin: 'hna', arabic: 'حنا', english: 'we' },
+  ntuma: { latin: 'ntuma', arabic: 'نتوما', english: 'you (pl)' },
+  huma: { latin: 'huma', arabic: 'هوما', english: 'they' },
+};
+const TENSE_LABELS = {
+  present: 'Present',
+  past: 'Past',
+  future: 'Future',
+  negative: 'Negative',
+};
+
 const tabs = [
   { id: 'vocabulary', label: 'Vocabulary', icon: BookOpen },
   { id: 'grammar', label: 'Grammar', icon: PenTool },
+  { id: 'conjugation', label: 'Conjugation', icon: Table2 },
   { id: 'phrases', label: 'Phrases', icon: MessageSquare },
   { id: 'exercises', label: 'Exercises', icon: Dumbbell },
 ];
@@ -189,6 +208,7 @@ export default function LessonView() {
           level: (data.level || '').toUpperCase(),
           vocabulary: mapVocab(rawVocabulary),
           grammar: mapGrammar(content.grammar || []),
+          conjugation: content.conjugation || [],
           phrases: mapPhrases(content.phrases || []),
           exercises: normalizeExercises(rawExercises, content),
         });
@@ -277,6 +297,7 @@ export default function LessonView() {
   const availableTabs = tabs.filter((tab) => {
     if (tab.id === 'vocabulary') return lesson.vocabulary.length > 0;
     if (tab.id === 'grammar') return lesson.grammar.length > 0;
+    if (tab.id === 'conjugation') return lesson.conjugation.length > 0;
     if (tab.id === 'phrases') return lesson.phrases.length > 0;
     if (tab.id === 'exercises') return lesson.exercises.length > 0;
     return true;
@@ -393,6 +414,77 @@ export default function LessonView() {
                 </div>
               </Card>
             ))}
+          </div>
+        )}
+
+        {/* Conjugation Tab */}
+        {activeTab === 'conjugation' && (
+          <div className="space-y-8">
+            {lesson.conjugation.map((verb, vIndex) => {
+              const tenses = ['present', 'past', 'future', 'negative'].filter(
+                (t) => verb[t]
+              );
+              return (
+                <motion.div
+                  key={verb.verb}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: vIndex * 0.1 }}
+                >
+                  <Card>
+                    <div className="flex items-baseline gap-3 mb-5">
+                      <span className="text-2xl font-extrabold text-teal-600">{verb.verb}</span>
+                      <span className="text-xl text-dark-300 font-arabic">{verb.verb_arabic}</span>
+                      <span className="text-sm text-dark-400 italic">{verb.english}</span>
+                    </div>
+
+                    <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                      <table className="w-full text-sm border-collapse min-w-[400px]">
+                        <thead>
+                          <tr>
+                            <th className="text-left py-2 px-3 bg-sand-100 rounded-tl-lg font-semibold text-dark-400 text-xs uppercase tracking-wider">
+                              Pronoun
+                            </th>
+                            {tenses.map((tense) => (
+                              <th
+                                key={tense}
+                                className="text-left py-2 px-3 bg-sand-100 font-semibold text-dark-400 text-xs uppercase tracking-wider last:rounded-tr-lg"
+                              >
+                                {TENSE_LABELS[tense]}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {PRONOUN_ORDER.map((pronoun, pIndex) => (
+                            <tr
+                              key={pronoun}
+                              className={pIndex % 2 === 0 ? 'bg-white' : 'bg-sand-50/50'}
+                            >
+                              <td className="py-2.5 px-3 border-b border-sand-100">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-bold text-dark">{PRONOUN_LABELS[pronoun].latin}</span>
+                                  <span className="text-dark-300 font-arabic text-xs">{PRONOUN_LABELS[pronoun].arabic}</span>
+                                  <span className="text-dark-400 text-xs hidden sm:inline">({PRONOUN_LABELS[pronoun].english})</span>
+                                </div>
+                              </td>
+                              {tenses.map((tense) => (
+                                <td
+                                  key={tense}
+                                  className="py-2.5 px-3 border-b border-sand-100 font-medium text-teal-700"
+                                >
+                                  {verb[tense][pronoun]}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         )}
 

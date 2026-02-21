@@ -11,6 +11,8 @@ const BACKEND_TYPE_MAP = {
   memory_match: 'memory_match',
   word_scramble: 'word_scramble',
   flashcard_sprint: 'flashcard_sprint',
+  conjugation_quiz: 'multiple_choice',
+  conjugation_fill: 'fill_in_blank',
 };
 
 const LEVEL_COLORS = {

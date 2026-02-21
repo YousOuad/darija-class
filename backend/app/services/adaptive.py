@@ -137,6 +137,16 @@ GAME_TYPES = [
         "title": "Flashcard Sprint",
         "description": "Quick-fire flashcard review of vocabulary",
     },
+    {
+        "game_type": "conjugation_quiz",
+        "title": "Conjugation Quiz",
+        "description": "Pick the correct conjugation of a Darija verb",
+    },
+    {
+        "game_type": "conjugation_fill",
+        "title": "Conjugation Challenge",
+        "description": "Fill in the correct verb conjugation",
+    },
 ]
 
 # Games that always appear in a session
@@ -853,6 +863,201 @@ def _build_flashcard_sprint_config(vocab: list, count: int = 8) -> dict:
     return {"cards": cards}
 
 
+PRONOUN_LABELS = {
+    "ana": "I",
+    "nta": "you (m)",
+    "nti": "you (f)",
+    "huwa": "he",
+    "hiya": "she",
+    "hna": "we",
+    "ntuma": "you (pl)",
+    "huma": "they",
+}
+TENSE_LABELS = {
+    "present": "present",
+    "past": "past",
+    "future": "future",
+    "negative": "negative",
+}
+
+
+async def _load_lesson_conjugation(db: AsyncSession, user_id: UUID, level: str) -> list:
+    """Extract conjugation entries from the user's completed lessons.
+
+    Returns a flat list of conjugation dicts, each with verb, verb_arabic,
+    english, and tense dicts (present, past, future, negative) mapping
+    pronouns to conjugated forms.
+    """
+    result = await db.execute(
+        select(Lesson.content_json)
+        .join(UserProgress, UserProgress.lesson_id == Lesson.id)
+        .where(
+            UserProgress.user_id == user_id, Lesson.level == level, Lesson.order < 999
+        )
+    )
+    conjugations = []
+    for (cj,) in result.all():
+        if not cj:
+            continue
+        for item in cj.get("conjugation", []):
+            if item.get("verb") and item.get("present"):
+                conjugations.append(item)
+    return conjugations
+
+
+def _build_conjugation_quiz_config(conjugations: list, count: int = 4) -> dict:
+    """Build a Multiple-Choice conjugation quiz.
+
+    Shows a verb + pronoun + tense and asks the user to pick the correct
+    conjugated form from 4 options.
+    """
+    if not conjugations:
+        return {}
+
+    # Collect all available (verb, tense, pronoun) combinations
+    candidates = []
+    for conj in conjugations:
+        for tense in ["present", "past", "future", "negative"]:
+            forms = conj.get(tense)
+            if not forms:
+                continue
+            for pronoun, form in forms.items():
+                if form:
+                    candidates.append(
+                        {
+                            "verb": conj["verb"],
+                            "verb_arabic": conj.get("verb_arabic", ""),
+                            "english": conj.get("english", ""),
+                            "tense": tense,
+                            "pronoun": pronoun,
+                            "correct_form": form,
+                        }
+                    )
+
+    if len(candidates) < 4:
+        return {}
+
+    sample = random.sample(candidates, min(count, len(candidates)))
+
+    # Collect all forms for distractor generation
+    all_forms = list({c["correct_form"] for c in candidates})
+
+    questions = []
+    for item in sample:
+        pronoun_label = PRONOUN_LABELS.get(item["pronoun"], item["pronoun"])
+        tense_label = TENSE_LABELS.get(item["tense"], item["tense"])
+
+        # Build distractors from other forms (excluding the correct one)
+        distractors = [f for f in all_forms if f != item["correct_form"]]
+        distractor_sample = random.sample(distractors, min(3, len(distractors)))
+
+        options = [{"arabic": "", "latin": item["correct_form"], "correct": True}]
+        for d in distractor_sample:
+            options.append({"arabic": "", "latin": d, "correct": False})
+        random.shuffle(options)
+        for j, opt in enumerate(options):
+            opt["id"] = chr(97 + j)
+
+        questions.append(
+            {
+                "english": (
+                    f"Conjugate '{item['verb']}' ({item['english']}) — "
+                    f"{item['pronoun']} ({pronoun_label}), {tense_label} tense"
+                ),
+                "question": {"arabic": item["verb_arabic"], "latin": item["verb"]},
+                "options": options,
+            }
+        )
+
+    return {"questions": questions}
+
+
+def _build_conjugation_fill_config(conjugations: list, count: int = 3) -> dict:
+    """Build a Fill-In-The-Blank conjugation game.
+
+    Shows a sentence template with a blank for the conjugated form
+    and asks the user to pick the correct option.
+    """
+    if not conjugations:
+        return {}
+
+    # Collect all available (verb, tense, pronoun) combinations
+    candidates = []
+    for conj in conjugations:
+        for tense in ["present", "past", "future", "negative"]:
+            forms = conj.get(tense)
+            if not forms:
+                continue
+            for pronoun, form in forms.items():
+                if form:
+                    candidates.append(
+                        {
+                            "verb": conj["verb"],
+                            "verb_arabic": conj.get("verb_arabic", ""),
+                            "english": conj.get("english", ""),
+                            "tense": tense,
+                            "pronoun": pronoun,
+                            "correct_form": form,
+                            "all_forms": forms,
+                        }
+                    )
+
+    if len(candidates) < 3:
+        return {}
+
+    sample = random.sample(candidates, min(count, len(candidates)))
+
+    questions = []
+    for item in sample:
+        pronoun_label = PRONOUN_LABELS.get(item["pronoun"], item["pronoun"])
+        tense_label = TENSE_LABELS.get(item["tense"], item["tense"])
+        correct = {"arabic": "", "latin": item["correct_form"]}
+
+        # Distractors: other pronoun forms of the same verb+tense
+        distractors = [
+            {"arabic": "", "latin": f}
+            for p, f in item["all_forms"].items()
+            if p != item["pronoun"] and f != item["correct_form"]
+        ]
+        # If not enough same-verb distractors, pull from other verbs
+        if len(distractors) < 3:
+            extra = [
+                {"arabic": "", "latin": c["correct_form"]}
+                for c in candidates
+                if c["correct_form"] != item["correct_form"]
+                and c["correct_form"] not in [d["latin"] for d in distractors]
+            ]
+            distractors.extend(extra)
+        distractor_sample = random.sample(distractors, min(3, len(distractors)))
+
+        options = [
+            {"arabic": correct["arabic"], "latin": correct["latin"], "correct": True}
+        ]
+        for d in distractor_sample:
+            options.append(
+                {"arabic": d["arabic"], "latin": d["latin"], "correct": False}
+            )
+        random.shuffle(options)
+        for j, opt in enumerate(options):
+            opt["id"] = chr(97 + j)
+
+        questions.append(
+            {
+                "sentence_arabic": "",
+                "sentence_latin": f"{item['pronoun']} ___ ({item['verb']}, {tense_label})",
+                "english": (
+                    f"{pronoun_label} — {tense_label} tense of "
+                    f"'{item['verb']}' ({item['english']})"
+                ),
+                "answer": correct,
+                "hint": f"Think about how '{item['verb']}' changes for {item['pronoun']} in the {tense_label}",
+                "options": options,
+            }
+        )
+
+    return {"questions": questions}
+
+
 async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[dict]:
     """Generate a daily game session prioritising the user's weak areas.
 
@@ -891,6 +1096,9 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
     # Combine all vocabulary sources for vocab-based games
     all_vocab = list(content["word_match"])  # already merged with lesson_vocab
 
+    # Load conjugation data from completed lessons for conjugation games
+    lesson_conjugation = await _load_lesson_conjugation(db, user_id, level)
+
     difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
 
     # Build a list of games; put weakness-related ones first
@@ -903,13 +1111,19 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
         "listening": "listening",
         "translation": "translation",
         "conversation": "conversation",
+        "conjugation": "conjugation_quiz",
     }
 
     # 1. Add core games that always appear
     for g in GAME_TYPES:
         if g["game_type"] in CORE_GAME_TYPES:
             config = _build_game_config(
-                g["game_type"], content, level, difficulty, all_vocab
+                g["game_type"],
+                content,
+                level,
+                difficulty,
+                all_vocab,
+                lesson_conjugation,
             )
             session_games.append({**g, "config": config})
             used_types.add(g["game_type"])
@@ -925,7 +1139,7 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
             )
             if game_def:
                 config = _build_game_config(
-                    game_type, content, level, difficulty, all_vocab
+                    game_type, content, level, difficulty, all_vocab, lesson_conjugation
                 )
                 session_games.append({**game_def, "config": config})
                 used_types.add(game_type)
@@ -937,7 +1151,7 @@ async def generate_session(db: AsyncSession, user_id: UUID, level: str) -> List[
         if len(session_games) >= SESSION_SIZE:
             break
         config = _build_game_config(
-            g["game_type"], content, level, difficulty, all_vocab
+            g["game_type"], content, level, difficulty, all_vocab, lesson_conjugation
         )
         session_games.append({**g, "config": config})
         used_types.add(g["game_type"])
@@ -978,6 +1192,7 @@ def _build_game_config(
     level: str,
     difficulty: dict | None = None,
     vocab: list | None = None,
+    conjugations: list | None = None,
 ) -> dict:
     """Build the config dict for a specific game type with real content.
 
@@ -985,11 +1200,15 @@ def _build_game_config(
     scaling with the user's CEFR level.  *vocab* is a flat list of
     vocabulary dicts used by vocab-based game types (listening,
     translation, memory_match, word_scramble, flashcard_sprint).
+    *conjugations* is a flat list of conjugation dicts from completed
+    lessons, used by conjugation_quiz and conjugation_fill games.
     """
     if difficulty is None:
         difficulty = LEVEL_DIFFICULTY.get(level, DEFAULT_DIFFICULTY)
     if vocab is None:
         vocab = []
+    if conjugations is None:
+        conjugations = []
 
     base = {"level": level}
 
@@ -1027,5 +1246,9 @@ def _build_game_config(
         base.update(_build_flashcard_sprint_config(vocab, count=8))
     elif game_type == "conversation":
         base.update(_build_conversation_config(level))
+    elif game_type == "conjugation_quiz" and conjugations:
+        base.update(_build_conjugation_quiz_config(conjugations, count=4))
+    elif game_type == "conjugation_fill" and conjugations:
+        base.update(_build_conjugation_fill_config(conjugations, count=3))
 
     return base

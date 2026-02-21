@@ -34,6 +34,13 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
     { value: 'hybrid', label: 'Both' },
   ];
 
+  const roleConfig = {
+    admin: { label: 'Admin', bg: 'bg-red-100', text: 'text-red-600' },
+    teacher: { label: 'Teacher', bg: 'bg-purple-100', text: 'text-purple-600' },
+    student: { label: 'Student', bg: 'bg-teal-100', text: 'text-teal-600' },
+  };
+  const role = roleConfig[user?.role] || roleConfig.student;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-sand-100 shadow-sm">
       <div className="flex items-center justify-between px-4 h-16">
@@ -93,6 +100,11 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
             <span className="text-terracotta-500 font-bold text-sm">{streak}</span>
           </div>
 
+          {/* Role badge */}
+          <div className={`hidden sm:flex items-center px-2.5 py-1 rounded-lg ${role.bg}`}>
+            <span className={`${role.text} font-semibold text-xs`}>{role.label}</span>
+          </div>
+
           {/* User menu */}
           <div className="relative">
             <button
@@ -117,7 +129,12 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
                   className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-sand-100 py-2 z-50"
                 >
                   <div className="px-4 py-3 border-b border-sand-100">
-                    <p className="font-semibold text-dark">{user?.display_name || 'User'}</p>
+                    <div className="flex items-center gap-2">
+                      <p className="font-semibold text-dark">{user?.display_name || 'User'}</p>
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${role.bg} ${role.text}`}>
+                        {role.label}
+                      </span>
+                    </div>
                     <p className="text-sm text-dark-300">{user?.email || 'user@demo.com'}</p>
                   </div>
 

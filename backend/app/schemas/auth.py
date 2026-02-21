@@ -42,3 +42,10 @@ class UserResponse(BaseModel):
 class UserUpdateRequest(BaseModel):
     display_name: Optional[str] = Field(None, min_length=1, max_length=100)
     level: Optional[str] = Field(None)
+
+
+class CreateUserRequest(BaseModel):
+    email: EmailStr
+    password: str = Field(..., min_length=8, max_length=128)
+    display_name: str = Field(..., min_length=1, max_length=100)
+    role: str = Field(default="student")

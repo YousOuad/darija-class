@@ -23,8 +23,8 @@ class Settings(BaseSettings):
     # JWT
     JWT_SECRET_KEY: str = "change-me-in-production"
     JWT_ALGORITHM: str = "HS256"
-    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 43200  # 30 days
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 90
 
     # Claude / Anthropic (kept for backwards compatibility)
     ANTHROPIC_API_KEY: str = ""

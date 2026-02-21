@@ -55,14 +55,9 @@ export default function Landing() {
                 <Button variant="primary" size="sm">Dashboard</Button>
               </Link>
             ) : (
-              <>
-                <Link to="/login">
-                  <Button variant="ghost" size="sm">Log In</Button>
-                </Link>
-                <Link to="/register">
-                  <Button variant="primary" size="sm">Get Started</Button>
-                </Link>
-              </>
+              <Link to="/login">
+                <Button variant="primary" size="sm">Log In</Button>
+              </Link>
             )}
           </div>
         </div>
@@ -97,9 +92,9 @@ export default function Landing() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/register">
+                <Link to="/login">
                   <Button variant="primary" size="lg">
-                    Start Learning Free
+                    Start Learning
                     <ArrowRight size={18} className="ml-2" />
                   </Button>
                 </Link>

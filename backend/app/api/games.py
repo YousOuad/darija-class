@@ -52,6 +52,8 @@ async def submit_game(
         "memory_match",
         "word_scramble",
         "flashcard_sprint",
+        "conjugation_quiz",
+        "conjugation_fill",
     }
     if game_type not in valid_types:
         raise HTTPException(
@@ -70,6 +72,8 @@ async def submit_game(
         "memory_match": "vocabulary",
         "word_scramble": "vocabulary",
         "flashcard_sprint": "vocabulary",
+        "conjugation_quiz": "conjugation",
+        "conjugation_fill": "conjugation",
     }
     skill_area = skill_map.get(game_type, game_type)
 

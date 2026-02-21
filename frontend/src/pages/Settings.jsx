@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { User, Lock, Globe, Check, Save } from 'lucide-react';
+import { User, Lock, Globe, Check, Save, Trash2 } from 'lucide-react';
 import AppLayout from '../components/layout/AppLayout';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
@@ -8,7 +9,8 @@ import useAuth from '../hooks/useAuth';
 import useScript from '../hooks/useScript';
 
 export default function Settings() {
-  const { user, updateProfile } = useAuth();
+  const { user, updateProfile, deleteAccount } = useAuth();
+  const navigate = useNavigate();
   const { scriptMode, setScriptMode } = useScript();
 
   const [displayName, setDisplayName] = useState(user?.display_name || '');
@@ -18,6 +20,8 @@ export default function Settings() {
   const [saved, setSaved] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [passwordSaved, setPasswordSaved] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const handleSaveProfile = async () => {
     setIsSaving(true);
@@ -237,6 +241,59 @@ export default function Settings() {
                 {passwordSaved ? 'Password Updated!' : 'Update Password'}
               </Button>
             </div>
+          </Card>
+        </motion.div>
+
+        {/* Delete Account */}
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+          <Card>
+            <div className="flex items-center gap-2 mb-4">
+              <Trash2 size={20} className="text-red-500" />
+              <h3 className="text-lg font-bold text-dark">Delete Account</h3>
+            </div>
+            <p className="text-sm text-dark-400 mb-4">
+              Permanently delete your account and all associated data. This action cannot be undone.
+            </p>
+
+            {!showDeleteConfirm ? (
+              <Button
+                variant="secondary"
+                onClick={() => setShowDeleteConfirm(true)}
+                className="!border-red-200 !text-red-500 hover:!bg-red-50"
+              >
+                <Trash2 size={16} className="mr-2" />
+                Delete My Account
+              </Button>
+            ) : (
+              <div className="p-4 bg-red-50 rounded-xl border border-red-200 space-y-3">
+                <p className="text-sm font-medium text-red-600">
+                  Are you sure? All your progress, flashcards, and data will be permanently deleted.
+                </p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={async () => {
+                      setIsDeleting(true);
+                      try {
+                        await deleteAccount();
+                        navigate('/');
+                      } catch {
+                        setIsDeleting(false);
+                      }
+                    }}
+                    disabled={isDeleting}
+                    className="px-4 py-2 bg-red-500 text-white text-sm font-medium rounded-lg hover:bg-red-600 transition-colors disabled:opacity-50"
+                  >
+                    {isDeleting ? 'Deleting...' : 'Yes, Delete Everything'}
+                  </button>
+                  <button
+                    onClick={() => setShowDeleteConfirm(false)}
+                    className="px-4 py-2 bg-white text-dark-400 text-sm font-medium rounded-lg border border-sand-200 hover:bg-sand-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
           </Card>
         </motion.div>
       </div>

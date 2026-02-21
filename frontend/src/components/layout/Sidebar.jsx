@@ -11,6 +11,7 @@ import {
   PenSquare,
   Layers,
   MessageCircle,
+  Users,
 } from 'lucide-react';
 import useAuthStore from '../../store/authStore';
 
@@ -31,7 +32,11 @@ export default function Sidebar({ isOpen, onClose }) {
   const isTeacherOrAdmin = user?.role === 'teacher' || user?.role === 'admin';
 
   const allNavItems = isTeacherOrAdmin
-    ? [...navItems, { to: '/curriculum-editor', label: 'Curriculum', icon: PenSquare }]
+    ? [
+        ...navItems,
+        { to: '/curriculum-editor', label: 'Curriculum', icon: PenSquare },
+        { to: '/user-management', label: 'Users', icon: Users },
+      ]
     : navItems;
 
   const sidebarContent = (

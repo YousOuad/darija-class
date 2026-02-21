@@ -5,6 +5,28 @@ from uuid import UUID
 from pydantic import BaseModel
 
 
+class XPHistoryEntry(BaseModel):
+    date: str
+    xp: int
+
+
+class SkillBreakdown(BaseModel):
+    vocabulary: float = 0
+    grammar: float = 0
+    phrases: float = 0
+    culture: float = 0
+    conversation: float = 0
+
+
+class BadgeSummary(BaseModel):
+    id: str
+    name: str
+    description: str
+    icon: str
+    earned: bool = False
+    earned_at: Optional[datetime] = None
+
+
 class ProgressSummary(BaseModel):
     total_lessons_completed: int
     total_games_played: int
@@ -13,6 +35,9 @@ class ProgressSummary(BaseModel):
     current_streak: int
     average_score: float
     lessons_by_module: dict = {}
+    xp_history: List[XPHistoryEntry] = []
+    skills: SkillBreakdown = SkillBreakdown()
+    badges: List[BadgeSummary] = []
 
 
 class WeaknessResponse(BaseModel):

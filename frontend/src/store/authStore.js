@@ -12,8 +12,9 @@ const useAuthStore = create((set, get) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await authAPI.login({ email, password });
-      const { access_token } = response.data;
+      const { access_token, refresh_token } = response.data;
       localStorage.setItem('darijalingo_token', access_token);
+      localStorage.setItem('darijalingo_refresh_token', refresh_token);
       set({ token: access_token, isAuthenticated: true });
 
       // Fetch user profile
@@ -33,8 +34,9 @@ const useAuthStore = create((set, get) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await authAPI.register({ display_name: displayName, email, password });
-      const { access_token } = response.data;
+      const { access_token, refresh_token } = response.data;
       localStorage.setItem('darijalingo_token', access_token);
+      localStorage.setItem('darijalingo_refresh_token', refresh_token);
       set({ token: access_token, isAuthenticated: true });
 
       // Fetch user profile
@@ -52,6 +54,7 @@ const useAuthStore = create((set, get) => ({
 
   logout: () => {
     localStorage.removeItem('darijalingo_token');
+    localStorage.removeItem('darijalingo_refresh_token');
     localStorage.removeItem('darijalingo_user');
     set({ user: null, token: null, isAuthenticated: false, error: null });
   },
@@ -92,6 +95,14 @@ const useAuthStore = create((set, get) => ({
       set({ error: message });
       throw new Error(message);
     }
+  },
+
+  deleteAccount: async () => {
+    await authAPI.deleteAccount();
+    localStorage.removeItem('darijalingo_token');
+    localStorage.removeItem('darijalingo_refresh_token');
+    localStorage.removeItem('darijalingo_user');
+    set({ user: null, token: null, isAuthenticated: false, error: null });
   },
 }));
 

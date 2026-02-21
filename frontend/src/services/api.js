@@ -27,12 +27,64 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor: handle 401 errors
+// Response interceptor: try token refresh on 401, then logout if that also fails
+let isRefreshing = false;
+let failedQueue = [];
+
+function processQueue(error, token = null) {
+  failedQueue.forEach(({ resolve, reject }) => {
+    if (error) reject(error);
+    else resolve(token);
+  });
+  failedQueue = [];
+}
+
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
+  async (error) => {
+    const originalRequest = error.config;
+    if (
+      error.response?.status === 401 &&
+      !originalRequest._retry &&
+      !originalRequest.url?.includes('/auth/login') &&
+      !originalRequest.url?.includes('/auth/refresh')
+    ) {
+      if (isRefreshing) {
+        return new Promise((resolve, reject) => {
+          failedQueue.push({ resolve, reject });
+        }).then((token) => {
+          originalRequest.headers.Authorization = `Bearer ${token}`;
+          return api(originalRequest);
+        });
+      }
+
+      originalRequest._retry = true;
+      isRefreshing = true;
+
+      const refreshToken = localStorage.getItem('darijalingo_refresh_token');
+      if (refreshToken) {
+        try {
+          const res = await axios.post(`${API_BASE_URL}/auth/refresh`, {
+            refresh_token: refreshToken,
+          });
+          const { access_token, refresh_token: newRefresh } = res.data;
+          localStorage.setItem('darijalingo_token', access_token);
+          localStorage.setItem('darijalingo_refresh_token', newRefresh);
+          processQueue(null, access_token);
+          originalRequest.headers.Authorization = `Bearer ${access_token}`;
+          return api(originalRequest);
+        } catch {
+          processQueue(error);
+        } finally {
+          isRefreshing = false;
+        }
+      } else {
+        isRefreshing = false;
+      }
+
+      // Refresh failed or no refresh token — log out
       localStorage.removeItem('darijalingo_token');
+      localStorage.removeItem('darijalingo_refresh_token');
       localStorage.removeItem('darijalingo_user');
       if (window.location.pathname !== '/login' && window.location.pathname !== '/') {
         window.location.href = '/login';
@@ -49,6 +101,10 @@ export const authAPI = {
   refresh: () => api.post('/auth/refresh'),
   getMe: () => api.get('/auth/me'),
   updateProfile: (data) => api.put('/auth/me', data),
+  deleteAccount: () => api.delete('/auth/me'),
+  listUsers: () => api.get('/auth/users'),
+  createUser: (data) => api.post('/auth/users', data),
+  deleteUser: (id) => api.delete(`/auth/users/${id}`),
 };
 
 // Lessons endpoints

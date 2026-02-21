@@ -4,7 +4,7 @@ import useAuthStore from './store/authStore';
 // Pages
 import Landing from './pages/Landing';
 import Login from './pages/Login';
-import Register from './pages/Register';
+import UserManagement from './pages/UserManagement';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
 import Session from './pages/Session';
@@ -51,7 +51,6 @@ export default function App() {
       {/* Public routes */}
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
 
       {/* Semi-protected (redirect to dashboard if already authenticated) */}
       <Route path="/onboarding" element={
@@ -116,6 +115,11 @@ export default function App() {
       <Route path="/curriculum-editor" element={
         <TeacherRoute>
           <CurriculumEditor />
+        </TeacherRoute>
+      } />
+      <Route path="/user-management" element={
+        <TeacherRoute>
+          <UserManagement />
         </TeacherRoute>
       } />
 

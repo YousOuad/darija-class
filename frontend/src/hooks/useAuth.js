@@ -14,6 +14,7 @@ export default function useAuth() {
     fetchUser,
     clearError,
     updateProfile,
+    deleteAccount,
   } = useAuthStore();
 
   return {
@@ -29,5 +30,6 @@ export default function useAuth() {
     fetchUser,
     clearError,
     updateProfile,
+    deleteAccount,
   };
 }

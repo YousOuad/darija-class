@@ -106,10 +106,7 @@ export default function Login() {
           </form>
 
           <p className="text-center text-sm text-dark-300 mt-6">
-            Don't have an account?{' '}
-            <Link to="/register" className="text-teal-500 font-semibold hover:text-teal-600">
-              Sign Up
-            </Link>
+            Contact your teacher or admin to get an account.
           </p>
         </div>
       </motion.div>
